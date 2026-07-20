@@ -1,0 +1,41 @@
+[gd_scene format=3 uid="uid://cv30uf6iqhy32"]
+
+[ext_resource type="Texture2D" uid="uid://c7e3qc54g6aeu" path="res://Art/TitleScreen.png" id="1_68ljo"]
+[ext_resource type="Script" uid="uid://c1vya0n2y4wc4" path="res://Scenes/title_scene.gd" id="1_b6ftn"]
+
+[node name="TitleScreen" type="Node2D" unique_id=1609848461]
+script = ExtResource("1_b6ftn")
+
+[node name="Background" type="TextureRect" parent="." unique_id=164711618]
+offset_right = 960.0
+offset_bottom = 537.0
+texture = ExtResource("1_68ljo")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="." unique_id=2029640105]
+offset_left = 292.00003
+offset_top = 283.00003
+offset_right = 385.23505
+offset_bottom = 366.00003
+scale = Vector2(2.3667157, 2.3667157)
+
+[node name="Start" type="Button" parent="VBoxContainer" unique_id=616841783]
+layout_mode = 2
+theme_override_constants/outline_size = 14
+theme_override_font_sizes/font_size = 12
+text = "Start"
+
+[node name="Tutorial" type="Button" parent="VBoxContainer" unique_id=1582090839]
+layout_mode = 2
+theme_override_constants/outline_size = 14
+theme_override_font_sizes/font_size = 12
+text = "Tutorial"
+
+[node name="Quit" type="Button" parent="VBoxContainer" unique_id=83450563]
+layout_mode = 2
+theme_override_constants/outline_size = 14
+theme_override_font_sizes/font_size = 12
+text = "Quit"
+
+[connection signal="pressed" from="VBoxContainer/Start" to="." method="_on_start_pressed"]
+[connection signal="pressed" from="VBoxContainer/Tutorial" to="." method="_on_tutorial_pressed"]
+[connection signal="pressed" from="VBoxContainer/Quit" to="." method="_on_quit_pressed"]
