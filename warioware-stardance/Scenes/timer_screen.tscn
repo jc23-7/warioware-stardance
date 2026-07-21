@@ -1,0 +1,55 @@
+[gd_scene format=3 uid="uid://cmojelq6qd65d"]
+
+[ext_resource type="Script" uid="uid://os5bdmufqj26" path="res://timer_screen.gd" id="1_f8hj7"]
+[ext_resource type="Texture2D" uid="uid://c7e3qc54g6aeu" path="res://Art/TitleScreen.png" id="2_ry0ke"]
+[ext_resource type="Texture2D" uid="uid://vfe0gkt4cix" path="res://icon.svg" id="3_tsv7m"]
+
+[node name="TimerScreen" type="Node2D" unique_id=1180713129]
+script = ExtResource("1_f8hj7")
+
+[node name="TextureRect" type="TextureRect" parent="." unique_id=233656147]
+offset_right = 40.0
+offset_bottom = 40.0
+texture = ExtResource("2_ry0ke")
+
+[node name="HeartContainer" type="HBoxContainer" parent="." unique_id=339492767]
+offset_left = 154.0
+offset_top = 115.0
+offset_right = 810.0
+offset_bottom = 243.0
+
+[node name="Heart1" type="TextureRect" parent="HeartContainer" unique_id=1848450429]
+layout_mode = 2
+texture = ExtResource("3_tsv7m")
+
+[node name="Heart2" type="TextureRect" parent="HeartContainer" unique_id=2019043702]
+layout_mode = 2
+texture = ExtResource("3_tsv7m")
+
+[node name="Heart3" type="TextureRect" parent="HeartContainer" unique_id=920337557]
+layout_mode = 2
+texture = ExtResource("3_tsv7m")
+
+[node name="Heart4" type="TextureRect" parent="HeartContainer" unique_id=37512289]
+layout_mode = 2
+texture = ExtResource("3_tsv7m")
+
+[node name="Heart5" type="TextureRect" parent="HeartContainer" unique_id=2108274219]
+layout_mode = 2
+texture = ExtResource("3_tsv7m")
+
+[node name="Level" type="RichTextLabel" parent="." unique_id=1540902887]
+offset_left = 400.0
+offset_top = 275.0
+offset_right = 550.0
+offset_bottom = 325.0
+theme_override_font_sizes/normal_font_size = 42
+text = "Level #"
+
+[node name="Timer" type="RichTextLabel" parent="." unique_id=813763132]
+offset_left = 437.0
+offset_top = 337.0
+offset_right = 537.0
+offset_bottom = 389.96
+theme_override_font_sizes/normal_font_size = 42
+text = "0.0"

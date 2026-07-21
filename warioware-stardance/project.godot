@@ -14,6 +14,10 @@ config/name="Warioware-Stardance"
 config/features=PackedStringArray("4.6", "GL Compatibility")
 config/icon="res://icon.svg"
 
+[autoload]
+
+Global="*uid://s8pk7c33cdyt"
+
 [display]
 
 window/size/viewport_width=960

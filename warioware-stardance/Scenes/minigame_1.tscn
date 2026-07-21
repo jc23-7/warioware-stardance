@@ -1,0 +1,16 @@
+[gd_scene format=3 uid="uid://br7q75ujhygk1"]
+
+[ext_resource type="Script" uid="uid://dancs6ihaqnme" path="res://minigame_1.gd" id="1_11mgy"]
+[ext_resource type="Texture2D" uid="uid://c7e3qc54g6aeu" path="res://Art/TitleScreen.png" id="2_f6tb2"]
+
+[node name="Minigame1" type="Node2D" unique_id=1669112296]
+script = ExtResource("1_11mgy")
+
+[node name="Background" type="TextureRect" parent="." unique_id=66120152]
+offset_right = 40.0
+offset_bottom = 40.0
+texture = ExtResource("2_f6tb2")
+
+[node name="Timer" type="RichTextLabel" parent="." unique_id=1186589225]
+offset_right = 40.0
+offset_bottom = 40.0
