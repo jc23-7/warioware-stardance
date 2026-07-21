@@ -11,7 +11,7 @@ config_version=5
 [application]
 
 config/name="Warioware-Stardance"
-run/main_scene="uid://br7q75ujhygk1"
+run/main_scene="uid://cv30uf6iqhy32"
 config/features=PackedStringArray("4.6", "GL Compatibility")
 config/icon="res://icon.svg"
 
