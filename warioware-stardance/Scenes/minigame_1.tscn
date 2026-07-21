@@ -1,16 +1,117 @@
 [gd_scene format=3 uid="uid://br7q75ujhygk1"]
 
-[ext_resource type="Script" uid="uid://dancs6ihaqnme" path="res://minigame_1.gd" id="1_11mgy"]
+[ext_resource type="Script" uid="uid://dancs6ihaqnme" path="res://Scenes/minigame_1.gd" id="1_5txvl"]
+[ext_resource type="PackedScene" uid="uid://beavwkuna4s6h" path="res://Scenes/player.tscn" id="2_11mgy"]
 [ext_resource type="Texture2D" uid="uid://c7e3qc54g6aeu" path="res://Art/TitleScreen.png" id="2_f6tb2"]
+[ext_resource type="Script" uid="uid://ui113f5alhi1" path="res://Scenes/collectable.gd" id="3_o6yob"]
+[ext_resource type="Texture2D" uid="uid://vfe0gkt4cix" path="res://icon.svg" id="4_5txvl"]
+[ext_resource type="PackedScene" uid="uid://ijvv7plr8526" path="res://Scenes/game_timer.tscn" id="6_0uv5o"]
 
-[node name="Minigame1" type="Node2D" unique_id=1669112296]
-script = ExtResource("1_11mgy")
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_f6tb2"]
+size = Vector2(966.5, 49)
 
-[node name="Background" type="TextureRect" parent="." unique_id=66120152]
-offset_right = 40.0
-offset_bottom = 40.0
+[sub_resource type="Animation" id="Animation_0uv5o"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Collectable:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(467, 289)]
+}
+
+[sub_resource type="Animation" id="Animation_ojqsy"]
+resource_name = "floating"
+loop_mode = 2
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Collectable:position")
+tracks/0/interp = 2
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(467, 289), Vector2(467, 282)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_jmcek"]
+_data = {
+&"RESET": SubResource("Animation_0uv5o"),
+&"floating": SubResource("Animation_ojqsy")
+}
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ne1wf"]
+size = Vector2(42, 43)
+
+[node name="Minigame_1" type="Node2D" unique_id=361239344]
+script = ExtResource("1_5txvl")
+
+[node name="ScrollingBackground" type="Parallax2D" parent="." unique_id=1659560861]
+repeat_size = Vector2(940, 0)
+autoscroll = Vector2(-100, 0)
+
+[node name="Background" type="TextureRect" parent="ScrollingBackground" unique_id=221362285]
+offset_right = 960.0
+offset_bottom = 540.0
 texture = ExtResource("2_f6tb2")
 
-[node name="Timer" type="RichTextLabel" parent="." unique_id=1186589225]
-offset_right = 40.0
-offset_bottom = 40.0
+[node name="Platform1" type="StaticBody2D" parent="." unique_id=201553025]
+
+[node name="ColorRect" type="ColorRect" parent="Platform1" unique_id=195212792]
+offset_left = -3.0
+offset_top = 496.0
+offset_right = 963.0
+offset_bottom = 546.0
+color = Color(0.30869442, 0.76377267, 0.9922549, 1)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Platform1" unique_id=1661647770]
+position = Vector2(479.75, 522)
+shape = SubResource("RectangleShape2D_f6tb2")
+
+[node name="Platform2" type="StaticBody2D" parent="." unique_id=1417914711]
+position = Vector2(361, -116)
+
+[node name="ColorRect" type="ColorRect" parent="Platform2" unique_id=1953857681]
+offset_left = -3.0
+offset_top = 496.0
+offset_right = 963.0
+offset_bottom = 546.0
+color = Color(0.30869442, 0.76377267, 0.9922549, 1)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Platform2" unique_id=292707776]
+position = Vector2(479.75, 522)
+shape = SubResource("RectangleShape2D_f6tb2")
+
+[node name="Player" parent="." unique_id=515594243 instance=ExtResource("2_11mgy")]
+position = Vector2(103, 394)
+
+[node name="Collectable" type="Node2D" parent="." unique_id=297294128]
+script = ExtResource("3_o6yob")
+
+[node name="Collectable" type="TextureRect" parent="Collectable" unique_id=730728844]
+offset_left = 467.0
+offset_top = 289.0
+offset_right = 595.0
+offset_bottom = 417.0
+scale = Vector2(0.36592284, 0.36592284)
+texture = ExtResource("4_5txvl")
+
+[node name="Animation" type="AnimationPlayer" parent="Collectable" unique_id=1729471157]
+libraries/ = SubResource("AnimationLibrary_jmcek")
+
+[node name="Area2D" type="Area2D" parent="Collectable" unique_id=115304410]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Collectable/Area2D" unique_id=37572183]
+position = Vector2(490, 305.5)
+shape = SubResource("RectangleShape2D_ne1wf")
+
+[node name="GameTimer" parent="." unique_id=1669112296 instance=ExtResource("6_0uv5o")]
+
+[connection signal="collectable_collected" from="Collectable" to="." method="_on_node_2d_collectable_collected"]
