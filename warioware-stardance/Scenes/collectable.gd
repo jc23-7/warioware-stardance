@@ -1,19 +1,22 @@
 extends Node2D
+signal collectable_collected()
 
 @onready var player: CharacterBody2D = $"../Player"
 @onready var self_area = $Area2D
 @onready var player_area = $"../Player/Area2D"
 
-signal collectable_collected
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
-	pass # Replace with function body.
+	pass
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
-	if player_area.overlaps_area(self_area):
+	position.y += 500 * delta
+	position.x += -100 * delta
+	
+	if player_area.overlaps_area(self_area) && position.y <= 450 && position.y >= 400:
 		if self.visible:
 			emit_signal("collectable_collected")
-			self.hide()
+			queue_free() 

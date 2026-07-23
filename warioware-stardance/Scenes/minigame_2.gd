@@ -22,3 +22,7 @@ func _process(delta: float) -> void:
 		Global.lives -= 1
 		Global.minigames_done -= 1
 		get_tree().change_scene_to_file("res://Scenes/timer_screen.tscn")
+
+
+func _on_star_picked_up() -> void:
+	pass # Replace with function body.
