@@ -1,0 +1,98 @@
+[gd_scene format=3 uid="uid://dnntinscrn4jt"]
+
+[ext_resource type="Script" uid="uid://bqc3x8qotssvl" path="res://Scenes/minigame_3.gd" id="1_6sdpr"]
+[ext_resource type="Texture2D" uid="uid://ca88q0am8iemd" path="res://Art/minigame_2_bg.png" id="2_lr4ld"]
+[ext_resource type="Script" uid="uid://c8ewy3i1gpryg" path="res://Scenes/star_mg3.gd" id="3_6sdpr"]
+[ext_resource type="Texture2D" uid="uid://d368wu03ubuac" path="res://Art/Star.png" id="4_y6mal"]
+[ext_resource type="PackedScene" uid="uid://ijvv7plr8526" path="res://Scenes/game_timer.tscn" id="5_4cfv6"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_lpvao"]
+size = Vector2(13, 13)
+
+[node name="Minigame_3" type="Node2D" unique_id=56606235]
+script = ExtResource("1_6sdpr")
+
+[node name="Background" type="TextureRect" parent="." unique_id=480148605]
+offset_right = 960.0
+offset_bottom = 540.0
+texture = ExtResource("2_lr4ld")
+
+[node name="StarContainer" type="Node2D" parent="." unique_id=2020598025]
+position = Vector2(79, 79)
+scale = Vector2(2, 2)
+
+[node name="Star1" type="Area2D" parent="StarContainer" unique_id=1065310081]
+position = Vector2(98.5, -7.5)
+script = ExtResource("3_6sdpr")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StarContainer/Star1" unique_id=2105815602]
+shape = SubResource("RectangleShape2D_lpvao")
+
+[node name="Sprite2D" type="Sprite2D" parent="StarContainer/Star1" unique_id=353942346]
+texture = ExtResource("4_y6mal")
+
+[node name="Star2" type="Area2D" parent="StarContainer" unique_id=1624362748]
+position = Vector2(157.5, 4)
+script = ExtResource("3_6sdpr")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StarContainer/Star2" unique_id=1887321649]
+shape = SubResource("RectangleShape2D_lpvao")
+
+[node name="Sprite2D" type="Sprite2D" parent="StarContainer/Star2" unique_id=1666693824]
+texture = ExtResource("4_y6mal")
+
+[node name="Star3" type="Area2D" parent="StarContainer" unique_id=979859773]
+position = Vector2(181.5, 37)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StarContainer/Star3" unique_id=1133580749]
+shape = SubResource("RectangleShape2D_lpvao")
+
+[node name="Sprite2D" type="Sprite2D" parent="StarContainer/Star3" unique_id=2042346623]
+texture = ExtResource("4_y6mal")
+
+[node name="Star4" type="Area2D" parent="StarContainer" unique_id=1769152207]
+position = Vector2(212.5, 67.5)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StarContainer/Star4" unique_id=824911276]
+shape = SubResource("RectangleShape2D_lpvao")
+
+[node name="Sprite2D" type="Sprite2D" parent="StarContainer/Star4" unique_id=1123030716]
+texture = ExtResource("4_y6mal")
+
+[node name="Star5" type="Area2D" parent="StarContainer" unique_id=1957788324]
+position = Vector2(207.5, 107)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StarContainer/Star5" unique_id=1553159044]
+shape = SubResource("RectangleShape2D_lpvao")
+
+[node name="Sprite2D" type="Sprite2D" parent="StarContainer/Star5" unique_id=1303068826]
+texture = ExtResource("4_y6mal")
+
+[node name="Star6" type="Area2D" parent="StarContainer" unique_id=1220091002]
+position = Vector2(269.5, 134.5)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StarContainer/Star6" unique_id=334663009]
+shape = SubResource("RectangleShape2D_lpvao")
+
+[node name="Sprite2D" type="Sprite2D" parent="StarContainer/Star6" unique_id=1092933977]
+texture = ExtResource("4_y6mal")
+
+[node name="Star7" type="Area2D" parent="StarContainer" unique_id=625415944]
+position = Vector2(296, 96.5)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StarContainer/Star7" unique_id=1034273661]
+shape = SubResource("RectangleShape2D_lpvao")
+
+[node name="Sprite2D" type="Sprite2D" parent="StarContainer/Star7" unique_id=551540173]
+texture = ExtResource("4_y6mal")
+
+[node name="LineContainer" type="Node2D" parent="." unique_id=1909802036]
+position = Vector2(79, 79)
+scale = Vector2(2, 2)
+
+[node name="Line12" type="Sprite2D" parent="LineContainer" unique_id=1604215133]
+
+[node name="GameTimer" parent="." unique_id=1669112296 instance=ExtResource("5_4cfv6")]
+
+[connection signal="input_event" from="StarContainer/Star1" to="." method="_on_star_clicked"]
+[connection signal="input_event" from="StarContainer/Star2" to="." method="_on_star_clicked"]

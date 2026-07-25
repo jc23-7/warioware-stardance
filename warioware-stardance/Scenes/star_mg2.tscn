@@ -1,6 +1,6 @@
-[gd_scene format=3 uid="uid://0dajfm01y5oh"]
+[gd_scene format=3 uid="uid://cc5m6hcfkjxqc"]
 
-[ext_resource type="Script" uid="uid://lqthg1848v0l" path="res://star.gd" id="1_3vu41"]
+[ext_resource type="Script" uid="uid://lqthg1848v0l" path="res://Scenes/star_mg2.gd" id="1_3vu41"]
 [ext_resource type="Texture2D" uid="uid://d368wu03ubuac" path="res://Art/Star.png" id="2_fwpdb"]
 
 [node name="Star" type="Node2D" unique_id=835319869]

@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://c3j107p7jccwm"]
 
-[ext_resource type="Script" uid="uid://ui113f5alhi1" path="res://Scenes/collectable.gd" id="1_licok"]
-[ext_resource type="Texture2D" uid="uid://d368wu03ubuac" path="res://Art/Star.png" id="2_me652"]
+[ext_resource type="Script" uid="uid://ui113f5alhi1" path="res://Scenes/collectable_mg1.gd" id="1_37cuy"]
+[ext_resource type="Texture2D" uid="uid://d368wu03ubuac" path="res://Art/Star.png" id="2_s7in1"]
 
 [sub_resource type="Animation" id="Animation_0uv5o"]
 length = 0.001
@@ -44,12 +44,12 @@ _data = {
 size = Vector2(26, 26.005001)
 
 [node name="Collectable" type="Node2D" unique_id=1623987422]
-script = ExtResource("1_licok")
+script = ExtResource("1_37cuy")
 
 [node name="Collectable2" type="Sprite2D" parent="." unique_id=468118831]
 texture_filter = 1
 scale = Vector2(2, 2)
-texture = ExtResource("2_me652")
+texture = ExtResource("2_s7in1")
 
 [node name="Animation" type="AnimationPlayer" parent="." unique_id=524344461]
 libraries/ = SubResource("AnimationLibrary_govy6")

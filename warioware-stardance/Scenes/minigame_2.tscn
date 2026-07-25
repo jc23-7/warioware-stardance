@@ -1,15 +1,54 @@
 [gd_scene format=3 uid="uid://bc2hawj4d8xlo"]
 
 [ext_resource type="Script" uid="uid://dk62ajt3d88hi" path="res://Scenes/minigame_2.gd" id="1_rfxq2"]
-[ext_resource type="Texture2D" uid="uid://vfe0gkt4cix" path="res://icon.svg" id="2_dfb65"]
 [ext_resource type="Texture2D" uid="uid://ca88q0am8iemd" path="res://Art/minigame_2_bg.png" id="2_mmgun"]
-[ext_resource type="Script" uid="uid://ih22ahw8eh1s" path="res://Scenes/star_spot.gd" id="3_rfxq2"]
-[ext_resource type="Script" uid="uid://dwcefisfi5hec" path="res://Scenes/star_bucket.gd" id="4_h684j"]
+[ext_resource type="Script" uid="uid://ih22ahw8eh1s" path="res://Scenes/star_spot_mg2.gd" id="3_rfxq2"]
+[ext_resource type="Script" uid="uid://dwcefisfi5hec" path="res://Scenes/star_bucket_mg2.gd" id="4_h684j"]
 [ext_resource type="PackedScene" uid="uid://ijvv7plr8526" path="res://Scenes/game_timer.tscn" id="4_mmgun"]
+[ext_resource type="Texture2D" uid="uid://bpxraq8n31v33" path="res://Art/BucketAnimation/frame0000.png" id="4_qhtu5"]
 [ext_resource type="Texture2D" uid="uid://c07g6dd8o7b6p" path="res://Art/star_spot.png" id="5_h684j"]
+[ext_resource type="Texture2D" uid="uid://cwj7tlyxgmlbe" path="res://Art/BucketAnimation/frame0001.png" id="5_m2y0d"]
+[ext_resource type="Texture2D" uid="uid://du38thau32cra" path="res://Art/BucketAnimation/frame0002.png" id="6_7qfsw"]
+[ext_resource type="Texture2D" uid="uid://cxu6gxu2qhnxb" path="res://Art/BucketAnimation/frame0003.png" id="7_ixrq7"]
+[ext_resource type="Texture2D" uid="uid://7qypxsstmwdv" path="res://Art/BucketAnimation/frame0004.png" id="8_er0qy"]
+[ext_resource type="Texture2D" uid="uid://5u2fjrhq8mtx" path="res://Art/BucketAnimation/frame0005.png" id="9_vpchf"]
+[ext_resource type="Texture2D" uid="uid://tjlm5ms7a13s" path="res://Art/BucketAnimation/frame0006.png" id="10_wqk41"]
+[ext_resource type="Texture2D" uid="uid://dxve4qgaqpxi8" path="res://Art/BucketAnimation/frame0007.png" id="11_kyth0"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_wu6l1"]
-size = Vector2(51, 54)
+size = Vector2(34, 31.75)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_124ma"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("4_qhtu5")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_m2y0d")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_7qfsw")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_ixrq7")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_er0qy")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_vpchf")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_wqk41")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_kyth0")
+}],
+"loop": true,
+"name": &"emptying",
+"speed": 5.0
+}]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_h684j"]
 size = Vector2(13, 13)
@@ -22,19 +61,19 @@ offset_right = 960.0
 offset_bottom = 540.0
 texture = ExtResource("2_mmgun")
 
-[node name="StarSpot8" type="Area2D" parent="." unique_id=539341568]
+[node name="StarBucket" type="Area2D" parent="." unique_id=539341568]
 position = Vector2(-3, 329)
 scale = Vector2(2, 2)
 script = ExtResource("4_h684j")
 
-[node name="Sprite2D" type="Sprite2D" parent="StarSpot8" unique_id=1427046424]
-position = Vector2(86.5, 34.5)
-scale = Vector2(0.44043106, 0.44043106)
-texture = ExtResource("2_dfb65")
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="StarSpot8" unique_id=1254077142]
-position = Vector2(87, 34.5)
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StarBucket" unique_id=1254077142]
+position = Vector2(72.5, 56.625)
 shape = SubResource("RectangleShape2D_wu6l1")
+
+[node name="Animation" type="AnimatedSprite2D" parent="StarBucket" unique_id=757618926]
+position = Vector2(79.5, 52.5)
+sprite_frames = SubResource("SpriteFrames_124ma")
+animation = &"emptying"
 
 [node name="StarSpotContainer" type="Node2D" parent="." unique_id=506160566]
 position = Vector2(79, 79)
@@ -112,4 +151,5 @@ texture = ExtResource("5_h684j")
 
 [node name="GameTimer" parent="." unique_id=1669112296 instance=ExtResource("4_mmgun")]
 
-[connection signal="input_event" from="StarSpot8" to="." method="_on_star_picked_up"]
+[connection signal="input_event" from="StarBucket" to="." method="_on_star_picked_up"]
+[connection signal="input_event" from="StarBucket" to="StarBucket" method="_on_star_picked_up"]

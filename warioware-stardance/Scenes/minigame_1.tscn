@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://br7q75ujhygk1"]
 
 [ext_resource type="Script" uid="uid://dancs6ihaqnme" path="res://Scenes/minigame_1.gd" id="1_5txvl"]
-[ext_resource type="PackedScene" uid="uid://beavwkuna4s6h" path="res://Scenes/player.tscn" id="2_11mgy"]
+[ext_resource type="PackedScene" uid="uid://beavwkuna4s6h" path="res://Scenes/player_mg1.tscn" id="2_11mgy"]
 [ext_resource type="Texture2D" uid="uid://da3enufnadd0l" path="res://Art/minigame_1_bg.png" id="2_o6yob"]
 [ext_resource type="PackedScene" uid="uid://ijvv7plr8526" path="res://Scenes/game_timer.tscn" id="6_0uv5o"]
 
