@@ -28,14 +28,17 @@ func _process(delta: float) -> void:
 
 	if num_collected >= 7:
 		if Global.minigames_done > 3:
-			get_tree().change_scene_to_file("res://scenes/end_screen.tscn")
+			Global.change_scene("res://scenes/end_screen.tscn")
 		else:
-			get_tree().change_scene_to_file("res://Scenes/timer_screen.tscn")
+			Global.change_scene("res://Scenes/timer_screen.tscn")
+		
+		
 			
 	if timer_end:
 		Global.minigames_done -= 1
 		Global.lives -= 1
-		get_tree().change_scene_to_file("res://Scenes/timer_screen.tscn")
+		Global.change_scene("res://Scenes/timer_screen.tscn")
+		
 
 func _spawn_star():
 	randomize()

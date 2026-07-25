@@ -41,26 +41,22 @@ _data = {
 }
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_v8770"]
-size = Vector2(23.5, 24.5)
+size = Vector2(26, 26.005001)
 
 [node name="Collectable" type="Node2D" unique_id=1623987422]
-position = Vector2(0, 2.755)
 script = ExtResource("1_licok")
 
-[node name="Collectable2" type="TextureRect" parent="." unique_id=2113289086]
+[node name="Collectable2" type="Sprite2D" parent="." unique_id=468118831]
 texture_filter = 1
-offset_left = -12.000001
-offset_top = -12.755
-offset_right = 116.0
-offset_bottom = 115.245
-scale = Vector2(0.18134893, 0.18134893)
+scale = Vector2(2, 2)
 texture = ExtResource("2_me652")
 
 [node name="Animation" type="AnimationPlayer" parent="." unique_id=524344461]
 libraries/ = SubResource("AnimationLibrary_govy6")
 
 [node name="Area2D" type="Area2D" parent="." unique_id=642667026]
+position = Vector2(-1, 1)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=1386038741]
-position = Vector2(-0.25, -1.7550001)
+position = Vector2(1, -1.0025005)
 shape = SubResource("RectangleShape2D_v8770")

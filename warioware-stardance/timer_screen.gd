@@ -16,10 +16,10 @@ func _ready() -> void:
 	
 	if Global.minigames_done < 3:
 		Global.minigames_done += 1
-		get_tree().change_scene_to_file("res://scenes/minigame_" + str(Global.minigames_done) + ".tscn")
+		Global.change_scene("res://scenes/minigame_" + str(Global.minigames_done) + ".tscn")
 		
 	else:
-		get_tree().change_scene_to_file("res://Scenes/title_screen.tscn")
+		Global.change_scene("res://Scenes/title_screen.tscn")
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
