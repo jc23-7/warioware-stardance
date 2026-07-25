@@ -15,14 +15,14 @@ func _ready() -> void:
 func _process(delta: float) -> void:
 	if stars_hung == 7:
 		if Global.minigames_done > 3:
-			get_tree().change_scene_to_file("res://Scenes/end_screen.tscn")
+			Global.change_scene("res://scenes/end_screen.tscn")
 		else:
-			get_tree().change_scene_to_file("res://Scenes/timer_screen.tscn")
+			Global.change_scene("res://Scenes/timer_screen.tscn")
 			
 	if timer_end:
 		Global.lives -= 1
 		Global.minigames_done -= 1
-		get_tree().change_scene_to_file("res://Scenes/timer_screen.tscn")
+		Global.change_scene("res://Scenes/timer_screen.tscn")
 
 
 func _on_star_picked_up(viewport: Node, event: InputEvent, shape_idx: int) -> void:
