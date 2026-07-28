@@ -1,10 +1,29 @@
 [gd_scene format=3 uid="uid://ijvv7plr8526"]
 
 [ext_resource type="Script" uid="uid://bc366oyy4vpma" path="res://Scenes/game_timer.tscn.gd" id="1_xyruv"]
+[ext_resource type="FontFile" uid="uid://bcorxdm3rgr4f" path="res://Art/Jersey_10/Jersey10-Regular.ttf" id="2_j2gkn"]
 
-[node name="GameTimer" type="Node2D" unique_id=1669112296]
+[node name="GameStats" type="Node2D" unique_id=1669112296]
 script = ExtResource("1_xyruv")
 
-[node name="Timer" type="RichTextLabel" parent="." unique_id=1186589225]
-offset_right = 40.0
-offset_bottom = 40.0
+[node name="VBoxContainer" type="VBoxContainer" parent="." unique_id=232973355]
+offset_left = 15.77
+offset_right = 267.77002
+offset_bottom = 159.365
+theme_override_constants/separation = -10
+
+[node name="Progress" type="RichTextLabel" parent="VBoxContainer" unique_id=2119416280]
+layout_mode = 2
+theme_override_fonts/normal_font = ExtResource("2_j2gkn")
+theme_override_font_sizes/normal_font_size = 80
+bbcode_enabled = true
+text = "0/7"
+fit_content = true
+autowrap_mode = 0
+
+[node name="Timer" type="RichTextLabel" parent="VBoxContainer" unique_id=1186589225]
+layout_mode = 2
+theme_override_fonts/normal_font = ExtResource("2_j2gkn")
+theme_override_font_sizes/normal_font_size = 50
+text = "0.0"
+fit_content = true

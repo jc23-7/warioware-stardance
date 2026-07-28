@@ -2,6 +2,7 @@ extends Node2D
 
 @onready var game_timer: Node2D = $GameTimer
 @onready var line_container: Node2D = $LineContainer
+@onready var progress_label: RichTextLabel = $GameTimer/VBoxContainer/Progress
 
 var lines_drawn = 0
 var timer_end = false
@@ -21,7 +22,9 @@ func _ready() -> void:
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:	
+	progress_label.text = str(lines_drawn) + "/7"
 	if lines_drawn == 7:
+		await game_timer.Timer(0.5)
 		if Global.minigames_done > 3:
 			Global.change_scene("res://scenes/end_screen.tscn")
 		else:

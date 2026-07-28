@@ -1,12 +1,13 @@
 extends Node2D
 @onready var game_timer: Node2D = $GameTimer
+@onready var progress_label: RichTextLabel = $GameTimer/VBoxContainer/Progress
 @onready var star_container: Node2D = $"Player/Visuals/StarContainer"
 
 var num_collected = 0
 var timer_end = false
 
 # Called when the node enters the scene tree for the first time.
-func _ready() -> void:	
+func _ready() -> void:		
 	for i in range(7):
 		var child = star_container.get_child(i)
 		child.visible = false
@@ -25,7 +26,10 @@ func _ready() -> void:
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
+	progress_label.text = str(num_collected) + "/7"
+	
 	if num_collected >= 7:
+		await game_timer.Timer(0.5)
 		if Global.minigames_done > 3:
 			Global.change_scene("res://scenes/end_screen.tscn")
 		else:
