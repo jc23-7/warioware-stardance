@@ -3,7 +3,7 @@ extends Node
 signal scene_changed(new_scene_path)
 signal star_spot_clicked(x:float, y:float)
 signal star_clicked (star: int)
-var minigames_done = 2
+var minigames_done = 0
 var lives = 5
 
 # Called when the node enters the scene tree for the first time.

@@ -25,7 +25,6 @@ func _ready() -> void:
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
-
 	if num_collected >= 7:
 		if Global.minigames_done > 3:
 			Global.change_scene("res://scenes/end_screen.tscn")
@@ -42,7 +41,7 @@ func _process(delta: float) -> void:
 
 func _spawn_star():
 	randomize()
-	var star_template = preload("res://Scenes/collectable.tscn")
+	var star_template = preload("res://Scenes/collectable_mg1.tscn")
 	var star = star_template.instantiate()
 	
 	star.collectable_collected.connect(_on_collectable_collected)

@@ -1,55 +1,86 @@
 [gd_scene format=3 uid="uid://cmojelq6qd65d"]
 
 [ext_resource type="Script" uid="uid://os5bdmufqj26" path="res://Scenes/timer_screen.gd" id="1_f8hj7"]
-[ext_resource type="Texture2D" uid="uid://c7e3qc54g6aeu" path="res://Art/TitleScreen.png" id="2_ry0ke"]
-[ext_resource type="Texture2D" uid="uid://vfe0gkt4cix" path="res://icon.svg" id="3_tsv7m"]
+[ext_resource type="Script" uid="uid://dlh7m20lj5r5w" path="res://Scenes/heart_container.gd" id="3_tsv7m"]
+[ext_resource type="Texture2D" uid="uid://bw5yrghjf3vdl" path="res://Art/StarLife.png" id="4_tpp86"]
+[ext_resource type="Texture2D" uid="uid://lxjdtv5bqo6v" path="res://Art/StarShattered.png" id="5_cqi0v"]
+[ext_resource type="FontFile" uid="uid://bcorxdm3rgr4f" path="res://Art/Jersey_10/Jersey10-Regular.ttf" id="5_tsv7m"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_cnaam"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("4_tpp86")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_cqi0v")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
 
 [node name="TimerScreen" type="Node2D" unique_id=1180713129]
 script = ExtResource("1_f8hj7")
 
-[node name="TextureRect" type="TextureRect" parent="." unique_id=233656147]
-offset_right = 40.0
-offset_bottom = 40.0
-texture = ExtResource("2_ry0ke")
+[node name="TextureRect" type="ColorRect" parent="." unique_id=1414122857]
+offset_right = 970.0
+offset_bottom = 546.0
+color = Color(0.050980393, 0.08627451, 0.15686275, 1)
 
-[node name="HeartContainer" type="HBoxContainer" parent="." unique_id=339492767]
-offset_left = 154.0
-offset_top = 115.0
-offset_right = 810.0
-offset_bottom = 243.0
+[node name="HeartContainer" type="Node2D" parent="." unique_id=1369656329]
+script = ExtResource("3_tsv7m")
 
-[node name="Heart1" type="TextureRect" parent="HeartContainer" unique_id=1848450429]
+[node name="Heart1" type="AnimatedSprite2D" parent="HeartContainer" unique_id=883948792]
+position = Vector2(170.99998, 164)
+scale = Vector2(2.3820758, 2.3820758)
+sprite_frames = SubResource("SpriteFrames_cnaam")
+
+[node name="Heart2" type="AnimatedSprite2D" parent="HeartContainer" unique_id=1289521752]
+position = Vector2(329, 160)
+scale = Vector2(2.3820758, 2.3820758)
+sprite_frames = SubResource("SpriteFrames_cnaam")
+
+[node name="Heart3" type="AnimatedSprite2D" parent="HeartContainer" unique_id=1864616879]
+position = Vector2(483, 158)
+scale = Vector2(2.3820758, 2.3820758)
+sprite_frames = SubResource("SpriteFrames_cnaam")
+
+[node name="Heart4" type="AnimatedSprite2D" parent="HeartContainer" unique_id=1819189758]
+position = Vector2(633, 156.99998)
+scale = Vector2(2.3820758, 2.3820758)
+sprite_frames = SubResource("SpriteFrames_cnaam")
+
+[node name="Heart5" type="AnimatedSprite2D" parent="HeartContainer" unique_id=345890441]
+position = Vector2(769.9999, 154.99998)
+scale = Vector2(2.3820758, 2.3820758)
+sprite_frames = SubResource("SpriteFrames_cnaam")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="." unique_id=1936269489]
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = 354.0
+offset_top = 300.0
+offset_right = 606.0
+offset_bottom = 463.0
+grow_horizontal = 2
+theme_override_constants/separation = -28
+
+[node name="Level" type="RichTextLabel" parent="VBoxContainer" unique_id=1540902887]
 layout_mode = 2
-texture = ExtResource("3_tsv7m")
+theme_override_fonts/normal_font = ExtResource("5_tsv7m")
+theme_override_font_sizes/normal_font_size = 96
+bbcode_enabled = true
+text = "[center]Level #[/center]"
+fit_content = true
+autowrap_mode = 0
 
-[node name="Heart2" type="TextureRect" parent="HeartContainer" unique_id=2019043702]
+[node name="Timer" type="RichTextLabel" parent="VBoxContainer" unique_id=813763132]
 layout_mode = 2
-texture = ExtResource("3_tsv7m")
-
-[node name="Heart3" type="TextureRect" parent="HeartContainer" unique_id=920337557]
-layout_mode = 2
-texture = ExtResource("3_tsv7m")
-
-[node name="Heart4" type="TextureRect" parent="HeartContainer" unique_id=37512289]
-layout_mode = 2
-texture = ExtResource("3_tsv7m")
-
-[node name="Heart5" type="TextureRect" parent="HeartContainer" unique_id=2108274219]
-layout_mode = 2
-texture = ExtResource("3_tsv7m")
-
-[node name="Level" type="RichTextLabel" parent="." unique_id=1540902887]
-offset_left = 400.0
-offset_top = 275.0
-offset_right = 550.0
-offset_bottom = 325.0
-theme_override_font_sizes/normal_font_size = 42
-text = "Level #"
-
-[node name="Timer" type="RichTextLabel" parent="." unique_id=813763132]
-offset_left = 437.0
-offset_top = 337.0
-offset_right = 537.0
-offset_bottom = 389.96
-theme_override_font_sizes/normal_font_size = 42
-text = "0.0"
+theme_override_fonts/normal_font = ExtResource("5_tsv7m")
+theme_override_font_sizes/normal_font_size = 80
+bbcode_enabled = true
+text = "[center]0.0[/center]"
+fit_content = true
+scroll_active = false

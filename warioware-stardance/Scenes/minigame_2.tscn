@@ -3,7 +3,6 @@
 [ext_resource type="Script" uid="uid://dk62ajt3d88hi" path="res://Scenes/minigame_2.gd" id="1_rfxq2"]
 [ext_resource type="Texture2D" uid="uid://ca88q0am8iemd" path="res://Art/minigame_2_bg.png" id="2_mmgun"]
 [ext_resource type="Script" uid="uid://ih22ahw8eh1s" path="res://Scenes/star_spot_mg2.gd" id="3_rfxq2"]
-[ext_resource type="Script" uid="uid://dwcefisfi5hec" path="res://Scenes/star_bucket_mg2.gd" id="4_h684j"]
 [ext_resource type="PackedScene" uid="uid://ijvv7plr8526" path="res://Scenes/game_timer.tscn" id="4_mmgun"]
 [ext_resource type="Texture2D" uid="uid://bpxraq8n31v33" path="res://Art/BucketAnimation/frame0000.png" id="4_qhtu5"]
 [ext_resource type="Texture2D" uid="uid://c07g6dd8o7b6p" path="res://Art/star_spot.png" id="5_h684j"]
@@ -64,7 +63,6 @@ texture = ExtResource("2_mmgun")
 [node name="StarBucket" type="Area2D" parent="." unique_id=539341568]
 position = Vector2(-3, 329)
 scale = Vector2(2, 2)
-script = ExtResource("4_h684j")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="StarBucket" unique_id=1254077142]
 position = Vector2(72.5, 56.625)
