@@ -95,7 +95,6 @@ scale = Vector2(0.99999994, 0.99999994)
 
 [node name="AnimatedSprite" type="AnimatedSprite2D" parent="Visuals" unique_id=1764782168]
 position = Vector2(12.500002, 0)
-scale = Vector2(1.0000001, 1.0000001)
 sprite_frames = SubResource("SpriteFrames_36dho")
 animation = &"run"
 

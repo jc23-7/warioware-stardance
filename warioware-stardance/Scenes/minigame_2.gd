@@ -11,15 +11,17 @@ var timer_end = false
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	
-	await game_timer.Timer(20.0)
+	await game_timer.Timer(10.0)
 	timer_end = true
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
 	progress_label.text = str(stars_hung) + "/7"
 	if stars_hung == 7:
+		game_timer.display_time = false
 		await game_timer.Timer(0.5)
-		if Global.minigames_done > 3:
+		game_timer.display_time = true
+		if Global.minigames_done >= Global.total_minigames:
 			Global.change_scene("res://scenes/end_screen.tscn")
 		else:
 			Global.change_scene("res://Scenes/timer_screen.tscn")

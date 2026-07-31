@@ -8,18 +8,16 @@ signal collectable_collected()
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
-	Global.scene_changed.connect(_on_scene_changed)
+	pass
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
-	position.y += 500 * delta
-	position.x += -100 * delta
+	position.y += 250 * delta
+	position.x += -50 * delta
 	
-	if player_area.overlaps_area(self_area) && position.y <= 450 && position.y >= 400:
+	if player_area.overlaps_area(self_area) && position.y <= 225 && position.y >= 200:
 		if self.visible:
 			emit_signal("collectable_collected")
 			queue_free() 
 			
-func _on_scene_changed(next_scene_path: String) -> void:
-	queue_free()

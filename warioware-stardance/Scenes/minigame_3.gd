@@ -17,15 +17,17 @@ func _ready() -> void:
 	for line in line_container.get_children():
 		line.hide()
 	
-	await game_timer.Timer(20.0)
+	await game_timer.Timer(8.0)
 	timer_end = true
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:	
 	progress_label.text = str(lines_drawn) + "/7"
 	if lines_drawn == 7:
+		game_timer.display_time = false
 		await game_timer.Timer(0.5)
-		if Global.minigames_done > 3:
+		game_timer.display_time = true
+		if Global.minigames_done >= Global.total_minigames:
 			Global.change_scene("res://scenes/end_screen.tscn")
 		else:
 			Global.change_scene("res://Scenes/timer_screen.tscn")

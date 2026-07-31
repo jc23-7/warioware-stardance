@@ -7,15 +7,15 @@
 script = ExtResource("1_xyruv")
 
 [node name="VBoxContainer" type="VBoxContainer" parent="." unique_id=232973355]
-offset_left = 15.77
-offset_right = 267.77002
-offset_bottom = 159.365
+offset_left = 9.0
+offset_right = 60.0
+offset_bottom = 69.0
 theme_override_constants/separation = -10
 
 [node name="Progress" type="RichTextLabel" parent="VBoxContainer" unique_id=2119416280]
 layout_mode = 2
 theme_override_fonts/normal_font = ExtResource("2_j2gkn")
-theme_override_font_sizes/normal_font_size = 80
+theme_override_font_sizes/normal_font_size = 48
 bbcode_enabled = true
 text = "0/7"
 fit_content = true
@@ -24,6 +24,6 @@ autowrap_mode = 0
 [node name="Timer" type="RichTextLabel" parent="VBoxContainer" unique_id=1186589225]
 layout_mode = 2
 theme_override_fonts/normal_font = ExtResource("2_j2gkn")
-theme_override_font_sizes/normal_font_size = 50
+theme_override_font_sizes/normal_font_size = 24
 text = "0.0"
 fit_content = true

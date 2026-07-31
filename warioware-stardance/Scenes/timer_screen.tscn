@@ -20,12 +20,19 @@ animations = [{
 "speed": 5.0
 }]
 
-[node name="TimerScreen" type="Node2D" unique_id=1180713129]
+[node name="TimerScreen" type="Control" unique_id=811260457]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
 script = ExtResource("1_f8hj7")
 
 [node name="TextureRect" type="ColorRect" parent="." unique_id=1414122857]
-offset_right = 970.0
-offset_bottom = 546.0
+layout_mode = 0
+offset_right = 480.0
+offset_bottom = 270.0
 color = Color(0.050980393, 0.08627451, 0.15686275, 1)
 
 [node name="HeartContainer" type="Node2D" parent="." unique_id=1369656329]
@@ -33,44 +40,40 @@ script = ExtResource("3_tsv7m")
 
 [node name="Heart1" type="AnimatedSprite2D" parent="HeartContainer" unique_id=883948792]
 position = Vector2(170.99998, 164)
-scale = Vector2(2.3820758, 2.3820758)
 sprite_frames = SubResource("SpriteFrames_cnaam")
 
 [node name="Heart2" type="AnimatedSprite2D" parent="HeartContainer" unique_id=1289521752]
 position = Vector2(329, 160)
-scale = Vector2(2.3820758, 2.3820758)
 sprite_frames = SubResource("SpriteFrames_cnaam")
 
 [node name="Heart3" type="AnimatedSprite2D" parent="HeartContainer" unique_id=1864616879]
 position = Vector2(483, 158)
-scale = Vector2(2.3820758, 2.3820758)
 sprite_frames = SubResource("SpriteFrames_cnaam")
 
 [node name="Heart4" type="AnimatedSprite2D" parent="HeartContainer" unique_id=1819189758]
 position = Vector2(633, 156.99998)
-scale = Vector2(2.3820758, 2.3820758)
 sprite_frames = SubResource("SpriteFrames_cnaam")
 
 [node name="Heart5" type="AnimatedSprite2D" parent="HeartContainer" unique_id=345890441]
 position = Vector2(769.9999, 154.99998)
-scale = Vector2(2.3820758, 2.3820758)
 sprite_frames = SubResource("SpriteFrames_cnaam")
 
 [node name="VBoxContainer" type="VBoxContainer" parent="." unique_id=1936269489]
+layout_mode = 1
 anchors_preset = 5
 anchor_left = 0.5
 anchor_right = 0.5
-offset_left = 354.0
-offset_top = 300.0
-offset_right = 606.0
-offset_bottom = 463.0
+offset_left = -63.0
+offset_top = 125.0
+offset_right = 63.0
+offset_bottom = 201.0
 grow_horizontal = 2
-theme_override_constants/separation = -28
+theme_override_constants/separation = -15
 
 [node name="Level" type="RichTextLabel" parent="VBoxContainer" unique_id=1540902887]
 layout_mode = 2
 theme_override_fonts/normal_font = ExtResource("5_tsv7m")
-theme_override_font_sizes/normal_font_size = 96
+theme_override_font_sizes/normal_font_size = 48
 bbcode_enabled = true
 text = "[center]Level #[/center]"
 fit_content = true
@@ -79,7 +82,7 @@ autowrap_mode = 0
 [node name="Timer" type="RichTextLabel" parent="VBoxContainer" unique_id=813763132]
 layout_mode = 2
 theme_override_fonts/normal_font = ExtResource("5_tsv7m")
-theme_override_font_sizes/normal_font_size = 80
+theme_override_font_sizes/normal_font_size = 36
 bbcode_enabled = true
 text = "[center]0.0[/center]"
 fit_content = true

@@ -3,7 +3,7 @@ extends CharacterBody2D
 @onready var visuals: Node2D = $"Visuals"
 @onready var animated_sprite: AnimatedSprite2D = $"Visuals/AnimatedSprite"
 
-const SPEED = 500.0
+const SPEED = 250.0
 const JUMP_VELOCITY = -500.0
 
 

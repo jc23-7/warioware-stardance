@@ -1,0 +1,122 @@
+[gd_scene format=3 uid="uid://suv3r7ny0dvp"]
+
+[ext_resource type="Script" uid="uid://ljjtnaf1tc0c" path="res://Scenes/end_screen.gd" id="1_1gwaw"]
+[ext_resource type="Theme" uid="uid://be15x84s4leoy" path="res://button_theme.tres" id="1_8yanq"]
+[ext_resource type="Texture2D" uid="uid://c4pikdwsdonrg" path="res://Art/failed_bg.png" id="1_f2mtv"]
+[ext_resource type="Texture2D" uid="uid://dkgqpempp1npl" path="res://Art/success_bg.png" id="3_gdxnu"]
+[ext_resource type="FontFile" uid="uid://bcorxdm3rgr4f" path="res://Art/Jersey_10/Jersey10-Regular.ttf" id="4_gdxnu"]
+
+[node name="EndScreen" type="Control" unique_id=518739561]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("1_8yanq")
+script = ExtResource("1_1gwaw")
+
+[node name="Success" type="Control" parent="." unique_id=451526824]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_right = -480.0
+offset_bottom = -270.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="SuccessBackground" type="TextureRect" parent="Success" unique_id=1577085305]
+layout_mode = 0
+offset_right = 480.0
+offset_bottom = 270.0
+texture = ExtResource("3_gdxnu")
+
+[node name="SuccessButtons" type="VBoxContainer" parent="Success" unique_id=2095789962]
+layout_mode = 0
+offset_left = 22.0
+offset_top = 104.0
+offset_right = 146.35501
+offset_bottom = 198.0
+theme_override_constants/separation = 8
+
+[node name="Home" type="Button" parent="Success/SuccessButtons" unique_id=686420271]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Play Again"
+alignment = 0
+
+[node name="Quit" type="Button" parent="Success/SuccessButtons" unique_id=1027993877]
+layout_mode = 2
+text = "Quit"
+alignment = 0
+
+[node name="SuccessText" type="RichTextLabel" parent="Success" unique_id=968051450]
+layout_mode = 0
+offset_left = 23.0
+offset_top = 13.0
+offset_right = 307.0
+offset_bottom = 121.0
+theme_override_fonts/normal_font = ExtResource("4_gdxnu")
+theme_override_font_sizes/normal_font_size = 100
+text = "STELLAR!"
+fit_content = true
+autowrap_mode = 0
+
+[node name="Fail" type="Control" parent="." unique_id=1720945534]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="FailBackground" type="TextureRect" parent="Fail" unique_id=1695281812]
+layout_mode = 0
+offset_right = 480.0
+offset_bottom = 270.0
+texture = ExtResource("1_f2mtv")
+
+[node name="FailButtons" type="HBoxContainer" parent="Fail" unique_id=913503477]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -161.0
+offset_top = 130.0
+offset_right = 161.0
+offset_bottom = 173.0
+grow_horizontal = 2
+theme_override_constants/separation = 122
+
+[node name="Home" type="Button" parent="Fail/FailButtons" unique_id=502198227]
+custom_minimum_size = Vector2(100, 0)
+layout_mode = 2
+text = "Try Again"
+
+[node name="Quit" type="Button" parent="Fail/FailButtons" unique_id=1841151293]
+custom_minimum_size = Vector2(100, 0)
+layout_mode = 2
+text = "Quit"
+
+[node name="FailText" type="RichTextLabel" parent="Fail" unique_id=1324882456]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -164.5
+offset_top = 50.0
+offset_right = 164.5
+offset_bottom = 132.0
+grow_horizontal = 2
+theme_override_fonts/normal_font = ExtResource("4_gdxnu")
+theme_override_font_sizes/normal_font_size = 75
+text = "Still broken..."
+fit_content = true
+autowrap_mode = 0
+
+[connection signal="pressed" from="Success/SuccessButtons/Home" to="." method="_on_home_pressed"]
+[connection signal="pressed" from="Success/SuccessButtons/Quit" to="." method="_on_quit_pressed"]
+[connection signal="pressed" from="Fail/FailButtons/Home" to="." method="_on_home_pressed"]
+[connection signal="pressed" from="Fail/FailButtons/Quit" to="." method="_on_quit_pressed"]

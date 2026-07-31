@@ -1,7 +1,7 @@
 extends Node2D
 @onready var timer: RichTextLabel = $VBoxContainer/Timer
 
-
+var display_time = true
 var time: float
 
 # Called when the node enters the scene tree for the first time.
@@ -11,7 +11,8 @@ func _ready() -> void:
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
-	timer.text = str(snapped(time, 0.10))
+	if display_time:
+		timer.text = str(snapped(time, 0.10))
 	
 func Timer(start_time: float):
 	

@@ -29,8 +29,10 @@ func _process(delta: float) -> void:
 	progress_label.text = str(num_collected) + "/7"
 	
 	if num_collected >= 7:
+		game_timer.display_time = false
 		await game_timer.Timer(0.5)
-		if Global.minigames_done > 3:
+		game_timer.display_time = true
+		if Global.minigames_done >= Global.total_minigames:
 			Global.change_scene("res://scenes/end_screen.tscn")
 		else:
 			Global.change_scene("res://Scenes/timer_screen.tscn")
@@ -52,11 +54,11 @@ func _spawn_star():
 	
 	add_child(star)
 	star.position.y = -50
-	star.position.x = randf_range(0+50, 940 - 20)
+	star.position.x = randf_range(0+25, 470 - 10)
 
 
 func _on_collectable_collected() -> void:
-	var star = star_container.get_child(num_collected)
-	star.visible = true
-	num_collected += 1
-	return
+	if num_collected < 7:
+		var star = star_container.get_child(num_collected)
+		star.visible = true
+		num_collected += 1

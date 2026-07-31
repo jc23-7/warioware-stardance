@@ -58,11 +58,11 @@ script = ExtResource("1_rfxq2")
 [node name="Background" type="TextureRect" parent="." unique_id=282207502]
 offset_right = 960.0
 offset_bottom = 540.0
+scale = Vector2(0.5, 0.5)
 texture = ExtResource("2_mmgun")
 
 [node name="StarBucket" type="Area2D" parent="." unique_id=539341568]
-position = Vector2(-3, 329)
-scale = Vector2(2, 2)
+position = Vector2(4, 155)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="StarBucket" unique_id=1254077142]
 position = Vector2(72.5, 56.625)
@@ -74,8 +74,7 @@ sprite_frames = SubResource("SpriteFrames_124ma")
 animation = &"emptying"
 
 [node name="StarSpotContainer" type="Node2D" parent="." unique_id=506160566]
-position = Vector2(79, 79)
-scale = Vector2(2, 2)
+position = Vector2(56, 37)
 
 [node name="StarSpot1" type="Area2D" parent="StarSpotContainer" unique_id=72098538]
 position = Vector2(98.5, -7.5)

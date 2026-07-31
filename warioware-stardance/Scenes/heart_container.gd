@@ -3,7 +3,7 @@ extends Node2D
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
-	var x = (get_viewport_rect().size.x - (160 * 4))/2
+	var x = (get_viewport_rect().size.x - (80 * 4))/2
 	for child in get_children():
 		if String(child.name)[-1].to_int() <= Global.lives:
 			child.frame = 0
@@ -12,8 +12,8 @@ func _ready() -> void:
 		
 		child.global_position.y = 0
 		child.global_position.x = x;
-		x += 160
-	global_position.y = 200
+		x += 80
+	global_position.y = 100
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.

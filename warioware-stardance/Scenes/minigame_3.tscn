@@ -21,13 +21,12 @@ size = Vector2(13, 13)
 script = ExtResource("1_6sdpr")
 
 [node name="Background" type="TextureRect" parent="." unique_id=480148605]
-offset_right = 960.0
-offset_bottom = 540.0
+offset_right = 480.0
+offset_bottom = 270.0
 texture = ExtResource("2_lr4ld")
 
 [node name="LineContainer" type="Node2D" parent="." unique_id=1909802036]
-position = Vector2(206, 205)
-scale = Vector2(2, 2)
+position = Vector2(129, 111)
 script = ExtResource("5_lr4ld")
 
 [node name="Line12" type="Sprite2D" parent="LineContainer" unique_id=1604215133]
@@ -66,8 +65,7 @@ scale = Vector2(0.5, 0.5)
 texture = ExtResource("10_o2tgi")
 
 [node name="StarContainer" type="Node2D" parent="." unique_id=2020598025]
-position = Vector2(79, 79)
-scale = Vector2(2, 2)
+position = Vector2(65, 49)
 
 [node name="Star1" type="Area2D" parent="StarContainer" unique_id=1065310081]
 position = Vector2(98.5, -7.5)

@@ -1,4 +1,4 @@
-extends Node2D
+extends Control
 
 @onready var level: RichTextLabel = $VBoxContainer/Level
 @onready var timer: RichTextLabel = $VBoxContainer/Timer
@@ -10,14 +10,14 @@ func _ready() -> void:
 	#level.global_position.x = (get_viewport_rect().size.x - level.size.x)/ 2
 	#timer.global_position.x = (get_viewport_rect().size.x - timer.size.x) / 2
 	#
-	await Timer(3.0)
-	
-	if Global.minigames_done < 3:
+	if Global.lives == 0:
+		Global.change_scene("res://Scenes/end_screen.tscn")
+	else:
+		await Timer(1.0)
+		
 		Global.minigames_done += 1
 		Global.change_scene("res://scenes/minigame_" + str(Global.minigames_done) + ".tscn")
-		
-	else:
-		Global.change_scene("res://Scenes/title_screen.tscn")
+	
 		
 	
 

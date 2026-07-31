@@ -15,11 +15,12 @@ size = Vector2(434.4003, 733.39)
 script = ExtResource("1_5txvl")
 
 [node name="Background" type="TextureRect" parent="." unique_id=221362285]
-offset_right = 960.0
-offset_bottom = 540.0
+offset_right = 480.0
+offset_bottom = 270.0
 texture = ExtResource("2_o6yob")
 
 [node name="Platform1" type="StaticBody2D" parent="." unique_id=201553025]
+position = Vector2(-58, -251)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Platform1" unique_id=1661647770]
 position = Vector2(479.75, 678.41626)
@@ -30,7 +31,7 @@ position = Vector2(-39.000004, 3)
 scale = Vector2(0.042028412, 0.4595099)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="LeftWall" unique_id=837770077]
-position = Vector2(686.9502, 845.46643)
+position = Vector2(690.0095, 544.05786)
 scale = Vector2(1.0000005, 1.0000005)
 shape = SubResource("RectangleShape2D_5txvl")
 
@@ -39,11 +40,12 @@ position = Vector2(-39.000004, 3)
 scale = Vector2(0.042028412, 0.4595099)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="RightWall" unique_id=278801997]
-position = Vector2(24007.566, 818.263)
+position = Vector2(12562.931, 406.95532)
 scale = Vector2(1.0000005, 1.0000005)
 shape = SubResource("RectangleShape2D_5txvl")
 
 [node name="Player" parent="." unique_id=515594243 instance=ExtResource("2_11mgy")]
-position = Vector2(103, 394)
+position = Vector2(68, 195)
+scale = Vector2(1, 1)
 
 [node name="GameTimer" parent="." unique_id=1669112296 instance=ExtResource("6_0uv5o")]
