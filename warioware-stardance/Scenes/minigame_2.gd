@@ -25,10 +25,18 @@ func _process(delta: float) -> void:
 			Global.change_scene("res://scenes/end_screen.tscn")
 		else:
 			Global.change_scene("res://Scenes/timer_screen.tscn")
+		
+		
 			
 	if timer_end:
-		Global.lives -= 1
+		timer_end = false
+
+		game_timer.timer.add_theme_color_override("default_color", Color.RED)
+		
+		GlobalAudio.stop_all()
+		await GlobalAudio.time_up()
 		Global.minigames_done -= 1
+		Global.lives -= 1
 		Global.change_scene("res://Scenes/timer_screen.tscn")
 
 

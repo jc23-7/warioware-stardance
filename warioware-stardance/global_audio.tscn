@@ -5,6 +5,8 @@
 [ext_resource type="AudioStream" uid="uid://dguocdk3vm5t0" path="res://Sounds/collect_star.mp3" id="3_iit21"]
 [ext_resource type="AudioStream" uid="uid://b25srqj8e8eca" path="res://Sounds/shine.mp3" id="4_5fn60"]
 [ext_resource type="AudioStream" uid="uid://dt1bd2xrfqdr6" path="res://Sounds/ding.mp3" id="5_jshp8"]
+[ext_resource type="AudioStream" uid="uid://cn6kf84y8hpal" path="res://Sounds/timer.mp3" id="6_7kqtl"]
+[ext_resource type="AudioStream" uid="uid://dqybs7hqa14js" path="res://Sounds/timer_end.mp3" id="7_0hgv5"]
 
 [sub_resource type="AudioStreamRandomizer" id="AudioStreamRandomizer_jshp8"]
 random_pitch = 1.0293022
@@ -42,3 +44,7 @@ stream = SubResource("AudioStreamRandomizer_0hgv5")
 volume_db = -5.0
 
 [node name="Timer" type="AudioStreamPlayer2D" parent="." unique_id=1342791227]
+stream = ExtResource("6_7kqtl")
+
+[node name="TimeUp" type="AudioStreamPlayer2D" parent="." unique_id=1433792151]
+stream = ExtResource("7_0hgv5")
