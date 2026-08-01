@@ -62,3 +62,5 @@ func _on_collectable_collected() -> void:
 		var star = star_container.get_child(num_collected)
 		star.visible = true
 		num_collected += 1
+		
+		GlobalAudio.collect_star()

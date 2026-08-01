@@ -34,6 +34,8 @@ func _on_star_clicked(star_id: int) -> void:
 		if not line == null and not line.visible:
 			minigame_3.lines_drawn += 1
 			line.show()
+			
+			GlobalAudio.ding()
 		state = 0
 		line_start = -1
 		queue_redraw()

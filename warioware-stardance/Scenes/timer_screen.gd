@@ -29,10 +29,13 @@ func _process(delta: float) -> void:
 
 func Timer(start_time: float):
 	time = start_time
+	GlobalAudio.start_timer()
 	
 	while time > 0.0:
 		await wait(0.1)
 		time -= 0.1
+	
+	GlobalAudio.stop_timer()
 	return
 
 func wait(seconds: float) -> void:

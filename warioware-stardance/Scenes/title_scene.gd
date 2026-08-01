@@ -11,12 +11,15 @@ func _process(delta: float) -> void:
 	pass
 
 func _on_start_pressed() -> void:
+	GlobalAudio.button_pressed()
 	get_tree().change_scene_to_file("res://Scenes/timer_screen.tscn")
 
 
 func _on_tutorial_pressed() -> void:
+	GlobalAudio.button_pressed()
 	get_tree().change_scene_to_file("res://Scenes/tutorial.tscn")
 
 
 func _on_quit_pressed() -> void:
+	GlobalAudio.button_pressed()
 	get_tree().quit()

@@ -21,8 +21,10 @@ func _process(delta: float) -> void:
 
 
 func _on_home_pressed() -> void:
+	GlobalAudio.button_pressed()
 	Global.change_scene("res://Scenes/title_scene.tscn")
 
 
 func _on_quit_pressed() -> void:
+	GlobalAudio.button_pressed()
 	get_tree().quit()
