@@ -7,6 +7,7 @@
 [ext_resource type="AudioStream" uid="uid://dt1bd2xrfqdr6" path="res://Sounds/ding.mp3" id="5_jshp8"]
 [ext_resource type="AudioStream" uid="uid://cn6kf84y8hpal" path="res://Sounds/timer.mp3" id="6_7kqtl"]
 [ext_resource type="AudioStream" uid="uid://dqybs7hqa14js" path="res://Sounds/timer_end.mp3" id="7_0hgv5"]
+[ext_resource type="AudioStream" uid="uid://15yf1swdm6ce" path="res://Sounds/A Chair - Starspotting.mp3" id="8_br45l"]
 
 [sub_resource type="AudioStreamRandomizer" id="AudioStreamRandomizer_jshp8"]
 random_pitch = 1.0293022
@@ -48,3 +49,6 @@ stream = ExtResource("6_7kqtl")
 
 [node name="TimeUp" type="AudioStreamPlayer2D" parent="." unique_id=1433792151]
 stream = ExtResource("7_0hgv5")
+
+[node name="BGM" type="AudioStreamPlayer2D" parent="." unique_id=721609921]
+stream = ExtResource("8_br45l")

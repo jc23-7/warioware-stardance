@@ -65,10 +65,9 @@ scale = Vector2(0.5, 0.5)
 texture = ExtResource("10_o2tgi")
 
 [node name="StarContainer" type="Node2D" parent="." unique_id=2020598025]
-position = Vector2(65, 49)
 
 [node name="Star1" type="Area2D" parent="StarContainer" unique_id=1065310081]
-position = Vector2(98.5, -7.5)
+position = Vector2(164, 40)
 script = ExtResource("3_6sdpr")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="StarContainer/Star1" unique_id=2105815602]
@@ -78,7 +77,7 @@ shape = SubResource("RectangleShape2D_lpvao")
 texture = ExtResource("4_y6mal")
 
 [node name="Star2" type="Area2D" parent="StarContainer" unique_id=1624362748]
-position = Vector2(157.5, 4)
+position = Vector2(223, 51.5)
 script = ExtResource("3_6sdpr")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="StarContainer/Star2" unique_id=1887321649]
@@ -88,7 +87,7 @@ shape = SubResource("RectangleShape2D_lpvao")
 texture = ExtResource("4_y6mal")
 
 [node name="Star3" type="Area2D" parent="StarContainer" unique_id=979859773]
-position = Vector2(181.5, 37)
+position = Vector2(247, 84.5)
 script = ExtResource("3_6sdpr")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="StarContainer/Star3" unique_id=1133580749]
@@ -98,7 +97,7 @@ shape = SubResource("RectangleShape2D_lpvao")
 texture = ExtResource("4_y6mal")
 
 [node name="Star4" type="Area2D" parent="StarContainer" unique_id=1769152207]
-position = Vector2(212.5, 67.5)
+position = Vector2(278, 115)
 script = ExtResource("3_6sdpr")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="StarContainer/Star4" unique_id=824911276]
@@ -108,7 +107,7 @@ shape = SubResource("RectangleShape2D_lpvao")
 texture = ExtResource("4_y6mal")
 
 [node name="Star5" type="Area2D" parent="StarContainer" unique_id=1957788324]
-position = Vector2(207.5, 107)
+position = Vector2(273, 154.5)
 script = ExtResource("3_6sdpr")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="StarContainer/Star5" unique_id=1553159044]
@@ -118,7 +117,7 @@ shape = SubResource("RectangleShape2D_lpvao")
 texture = ExtResource("4_y6mal")
 
 [node name="Star6" type="Area2D" parent="StarContainer" unique_id=1220091002]
-position = Vector2(269.5, 134.5)
+position = Vector2(335, 182)
 script = ExtResource("3_6sdpr")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="StarContainer/Star6" unique_id=334663009]
@@ -128,7 +127,7 @@ shape = SubResource("RectangleShape2D_lpvao")
 texture = ExtResource("4_y6mal")
 
 [node name="Star7" type="Area2D" parent="StarContainer" unique_id=625415944]
-position = Vector2(296, 96.5)
+position = Vector2(361.5, 144)
 script = ExtResource("3_6sdpr")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="StarContainer/Star7" unique_id=1034273661]

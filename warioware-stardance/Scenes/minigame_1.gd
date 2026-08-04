@@ -44,7 +44,7 @@ func _process(delta: float) -> void:
 
 		game_timer.timer.add_theme_color_override("default_color", Color.RED)
 		
-		GlobalAudio.stop_all()
+		GlobalAudio.stop_timer()
 		await GlobalAudio.time_up()
 		Global.minigames_done -= 1
 		Global.lives -= 1

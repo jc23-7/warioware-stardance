@@ -2,6 +2,7 @@ extends Node
 
 signal scene_changed(new_scene_path)
 signal star_spot_clicked(x:float, y:float)
+signal bucket_clicked
 signal star_clicked (star: int)
 var minigames_done = 0
 var total_minigames = 3

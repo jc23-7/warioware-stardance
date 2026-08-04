@@ -13,7 +13,7 @@ func _ready() -> void:
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
 	if state == 1:
-		if not Input.is_mouse_button_pressed(MOUSE_BUTTON_LEFT):
+		if not Input.is_mouse_button_pressed(MOUSE_BUTTON_LEFT) and not minigame_3.tutorial:
 			state = 0
 			line_start = -1
 		queue_redraw()

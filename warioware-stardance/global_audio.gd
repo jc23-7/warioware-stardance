@@ -1,15 +1,25 @@
 extends Node
 
 var fade_tween: Tween
+var bgm_fade: Tween
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
-	pass # Replace with function body.
+	reset_bgm()
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
-	pass
+	if not $BGM.playing:
+		reset_bgm()
+		
+func reset_bgm() -> void:
+	if bgm_fade and bgm_fade.is_valid():
+		bgm_fade.kill()
+	$BGM.volume_db = -50
+	$BGM.play()
+	bgm_fade = create_tween()
+	bgm_fade.tween_property($BGM, "volume_db", -10, 10.0)
 
 func button_pressed() -> void:
 	$ButtonClick.play()
@@ -41,6 +51,3 @@ func time_up() -> void:
 	$TimeUp.play()
 	await $TimeUp.finished
 	
-func stop_all() -> void:
-	for child in get_children():
-		child.stop()

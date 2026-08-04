@@ -1,5 +1,6 @@
 extends Node2D
 
+@onready var tutorial = false
 @onready var game_timer: Node2D = $GameTimer
 @onready var line_container: Node2D = $LineContainer
 @onready var progress_label: RichTextLabel = $GameTimer/VBoxContainer/Progress
@@ -39,7 +40,7 @@ func _process(delta: float) -> void:
 
 		game_timer.timer.add_theme_color_override("default_color", Color.RED)
 		
-		GlobalAudio.stop_all()
+		GlobalAudio.stop_timer()
 		await GlobalAudio.time_up()
 		Global.minigames_done -= 1
 		Global.lives -= 1

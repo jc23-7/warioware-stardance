@@ -17,7 +17,7 @@ func _on_start_pressed() -> void:
 
 func _on_tutorial_pressed() -> void:
 	GlobalAudio.button_pressed()
-	get_tree().change_scene_to_file("res://Scenes/tutorial.tscn")
+	get_tree().change_scene_to_file("res://Scenes/tutorial_screen.tscn")
 
 
 func _on_quit_pressed() -> void:
