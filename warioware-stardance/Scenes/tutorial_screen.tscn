@@ -4,6 +4,8 @@
 [ext_resource type="PackedScene" uid="uid://br7q75ujhygk1" path="res://Scenes/minigame_1.tscn" id="2_cd03v"]
 [ext_resource type="PackedScene" uid="uid://bc2hawj4d8xlo" path="res://Scenes/minigame_2.tscn" id="3_elo14"]
 [ext_resource type="PackedScene" uid="uid://dnntinscrn4jt" path="res://Scenes/minigame_3.tscn" id="4_vscmb"]
+[ext_resource type="Texture2D" uid="uid://c1nfmcwhhdwa1" path="res://Art/tutorial.png" id="5_vscmb"]
+[ext_resource type="FontFile" uid="uid://bcorxdm3rgr4f" path="res://Art/Jersey_10/Jersey10-Regular.ttf" id="6_gf6pl"]
 
 [sub_resource type="Animation" id="Animation_elo14"]
 length = 0.001
@@ -149,6 +151,18 @@ minigame1_scene = ExtResource("2_cd03v")
 minigame2_scene = ExtResource("3_elo14")
 minigame3_scene = ExtResource("4_vscmb")
 
+[node name="Blur" type="ColorRect" parent="." unique_id=1038222740]
+layout_mode = 0
+offset_right = 480.0
+offset_bottom = 270.0
+color = Color(1, 1, 1, 0.6862745)
+
+[node name="Background" type="TextureRect" parent="." unique_id=415293727]
+layout_mode = 0
+offset_right = 480.0
+offset_bottom = 270.0
+texture = ExtResource("5_vscmb")
+
 [node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=1510735729]
 libraries/ = SubResource("AnimationLibrary_cd03v")
 autoplay = &"minigame_1_animation"
@@ -163,31 +177,119 @@ size = Vector2i(480, 270)
 [node name="Minigame3Viewport" type="SubViewport" parent="." unique_id=1443549901]
 size = Vector2i(480, 270)
 
-[node name="HBoxContainer" type="HBoxContainer" parent="." unique_id=108690135]
+[node name="VBoxContainer" type="VBoxContainer" parent="." unique_id=1751896096]
 layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -169.525
+offset_top = 56.59
+offset_right = 169.525
+offset_bottom = 224.785
 grow_horizontal = 2
-grow_vertical = 2
+theme_override_constants/separation = 0
 
-[node name="Minigame1Rect" type="TextureRect" parent="HBoxContainer" unique_id=120918752]
+[node name="HBoxContainer3" type="HBoxContainer" parent="VBoxContainer" unique_id=1517343539]
+layout_mode = 2
+size_flags_vertical = 3
+size_flags_stretch_ratio = 0.2
+theme_override_constants/separation = 20
+
+[node name="RichTextLabel" type="RichTextLabel" parent="VBoxContainer/HBoxContainer3" unique_id=2047087901]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_colors/default_color = Color(0, 0, 0, 1)
+theme_override_fonts/normal_font = ExtResource("6_gf6pl")
+theme_override_fonts/bold_font = ExtResource("6_gf6pl")
+text = "Minigame 1"
+horizontal_alignment = 1
+
+[node name="RichTextLabel2" type="RichTextLabel" parent="VBoxContainer/HBoxContainer3" unique_id=375321926]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_colors/default_color = Color(0, 0, 0, 1)
+theme_override_fonts/normal_font = ExtResource("6_gf6pl")
+theme_override_fonts/bold_font = ExtResource("6_gf6pl")
+text = "Minigame 2"
+horizontal_alignment = 1
+
+[node name="RichTextLabel3" type="RichTextLabel" parent="VBoxContainer/HBoxContainer3" unique_id=1378887616]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_colors/default_color = Color(0, 0, 0, 1)
+theme_override_fonts/normal_font = ExtResource("6_gf6pl")
+theme_override_fonts/bold_font = ExtResource("6_gf6pl")
+text = "Minigame 3"
+horizontal_alignment = 1
+
+[node name="HBoxContainer4" type="HBoxContainer" parent="VBoxContainer" unique_id=1549506770]
+layout_mode = 2
+size_flags_vertical = 3
+size_flags_stretch_ratio = 0.6
+theme_override_constants/separation = 20
+
+[node name="RichTextLabel" type="RichTextLabel" parent="VBoxContainer/HBoxContainer4" unique_id=1254473340]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_colors/default_color = Color(0, 0, 0, 1)
+theme_override_fonts/normal_font = ExtResource("6_gf6pl")
+theme_override_fonts/bold_font = ExtResource("6_gf6pl")
+theme_override_font_sizes/normal_font_size = 10
+text = "Collect stars. Use the arrow key to move the player so they may catch the stars in their bucket."
+horizontal_alignment = 1
+
+[node name="RichTextLabel2" type="RichTextLabel" parent="VBoxContainer/HBoxContainer4" unique_id=205114479]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_colors/default_color = Color(0, 0, 0, 1)
+theme_override_fonts/normal_font = ExtResource("6_gf6pl")
+theme_override_fonts/bold_font = ExtResource("6_gf6pl")
+theme_override_font_sizes/normal_font_size = 10
+text = "Pin up the stars. Click on the bucket to pick up a star, and then click on the appropriate spot in the sky to pin it up."
+horizontal_alignment = 1
+
+[node name="RichTextLabel3" type="RichTextLabel" parent="VBoxContainer/HBoxContainer4" unique_id=489653173]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_colors/default_color = Color(0, 0, 0, 1)
+theme_override_fonts/normal_font = ExtResource("6_gf6pl")
+theme_override_fonts/bold_font = ExtResource("6_gf6pl")
+theme_override_font_sizes/normal_font_size = 10
+text = "Connect the draws. Click a star and hold down the left mouse button, dragging it to the next star to connect them."
+horizontal_alignment = 1
+
+[node name="HBoxContainer" type="HBoxContainer" parent="VBoxContainer" unique_id=108690135]
+layout_mode = 2
+size_flags_vertical = 3
+size_flags_stretch_ratio = 0.4
+theme_override_constants/separation = 20
+
+[node name="Minigame1Rect" type="TextureRect" parent="VBoxContainer/HBoxContainer" unique_id=120918752]
 texture_filter = 1
 layout_mode = 2
 size_flags_horizontal = 3
 texture = SubResource("ViewportTexture_b7hhi")
 expand_mode = 1
+stretch_mode = 5
 
-[node name="Minigame2Rect" type="TextureRect" parent="HBoxContainer" unique_id=296168286]
+[node name="Minigame2Rect" type="TextureRect" parent="VBoxContainer/HBoxContainer" unique_id=296168286]
 texture_filter = 1
 layout_mode = 2
 size_flags_horizontal = 3
 texture = SubResource("ViewportTexture_cd03v")
 expand_mode = 1
+stretch_mode = 5
 
-[node name="Minigame3Rect" type="TextureRect" parent="HBoxContainer" unique_id=920617089]
+[node name="Minigame3Rect" type="TextureRect" parent="VBoxContainer/HBoxContainer" unique_id=920617089]
 texture_filter = 1
 layout_mode = 2
 size_flags_horizontal = 3
 texture = SubResource("ViewportTexture_elo14")
-expand_mode = 2
+expand_mode = 1
+stretch_mode = 5

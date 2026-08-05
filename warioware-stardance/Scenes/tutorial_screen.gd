@@ -14,7 +14,9 @@ extends Control
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
-	pass
+	GlobalAudio.tutorial = true
+	
+	$VBoxContainer.global_position.x = get_viewport_rect().size.x / 2 - $VBoxContainer.size.x / 2
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
@@ -70,5 +72,6 @@ func click_star(star_id: int) -> void:
 	Global.star_clicked.emit(star_id)
 
 func _exit_tree() -> void:
+	GlobalAudio.tutorial = false
 	Input.action_release("ui_left")
 	Input.action_release("ui_right")
