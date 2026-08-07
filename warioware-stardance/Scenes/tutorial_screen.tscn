@@ -186,10 +186,10 @@ layout_mode = 1
 anchors_preset = 5
 anchor_left = 0.5
 anchor_right = 0.5
-offset_left = -169.525
-offset_top = 56.59
-offset_right = 169.525
-offset_bottom = 224.785
+offset_left = -170.0
+offset_top = 57.0
+offset_right = 169.0
+offset_bottom = 225.0
 grow_horizontal = 2
 theme_override_constants/separation = 0
 
@@ -243,7 +243,7 @@ theme_override_colors/default_color = Color(0, 0, 0, 1)
 theme_override_fonts/normal_font = ExtResource("6_gf6pl")
 theme_override_fonts/bold_font = ExtResource("6_gf6pl")
 theme_override_font_sizes/normal_font_size = 10
-text = "Collect stars. Use the arrow key to move the player so they may catch the stars in their bucket."
+text = "Catch the stars. Use the arrow keys to move the player so they may catch the stars in their bucket."
 horizontal_alignment = 1
 
 [node name="RichTextLabel2" type="RichTextLabel" parent="VBoxContainer/HBoxContainer4" unique_id=205114479]
@@ -265,7 +265,7 @@ theme_override_colors/default_color = Color(0, 0, 0, 1)
 theme_override_fonts/normal_font = ExtResource("6_gf6pl")
 theme_override_fonts/bold_font = ExtResource("6_gf6pl")
 theme_override_font_sizes/normal_font_size = 10
-text = "Connect the draws. Click a star and hold down the left mouse button, dragging it to the next star to connect them."
+text = "Connect the stars. Click a star and hold down the left mouse button, dragging it to the next star to connect them."
 horizontal_alignment = 1
 
 [node name="HBoxContainer" type="HBoxContainer" parent="VBoxContainer" unique_id=108690135]
