@@ -5,9 +5,11 @@ extends Node2D
 
 var num_collected = 0
 var timer_end = false
+var game_ended = false
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:		
+	print("game_started")
 	for i in range(7):
 		var child = star_container.get_child(i)
 		child.visible = false
@@ -19,7 +21,7 @@ func _ready() -> void:
 	add_child(star_timer)
 	star_timer.timeout.connect(_spawn_star)
 
-	await game_timer.Timer(10.0)
+	await game_timer.Timer(8.0)
 	timer_end = true
 	
 
@@ -28,19 +30,18 @@ func _ready() -> void:
 func _process(delta: float) -> void:
 	progress_label.text = str(num_collected) + "/7"
 	
-	if num_collected >= 7:
+	if num_collected >= 7 and not game_ended:
 		game_timer.display_time = false
 		await game_timer.Timer(0.5)
 		game_timer.display_time = true
 		if Global.minigames_done >= Global.total_minigames:
-			Global.change_scene("res://scenes/end_screen.tscn")
+			Global.change_scene("res://Scenes/end_screen.tscn")
 		else:
 			Global.change_scene("res://Scenes/timer_screen.tscn")
-		
-		
-			
-	if timer_end:
+
+	elif timer_end:
 		timer_end = false
+		game_ended = true
 
 		game_timer.timer.add_theme_color_override("default_color", Color.RED)
 		
@@ -64,7 +65,7 @@ func _spawn_star():
 
 
 func _on_collectable_collected() -> void:
-	if num_collected < 7:
+	if num_collected < 7 and not game_ended:
 		var star = star_container.get_child(num_collected)
 		star.visible = true
 		num_collected += 1

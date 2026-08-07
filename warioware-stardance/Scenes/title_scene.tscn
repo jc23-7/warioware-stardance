@@ -2,8 +2,7 @@
 
 [ext_resource type="Theme" uid="uid://be15x84s4leoy" path="res://button_theme.tres" id="1_4nugt"]
 [ext_resource type="Script" uid="uid://c1vya0n2y4wc4" path="res://Scenes/title_scene.gd" id="1_b6ftn"]
-[ext_resource type="Texture2D" uid="uid://dkgqpempp1npl" path="res://Art/success_bg.png" id="2_3cm6q"]
-[ext_resource type="FontFile" uid="uid://bcorxdm3rgr4f" path="res://Art/Jersey_10/Jersey10-Regular.ttf" id="3_4nugt"]
+[ext_resource type="Texture2D" uid="uid://debccx5bpy647" path="res://Art/title_bg.png" id="3_3cm6q"]
 
 [node name="TitleScreen" type="Control" unique_id=346954644]
 layout_mode = 3
@@ -15,7 +14,8 @@ script = ExtResource("1_b6ftn")
 layout_mode = 0
 offset_right = 480.0
 offset_bottom = 270.0
-texture = ExtResource("2_3cm6q")
+mouse_filter = 2
+texture = ExtResource("3_3cm6q")
 
 [node name="VBoxContainer" type="VBoxContainer" parent="." unique_id=2029640105]
 layout_mode = 0
@@ -23,6 +23,7 @@ offset_left = 55.0
 offset_top = 85.0
 offset_right = 163.455
 offset_bottom = 222.0
+mouse_filter = 2
 
 [node name="Start" type="Button" parent="VBoxContainer" unique_id=616841783]
 layout_mode = 2
@@ -35,22 +36,6 @@ text = "Tutorial"
 [node name="Quit" type="Button" parent="VBoxContainer" unique_id=83450563]
 layout_mode = 2
 text = "Quit"
-
-[node name="SuccessText" type="RichTextLabel" parent="." unique_id=2051374972]
-layout_mode = 1
-anchors_preset = 5
-anchor_left = 0.5
-anchor_right = 0.5
-offset_left = 26.0
-offset_top = 27.0
-offset_right = 315.0
-offset_bottom = 82.0
-grow_horizontal = 2
-theme_override_fonts/normal_font = ExtResource("3_4nugt")
-theme_override_font_sizes/normal_font_size = 50
-text = "Starry Scramble"
-fit_content = true
-autowrap_mode = 0
 
 [connection signal="pressed" from="VBoxContainer/Start" to="." method="_on_start_pressed"]
 [connection signal="pressed" from="VBoxContainer/Tutorial" to="." method="_on_tutorial_pressed"]

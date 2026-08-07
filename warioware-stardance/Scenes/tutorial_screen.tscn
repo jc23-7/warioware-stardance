@@ -6,6 +6,9 @@
 [ext_resource type="PackedScene" uid="uid://dnntinscrn4jt" path="res://Scenes/minigame_3.tscn" id="4_vscmb"]
 [ext_resource type="Texture2D" uid="uid://c1nfmcwhhdwa1" path="res://Art/tutorial.png" id="5_vscmb"]
 [ext_resource type="FontFile" uid="uid://bcorxdm3rgr4f" path="res://Art/Jersey_10/Jersey10-Regular.ttf" id="6_gf6pl"]
+[ext_resource type="Texture2D" uid="uid://cw8xpx0bnogbf" path="res://Art/Exit/Hover.png" id="7_knip7"]
+[ext_resource type="Texture2D" uid="uid://bjmbge8oqsn1p" path="res://Art/Exit/Pressed.png" id="8_mcwbk"]
+[ext_resource type="Texture2D" uid="uid://ci6wfhevai4sa" path="res://Art/Exit/Normal.png" id="9_00ygr"]
 
 [sub_resource type="Animation" id="Animation_elo14"]
 length = 0.001
@@ -140,6 +143,7 @@ viewport_path = NodePath("Minigame2Viewport")
 viewport_path = NodePath("Minigame3Viewport")
 
 [node name="TutorialScreen" type="Control" unique_id=324021244]
+z_index = 2
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
@@ -155,7 +159,7 @@ minigame3_scene = ExtResource("4_vscmb")
 layout_mode = 0
 offset_right = 480.0
 offset_bottom = 270.0
-color = Color(1, 1, 1, 0.6862745)
+color = Color(0, 0, 0, 0.5882353)
 
 [node name="Background" type="TextureRect" parent="." unique_id=415293727]
 layout_mode = 0
@@ -293,3 +297,16 @@ size_flags_horizontal = 3
 texture = SubResource("ViewportTexture_elo14")
 expand_mode = 1
 stretch_mode = 5
+
+[node name="TextureButton" type="TextureButton" parent="." unique_id=1820159544]
+layout_mode = 0
+offset_left = 435.0
+offset_top = 19.0
+offset_right = 451.0
+offset_bottom = 35.0
+texture_normal = ExtResource("9_00ygr")
+texture_pressed = ExtResource("8_mcwbk")
+texture_hover = ExtResource("7_knip7")
+stretch_mode = 0
+
+[connection signal="pressed" from="TextureButton" to="." method="_exit_tree"]

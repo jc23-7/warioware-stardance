@@ -8,6 +8,8 @@
 [ext_resource type="AudioStream" uid="uid://cn6kf84y8hpal" path="res://Sounds/timer.mp3" id="6_7kqtl"]
 [ext_resource type="AudioStream" uid="uid://dqybs7hqa14js" path="res://Sounds/timer_end.mp3" id="7_0hgv5"]
 [ext_resource type="AudioStream" uid="uid://15yf1swdm6ce" path="res://Sounds/A Chair - Starspotting.mp3" id="8_br45l"]
+[ext_resource type="Texture2D" uid="uid://bqurb5i8xm1kw" path="res://Art/Buttons/AudioOn.png" id="9_v8kjx"]
+[ext_resource type="Texture2D" uid="uid://dpna17pha0jhl" path="res://Art/Buttons/AudioOff.png" id="10_7vvee"]
 
 [sub_resource type="AudioStreamRandomizer" id="AudioStreamRandomizer_jshp8"]
 random_pitch = 1.0293022
@@ -24,7 +26,25 @@ random_pitch = 1.0293022
 streams_count = 1
 stream_0/stream = ExtResource("5_jshp8")
 
-[node name="GlobalAudio" type="Node" unique_id=1146784167]
+[sub_resource type="SpriteFrames" id="SpriteFrames_n5v6e"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("9_v8kjx")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_7vvee")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_nssk2"]
+size = Vector2(25, 20)
+
+[node name="GlobalAudio" type="Node2D" unique_id=639536717]
+z_index = 1
 script = ExtResource("1_tn11u")
 
 [node name="ButtonClick" type="AudioStreamPlayer2D" parent="." unique_id=2065098220]
@@ -52,3 +72,18 @@ stream = ExtResource("7_0hgv5")
 
 [node name="BGM" type="AudioStreamPlayer2D" parent="." unique_id=721609921]
 stream = ExtResource("8_br45l")
+
+[node name="MuteButton" type="Node2D" parent="." unique_id=1857737185]
+position = Vector2(458, 17)
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="MuteButton" unique_id=2099780936]
+position = Vector2(1, 0)
+sprite_frames = SubResource("SpriteFrames_n5v6e")
+
+[node name="Area2D" type="Area2D" parent="MuteButton" unique_id=996790248]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="MuteButton/Area2D" unique_id=299381721]
+position = Vector2(0.5, 0)
+shape = SubResource("RectangleShape2D_nssk2")
+
+[connection signal="input_event" from="MuteButton/Area2D" to="." method="_button_clicked"]

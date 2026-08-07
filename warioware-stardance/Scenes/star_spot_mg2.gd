@@ -20,5 +20,5 @@ func _on_input_event(viewport: Node, event: InputEvent, shape_idx: int) -> void:
 			Global.star_spot_clicked.emit(global_position.x, global_position.y)
 
 func _on_star_spot_clicked(x: float, y:float) -> void:
-	if global_position.x == x and global_position.y == y:
+	if global_position.x == x and global_position.y == y and not minigame_2.game_ended:
 		hide()

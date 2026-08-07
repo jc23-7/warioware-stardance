@@ -14,7 +14,7 @@ func _process(delta: float) -> void:
 		global_position = get_global_mouse_position()
 
 func _on_star_spot_clicked(x:float, y:float):
-	if state == 1:
+	if state == 1 and not minigame_2.game_ended:
 		state = 2
 		global_position = Vector2(x, y)
 		minigame_2.stars_hung += 1

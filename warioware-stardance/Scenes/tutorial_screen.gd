@@ -73,5 +73,7 @@ func click_star(star_id: int) -> void:
 
 func _exit_tree() -> void:
 	GlobalAudio.tutorial = false
+	GlobalAudio.button_pressed()
 	Input.action_release("ui_left")
 	Input.action_release("ui_right")
+	queue_free()
