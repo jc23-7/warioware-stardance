@@ -17,8 +17,8 @@ config/icon="res://icon.svg"
 
 [autoload]
 
-Global="*uid://s8pk7c33cdyt"
 GlobalAudio="*uid://co63faxc04ury"
+Global="*uid://sg2yrdr1ky5d"
 
 [display]
 

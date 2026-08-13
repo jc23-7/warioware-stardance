@@ -1,0 +1,89 @@
+[gd_scene format=3 uid="uid://co63faxc04ury"]
+
+[ext_resource type="Script" uid="uid://qdd5tjxc1g8s" path="res://Globals/global_audio.gd" id="1_tn11u"]
+[ext_resource type="AudioStream" uid="uid://bof4q0847tcb7" path="res://Sounds/button_click.mp3" id="2_iit21"]
+[ext_resource type="AudioStream" uid="uid://dguocdk3vm5t0" path="res://Sounds/collect_star.mp3" id="3_iit21"]
+[ext_resource type="AudioStream" uid="uid://b25srqj8e8eca" path="res://Sounds/shine.mp3" id="4_5fn60"]
+[ext_resource type="AudioStream" uid="uid://dt1bd2xrfqdr6" path="res://Sounds/ding.mp3" id="5_jshp8"]
+[ext_resource type="AudioStream" uid="uid://cn6kf84y8hpal" path="res://Sounds/timer.mp3" id="6_7kqtl"]
+[ext_resource type="AudioStream" uid="uid://dqybs7hqa14js" path="res://Sounds/timer_end.mp3" id="7_0hgv5"]
+[ext_resource type="AudioStream" uid="uid://15yf1swdm6ce" path="res://Sounds/A Chair - Starspotting.mp3" id="8_br45l"]
+[ext_resource type="Texture2D" uid="uid://bqurb5i8xm1kw" path="res://Art/Buttons/AudioOn.png" id="9_v8kjx"]
+[ext_resource type="Texture2D" uid="uid://dpna17pha0jhl" path="res://Art/Buttons/AudioOff.png" id="10_7vvee"]
+
+[sub_resource type="AudioStreamRandomizer" id="AudioStreamRandomizer_jshp8"]
+random_pitch = 1.0293022
+streams_count = 1
+stream_0/stream = ExtResource("3_iit21")
+
+[sub_resource type="AudioStreamRandomizer" id="AudioStreamRandomizer_7kqtl"]
+random_pitch = 1.0293022
+streams_count = 1
+stream_0/stream = ExtResource("4_5fn60")
+
+[sub_resource type="AudioStreamRandomizer" id="AudioStreamRandomizer_0hgv5"]
+random_pitch = 1.0293022
+streams_count = 1
+stream_0/stream = ExtResource("5_jshp8")
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_n5v6e"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("9_v8kjx")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_7vvee")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_nssk2"]
+size = Vector2(25, 20)
+
+[node name="GlobalAudio" type="Node2D" unique_id=639536717]
+z_index = 1
+script = ExtResource("1_tn11u")
+
+[node name="ButtonClick" type="AudioStreamPlayer2D" parent="." unique_id=2065098220]
+stream = ExtResource("2_iit21")
+volume_db = -5.0
+
+[node name="CollectStar" type="AudioStreamPlayer2D" parent="." unique_id=1611979067]
+stream = SubResource("AudioStreamRandomizer_jshp8")
+volume_db = -5.0
+max_polyphony = 7
+
+[node name="Shine" type="AudioStreamPlayer2D" parent="." unique_id=1962320707]
+stream = SubResource("AudioStreamRandomizer_7kqtl")
+volume_db = -5.0
+
+[node name="Ding" type="AudioStreamPlayer2D" parent="." unique_id=544110773]
+stream = SubResource("AudioStreamRandomizer_0hgv5")
+volume_db = -5.0
+
+[node name="Timer" type="AudioStreamPlayer2D" parent="." unique_id=1342791227]
+stream = ExtResource("6_7kqtl")
+
+[node name="TimeUp" type="AudioStreamPlayer2D" parent="." unique_id=1433792151]
+stream = ExtResource("7_0hgv5")
+
+[node name="BGM" type="AudioStreamPlayer2D" parent="." unique_id=721609921]
+stream = ExtResource("8_br45l")
+
+[node name="MuteButton" type="Node2D" parent="." unique_id=1857737185]
+position = Vector2(458, 17)
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="MuteButton" unique_id=2099780936]
+position = Vector2(1, 0)
+sprite_frames = SubResource("SpriteFrames_n5v6e")
+
+[node name="Area2D" type="Area2D" parent="MuteButton" unique_id=996790248]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="MuteButton/Area2D" unique_id=299381721]
+position = Vector2(0.5, 0)
+shape = SubResource("RectangleShape2D_nssk2")
+
+[connection signal="input_event" from="MuteButton/Area2D" to="." method="_button_clicked"]
