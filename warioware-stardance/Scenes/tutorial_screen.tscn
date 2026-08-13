@@ -1,9 +1,9 @@
 [gd_scene format=3 uid="uid://14s2vsvcjhvm"]
 
 [ext_resource type="Script" uid="uid://mae6alrq3lia" path="res://Scenes/tutorial_screen.gd" id="1_b7hhi"]
-[ext_resource type="PackedScene" uid="uid://br7q75ujhygk1" path="res://Scenes/minigame_1.tscn" id="2_cd03v"]
-[ext_resource type="PackedScene" uid="uid://bc2hawj4d8xlo" path="res://Scenes/minigame_2.tscn" id="3_elo14"]
-[ext_resource type="PackedScene" uid="uid://dnntinscrn4jt" path="res://Scenes/minigame_3.tscn" id="4_vscmb"]
+[ext_resource type="PackedScene" uid="uid://br7q75ujhygk1" path="res://Scenes/BigDipper/minigame_1.tscn" id="2_cd03v"]
+[ext_resource type="PackedScene" uid="uid://bc2hawj4d8xlo" path="res://Scenes/BigDipper/minigame_2.tscn" id="3_elo14"]
+[ext_resource type="PackedScene" uid="uid://dnntinscrn4jt" path="res://Scenes/BigDipper/minigame_3.tscn" id="4_vscmb"]
 [ext_resource type="Texture2D" uid="uid://c1nfmcwhhdwa1" path="res://Art/tutorial.png" id="5_vscmb"]
 [ext_resource type="FontFile" uid="uid://bcorxdm3rgr4f" path="res://Art/Jersey_10/Jersey10-Regular.ttf" id="6_gf6pl"]
 [ext_resource type="Texture2D" uid="uid://cw8xpx0bnogbf" path="res://Art/Exit/Hover.png" id="7_knip7"]

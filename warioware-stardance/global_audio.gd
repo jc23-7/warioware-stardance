@@ -4,7 +4,6 @@ extends Node2D
 
 var fade_tween: Tween
 var bgm_fade: Tween
-var tutorial = false
 var mute = false
 
 # Called when the node enters the scene tree for the first time.
@@ -38,19 +37,19 @@ func button_pressed() -> void:
 	$ButtonClick.play()
 	
 func collect_star() -> void:
-	if not tutorial:
+	if not Global.tutorial:
 		$CollectStar.play()
 
 func shine() -> void:
-	if not tutorial:
+	if not Global.tutorial:
 		$Shine.play()
 	
 func ding() -> void:
-	if not tutorial:
+	if not Global.tutorial:
 		$Ding.play()
 	
 func start_timer(vol: int, fade_in: bool) -> void:
-	if not tutorial:
+	if not Global.tutorial:
 		if fade_tween and fade_tween.is_valid():
 			fade_tween.kill()
 		$Timer.volume_db = vol
@@ -62,11 +61,11 @@ func start_timer(vol: int, fade_in: bool) -> void:
 
 		
 func stop_timer() -> void:
-	if not tutorial:
+	if not Global.tutorial:
 		$Timer.stop()
 	
 func time_up() -> void:
-	if not tutorial:
+	if not Global.tutorial:
 		$TimeUp.play()
 		await $TimeUp.finished
 

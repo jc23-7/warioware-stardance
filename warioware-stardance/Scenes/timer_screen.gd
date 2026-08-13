@@ -7,14 +7,11 @@ var time
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
-	print("timer started")
 	if Global.lives == 0:
-		Global.change_scene("res://Scenes/end_screen.tscn")
+		Global.next_minigame()
 	else:
 		await Timer(1.0)
-		
-		Global.minigames_done += 1
-		Global.change_scene("res://Scenes/minigame_" + str(Global.minigames_done) + ".tscn")
+		Global.next_minigame()
 	
 		
 	
@@ -37,5 +34,5 @@ func Timer(start_time: float):
 
 	return
 
-func wait(seconds: float) -> void:
+func wait(seconds: float):
 	await get_tree().create_timer(seconds).timeout

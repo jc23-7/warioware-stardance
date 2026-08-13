@@ -1,9 +1,9 @@
 [gd_scene format=3 uid="uid://bc2hawj4d8xlo"]
 
-[ext_resource type="Script" uid="uid://dk62ajt3d88hi" path="res://Scenes/minigame_2.gd" id="1_rfxq2"]
+[ext_resource type="Script" uid="uid://dk62ajt3d88hi" path="res://Scenes/BigDipper/minigame_2.gd" id="1_rfxq2"]
+[ext_resource type="Script" uid="uid://dwcefisfi5hec" path="res://Scenes/BigDipper/star_bucket_mg2.gd" id="1_s1o1o"]
 [ext_resource type="Texture2D" uid="uid://ca88q0am8iemd" path="res://Art/minigame_2_bg.png" id="2_mmgun"]
-[ext_resource type="Script" uid="uid://chlc4exawalmf" path="res://Scenes/star_bucket.gd" id="3_qhtu5"]
-[ext_resource type="Script" uid="uid://ih22ahw8eh1s" path="res://Scenes/star_spot_mg2.gd" id="3_rfxq2"]
+[ext_resource type="Script" uid="uid://ih22ahw8eh1s" path="res://Scenes/BigDipper/star_spot_mg2.gd" id="3_rfxq2"]
 [ext_resource type="PackedScene" uid="uid://ijvv7plr8526" path="res://Scenes/game_timer.tscn" id="4_mmgun"]
 [ext_resource type="Texture2D" uid="uid://bpxraq8n31v33" path="res://Art/BucketAnimation/frame0000.png" id="4_qhtu5"]
 [ext_resource type="Texture2D" uid="uid://c07g6dd8o7b6p" path="res://Art/star_spot.png" id="5_h684j"]
@@ -53,8 +53,11 @@ animations = [{
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_h684j"]
 size = Vector2(13, 13)
 
-[node name="Minigame_2" type="Node2D" unique_id=2020601061]
+[node name="Minigame_2" type="Node2D" unique_id=2020601061 node_paths=PackedStringArray("game_stats")]
 script = ExtResource("1_rfxq2")
+game_stats = NodePath("GameStats")
+total_points = 7
+time_limit = 10.0
 
 [node name="Background" type="TextureRect" parent="." unique_id=282207502]
 offset_right = 960.0
@@ -65,7 +68,7 @@ texture = ExtResource("2_mmgun")
 
 [node name="StarBucket" type="Area2D" parent="." unique_id=539341568]
 position = Vector2(72, 217)
-script = ExtResource("3_qhtu5")
+script = ExtResource("1_s1o1o")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="StarBucket" unique_id=1254077142]
 position = Vector2(0, 0.125)
@@ -148,6 +151,6 @@ shape = SubResource("RectangleShape2D_h684j")
 [node name="Sprite2D" type="Sprite2D" parent="StarSpotContainer/StarSpot7" unique_id=1666193292]
 texture = ExtResource("5_h684j")
 
-[node name="GameTimer" parent="." unique_id=1669112296 instance=ExtResource("4_mmgun")]
+[node name="GameStats" parent="." unique_id=1669112296 instance=ExtResource("4_mmgun")]
 
 [connection signal="input_event" from="StarBucket" to="StarBucket" method="_on_input_event"]

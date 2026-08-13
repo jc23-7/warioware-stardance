@@ -1,6 +1,5 @@
 extends CharacterBody2D
 
-@export var tutorial: bool = false
 var fake_input: Vector2 = Vector2.ZERO
 
 @onready var visuals: Node2D = $"Visuals"
@@ -16,7 +15,7 @@ func _physics_process(delta: float) -> void:
 		
 	
 	var direction
-	if tutorial:
+	if Global.tutorial:
 		direction = fake_input.x
 	else:
 		direction = Input.get_axis("ui_left", "ui_right")

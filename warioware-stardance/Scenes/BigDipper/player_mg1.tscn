@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://beavwkuna4s6h"]
 
-[ext_resource type="Script" uid="uid://vtqnx4vn5ifd" path="res://Scenes/player_mg1.gd" id="1_ndv3g"]
+[ext_resource type="Script" uid="uid://vtqnx4vn5ifd" path="res://Scenes/BigDipper/player_mg1.gd" id="1_ndv3g"]
 [ext_resource type="Texture2D" uid="uid://cp77p6m37hdts" path="res://Art/Character.png" id="2_v0ob8"]
 [ext_resource type="Texture2D" uid="uid://bp21x6qou5aiq" path="res://Art/Animation/frame0000.png" id="3_xwweu"]
 [ext_resource type="Texture2D" uid="uid://du8j52pv1sh4j" path="res://Art/Animation/frame0001.png" id="4_sotp1"]

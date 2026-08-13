@@ -7,13 +7,13 @@ var line_start = -1
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
-	Global.star_clicked.connect(_on_star_clicked)
+	minigame_3.star_clicked.connect(_on_star_clicked)
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
 	if state == 1 and not minigame_3.game_ended:
-		if not Input.is_mouse_button_pressed(MOUSE_BUTTON_LEFT) and not minigame_3.tutorial:
+		if not Input.is_mouse_button_pressed(MOUSE_BUTTON_LEFT) and not Global.tutorial:
 			state = 0
 			line_start = -1
 		queue_redraw()
@@ -33,10 +33,9 @@ func _on_star_clicked(star_id: int) -> void:
 			var node_name = "Line" + str(min(star_id, line_start)) + str(max(star_id, line_start))
 			var line = get_node(node_name)
 			if not line == null and not line.visible:
-				minigame_3.lines_drawn += 1
+				minigame_3.increase_point(1, GlobalAudio.ding)
 				line.show()
 				
-				GlobalAudio.ding()
 			state = 0
 			line_start = -1
 			queue_redraw()

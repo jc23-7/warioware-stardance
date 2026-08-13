@@ -1,5 +1,6 @@
 extends Node2D
 @onready var timer: RichTextLabel = $VBoxContainer/Timer
+@onready var progress_label: RichTextLabel = $VBoxContainer/Progress
 @onready var parent = $".."
 
 var display_time = true

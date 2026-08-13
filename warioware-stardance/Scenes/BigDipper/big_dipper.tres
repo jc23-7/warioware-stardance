@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="Constellation" format=3 uid="uid://bbpqe264v7lvk"]
+
+[ext_resource type="PackedScene" uid="uid://br7q75ujhygk1" path="res://Scenes/BigDipper/minigame_1.tscn" id="1_xb6l6"]
+[ext_resource type="Script" uid="uid://djyjxwhqcifvv" path="res://constellation.gd" id="1_ydrcu"]
+[ext_resource type="PackedScene" uid="uid://bc2hawj4d8xlo" path="res://Scenes/BigDipper/minigame_2.tscn" id="2_7j5cn"]
+[ext_resource type="PackedScene" uid="uid://dnntinscrn4jt" path="res://Scenes/BigDipper/minigame_3.tscn" id="3_7pirq"]
+
+[resource]
+script = ExtResource("1_ydrcu")
+unlocked = true
+constellation_name = "BigDipper"
+minigames = Array[PackedScene]([ExtResource("1_xb6l6"), ExtResource("2_7j5cn"), ExtResource("3_7pirq")])
+metadata/_custom_type_script = "uid://djyjxwhqcifvv"

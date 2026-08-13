@@ -17,7 +17,5 @@ func _on_star_spot_clicked(x:float, y:float):
 	if state == 1 and not minigame_2.game_ended:
 		state = 2
 		global_position = Vector2(x, y)
-		minigame_2.stars_hung += 1
+		minigame_2.increase_point(1, GlobalAudio.shine)
 		minigame_2.star_picked_up = false
-		
-		GlobalAudio.shine()

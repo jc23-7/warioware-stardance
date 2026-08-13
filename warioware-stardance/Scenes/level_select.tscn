@@ -1,0 +1,77 @@
+[gd_scene format=3 uid="uid://b5istff0hd8vq"]
+
+[ext_resource type="Texture2D" uid="uid://eqmlt61uaief" path="res://Art/LevelSelectArt/CircleMask.png" id="1_1fiak"]
+[ext_resource type="Script" uid="uid://dxi1wtrk6adto" path="res://Scenes/level_select.gd" id="1_72w8f"]
+[ext_resource type="Texture2D" uid="uid://bssdhf5jjmkqa" path="res://Art/LevelSelectArt/LevelMap.png" id="2_nkys2"]
+[ext_resource type="Script" uid="uid://djyjxwhqcifvv" path="res://constellation.gd" id="2_qnihq"]
+[ext_resource type="Texture2D" uid="uid://d368wu03ubuac" path="res://Art/Star.png" id="3_2sqnl"]
+[ext_resource type="Script" uid="uid://4l8i5bw4fek3" path="res://Scenes/lvl_select_camera.gd" id="3_lx4vd"]
+[ext_resource type="Resource" uid="uid://bbpqe264v7lvk" path="res://Scenes/BigDipper/big_dipper.tres" id="3_tgoug"]
+[ext_resource type="Script" uid="uid://sc20de3tbw0f" path="res://Scenes/constellation_button.gd" id="5_s6o25"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_72w8f"]
+
+[node name="LevelSelect" type="Node2D" unique_id=529215221]
+script = ExtResource("1_72w8f")
+constellations = Array[ExtResource("2_qnihq")]([ExtResource("3_tgoug")])
+
+[node name="Background" type="ColorRect" parent="." unique_id=1256307960]
+offset_right = 480.0
+offset_bottom = 270.0
+mouse_filter = 2
+color = Color(0.050980393, 0.08627451, 0.15686275, 1)
+
+[node name="TextureRect2" type="TextureRect" parent="." unique_id=1118172012]
+clip_children = 1
+offset_right = 40.0
+offset_bottom = 40.0
+mouse_filter = 2
+texture = ExtResource("1_1fiak")
+stretch_mode = 5
+
+[node name="SubViewportContainer" type="SubViewportContainer" parent="TextureRect2" unique_id=105864383]
+layout_mode = 0
+offset_left = 1.0
+offset_top = 2.0
+offset_right = 513.0
+offset_bottom = 514.0
+
+[node name="SubViewport" type="SubViewport" parent="TextureRect2/SubViewportContainer" unique_id=1341370546]
+handle_input_locally = false
+physics_object_picking = true
+size = Vector2i(250, 250)
+render_target_update_mode = 4
+
+[node name="TextureRect" type="TextureRect" parent="TextureRect2/SubViewportContainer/SubViewport" unique_id=1593803911]
+offset_left = -386.0
+offset_top = -302.0
+offset_right = 614.0
+offset_bottom = 698.0
+texture = ExtResource("2_nkys2")
+
+[node name="LvlSelectCamera" type="Camera2D" parent="TextureRect2/SubViewportContainer/SubViewport" unique_id=910052112]
+position = Vector2(-145, -44)
+script = ExtResource("3_lx4vd")
+
+[node name="BigDipper" type="Node2D" parent="TextureRect2/SubViewportContainer/SubViewport" unique_id=791382079]
+position = Vector2(121, 318)
+script = ExtResource("5_s6o25")
+
+[node name="Sprite2D" type="Sprite2D" parent="TextureRect2/SubViewportContainer/SubViewport/BigDipper" unique_id=1628623644]
+texture = ExtResource("3_2sqnl")
+
+[node name="Area2D" type="Area2D" parent="TextureRect2/SubViewportContainer/SubViewport/BigDipper" unique_id=1578556836]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="TextureRect2/SubViewportContainer/SubViewport/BigDipper/Area2D" unique_id=1479851246]
+shape = SubResource("RectangleShape2D_72w8f")
+
+[node name="TextureRect" type="TextureRect" parent="." unique_id=1505540221]
+visible = false
+offset_left = -386.0
+offset_top = -302.0
+offset_right = 614.0
+offset_bottom = 698.0
+mouse_filter = 2
+texture = ExtResource("2_nkys2")
+
+[connection signal="input_event" from="TextureRect2/SubViewportContainer/SubViewport/BigDipper/Area2D" to="TextureRect2/SubViewportContainer/SubViewport/BigDipper" method="_on_area_2d_input_event"]

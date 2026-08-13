@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://c3j107p7jccwm"]
 
-[ext_resource type="Script" uid="uid://ui113f5alhi1" path="res://Scenes/collectable_mg1.gd" id="1_37cuy"]
+[ext_resource type="Script" uid="uid://ui113f5alhi1" path="res://Scenes/BigDipper/collectable_mg1.gd" id="1_37cuy"]
 [ext_resource type="Texture2D" uid="uid://d368wu03ubuac" path="res://Art/Star.png" id="2_s7in1"]
 
 [sub_resource type="Animation" id="Animation_0uv5o"]

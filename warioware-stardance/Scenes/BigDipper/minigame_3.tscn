@@ -1,12 +1,12 @@
 [gd_scene format=3 uid="uid://dnntinscrn4jt"]
 
-[ext_resource type="Script" uid="uid://bqc3x8qotssvl" path="res://Scenes/minigame_3.gd" id="1_6sdpr"]
+[ext_resource type="Script" uid="uid://bqc3x8qotssvl" path="res://Scenes/BigDipper/minigame_3.gd" id="1_6sdpr"]
 [ext_resource type="Texture2D" uid="uid://ca88q0am8iemd" path="res://Art/minigame_2_bg.png" id="2_lr4ld"]
-[ext_resource type="Script" uid="uid://c8ewy3i1gpryg" path="res://Scenes/star_mg3.gd" id="3_6sdpr"]
+[ext_resource type="Script" uid="uid://c8ewy3i1gpryg" path="res://Scenes/BigDipper/star_mg3.gd" id="3_6sdpr"]
 [ext_resource type="Texture2D" uid="uid://d368wu03ubuac" path="res://Art/Star.png" id="4_y6mal"]
 [ext_resource type="Texture2D" uid="uid://klnp2wywub1a" path="res://Art/Lines/Line0002.png" id="5_1kvof"]
 [ext_resource type="PackedScene" uid="uid://ijvv7plr8526" path="res://Scenes/game_timer.tscn" id="5_4cfv6"]
-[ext_resource type="Script" uid="uid://b2ydjro5asmej" path="res://Scenes/line_container.gd" id="5_lr4ld"]
+[ext_resource type="Script" uid="uid://b2ydjro5asmej" path="res://Scenes/BigDipper/line_container.gd" id="5_lr4ld"]
 [ext_resource type="Texture2D" uid="uid://cw3fgsnbc8b4g" path="res://Art/Lines/Line0003.png" id="6_7u6rh"]
 [ext_resource type="Texture2D" uid="uid://ym2vmtl211n5" path="res://Art/Lines/Line0001.png" id="6_y6mal"]
 [ext_resource type="Texture2D" uid="uid://djgjlexvjeyuw" path="res://Art/Lines/Line0004.png" id="7_75k32"]
@@ -17,8 +17,11 @@
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_lpvao"]
 size = Vector2(13, 13)
 
-[node name="Minigame_3" type="Node2D" unique_id=1062025684]
+[node name="Minigame_3" type="Node2D" unique_id=1062025684 node_paths=PackedStringArray("game_stats")]
 script = ExtResource("1_6sdpr")
+game_stats = NodePath("GameStats")
+total_points = 7
+time_limit = 7.0
 
 [node name="Background" type="TextureRect" parent="." unique_id=480148605]
 offset_right = 480.0
@@ -136,7 +139,7 @@ shape = SubResource("RectangleShape2D_lpvao")
 [node name="Sprite2D" type="Sprite2D" parent="StarContainer/Star7" unique_id=551540173]
 texture = ExtResource("4_y6mal")
 
-[node name="GameTimer" parent="." unique_id=1669112296 instance=ExtResource("5_4cfv6")]
+[node name="GameStats" parent="." unique_id=1669112296 instance=ExtResource("5_4cfv6")]
 
 [connection signal="input_event" from="StarContainer/Star1" to="." method="_on_star_clicked"]
 [connection signal="input_event" from="StarContainer/Star2" to="." method="_on_star_clicked"]

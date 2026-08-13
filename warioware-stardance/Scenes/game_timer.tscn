@@ -1,10 +1,10 @@
 [gd_scene format=3 uid="uid://ijvv7plr8526"]
 
-[ext_resource type="Script" uid="uid://bc366oyy4vpma" path="res://Scenes/game_timer.tscn.gd" id="1_xyruv"]
+[ext_resource type="Script" uid="uid://b24ijmkixnjwv" path="res://Scenes/game_stats.gd" id="1_j2gkn"]
 [ext_resource type="FontFile" uid="uid://bcorxdm3rgr4f" path="res://Art/Jersey_10/Jersey10-Regular.ttf" id="2_j2gkn"]
 
 [node name="GameStats" type="Node2D" unique_id=1669112296]
-script = ExtResource("1_xyruv")
+script = ExtResource("1_j2gkn")
 
 [node name="VBoxContainer" type="VBoxContainer" parent="." unique_id=232973355]
 offset_left = 9.0
