@@ -2,9 +2,11 @@ extends MinigameManager
 
 @onready var hands_container: Node2D = $Hands
 
+signal game_success()
 signal apple_state_changed(apple_id)
 var hands_list: Array[Node]
 var hands_timer
+
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
@@ -27,9 +29,11 @@ func _process(delta: float) -> void:
 	# Overwrites minigame_manager
 	game_stats.progress_label.text = "Protect all 7 apples!"
 	
-	if timer_end:
+	if timer_end and not game_ended:
+		game_ended = true
 		game_stats.display_time = false
-		await game_stats.Timer(0.5)
+		game_success.emit()
+		await game_stats.Timer(1.5)
 		game_stats.display_time = true
 		Global.minigame_done(true)
 
@@ -43,9 +47,8 @@ func _process(delta: float) -> void:
 		await GlobalAudio.time_up()
 		Global.minigame_done(false)
 		
-	
 func start_hands_timer() -> void:
-	hands_timer.start(randf_range(0.3, 1.0))
+	hands_timer.start(randf_range(0.4, 1.0))
 
 func grab_apple():
 	start_hands_timer()
@@ -55,7 +58,7 @@ func grab_apple():
 	for i in range(hands_list.size()):
 		new_num = (hand_num + i) % hands_list.size()
 		
-		if hands_list[new_num].state == 0:
+		if hands_list[new_num].state == "inactive":
 			hands_list[new_num].grab_apple()
-			hands_list[new_num].state = 1
+			hands_list[new_num].state = "reaching"
 			break
