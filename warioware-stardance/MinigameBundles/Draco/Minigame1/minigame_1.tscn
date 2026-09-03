@@ -5,17 +5,14 @@
 [ext_resource type="Texture2D" uid="uid://dus8m166dra8g" path="res://MinigameBundles/Draco/Minigame1/Art/apple.png" id="3_thjml"]
 [ext_resource type="Script" uid="uid://d1cryqfaxta2t" path="res://MinigameBundles/Draco/Minigame1/apple.gd" id="4_jws26"]
 [ext_resource type="Texture2D" uid="uid://d4r7devnmavt" path="res://MinigameBundles/Draco/Minigame1/Art/apple_empty.png" id="4_s0tfr"]
-[ext_resource type="Texture2D" uid="uid://dtak0c2grgf54" path="res://MinigameBundles/Draco/Minigame1/Art/hand_open.png" id="4_thjml"]
 [ext_resource type="Texture2D" uid="uid://dbip2yymhu8fk" path="res://MinigameBundles/Draco/Minigame1/Art/Apple Animation/apple0001.png" id="5_7jsda"]
 [ext_resource type="PackedScene" uid="uid://ijvv7plr8526" path="res://Scenes/game_timer.tscn" id="5_7yuy3"]
-[ext_resource type="Texture2D" uid="uid://dgain6r1bh45e" path="res://MinigameBundles/Draco/Minigame1/Art/hand_grab.png" id="5_jws26"]
 [ext_resource type="Script" uid="uid://bfv53wnnyn60l" path="res://MinigameBundles/Draco/Minigame1/hand.gd" id="5_xqe2j"]
 [ext_resource type="Texture2D" uid="uid://cu0qjxlumh242" path="res://MinigameBundles/Draco/Minigame1/Art/Apple Animation/apple0002.png" id="6_cbhe0"]
 [ext_resource type="Texture2D" uid="uid://c1jy0jkdvnmpe" path="res://MinigameBundles/Draco/Minigame1/Art/Apple Animation/apple0003.png" id="7_46ls1"]
 [ext_resource type="Texture2D" uid="uid://diuatydq7l2et" path="res://MinigameBundles/Draco/Minigame1/Art/Apple Animation/apple0004.png" id="8_hiffw"]
-[ext_resource type="Texture2D" uid="uid://b0p2snnna2k25" path="res://MinigameBundles/Draco/Minigame1/Art/hand_ouch.png" id="8_s0tfr"]
 [ext_resource type="Texture2D" uid="uid://bqs6jnnr76nr5" path="res://MinigameBundles/Draco/Minigame1/Art/Apple Animation/apple0005.png" id="9_p7iyg"]
-[ext_resource type="Texture2D" uid="uid://b443tyn71rp4c" path="res://MinigameBundles/Draco/Minigame1/Art/hand_grab_ouch.png" id="9_vxpcc"]
+[ext_resource type="SpriteFrames" uid="uid://kbivv1i2ub1t" path="res://MinigameBundles/Draco/hand_grab.tres" id="11_0ehk3"]
 [ext_resource type="PackedScene" uid="uid://ct0uxj5o8rhl0" path="res://MinigameBundles/Draco/Minigame1/dragon_cursor.tscn" id="17_cbhe0"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_an021"]
@@ -47,26 +44,6 @@ animations = [{
 "speed": 5.0
 }]
 
-[sub_resource type="SpriteFrames" id="SpriteFrames_r06ps"]
-animations = [{
-"frames": [{
-"duration": 1.0,
-"texture": ExtResource("4_thjml")
-}, {
-"duration": 1.0,
-"texture": ExtResource("5_jws26")
-}, {
-"duration": 1.0,
-"texture": ExtResource("8_s0tfr")
-}, {
-"duration": 1.0,
-"texture": ExtResource("9_vxpcc")
-}],
-"loop": true,
-"name": &"default",
-"speed": 5.0
-}]
-
 [node name="Minigame1" type="Node2D" unique_id=221894460 node_paths=PackedStringArray("game_stats")]
 script = ExtResource("1_xqe2j")
 game_stats = NodePath("GameStats")
@@ -77,6 +54,7 @@ time_limit = 10.0
 offset_right = 40.0
 offset_bottom = 40.0
 texture = ExtResource("2_xqe2j")
+metadata/_edit_use_anchors_ = true
 
 [node name="Apples" type="Node2D" parent="." unique_id=1662362791]
 
@@ -117,15 +95,19 @@ script = ExtResource("4_jws26")
 
 [node name="Hands" type="Node2D" parent="." unique_id=1899600153]
 
-[node name="Hand1" type="AnimatedSprite2D" parent="Hands" unique_id=1113136113]
+[node name="Hand1" type="AnimatedSprite2D" parent="Hands" unique_id=1113136113 node_paths=PackedStringArray("parent_minigame")]
 position = Vector2(426, 123)
 rotation = -1.4137167
-sprite_frames = SubResource("SpriteFrames_r06ps")
+sprite_frames = ExtResource("11_0ehk3")
+animation = &"hand_grab"
 centered = false
 offset = Vector2(-19.81, -34.42)
 script = ExtResource("5_xqe2j")
+parent_minigame = NodePath("../..")
 default_pos = Vector2(531, 170)
 goal_pos = Vector2(374, 132)
+move_speed = 100
+has_object_frame = 2
 
 [node name="Area2D" type="Area2D" parent="Hands/Hand1" unique_id=501597342]
 
@@ -134,15 +116,19 @@ position = Vector2(-0.3070321, -12.080872)
 scale = Vector2(2.1117632, 2.2080872)
 polygon = PackedVector2Array(5.3918533, 11.095825, 11.1946335, -3.0804138, 5.7259407, -10.046967, -4.3181534, -9.901108, -10.8152275, -5.7072906, -9.972782, 5.169739, -4.2818527, 13.47821, -3.7749825, 91.809326, 5.333702, 91.805176)
 
-[node name="Hand2" type="AnimatedSprite2D" parent="Hands" unique_id=2071446026]
+[node name="Hand2" type="AnimatedSprite2D" parent="Hands" unique_id=2071446026 node_paths=PackedStringArray("parent_minigame")]
 position = Vector2(347, -40)
 rotation = -2.6965778
-sprite_frames = SubResource("SpriteFrames_r06ps")
+sprite_frames = ExtResource("11_0ehk3")
+animation = &"hand_grab"
 centered = false
 offset = Vector2(-19.81, -34.42)
 script = ExtResource("5_xqe2j")
+parent_minigame = NodePath("../..")
 default_pos = Vector2(348, -36)
 goal_pos = Vector2(297, 82)
+move_speed = 100
+has_object_frame = 2
 
 [node name="Area2D" type="Area2D" parent="Hands/Hand2" unique_id=871376279]
 
@@ -151,15 +137,19 @@ position = Vector2(-0.3070321, -12.080872)
 scale = Vector2(2.1117632, 2.2080872)
 polygon = PackedVector2Array(5.3918533, 11.095825, 11.1946335, -3.0804138, 5.7259407, -10.046967, -4.3181534, -9.901108, -10.8152275, -5.7072906, -9.972782, 5.169739, -4.2818527, 13.47821, -3.7749825, 91.809326, 5.333702, 91.805176)
 
-[node name="Hand3" type="AnimatedSprite2D" parent="Hands" unique_id=1524274757]
+[node name="Hand3" type="AnimatedSprite2D" parent="Hands" unique_id=1524274757 node_paths=PackedStringArray("parent_minigame")]
 position = Vector2(201.00003, -37)
 rotation = -3.3287587
-sprite_frames = SubResource("SpriteFrames_r06ps")
+sprite_frames = ExtResource("11_0ehk3")
+animation = &"hand_grab"
 centered = false
 offset = Vector2(-19.81, -34.42)
 script = ExtResource("5_xqe2j")
+parent_minigame = NodePath("../..")
 default_pos = Vector2(201, -37)
 goal_pos = Vector2(225, 71)
+move_speed = 100
+has_object_frame = 2
 
 [node name="Area2D" type="Area2D" parent="Hands/Hand3" unique_id=1302932925]
 
@@ -168,15 +158,19 @@ position = Vector2(-0.3070321, -12.080872)
 scale = Vector2(2.1117632, 2.2080872)
 polygon = PackedVector2Array(5.3918533, 11.095825, 11.1946335, -3.0804138, 5.7259407, -10.046967, -4.3181534, -9.901108, -10.8152275, -5.7072906, -9.972782, 5.169739, -4.2818527, 13.47821, -3.7749825, 91.809326, 5.333702, 91.805176)
 
-[node name="Hand4" type="AnimatedSprite2D" parent="Hands" unique_id=254609178]
+[node name="Hand4" type="AnimatedSprite2D" parent="Hands" unique_id=254609178 node_paths=PackedStringArray("parent_minigame")]
 position = Vector2(-39.999977, 124.99999)
 rotation = -4.8132114
-sprite_frames = SubResource("SpriteFrames_r06ps")
+sprite_frames = ExtResource("11_0ehk3")
+animation = &"hand_grab"
 centered = false
 offset = Vector2(-19.81, -34.42)
 script = ExtResource("5_xqe2j")
+parent_minigame = NodePath("../..")
 default_pos = Vector2(-40, 125)
 goal_pos = Vector2(116, 112)
+move_speed = 100
+has_object_frame = 2
 
 [node name="Area2D" type="Area2D" parent="Hands/Hand4" unique_id=1962360887]
 
@@ -185,15 +179,19 @@ position = Vector2(-0.3070321, -12.080872)
 scale = Vector2(2.1117632, 2.2080872)
 polygon = PackedVector2Array(5.3918533, 11.095825, 11.1946335, -3.0804138, 5.7259407, -10.046967, -4.3181534, -9.901108, -10.8152275, -5.7072906, -9.972782, 5.169739, -4.2818527, 13.47821, -3.7749825, 91.809326, 5.333702, 91.805176)
 
-[node name="Hand5" type="AnimatedSprite2D" parent="Hands" unique_id=1999891764]
+[node name="Hand5" type="AnimatedSprite2D" parent="Hands" unique_id=1999891764 node_paths=PackedStringArray("parent_minigame")]
 position = Vector2(89, 306)
 rotation = -5.6700993
-sprite_frames = SubResource("SpriteFrames_r06ps")
+sprite_frames = ExtResource("11_0ehk3")
+animation = &"hand_grab"
 centered = false
 offset = Vector2(-19.81, -34.42)
 script = ExtResource("5_xqe2j")
+parent_minigame = NodePath("../..")
 default_pos = Vector2(89, 306)
 goal_pos = Vector2(142, 199)
+move_speed = 100
+has_object_frame = 2
 
 [node name="Area2D" type="Area2D" parent="Hands/Hand5" unique_id=1629897513]
 
@@ -202,15 +200,19 @@ position = Vector2(-0.3070321, -12.080872)
 scale = Vector2(2.1117632, 2.2080872)
 polygon = PackedVector2Array(5.3918533, 11.095825, 11.1946335, -3.0804138, 5.7259407, -10.046967, -4.3181534, -9.901108, -10.8152275, -5.7072906, -9.972782, 5.169739, -4.2818527, 13.47821, -3.7749825, 91.809326, 5.333702, 91.805176)
 
-[node name="Hand6" type="AnimatedSprite2D" parent="Hands" unique_id=683515819]
+[node name="Hand6" type="AnimatedSprite2D" parent="Hands" unique_id=683515819 node_paths=PackedStringArray("parent_minigame")]
 position = Vector2(247.99998, 309.00003)
 rotation = -6.2683034
-sprite_frames = SubResource("SpriteFrames_r06ps")
+sprite_frames = ExtResource("11_0ehk3")
+animation = &"hand_grab"
 centered = false
 offset = Vector2(-19.81, -34.42)
 script = ExtResource("5_xqe2j")
+parent_minigame = NodePath("../..")
 default_pos = Vector2(248, 309)
 goal_pos = Vector2(247, 170)
+move_speed = 100
+has_object_frame = 2
 
 [node name="Area2D" type="Area2D" parent="Hands/Hand6" unique_id=371328893]
 
@@ -219,15 +221,19 @@ position = Vector2(-0.3070321, -12.080872)
 scale = Vector2(2.1117632, 2.2080872)
 polygon = PackedVector2Array(5.3918533, 11.095825, 11.1946335, -3.0804138, 5.7259407, -10.046967, -4.3181534, -9.901108, -10.8152275, -5.7072906, -9.972782, 5.169739, -4.2818527, 13.47821, -3.7749825, 91.809326, 5.333702, 91.805176)
 
-[node name="Hand7" type="AnimatedSprite2D" parent="Hands" unique_id=215629485]
+[node name="Hand7" type="AnimatedSprite2D" parent="Hands" unique_id=215629485 node_paths=PackedStringArray("parent_minigame")]
 position = Vector2(362, 310)
 rotation = -6.6689553
-sprite_frames = SubResource("SpriteFrames_r06ps")
+sprite_frames = ExtResource("11_0ehk3")
+animation = &"hand_grab"
 centered = false
 offset = Vector2(-19.81, -34.42)
 script = ExtResource("5_xqe2j")
+parent_minigame = NodePath("../..")
 default_pos = Vector2(362, 310)
 goal_pos = Vector2(318, 205)
+move_speed = 100
+has_object_frame = 2
 
 [node name="Area2D" type="Area2D" parent="Hands/Hand7" unique_id=1953342738]
 

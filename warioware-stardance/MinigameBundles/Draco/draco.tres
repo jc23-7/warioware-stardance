@@ -1,0 +1,12 @@
+[gd_resource type="Resource" script_class="Constellation" format=3 uid="uid://b5mwjqfljjti7"]
+
+[ext_resource type="Script" uid="uid://djyjxwhqcifvv" path="res://Scenes/LevelSelect/constellation.gd" id="1_dh2il"]
+[ext_resource type="PackedScene" uid="uid://byw0aiv3gxfuq" path="res://MinigameBundles/Draco/Minigame1/minigame_1.tscn" id="1_ofchl"]
+[ext_resource type="PackedScene" uid="uid://b3a3j5om2j55i" path="res://MinigameBundles/Draco/Minigame2/minigame_2.tscn" id="2_eyxyi"]
+
+[resource]
+script = ExtResource("1_dh2il")
+unlocked = true
+constellation_name = "Draco"
+minigames = Array[PackedScene]([ExtResource("1_ofchl"), ExtResource("2_eyxyi")])
+metadata/_custom_type_script = "uid://djyjxwhqcifvv"

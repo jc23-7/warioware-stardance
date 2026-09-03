@@ -1,0 +1,40 @@
+[gd_scene format=3 uid="uid://dwrf7huenjkb7"]
+
+[ext_resource type="Script" uid="uid://cyp35gje0kc17" path="res://dragon_cursor.gd" id="1_2u1ff"]
+[ext_resource type="Texture2D" uid="uid://c3uopo7susxvj" path="res://MinigameBundles/Draco/Minigame1 (2)/Art/Dragon Mouse/single_head0000.png" id="2_qqlhi"]
+[ext_resource type="Texture2D" uid="uid://cxtl5n26xdvhh" path="res://MinigameBundles/Draco/Minigame1 (2)/Art/Dragon Mouse/single_head0001.png" id="3_auyhi"]
+[ext_resource type="Texture2D" uid="uid://bdtlxdjbq5xoi" path="res://MinigameBundles/Draco/Minigame1 (2)/Art/Dragon Mouse/single_head0002.png" id="4_6lonf"]
+[ext_resource type="Texture2D" uid="uid://cq78lty51fcab" path="res://MinigameBundles/Draco/Minigame1 (2)/Art/Dragon Mouse/single_head0003.png" id="5_agyfs"]
+[ext_resource type="Texture2D" uid="uid://btnk6ou57tr2c" path="res://MinigameBundles/Draco/Minigame1 (2)/Art/Dragon Mouse/single_head0004.png" id="6_l348w"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_bfesm"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_qqlhi")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_auyhi")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_6lonf")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_agyfs")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_l348w")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_qqlhi")
+}],
+"loop": false,
+"name": &"default",
+"speed": 24.0
+}]
+
+[node name="DragonCursor" type="Node2D" unique_id=1544615241]
+script = ExtResource("1_2u1ff")
+
+[node name="Cursor" type="AnimatedSprite2D" parent="." unique_id=224221481]
+sprite_frames = SubResource("SpriteFrames_bfesm")

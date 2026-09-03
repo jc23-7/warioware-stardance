@@ -1,0 +1,317 @@
+[gd_scene format=3 uid="uid://b3a3j5om2j55i"]
+
+[ext_resource type="Texture2D" uid="uid://d4mjefpx0na76" path="res://MinigameBundles/Draco/Minigame1/Art/tree.png" id="1_iuxwi"]
+[ext_resource type="Script" uid="uid://cpyyc0sgqoi5i" path="res://MinigameBundles/Draco/Minigame2/minigame_2.gd" id="1_mkcln"]
+[ext_resource type="Texture2D" uid="uid://d4r7devnmavt" path="res://MinigameBundles/Draco/Minigame1/Art/apple_empty.png" id="2_nsxvs"]
+[ext_resource type="Texture2D" uid="uid://d368wu03ubuac" path="res://Art/Star.png" id="2_svm5u"]
+[ext_resource type="Texture2D" uid="uid://dus8m166dra8g" path="res://MinigameBundles/Draco/Minigame1/Art/apple.png" id="3_eoay1"]
+[ext_resource type="Texture2D" uid="uid://dbip2yymhu8fk" path="res://MinigameBundles/Draco/Minigame1/Art/Apple Animation/apple0001.png" id="4_k5cb3"]
+[ext_resource type="Script" uid="uid://chqbh2n2tl8ml" path="res://MinigameBundles/Draco/Minigame2/star.gd" id="4_uovtv"]
+[ext_resource type="Texture2D" uid="uid://cu0qjxlumh242" path="res://MinigameBundles/Draco/Minigame1/Art/Apple Animation/apple0002.png" id="5_qkege"]
+[ext_resource type="Texture2D" uid="uid://c1jy0jkdvnmpe" path="res://MinigameBundles/Draco/Minigame1/Art/Apple Animation/apple0003.png" id="6_svm5u"]
+[ext_resource type="Texture2D" uid="uid://diuatydq7l2et" path="res://MinigameBundles/Draco/Minigame1/Art/Apple Animation/apple0004.png" id="7_uovtv"]
+[ext_resource type="Texture2D" uid="uid://bqs6jnnr76nr5" path="res://MinigameBundles/Draco/Minigame1/Art/Apple Animation/apple0005.png" id="8_d3bx2"]
+[ext_resource type="Script" uid="uid://d1cryqfaxta2t" path="res://MinigameBundles/Draco/Minigame1/apple.gd" id="9_jjgpd"]
+[ext_resource type="Texture2D" uid="uid://bu8y7whstxei5" path="res://MinigameBundles/Draco/Minigame1/Art/Apple Animation/apple0006.png" id="10_nsxvs"]
+[ext_resource type="Texture2D" uid="uid://dcihlqyqftwvd" path="res://MinigameBundles/Draco/Minigame1/Art/Apple Animation/apple0007.png" id="11_eoay1"]
+[ext_resource type="Texture2D" uid="uid://7befwye02v2i" path="res://MinigameBundles/Draco/Minigame1/Art/Apple Animation/apple0008.png" id="12_k5cb3"]
+[ext_resource type="Script" uid="uid://bny6wvy7r4fkw" path="res://MinigameBundles/Draco/Minigame2/dragon.gd" id="14_iuxwi"]
+[ext_resource type="Texture2D" uid="uid://dl1gkojtxgcp2" path="res://MinigameBundles/Draco/Minigame2/Art/dragon_default.png" id="14_svm5u"]
+[ext_resource type="PackedScene" uid="uid://ijvv7plr8526" path="res://Scenes/game_timer.tscn" id="15_67olh"]
+[ext_resource type="Texture2D" uid="uid://h0tn1xoif07u" path="res://MinigameBundles/Draco/Minigame2/Art/dragon_active.png" id="15_uovtv"]
+[ext_resource type="Texture2D" uid="uid://dw38ykswtq7dy" path="res://MinigameBundles/Draco/Minigame2/Art/dragon_grab.png" id="16_d3bx2"]
+[ext_resource type="Texture2D" uid="uid://cgn41a50lqk6" path="res://MinigameBundles/Draco/Minigame2/Art/dragon_star.png" id="17_jjgpd"]
+[ext_resource type="Texture2D" uid="uid://dufceh6e5h5wk" path="res://MinigameBundles/Draco/BasketArt/frame0000.png" id="21_1u853"]
+[ext_resource type="Texture2D" uid="uid://d165midptudpe" path="res://MinigameBundles/Draco/BasketArt/frame0001.png" id="22_6hnqm"]
+[ext_resource type="Texture2D" uid="uid://city3dqt6qrbf" path="res://MinigameBundles/Draco/BasketArt/frame0002.png" id="23_4lbhk"]
+[ext_resource type="Texture2D" uid="uid://cobbrgs7umth6" path="res://MinigameBundles/Draco/BasketArt/frame0003.png" id="24_fma7j"]
+[ext_resource type="Texture2D" uid="uid://b1w34qdmtctfw" path="res://MinigameBundles/Draco/BasketArt/frame0004.png" id="25_3rad7"]
+[ext_resource type="Texture2D" uid="uid://ddv17ugxhrdd8" path="res://MinigameBundles/Draco/BasketArt/frame0005.png" id="26_x0j5d"]
+[ext_resource type="Texture2D" uid="uid://dlg2yfyaotm55" path="res://MinigameBundles/Draco/BasketArt/frame0006.png" id="27_ss6f4"]
+[ext_resource type="Texture2D" uid="uid://dxy0ydo8urct7" path="res://MinigameBundles/Draco/BasketArt/frame0007.png" id="28_k5kg1"]
+[ext_resource type="Texture2D" uid="uid://broohdwjygvbq" path="res://MinigameBundles/Draco/BasketArt/frame0008.png" id="29_kma23"]
+[ext_resource type="Texture2D" uid="uid://bfth32kbmyb23" path="res://MinigameBundles/Draco/BasketArt/frame0009.png" id="30_re7j3"]
+[ext_resource type="Texture2D" uid="uid://d042qti5lptwh" path="res://MinigameBundles/Draco/BasketArt/frame0010.png" id="31_reqrq"]
+[ext_resource type="Texture2D" uid="uid://bpdpqf0qcaygh" path="res://MinigameBundles/Draco/BasketArt/frame0011.png" id="32_k7s84"]
+[ext_resource type="Texture2D" uid="uid://cki8ks35y0wwk" path="res://MinigameBundles/Draco/BasketArt/frame0012.png" id="33_3n3ja"]
+[ext_resource type="Texture2D" uid="uid://ddtekjvs2864d" path="res://MinigameBundles/Draco/BasketArt/frame0013.png" id="34_c333n"]
+[ext_resource type="Texture2D" uid="uid://20hq3sfrqv7f" path="res://MinigameBundles/Draco/BasketArt/frame0014.png" id="35_spxib"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_ndfba"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_nsxvs")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_eoay1")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_k5cb3")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_qkege")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_svm5u")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_uovtv")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_d3bx2")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_nsxvs")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_eoay1")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12_k5cb3")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_0c6hd"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("14_svm5u")
+}, {
+"duration": 1.0,
+"texture": ExtResource("15_uovtv")
+}, {
+"duration": 1.0,
+"texture": ExtResource("16_d3bx2")
+}, {
+"duration": 1.0,
+"texture": ExtResource("17_jjgpd")
+}],
+"loop": true,
+"name": &"dragon",
+"speed": 5.0
+}]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_pdufn"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("21_1u853")
+}, {
+"duration": 1.0,
+"texture": ExtResource("22_6hnqm")
+}, {
+"duration": 1.0,
+"texture": ExtResource("23_4lbhk")
+}, {
+"duration": 1.0,
+"texture": ExtResource("24_fma7j")
+}, {
+"duration": 1.0,
+"texture": ExtResource("25_3rad7")
+}, {
+"duration": 1.0,
+"texture": ExtResource("26_x0j5d")
+}, {
+"duration": 1.0,
+"texture": ExtResource("27_ss6f4")
+}, {
+"duration": 1.0,
+"texture": ExtResource("28_k5kg1")
+}, {
+"duration": 1.0,
+"texture": ExtResource("29_kma23")
+}, {
+"duration": 1.0,
+"texture": ExtResource("30_re7j3")
+}, {
+"duration": 1.0,
+"texture": ExtResource("31_reqrq")
+}, {
+"duration": 1.0,
+"texture": ExtResource("32_k7s84")
+}, {
+"duration": 1.0,
+"texture": ExtResource("33_3n3ja")
+}, {
+"duration": 1.0,
+"texture": ExtResource("34_c333n")
+}, {
+"duration": 1.0,
+"texture": ExtResource("35_spxib")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[node name="Minigame2" type="Node2D" unique_id=479262636 node_paths=PackedStringArray("game_stats")]
+script = ExtResource("1_mkcln")
+game_stats = NodePath("GameStats")
+total_points = 14
+time_limit = 100.0
+
+[node name="Background" type="TextureRect" parent="." unique_id=1066739713]
+offset_right = 40.0
+offset_bottom = 40.0
+texture = ExtResource("1_iuxwi")
+metadata/_edit_use_anchors_ = true
+
+[node name="Star" type="Sprite2D" parent="." unique_id=2048925829]
+position = Vector2(390, 137)
+texture = ExtResource("2_svm5u")
+script = ExtResource("4_uovtv")
+move_speed = 500
+
+[node name="Stars" type="Node2D" parent="." unique_id=1575016110]
+
+[node name="Star1" type="AnimatedSprite2D" parent="Stars" unique_id=2022610801]
+position = Vector2(367, 131)
+sprite_frames = SubResource("SpriteFrames_ndfba")
+script = ExtResource("9_jjgpd")
+
+[node name="Star2" type="AnimatedSprite2D" parent="Stars" unique_id=814104919]
+position = Vector2(294, 88)
+sprite_frames = SubResource("SpriteFrames_ndfba")
+script = ExtResource("9_jjgpd")
+
+[node name="Star3" type="AnimatedSprite2D" parent="Stars" unique_id=1884340139]
+position = Vector2(205, 92)
+sprite_frames = SubResource("SpriteFrames_ndfba")
+script = ExtResource("9_jjgpd")
+
+[node name="Star4" type="AnimatedSprite2D" parent="Stars" unique_id=1376308941]
+position = Vector2(127, 111)
+sprite_frames = SubResource("SpriteFrames_ndfba")
+script = ExtResource("9_jjgpd")
+
+[node name="Star5" type="AnimatedSprite2D" parent="Stars" unique_id=2098148041]
+position = Vector2(151, 187)
+sprite_frames = SubResource("SpriteFrames_ndfba")
+script = ExtResource("9_jjgpd")
+
+[node name="Star6" type="AnimatedSprite2D" parent="Stars" unique_id=1256732618]
+position = Vector2(245, 158)
+sprite_frames = SubResource("SpriteFrames_ndfba")
+script = ExtResource("9_jjgpd")
+
+[node name="Star7" type="AnimatedSprite2D" parent="Stars" unique_id=83405575]
+position = Vector2(316, 175)
+sprite_frames = SubResource("SpriteFrames_ndfba")
+script = ExtResource("9_jjgpd")
+
+[node name="Dragons" type="Node2D" parent="." unique_id=1220759774]
+
+[node name="Dragon1" type="AnimatedSprite2D" parent="Dragons" unique_id=1750220402 node_paths=PackedStringArray("parent_minigame")]
+position = Vector2(422, 140)
+rotation = -1.4137167
+sprite_frames = SubResource("SpriteFrames_0c6hd")
+animation = &"dragon"
+centered = false
+offset = Vector2(-20.035, -5.645)
+script = ExtResource("14_iuxwi")
+parent_minigame = NodePath("../..")
+default_pos = Vector2(422, 141)
+goal_pos = Vector2(388, 135)
+move_speed = 200
+grab_frame = 2
+has_object_frame = 3
+
+[node name="Dragon2" type="AnimatedSprite2D" parent="Dragons" unique_id=251766571 node_paths=PackedStringArray("parent_minigame")]
+position = Vector2(306, 56)
+rotation = -2.4831495
+sprite_frames = SubResource("SpriteFrames_0c6hd")
+animation = &"dragon"
+centered = false
+offset = Vector2(-20.035, -5.645)
+script = ExtResource("14_iuxwi")
+parent_minigame = NodePath("../..")
+default_pos = Vector2(306, 56)
+goal_pos = Vector2(290, 92)
+move_speed = 200
+grab_frame = 2
+has_object_frame = 3
+
+[node name="Dragon3" type="AnimatedSprite2D" parent="Dragons" unique_id=657793580 node_paths=PackedStringArray("parent_minigame")]
+position = Vector2(202, 61.000008)
+rotation = -3.2197216
+sprite_frames = SubResource("SpriteFrames_0c6hd")
+animation = &"dragon"
+centered = false
+offset = Vector2(-20.035, -5.645)
+script = ExtResource("14_iuxwi")
+parent_minigame = NodePath("../..")
+default_pos = Vector2(202, 61)
+goal_pos = Vector2(205, 97)
+move_speed = 200
+grab_frame = 2
+has_object_frame = 3
+
+[node name="Dragon4" type="AnimatedSprite2D" parent="Dragons" unique_id=560292365 node_paths=PackedStringArray("parent_minigame")]
+position = Vector2(63.999992, 111.99999)
+rotation = 1.5478085
+sprite_frames = SubResource("SpriteFrames_0c6hd")
+animation = &"dragon"
+centered = false
+offset = Vector2(-20.035, -5.645)
+script = ExtResource("14_iuxwi")
+parent_minigame = NodePath("../..")
+default_pos = Vector2(64, 112)
+goal_pos = Vector2(131, 113)
+move_speed = 200
+grab_frame = 2
+has_object_frame = 3
+
+[node name="Dragon5" type="AnimatedSprite2D" parent="Dragons" unique_id=407803797 node_paths=PackedStringArray("parent_minigame")]
+position = Vector2(133, 217)
+rotation = 0.7088185
+sprite_frames = SubResource("SpriteFrames_0c6hd")
+animation = &"dragon"
+centered = false
+offset = Vector2(-20.035, -5.645)
+script = ExtResource("14_iuxwi")
+parent_minigame = NodePath("../..")
+default_pos = Vector2(133, 217)
+goal_pos = Vector2(152, 186)
+move_speed = 200
+grab_frame = 2
+has_object_frame = 3
+
+[node name="Dragon6" type="AnimatedSprite2D" parent="Dragons" unique_id=479521510 node_paths=PackedStringArray("parent_minigame")]
+position = Vector2(244.00002, 159.00002)
+rotation = 0.038290262
+sprite_frames = SubResource("SpriteFrames_0c6hd")
+animation = &"dragon"
+centered = false
+offset = Vector2(-20.035, -5.645)
+script = ExtResource("14_iuxwi")
+parent_minigame = NodePath("../..")
+default_pos = Vector2(242, 209)
+goal_pos = Vector2(244, 159)
+move_speed = 200
+grab_frame = 2
+has_object_frame = 3
+
+[node name="Dragon7" type="AnimatedSprite2D" parent="Dragons" unique_id=819531528 node_paths=PackedStringArray("parent_minigame")]
+position = Vector2(316.00003, 177.00002)
+rotation = -0.056269318
+sprite_frames = SubResource("SpriteFrames_0c6hd")
+animation = &"dragon"
+centered = false
+offset = Vector2(-20.035, -5.645)
+script = ExtResource("14_iuxwi")
+parent_minigame = NodePath("../..")
+default_pos = Vector2(319, 212)
+goal_pos = Vector2(316, 177)
+move_speed = 200
+grab_frame = 2
+has_object_frame = 3
+
+[node name="Basket" type="AnimatedSprite2D" parent="." unique_id=858107003]
+position = Vector2(411, 234)
+sprite_frames = SubResource("SpriteFrames_pdufn")
+
+[node name="GameStats" parent="." unique_id=1669112296 instance=ExtResource("15_67olh")]

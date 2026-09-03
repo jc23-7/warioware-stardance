@@ -1,0 +1,67 @@
+[gd_resource type="SpriteFrames" format=3 uid="uid://d14sehwfuhl0i"]
+
+[ext_resource type="Texture2D" uid="uid://co4vuim5fag0g" path="res://MinigameBundles/Draco/Minigame1 (2)/Art/Hands/hand_closed0000.png" id="1_847mb"]
+[ext_resource type="Texture2D" uid="uid://cj0wcqn4gv15" path="res://MinigameBundles/Draco/Minigame1 (2)/Art/Hands/hand_closed0001.png" id="2_303vd"]
+[ext_resource type="Texture2D" uid="uid://dplf2bmj1jpda" path="res://MinigameBundles/Draco/Minigame1 (2)/Art/Hands/hand_closed0002.png" id="3_torjr"]
+[ext_resource type="Texture2D" uid="uid://buw3b2fnhu84c" path="res://MinigameBundles/Draco/Minigame1 (2)/Art/Hands/hand_closed0003.png" id="4_j4sjn"]
+[ext_resource type="Texture2D" uid="uid://bc1b3fuojeeo1" path="res://MinigameBundles/Draco/Minigame1 (2)/Art/Hands/hand_closed0004.png" id="5_w5qtg"]
+[ext_resource type="Texture2D" uid="uid://d2n8m74jtks1v" path="res://MinigameBundles/Draco/Minigame1 (2)/Art/Hands/hand_closed0005.png" id="6_h28iy"]
+[ext_resource type="Texture2D" uid="uid://bqmr6647qf6qc" path="res://MinigameBundles/Draco/Minigame1 (2)/Art/Hands/hand_open0000.png" id="7_6a00c"]
+[ext_resource type="Texture2D" uid="uid://ddbkkon7f7qle" path="res://MinigameBundles/Draco/Minigame1 (2)/Art/Hands/hand_open0001.png" id="8_folfc"]
+[ext_resource type="Texture2D" uid="uid://f05im5ig0q24" path="res://MinigameBundles/Draco/Minigame1 (2)/Art/Hands/hand_open0002.png" id="9_tyanc"]
+[ext_resource type="Texture2D" uid="uid://rp577ujhellh" path="res://MinigameBundles/Draco/Minigame1 (2)/Art/Hands/hand_open0003.png" id="10_tar5d"]
+[ext_resource type="Texture2D" uid="uid://d12tg3j2urem8" path="res://MinigameBundles/Draco/Minigame1 (2)/Art/Hands/hand_open0004.png" id="11_0tfaj"]
+[ext_resource type="Texture2D" uid="uid://cah0u31wphros" path="res://MinigameBundles/Draco/Minigame1 (2)/Art/Hands/hand_open0005.png" id="12_3i85o"]
+[ext_resource type="Texture2D" uid="uid://d2bhftlfm2qsu" path="res://MinigameBundles/Draco/Minigame1 (2)/Art/Hands/hand_open0006.png" id="13_303vd"]
+
+[resource]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_847mb")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_303vd")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_torjr")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_j4sjn")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_w5qtg")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_h28iy")
+}],
+"loop": true,
+"name": &"hand_closed",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("7_6a00c")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_folfc")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_tyanc")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_tar5d")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_0tfaj")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12_3i85o")
+}, {
+"duration": 1.0,
+"texture": ExtResource("13_303vd")
+}],
+"loop": true,
+"name": &"hand_open",
+"speed": 5.0
+}]

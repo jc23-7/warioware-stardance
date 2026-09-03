@@ -11,6 +11,7 @@ var hands_timer
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	super()
+	Input.mouse_mode = Input.MOUSE_MODE_HIDDEN
 	
 	game_stats.progress_label.add_theme_font_size_override("normal_font_size", 24)
 	game_stats.timer.add_theme_font_size_override("normal_font_size", 36)
@@ -35,6 +36,7 @@ func _process(delta: float) -> void:
 		game_success.emit()
 		await game_stats.Timer(1.5)
 		game_stats.display_time = true
+		Input.mouse_mode = Input.MOUSE_MODE_VISIBLE
 		Global.minigame_done(true)
 
 	elif completed_points < total_points and not game_ended:
@@ -58,7 +60,7 @@ func grab_apple():
 	for i in range(hands_list.size()):
 		new_num = (hand_num + i) % hands_list.size()
 		
-		if hands_list[new_num].state == "inactive":
-			hands_list[new_num].grab_apple()
-			hands_list[new_num].state = "reaching"
+		if not hands_list[new_num].active:
+			hands_list[new_num].grab()
+			hands_list[new_num].active = true
 			break

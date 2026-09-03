@@ -1,0 +1,257 @@
+[gd_scene format=3 uid="uid://0w2swf6vb6fm"]
+
+[ext_resource type="Script" uid="uid://daea8r6gysom0" path="res://MinigameBundles/Draco/Minigame1 (2)/minigame_1.gd" id="1_u745u"]
+[ext_resource type="Texture2D" uid="uid://8mkvxxp52yd3" path="res://MinigameBundles/Draco/Minigame1 (2)/Art/tree.png" id="2_jybxc"]
+[ext_resource type="Texture2D" uid="uid://cgp8nqi66yec7" path="res://MinigameBundles/Draco/Minigame1 (2)/Art/apple_empty.png" id="3_gbggl"]
+[ext_resource type="Texture2D" uid="uid://cxoly6ugvgy85" path="res://MinigameBundles/Draco/Minigame1 (2)/Art/apple.png" id="4_gkr2h"]
+[ext_resource type="Texture2D" uid="uid://bwe1drwsy8oxg" path="res://MinigameBundles/Draco/Minigame1 (2)/Art/Apple Animation/apple0001.png" id="5_83grt"]
+[ext_resource type="Texture2D" uid="uid://b02reg1wjsn4h" path="res://MinigameBundles/Draco/Minigame1 (2)/Art/Apple Animation/apple0002.png" id="6_1jx7c"]
+[ext_resource type="Texture2D" uid="uid://ctr1r7yoiqrg1" path="res://MinigameBundles/Draco/Minigame1 (2)/Art/Apple Animation/apple0003.png" id="7_4mvyh"]
+[ext_resource type="Texture2D" uid="uid://erk1pjsd2d5b" path="res://MinigameBundles/Draco/Minigame1 (2)/Art/Apple Animation/apple0004.png" id="8_8dr52"]
+[ext_resource type="Texture2D" uid="uid://b3t44eo7jnwct" path="res://MinigameBundles/Draco/Minigame1 (2)/Art/Apple Animation/apple0005.png" id="9_356qj"]
+[ext_resource type="Script" uid="uid://1i37h6au7j1p" path="res://MinigameBundles/Draco/Minigame1 (2)/apple.gd" id="10_2n33d"]
+[ext_resource type="SpriteFrames" uid="uid://d14sehwfuhl0i" path="res://MinigameBundles/Draco/Minigame1 (2)/hand_animation.tres" id="11_u745u"]
+[ext_resource type="Script" uid="uid://dtwhm6tm1i284" path="res://MinigameBundles/Draco/Minigame1 (2)/hand.gd" id="12_5hv4b"]
+[ext_resource type="PackedScene" uid="uid://ijvv7plr8526" path="res://Scenes/game_timer.tscn" id="13_3kq2s"]
+[ext_resource type="PackedScene" uid="uid://dwrf7huenjkb7" path="res://MinigameBundles/Draco/Minigame1 (2)/dragon_cursor.tscn" id="14_1ydlr"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_an021"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("3_gbggl")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_gkr2h")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_83grt")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_1jx7c")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_4mvyh")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_8dr52")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_356qj")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[node name="Minigame1" type="Node2D" unique_id=221894460 node_paths=PackedStringArray("game_stats")]
+script = ExtResource("1_u745u")
+min_time = 1.0
+max_time = 3.0
+game_stats = NodePath("GameStats")
+total_points = 7
+time_limit = 10.0
+
+[node name="Background" type="TextureRect" parent="." unique_id=1120083052]
+offset_right = 40.0
+offset_bottom = 40.0
+texture = ExtResource("2_jybxc")
+metadata/_edit_use_anchors_ = true
+
+[node name="Apples" type="Node2D" parent="." unique_id=1662362791]
+
+[node name="Apple1" type="AnimatedSprite2D" parent="Apples" unique_id=1558031986]
+position = Vector2(367, 131)
+sprite_frames = SubResource("SpriteFrames_an021")
+script = ExtResource("10_2n33d")
+
+[node name="Apple2" type="AnimatedSprite2D" parent="Apples" unique_id=1485773282]
+position = Vector2(294, 88)
+sprite_frames = SubResource("SpriteFrames_an021")
+script = ExtResource("10_2n33d")
+
+[node name="Apple3" type="AnimatedSprite2D" parent="Apples" unique_id=507431938]
+position = Vector2(227, 79)
+sprite_frames = SubResource("SpriteFrames_an021")
+script = ExtResource("10_2n33d")
+
+[node name="Apple4" type="AnimatedSprite2D" parent="Apples" unique_id=566191949]
+position = Vector2(127, 111)
+sprite_frames = SubResource("SpriteFrames_an021")
+script = ExtResource("10_2n33d")
+
+[node name="Apple5" type="AnimatedSprite2D" parent="Apples" unique_id=990850645]
+position = Vector2(151, 187)
+sprite_frames = SubResource("SpriteFrames_an021")
+script = ExtResource("10_2n33d")
+
+[node name="Apple6" type="AnimatedSprite2D" parent="Apples" unique_id=1528362721]
+position = Vector2(245, 158)
+sprite_frames = SubResource("SpriteFrames_an021")
+script = ExtResource("10_2n33d")
+
+[node name="Apple7" type="AnimatedSprite2D" parent="Apples" unique_id=1568503810]
+position = Vector2(315, 194)
+sprite_frames = SubResource("SpriteFrames_an021")
+script = ExtResource("10_2n33d")
+
+[node name="Hands" type="Node2D" parent="." unique_id=1899600153]
+
+[node name="Hand1" type="AnimatedSprite2D" parent="Hands" unique_id=1113136113 node_paths=PackedStringArray("parent_minigame")]
+position = Vector2(426, 123)
+rotation = -1.4137167
+sprite_frames = ExtResource("11_u745u")
+animation = &"hand_open"
+centered = false
+offset = Vector2(-19.81, -34.42)
+script = ExtResource("12_5hv4b")
+parent_minigame = NodePath("../..")
+default_pos = Vector2(531, 170)
+goal_pos = Vector2(374, 132)
+move_speed = 50
+has_object_frame = 2
+
+[node name="Area2D" type="Area2D" parent="Hands/Hand1" unique_id=501597342]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Hands/Hand1/Area2D" unique_id=544562662]
+position = Vector2(-0.3070321, -12.080872)
+scale = Vector2(2.1117632, 2.2080872)
+polygon = PackedVector2Array(5.3918533, 11.095825, 11.1946335, -3.0804138, 5.7259407, -10.046967, -4.3181534, -9.901108, -10.8152275, -5.7072906, -9.972782, 5.169739, -4.2818527, 13.47821, -3.7749825, 91.809326, 5.333702, 91.805176)
+
+[node name="Hand2" type="AnimatedSprite2D" parent="Hands" unique_id=2071446026 node_paths=PackedStringArray("parent_minigame")]
+position = Vector2(347, -40)
+rotation = -2.6965778
+sprite_frames = ExtResource("11_u745u")
+animation = &"hand_closed"
+centered = false
+offset = Vector2(-19.81, -34.42)
+script = ExtResource("12_5hv4b")
+parent_minigame = NodePath("../..")
+default_pos = Vector2(348, -36)
+goal_pos = Vector2(297, 82)
+move_speed = 50
+has_object_frame = 2
+
+[node name="Area2D" type="Area2D" parent="Hands/Hand2" unique_id=871376279]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Hands/Hand2/Area2D" unique_id=612963065]
+position = Vector2(-0.3070321, -12.080872)
+scale = Vector2(2.1117632, 2.2080872)
+polygon = PackedVector2Array(5.3918533, 11.095825, 11.1946335, -3.0804138, 5.7259407, -10.046967, -4.3181534, -9.901108, -10.8152275, -5.7072906, -9.972782, 5.169739, -4.2818527, 13.47821, -3.7749825, 91.809326, 5.333702, 91.805176)
+
+[node name="Hand3" type="AnimatedSprite2D" parent="Hands" unique_id=1524274757 node_paths=PackedStringArray("parent_minigame")]
+position = Vector2(201.00003, -37)
+rotation = -3.3287587
+sprite_frames = ExtResource("11_u745u")
+animation = &"hand_closed"
+centered = false
+offset = Vector2(-19.81, -34.42)
+script = ExtResource("12_5hv4b")
+parent_minigame = NodePath("../..")
+default_pos = Vector2(201, -37)
+goal_pos = Vector2(225, 71)
+move_speed = 50
+has_object_frame = 2
+
+[node name="Area2D" type="Area2D" parent="Hands/Hand3" unique_id=1302932925]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Hands/Hand3/Area2D" unique_id=1591266643]
+position = Vector2(-0.3070321, -12.080872)
+scale = Vector2(2.1117632, 2.2080872)
+polygon = PackedVector2Array(5.3918533, 11.095825, 11.1946335, -3.0804138, 5.7259407, -10.046967, -4.3181534, -9.901108, -10.8152275, -5.7072906, -9.972782, 5.169739, -4.2818527, 13.47821, -3.7749825, 91.809326, 5.333702, 91.805176)
+
+[node name="Hand4" type="AnimatedSprite2D" parent="Hands" unique_id=254609178 node_paths=PackedStringArray("parent_minigame")]
+position = Vector2(-39.999977, 124.99999)
+rotation = -4.8132114
+sprite_frames = ExtResource("11_u745u")
+animation = &"hand_closed"
+centered = false
+offset = Vector2(-19.81, -34.42)
+script = ExtResource("12_5hv4b")
+parent_minigame = NodePath("../..")
+default_pos = Vector2(-40, 125)
+goal_pos = Vector2(116, 112)
+move_speed = 50
+has_object_frame = 2
+
+[node name="Area2D" type="Area2D" parent="Hands/Hand4" unique_id=1962360887]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Hands/Hand4/Area2D" unique_id=1953205917]
+position = Vector2(-0.3070321, -12.080872)
+scale = Vector2(2.1117632, 2.2080872)
+polygon = PackedVector2Array(5.3918533, 11.095825, 11.1946335, -3.0804138, 5.7259407, -10.046967, -4.3181534, -9.901108, -10.8152275, -5.7072906, -9.972782, 5.169739, -4.2818527, 13.47821, -3.7749825, 91.809326, 5.333702, 91.805176)
+
+[node name="Hand5" type="AnimatedSprite2D" parent="Hands" unique_id=1999891764 node_paths=PackedStringArray("parent_minigame")]
+position = Vector2(89, 306)
+rotation = -5.6700993
+sprite_frames = ExtResource("11_u745u")
+animation = &"hand_closed"
+centered = false
+offset = Vector2(-19.81, -34.42)
+script = ExtResource("12_5hv4b")
+parent_minigame = NodePath("../..")
+default_pos = Vector2(89, 306)
+goal_pos = Vector2(142, 199)
+move_speed = 50
+has_object_frame = 2
+
+[node name="Area2D" type="Area2D" parent="Hands/Hand5" unique_id=1629897513]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Hands/Hand5/Area2D" unique_id=51682090]
+position = Vector2(-0.3070321, -12.080872)
+scale = Vector2(2.1117632, 2.2080872)
+polygon = PackedVector2Array(5.3918533, 11.095825, 11.1946335, -3.0804138, 5.7259407, -10.046967, -4.3181534, -9.901108, -10.8152275, -5.7072906, -9.972782, 5.169739, -4.2818527, 13.47821, -3.7749825, 91.809326, 5.333702, 91.805176)
+
+[node name="Hand6" type="AnimatedSprite2D" parent="Hands" unique_id=683515819 node_paths=PackedStringArray("parent_minigame")]
+position = Vector2(247.99998, 309.00003)
+rotation = -6.2683034
+sprite_frames = ExtResource("11_u745u")
+animation = &"hand_closed"
+centered = false
+offset = Vector2(-19.81, -34.42)
+script = ExtResource("12_5hv4b")
+parent_minigame = NodePath("../..")
+default_pos = Vector2(248, 309)
+goal_pos = Vector2(247, 170)
+move_speed = 50
+has_object_frame = 2
+
+[node name="Area2D" type="Area2D" parent="Hands/Hand6" unique_id=371328893]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Hands/Hand6/Area2D" unique_id=1086468508]
+position = Vector2(-0.3070321, -12.080872)
+scale = Vector2(2.1117632, 2.2080872)
+polygon = PackedVector2Array(5.3918533, 11.095825, 11.1946335, -3.0804138, 5.7259407, -10.046967, -4.3181534, -9.901108, -10.8152275, -5.7072906, -9.972782, 5.169739, -4.2818527, 13.47821, -3.7749825, 91.809326, 5.333702, 91.805176)
+
+[node name="Hand7" type="AnimatedSprite2D" parent="Hands" unique_id=215629485 node_paths=PackedStringArray("parent_minigame")]
+position = Vector2(362, 310)
+rotation = -6.6689553
+sprite_frames = ExtResource("11_u745u")
+animation = &"hand_closed"
+centered = false
+offset = Vector2(-19.81, -34.42)
+script = ExtResource("12_5hv4b")
+parent_minigame = NodePath("../..")
+default_pos = Vector2(362, 310)
+goal_pos = Vector2(318, 205)
+move_speed = 50
+has_object_frame = 2
+
+[node name="Area2D" type="Area2D" parent="Hands/Hand7" unique_id=1953342738]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Hands/Hand7/Area2D" unique_id=838191561]
+position = Vector2(-0.3070321, -12.080872)
+scale = Vector2(2.1117632, 2.2080872)
+polygon = PackedVector2Array(5.3918533, 11.095825, 11.1946335, -3.0804138, 5.7259407, -10.046967, -4.3181534, -9.901108, -10.8152275, -5.7072906, -9.972782, 5.169739, -4.2818527, 13.47821, -3.7749825, 91.809326, 5.333702, 91.805176)
+
+[node name="GameStats" parent="." unique_id=1669112296 instance=ExtResource("13_3kq2s")]
+
+[node name="DragonCursor" parent="." unique_id=1544615241 instance=ExtResource("14_1ydlr")]
+
+[connection signal="input_event" from="Hands/Hand1/Area2D" to="Hands/Hand1" method="_on_hand_clicked"]
+[connection signal="input_event" from="Hands/Hand2/Area2D" to="Hands/Hand2" method="_on_hand_clicked"]
+[connection signal="input_event" from="Hands/Hand3/Area2D" to="Hands/Hand3" method="_on_hand_clicked"]
+[connection signal="input_event" from="Hands/Hand4/Area2D" to="Hands/Hand4" method="_on_hand_clicked"]
+[connection signal="input_event" from="Hands/Hand5/Area2D" to="Hands/Hand5" method="_on_hand_clicked"]
+[connection signal="input_event" from="Hands/Hand6/Area2D" to="Hands/Hand6" method="_on_hand_clicked"]
+[connection signal="input_event" from="Hands/Hand7/Area2D" to="Hands/Hand7" method="_on_hand_clicked"]

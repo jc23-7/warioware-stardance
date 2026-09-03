@@ -1,0 +1,132 @@
+[gd_scene format=3 uid="uid://byw0aiv3gxfuq"]
+
+[ext_resource type="Script" uid="uid://df45wmifhqh5i" path="res://MinigameBundles/Draco/Minigame1/minigame_1.gd" id="1_xqe2j"]
+[ext_resource type="Texture2D" uid="uid://d4mjefpx0na76" path="res://MinigameBundles/Draco/Minigame1/Art/tree.png" id="2_xqe2j"]
+[ext_resource type="Texture2D" uid="uid://dus8m166dra8g" path="res://MinigameBundles/Draco/Minigame1/Art/apple.png" id="3_thjml"]
+[ext_resource type="Texture2D" uid="uid://dtak0c2grgf54" path="res://MinigameBundles/Draco/Minigame1/Art/hand_open.png" id="4_thjml"]
+[ext_resource type="PackedScene" uid="uid://ijvv7plr8526" path="res://Scenes/game_timer.tscn" id="5_7yuy3"]
+[ext_resource type="Texture2D" uid="uid://dgain6r1bh45e" path="res://MinigameBundles/Draco/Minigame1/Art/hand_grab.png" id="5_jws26"]
+[ext_resource type="Script" uid="uid://bfv53wnnyn60l" path="res://MinigameBundles/Draco/Minigame1/hand.gd" id="5_xqe2j"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_r06ps"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("4_thjml")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_jws26")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="Animation" id="Animation_jws26"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(426, 123)]
+}
+
+[sub_resource type="Animation" id="Animation_r06ps"]
+resource_name = "grab_apple"
+length = 2.1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 2),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(426, 123), Vector2(239, 145)]
+}
+
+[sub_resource type="Animation" id="Animation_xqe2j"]
+resource_name = "retreat"
+length = 2.1
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_an021"]
+_data = {
+&"RESET": SubResource("Animation_jws26"),
+&"grab_apple": SubResource("Animation_r06ps"),
+&"retreat": SubResource("Animation_xqe2j")
+}
+
+[node name="Minigame1" type="Node2D" unique_id=221894460 node_paths=PackedStringArray("game_stats")]
+script = ExtResource("1_xqe2j")
+game_stats = NodePath("GameStats")
+total_points = 7
+time_limit = 10.0
+
+[node name="Background" type="TextureRect" parent="." unique_id=1120083052]
+offset_right = 40.0
+offset_bottom = 40.0
+texture = ExtResource("2_xqe2j")
+
+[node name="Apples" type="Node2D" parent="." unique_id=1662362791]
+
+[node name="Apple1" type="Sprite2D" parent="Apples" unique_id=870463465]
+position = Vector2(228, 151)
+texture = ExtResource("3_thjml")
+
+[node name="Apple2" type="Sprite2D" parent="Apples" unique_id=813973589]
+position = Vector2(302, 104)
+texture = ExtResource("3_thjml")
+
+[node name="Apple3" type="Sprite2D" parent="Apples" unique_id=827488873]
+position = Vector2(228, 65)
+texture = ExtResource("3_thjml")
+
+[node name="Apple4" type="Sprite2D" parent="Apples" unique_id=720457121]
+position = Vector2(142, 113)
+texture = ExtResource("3_thjml")
+
+[node name="Apple5" type="Sprite2D" parent="Apples" unique_id=1880241743]
+position = Vector2(300, 206)
+texture = ExtResource("3_thjml")
+
+[node name="Apple6" type="Sprite2D" parent="Apples" unique_id=1599174143]
+position = Vector2(135, 200)
+texture = ExtResource("3_thjml")
+
+[node name="Apple7" type="Sprite2D" parent="Apples" unique_id=1118639642]
+position = Vector2(368, 130)
+texture = ExtResource("3_thjml")
+
+[node name="Hands" type="Node2D" parent="." unique_id=1899600153]
+
+[node name="Hand1" type="AnimatedSprite2D" parent="Hands" unique_id=1113136113]
+position = Vector2(426, 123)
+rotation = -1.4137167
+sprite_frames = SubResource("SpriteFrames_r06ps")
+centered = false
+offset = Vector2(-19.81, -34.42)
+script = ExtResource("5_xqe2j")
+default_pos = Vector2(531, 170)
+goal_pos = Vector2(374, 132)
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Hands/Hand1" unique_id=2076375939]
+libraries/ = SubResource("AnimationLibrary_an021")
+
+[node name="Area2D" type="Area2D" parent="Hands/Hand1" unique_id=501597342]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Hands/Hand1/Area2D" unique_id=544562662]
+position = Vector2(-0.3070321, -12.080872)
+scale = Vector2(2.1117632, 2.2080872)
+polygon = PackedVector2Array(5.3918533, 11.095825, 11.1946335, -3.0804138, 5.7259407, -10.046967, -4.3181534, -9.901108, -10.8152275, -5.7072906, -9.972782, 5.169739, -4.2818527, 13.47821, -3.7749825, 91.809326, 5.333702, 91.805176)
+
+[node name="GameStats" parent="." unique_id=1669112296 instance=ExtResource("5_7yuy3")]
+
+[connection signal="input_event" from="Hands/Hand1/Area2D" to="Hands/Hand1" method="_on_hand_clicked"]

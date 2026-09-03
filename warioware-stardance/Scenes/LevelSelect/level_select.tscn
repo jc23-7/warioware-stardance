@@ -3,19 +3,21 @@
 [ext_resource type="Texture2D" uid="uid://eqmlt61uaief" path="res://Scenes/LevelSelect/Art/CircleMask.png" id="1_1fiak"]
 [ext_resource type="Script" uid="uid://dxi1wtrk6adto" path="res://Scenes/LevelSelect/level_select.gd" id="1_72w8f"]
 [ext_resource type="Texture2D" uid="uid://bssdhf5jjmkqa" path="res://Scenes/LevelSelect/Art/LevelMap.png" id="2_nkys2"]
-[ext_resource type="Texture2D" uid="uid://d368wu03ubuac" path="res://Art/Star.png" id="3_2sqnl"]
 [ext_resource type="Script" uid="uid://4l8i5bw4fek3" path="res://Scenes/LevelSelect/lvl_select_camera.gd" id="3_lx4vd"]
 [ext_resource type="Script" uid="uid://sc20de3tbw0f" path="res://Scenes/LevelSelect/constellation_button.gd" id="5_s6o25"]
 [ext_resource type="Texture2D" uid="uid://fwq4bffepi2f" path="res://Scenes/LevelSelect/Art/BigDipperArt/BigDipper0000.png" id="9_bpfon"]
 [ext_resource type="BitMap" uid="uid://baqclx73thacs" path="res://Scenes/LevelSelect/Art/BigDipperArt/BigDipper0005.png" id="9_npf18"]
 [ext_resource type="Texture2D" uid="uid://byh2uutmqatft" path="res://Scenes/LevelSelect/Art/BigDipperArt/BigDipper0004.png" id="10_07bvh"]
+[ext_resource type="Texture2D" uid="uid://bqeerqlr6ttti" path="res://Scenes/LevelSelect/Art/DracoArt/draco0000.png" id="10_yof5r"]
+[ext_resource type="Texture2D" uid="uid://bdypknjohanh" path="res://Scenes/LevelSelect/Art/DracoArt/draco0002.png" id="11_t45ri"]
+[ext_resource type="Texture2D" uid="uid://ddqsbstcrhucp" path="res://Scenes/LevelSelect/Art/DracoArt/draco0001.png" id="12_eol4j"]
 [ext_resource type="Texture2D" uid="uid://bkslimd8odxaj" path="res://Scenes/LevelSelect/Art/BigDipperArt/BigDipper0001.png" id="12_yx562"]
+[ext_resource type="Texture2D" uid="uid://b0o0uff8gn7j2" path="res://Scenes/LevelSelect/Art/DracoArt/draco0003.png" id="13_7irii"]
 [ext_resource type="Texture2D" uid="uid://cteqxd2gieftp" path="res://Scenes/LevelSelect/Art/BigDipperArt/BigDipper0003.png" id="13_wn3si"]
+[ext_resource type="BitMap" uid="uid://chg2v2vsuqxdg" path="res://Scenes/LevelSelect/Art/DracoArt/draco0004.png" id="14_d7t5y"]
 
 [sub_resource type="CompressedTexture2D" id="CompressedTexture2D_bpfon"]
 load_path = "res://.godot/imported/BigDipper0003.png-b90af9b1cd4678e07c054b90a3e3ec3f.ctex"
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_72w8f"]
 
 [node name="LevelSelect" type="Node2D" unique_id=529215221]
 script = ExtResource("1_72w8f")
@@ -27,8 +29,8 @@ mouse_filter = 2
 
 [node name="TextureRect2" type="TextureRect" parent="." unique_id=1118172012]
 clip_children = 1
-offset_right = 40.0
-offset_bottom = 40.0
+offset_right = 250.0
+offset_bottom = 250.0
 mouse_filter = 2
 texture = ExtResource("1_1fiak")
 stretch_mode = 5
@@ -67,29 +69,23 @@ texture_focused = SubResource("CompressedTexture2D_bpfon")
 texture_click_mask = ExtResource("9_npf18")
 script = ExtResource("5_s6o25")
 
+[node name="Draco" type="TextureButton" parent="TextureRect2/SubViewportContainer/SubViewport" unique_id=1493316759]
+texture_filter = 1
+offset_left = -83.0
+offset_top = 92.0
+offset_right = 167.0
+offset_bottom = 342.0
+texture_normal = ExtResource("10_yof5r")
+texture_pressed = ExtResource("11_t45ri")
+texture_hover = ExtResource("12_eol4j")
+texture_disabled = ExtResource("13_7irii")
+texture_focused = ExtResource("11_t45ri")
+texture_click_mask = ExtResource("14_d7t5y")
+script = ExtResource("5_s6o25")
+
 [node name="LvlSelectCamera" type="Camera2D" parent="TextureRect2/SubViewportContainer/SubViewport" unique_id=910052112]
 position = Vector2(-145, -44)
 script = ExtResource("3_lx4vd")
 
-[node name="TextureRect" type="TextureRect" parent="." unique_id=1505540221]
-visible = false
-offset_left = -386.0
-offset_top = -302.0
-offset_right = 614.0
-offset_bottom = 698.0
-mouse_filter = 2
-texture = ExtResource("2_nkys2")
-
-[node name="BigDipper" type="Node2D" parent="." unique_id=791382079]
-visible = false
-position = Vector2(121, 318)
-
-[node name="Sprite2D" type="Sprite2D" parent="BigDipper" unique_id=1628623644]
-texture = ExtResource("3_2sqnl")
-
-[node name="Area2D" type="Area2D" parent="BigDipper" unique_id=1578556836]
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="BigDipper/Area2D" unique_id=1479851246]
-shape = SubResource("RectangleShape2D_72w8f")
-
 [connection signal="pressed" from="TextureRect2/SubViewportContainer/SubViewport/BigDipper" to="TextureRect2/SubViewportContainer/SubViewport/BigDipper" method="_on_pressed"]
+[connection signal="pressed" from="TextureRect2/SubViewportContainer/SubViewport/Draco" to="TextureRect2/SubViewportContainer/SubViewport/Draco" method="_on_pressed"]

@@ -1,0 +1,33 @@
+[gd_scene format=3 uid="uid://buarhkofv2mr5"]
+
+[ext_resource type="Texture2D" uid="uid://c07g6dd8o7b6p" path="res://Art/star_spot.png" id="1_frcle"]
+[ext_resource type="Texture2D" uid="uid://d368wu03ubuac" path="res://Art/Star.png" id="2_at6k2"]
+[ext_resource type="Script" uid="uid://csnr6a7kpeqh4" path="res://MinigameBundles/outline_star.gd" id="3_3uljc"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_w0b3m"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_frcle")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_at6k2")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_pfxu2"]
+size = Vector2(13, 13)
+
+[node name="OutlineStar" type="AnimatedSprite2D" unique_id=1531669212]
+sprite_frames = SubResource("SpriteFrames_w0b3m")
+script = ExtResource("3_3uljc")
+
+[node name="Area2D" type="Area2D" parent="." unique_id=807579520]
+position = Vector2(92, 65)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=641717403]
+position = Vector2(-92, -65)
+shape = SubResource("RectangleShape2D_pfxu2")

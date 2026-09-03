@@ -17,7 +17,6 @@ var current_constellation: Constellation
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
-	Input.mouse_mode = Input.MOUSE_MODE_HIDDEN
 	completed_constellations.resize(constellations.size())
 	completed_constellations.fill(false)
 
@@ -55,8 +54,6 @@ func minigame_done(success: bool) -> void:
 	
 	if minigames_done == current_constellation.minigames.size():
 		completed_constellations[constellations.find(current_constellation)] = true
-
-
 		get_tree().change_scene_to_packed(level_select)
 	else:
 		get_tree().change_scene_to_packed(timer_scene)

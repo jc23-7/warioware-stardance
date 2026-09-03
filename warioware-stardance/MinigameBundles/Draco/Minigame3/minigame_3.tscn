@@ -1,0 +1,153 @@
+[gd_scene format=3 uid="uid://67orblut4xnw"]
+
+[ext_resource type="Script" uid="uid://c55k08vlp2g6v" path="res://MinigameBundles/Draco/Minigame3/minigame_3.gd" id="1_amga6"]
+[ext_resource type="Texture2D" uid="uid://ca88q0am8iemd" path="res://Art/Backgrounds/minigame_2_bg.png" id="1_v1qx4"]
+[ext_resource type="Script" uid="uid://dwcefisfi5hec" path="res://MinigameBundles/BigDipper/Minigame2/star_bucket_mg2.gd" id="2_amga6"]
+[ext_resource type="Texture2D" uid="uid://bssdhf5jjmkqa" path="res://Scenes/LevelSelect/Art/LevelMap.png" id="3_amga6"]
+[ext_resource type="Texture2D" uid="uid://bpxraq8n31v33" path="res://MinigameBundles/BigDipper/Minigame2/BucketMg2/frame0000.png" id="3_lag8l"]
+[ext_resource type="Texture2D" uid="uid://cwj7tlyxgmlbe" path="res://MinigameBundles/BigDipper/Minigame2/BucketMg2/frame0001.png" id="4_64yjt"]
+[ext_resource type="Texture2D" uid="uid://du38thau32cra" path="res://MinigameBundles/BigDipper/Minigame2/BucketMg2/frame0002.png" id="5_gf6ym"]
+[ext_resource type="Texture2D" uid="uid://cxu6gxu2qhnxb" path="res://MinigameBundles/BigDipper/Minigame2/BucketMg2/frame0003.png" id="6_avpwu"]
+[ext_resource type="Texture2D" uid="uid://7qypxsstmwdv" path="res://MinigameBundles/BigDipper/Minigame2/BucketMg2/frame0004.png" id="7_0le0e"]
+[ext_resource type="Texture2D" uid="uid://5u2fjrhq8mtx" path="res://MinigameBundles/BigDipper/Minigame2/BucketMg2/frame0005.png" id="8_m6mw6"]
+[ext_resource type="Texture2D" uid="uid://tjlm5ms7a13s" path="res://MinigameBundles/BigDipper/Minigame2/BucketMg2/frame0006.png" id="9_m7fjt"]
+[ext_resource type="Texture2D" uid="uid://dxve4qgaqpxi8" path="res://MinigameBundles/BigDipper/Minigame2/BucketMg2/frame0007.png" id="10_n0yi2"]
+[ext_resource type="PackedScene" uid="uid://buarhkofv2mr5" path="res://MinigameBundles/outline_star.tscn" id="11_btwe4"]
+[ext_resource type="Texture2D" uid="uid://dl1gkojtxgcp2" path="res://MinigameBundles/Draco/Minigame2/Art/dragon_default.png" id="13_prod2"]
+[ext_resource type="Texture2D" uid="uid://h0tn1xoif07u" path="res://MinigameBundles/Draco/Minigame2/Art/dragon_active.png" id="14_1ptat"]
+[ext_resource type="Texture2D" uid="uid://dw38ykswtq7dy" path="res://MinigameBundles/Draco/Minigame2/Art/dragon_grab.png" id="15_fy54w"]
+[ext_resource type="Texture2D" uid="uid://cgn41a50lqk6" path="res://MinigameBundles/Draco/Minigame2/Art/dragon_star.png" id="16_d27bs"]
+[ext_resource type="Script" uid="uid://dav8d150tw18e" path="res://MinigameBundles/Draco/Minigame3/dragon.gd" id="17_7agwb"]
+[ext_resource type="PackedScene" uid="uid://ijvv7plr8526" path="res://Scenes/game_timer.tscn" id="18_rk4xg"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_l6vxb"]
+size = Vector2(34, 31.75)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_nwete"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("3_lag8l")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_64yjt")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_gf6ym")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_avpwu")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_0le0e")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_m6mw6")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_m7fjt")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_n0yi2")
+}],
+"loop": true,
+"name": &"emptying",
+"speed": 5.0
+}]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_s5amx"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("13_prod2")
+}, {
+"duration": 1.0,
+"texture": ExtResource("14_1ptat")
+}, {
+"duration": 1.0,
+"texture": ExtResource("15_fy54w")
+}, {
+"duration": 1.0,
+"texture": ExtResource("16_d27bs")
+}],
+"loop": true,
+"name": &"dragon",
+"speed": 5.0
+}]
+
+[node name="Minigame3" type="Node2D" unique_id=172021255]
+script = ExtResource("1_amga6")
+
+[node name="Background" type="TextureRect" parent="." unique_id=1546614206]
+offset_right = 960.0
+offset_bottom = 540.0
+scale = Vector2(0.5, 0.5)
+mouse_filter = 2
+texture = ExtResource("1_v1qx4")
+
+[node name="TextureRect" type="TextureRect" parent="." unique_id=1279536544]
+offset_left = -505.0
+offset_top = -823.0
+offset_right = 495.0
+offset_bottom = 177.0
+scale = Vector2(1.785, 1.785)
+texture = ExtResource("3_amga6")
+
+[node name="StarBucket" type="Area2D" parent="." unique_id=802814205]
+position = Vector2(72, 217)
+script = ExtResource("2_amga6")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StarBucket" unique_id=1055049630]
+position = Vector2(0, 0.125)
+shape = SubResource("RectangleShape2D_l6vxb")
+
+[node name="Animation" type="AnimatedSprite2D" parent="StarBucket" unique_id=506258168]
+position = Vector2(7, -4)
+sprite_frames = SubResource("SpriteFrames_nwete")
+animation = &"emptying"
+
+[node name="OutlineStars" type="Node2D" parent="." unique_id=1271927226]
+position = Vector2(97, 47)
+
+[node name="OutlineStar" parent="OutlineStars" unique_id=958069888 instance=ExtResource("11_btwe4")]
+
+[node name="Dragons" type="Node2D" parent="." unique_id=1194845491]
+
+[node name="Dragon1" type="AnimatedSprite2D" parent="Dragons" unique_id=1735771604]
+position = Vector2(46, 141)
+rotation = 0.53502065
+sprite_frames = SubResource("SpriteFrames_s5amx")
+animation = &"dragon"
+centered = false
+offset = Vector2(-20.035, -5.645)
+script = ExtResource("17_7agwb")
+
+[node name="Dragon2" type="AnimatedSprite2D" parent="Dragons" unique_id=384630528]
+position = Vector2(87.00001, 171.00002)
+rotation = 0.36589542
+sprite_frames = SubResource("SpriteFrames_s5amx")
+animation = &"dragon"
+centered = false
+offset = Vector2(-20.035, -5.645)
+script = ExtResource("17_7agwb")
+
+[node name="Dragon3" type="AnimatedSprite2D" parent="Dragons" unique_id=948460915]
+position = Vector2(125.00001, 190.00003)
+rotation = 0.13200964
+sprite_frames = SubResource("SpriteFrames_s5amx")
+animation = &"dragon"
+centered = false
+offset = Vector2(-20.035, -5.645)
+script = ExtResource("17_7agwb")
+
+[node name="Dragon4" type="AnimatedSprite2D" parent="Dragons" unique_id=1389704863]
+position = Vector2(152, 157)
+sprite_frames = SubResource("SpriteFrames_s5amx")
+animation = &"dragon"
+centered = false
+offset = Vector2(-20.035, -5.645)
+script = ExtResource("17_7agwb")
+
+[node name="GameStats" parent="." unique_id=1669112296 instance=ExtResource("18_rk4xg")]
+
+[connection signal="input_event" from="StarBucket" to="StarBucket" method="_on_input_event"]
