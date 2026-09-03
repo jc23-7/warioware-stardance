@@ -3,6 +3,7 @@ class_name MinigameManager
 @export var game_stats: Node2D
 @export var total_points: int
 @export var time_limit: float
+@export var increase_points: bool
 
 var completed_points = 0
 var timer_end = false
@@ -10,30 +11,51 @@ var game_ended = false
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
+	if not increase_points:
+		completed_points = total_points
 	await game_stats.Timer(time_limit)
 	timer_end = true
 	
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta: float) -> void:
-	game_stats.progress_label.text = str(completed_points) + "/" + str(total_points)
-	
-	if completed_points >= total_points and not game_ended:
-		game_stats.display_time = false
-		await game_stats.Timer(0.5)
-		game_stats.display_time = true
-		Global.minigame_done(true)
+func _process(delta: float) -> void:	
+	if increase_points:
+		game_stats.progress_label.text = str(completed_points) + "/" + str(total_points)
+		if completed_points >= total_points and not game_ended:
+			game_stats.display_time = false
+			await game_stats.Timer(0.5)
+			game_stats.display_time = true
+			Global.minigame_done(true)
 
-	elif timer_end:
-		timer_end = false
-		game_ended = true
+		elif timer_end and not game_ended:
+			timer_end = false
+			game_ended = true
 
-		game_stats.timer.add_theme_color_override("default_color", Color.RED)
-		
-		GlobalAudio.stop_timer()
-		await GlobalAudio.time_up()
-		Global.minigame_done(false)
+			game_stats.timer.add_theme_color_override("default_color", Color.RED)
+			game_stats.progress_label.add_theme_color_override("default_color", Color.RED)
+			
+			GlobalAudio.stop_timer()
+			await GlobalAudio.time_up()
+			Global.minigame_done(false)
+	else:
+		game_stats.progress_label.text = " "
+		if timer_end and not game_ended:
+			game_stats.display_time = false
+			await game_stats.Timer(0.5)
+			game_stats.display_time = true
+			Global.minigame_done(true)
+
+		elif completed_points <= 0 and not game_ended:
+			timer_end = false
+			game_ended = true
+
+			game_stats.timer.add_theme_color_override("default_color", Color.RED)
+			game_stats.progress_label.add_theme_color_override("default_color", Color.RED)
+			
+			GlobalAudio.stop_timer()
+			await GlobalAudio.time_up()
+			Global.minigame_done(false)
 		
 
 

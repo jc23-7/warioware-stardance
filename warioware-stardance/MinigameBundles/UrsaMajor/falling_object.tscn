@@ -1,0 +1,26 @@
+[gd_scene format=3 uid="uid://bh1tbocrvepu1"]
+
+[ext_resource type="Script" uid="uid://8ocnwf4mgjnt" path="res://MinigameBundles/UrsaMajor/falling_object.gd" id="1_86xuf"]
+[ext_resource type="Texture2D" uid="uid://d368wu03ubuac" path="res://Art/Star.png" id="2_q6j5n"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_6h0ba"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_q6j5n")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[node name="FallingObject" type="Node2D" unique_id=1473784464]
+script = ExtResource("1_86xuf")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=742138448]
+sprite_frames = SubResource("SpriteFrames_6h0ba")
+
+[node name="Area2D" type="Area2D" parent="AnimatedSprite2D" unique_id=1337975583]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="AnimatedSprite2D/Area2D" unique_id=1144383466]
+polygon = PackedVector2Array(-2, -3, -5, 6, 4, 0)
