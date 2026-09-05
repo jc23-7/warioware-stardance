@@ -10,6 +10,7 @@ extends MinigameManager
 
 @onready var player: CharacterBody2D = $Player
 
+var lives
 var arrow_timer
 
 # Called when the node enters the scene tree for the first time.
@@ -26,6 +27,7 @@ func _ready() -> void:
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
 	super(delta)
+	lives = completed_points
 
 func spawn_arrow() -> void:
 	var arrow = arrow_template.instantiate()

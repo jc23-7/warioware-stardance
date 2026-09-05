@@ -26,7 +26,6 @@ max_time = 1.0
 game_stats = NodePath("GameStats")
 total_points = 5
 time_limit = 10.0
-activate_timer = true
 
 [node name="Background" type="TextureRect" parent="." unique_id=1174752548]
 offset_right = 480.0
