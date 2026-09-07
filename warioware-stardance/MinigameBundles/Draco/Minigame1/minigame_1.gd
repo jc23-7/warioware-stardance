@@ -30,7 +30,7 @@ func _process(delta: float) -> void:
 	# Overwrites minigame_manager
 	game_stats.progress_label.text = "Protect all 7 apples!"
 	
-	if timer_end and not game_ended:
+	if end_game and not game_ended:
 		game_ended = true
 		game_stats.display_time = false
 		game_success.emit()
@@ -40,7 +40,7 @@ func _process(delta: float) -> void:
 		Global.minigame_done(true)
 
 	elif completed_points < total_points and not game_ended:
-		timer_end = false
+		end_game = false
 		game_ended = true
 
 		game_stats.progress_label.add_theme_color_override("default_color", Color.RED)

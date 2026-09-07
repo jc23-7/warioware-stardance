@@ -1,0 +1,47 @@
+[gd_scene format=3 uid="uid://b8bjdqitct8pt"]
+
+[ext_resource type="Script" uid="uid://ish72yvp1ehu" path="res://MinigameBundles/Cygnus/Obstacles/obstacles.gd" id="1_1t1rm"]
+[ext_resource type="PackedScene" uid="uid://b8sswx3o6rq8w" path="res://MinigameBundles/Cygnus/Obstacles/collectible.tscn" id="2_cihg3"]
+[ext_resource type="Texture2D" uid="uid://vfe0gkt4cix" path="res://icon.svg" id="2_csdst"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_cihg3"]
+size = Vector2(53, 138)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_1ft1p"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_csdst")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_1t1rm"]
+size = Vector2(52, 163)
+
+[node name="Obstacle1" type="AnimatableBody2D" unique_id=1415655783]
+script = ExtResource("1_1t1rm")
+min_y = -35
+max_y = 71
+width = 55
+collectible_scene = ExtResource("2_cihg3")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1783049030]
+position = Vector2(26.5, -2)
+shape = SubResource("RectangleShape2D_cihg3")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=384589831]
+position = Vector2(27, -13)
+scale = Vector2(0.421277, 1.2744292)
+sprite_frames = SubResource("SpriteFrames_1ft1p")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="." unique_id=1888991701]
+position = Vector2(25, 223.5)
+shape = SubResource("RectangleShape2D_1t1rm")
+
+[node name="AnimatedSprite2D2" type="AnimatedSprite2D" parent="." unique_id=2019387436]
+position = Vector2(27, 223)
+scale = Vector2(0.421277, 1.2744292)
+sprite_frames = SubResource("SpriteFrames_1ft1p")

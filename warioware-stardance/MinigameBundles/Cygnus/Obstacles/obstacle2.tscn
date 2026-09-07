@@ -1,0 +1,64 @@
+[gd_scene format=3 uid="uid://bmgua711u3dfm"]
+
+[ext_resource type="Script" uid="uid://ish72yvp1ehu" path="res://MinigameBundles/Cygnus/Obstacles/obstacles.gd" id="1_6y23x"]
+[ext_resource type="Texture2D" uid="uid://vfe0gkt4cix" path="res://icon.svg" id="2_0cyo5"]
+[ext_resource type="PackedScene" uid="uid://b8sswx3o6rq8w" path="res://MinigameBundles/Cygnus/Obstacles/collectible.tscn" id="2_dfs2b"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_cihg3"]
+size = Vector2(53, 138)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_1ft1p"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_0cyo5")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_1t1rm"]
+size = Vector2(52, 163)
+
+[node name="Obstacle1" type="AnimatableBody2D" unique_id=1970614335]
+script = ExtResource("1_6y23x")
+min_y = -22
+max_y = -3
+width = 55
+collectible_scene = ExtResource("2_dfs2b")
+
+[node name="Marker2D" type="Marker2D" parent="." unique_id=2135946789]
+position = Vector2(26, 91)
+
+[node name="Marker2D2" type="Marker2D" parent="." unique_id=993234150]
+position = Vector2(27, 223)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1783049030]
+position = Vector2(27.461727, -44.43653)
+shape = SubResource("RectangleShape2D_cihg3")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=384589831]
+position = Vector2(27.961727, -55.43653)
+scale = Vector2(0.421277, 1.2744292)
+sprite_frames = SubResource("SpriteFrames_1ft1p")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="." unique_id=1888991701]
+position = Vector2(24.674173, 156.85818)
+scale = Vector2(0.98696697, 0.4626835)
+shape = SubResource("RectangleShape2D_1t1rm")
+
+[node name="AnimatedSprite2D2" type="AnimatedSprite2D" parent="." unique_id=2019387436]
+position = Vector2(26.648108, 156.62685)
+scale = Vector2(0.41578647, 0.58965737)
+sprite_frames = SubResource("SpriteFrames_1ft1p")
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="." unique_id=986409589]
+position = Vector2(24.6364, 305.96942)
+scale = Vector2(0.98696697, 0.4626835)
+shape = SubResource("RectangleShape2D_1t1rm")
+
+[node name="AnimatedSprite2D3" type="AnimatedSprite2D" parent="." unique_id=2106345024]
+position = Vector2(26.610334, 305.73807)
+scale = Vector2(0.41578647, 0.58965737)
+sprite_frames = SubResource("SpriteFrames_1ft1p")

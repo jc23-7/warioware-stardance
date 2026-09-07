@@ -1,0 +1,77 @@
+[gd_scene format=3 uid="uid://dl8vsejqnbu8v"]
+
+[ext_resource type="Script" uid="uid://bibj3tb2ve2eh" path="res://MinigameBundles/Cygnus/minigame_1.gd" id="1_7elpu"]
+[ext_resource type="Texture2D" uid="uid://da3enufnadd0l" path="res://Art/Backgrounds/minigame_1_bg.png" id="2_sykq6"]
+[ext_resource type="PackedScene" uid="uid://ijvv7plr8526" path="res://Scenes/game_timer.tscn" id="3_fqpiu"]
+[ext_resource type="Texture2D" uid="uid://bw5yrghjf3vdl" path="res://Scenes/TimerScene/StarLife.png" id="3_hxkhb"]
+[ext_resource type="Script" uid="uid://b1wj25ptf105b" path="res://MinigameBundles/Cygnus/spawner.gd" id="3_xmtds"]
+[ext_resource type="PackedScene" uid="uid://b8bjdqitct8pt" path="res://MinigameBundles/Cygnus/Obstacles/obstacle1.tscn" id="4_d6xtu"]
+[ext_resource type="Script" uid="uid://blqlb7wssxrrn" path="res://MinigameBundles/Cygnus/player.gd" id="4_xmtds"]
+[ext_resource type="PackedScene" uid="uid://bmgua711u3dfm" path="res://MinigameBundles/Cygnus/Obstacles/obstacle2.tscn" id="5_k7n0a"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_fqpiu"]
+size = Vector2(53, 54)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_fqpiu"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("3_hxkhb")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_hxkhb"]
+size = Vector2(966.5, 364.83255)
+
+[node name="Minigame1" type="Node2D" unique_id=234868541 node_paths=PackedStringArray("game_stats")]
+script = ExtResource("1_7elpu")
+game_stats = NodePath("GameStats")
+total_points = 10
+increase_points = true
+show_points = true
+
+[node name="Background" type="TextureRect" parent="." unique_id=1864616182]
+offset_right = 480.0
+offset_bottom = 270.0
+texture = ExtResource("2_sykq6")
+
+[node name="Spawner" type="Marker2D" parent="." unique_id=2043700871]
+position = Vector2(536, 63)
+script = ExtResource("3_xmtds")
+obstacles = Array[PackedScene]([ExtResource("4_d6xtu"), ExtResource("5_k7n0a")])
+min_time = 0.5
+max_time = 1.0
+
+[node name="Player" type="CharacterBody2D" parent="." unique_id=484690266]
+position = Vector2(77, 106)
+script = ExtResource("4_xmtds")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Player" unique_id=549971755]
+shape = SubResource("RectangleShape2D_fqpiu")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Player" unique_id=1587479486]
+sprite_frames = SubResource("SpriteFrames_fqpiu")
+
+[node name="Platform1" type="StaticBody2D" parent="." unique_id=182033628]
+position = Vector2(-65, -226)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Platform1" unique_id=408276722]
+position = Vector2(479.75, 678.41626)
+shape = SubResource("RectangleShape2D_hxkhb")
+
+[node name="CollisionShape2D4" type="CollisionShape2D" parent="Platform1" unique_id=1273948562]
+position = Vector2(1030, 392)
+shape = SubResource("RectangleShape2D_hxkhb")
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="Platform1" unique_id=1170107838]
+position = Vector2(-418, 384)
+shape = SubResource("RectangleShape2D_hxkhb")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="Platform1" unique_id=1575603665]
+position = Vector2(381, 42.5)
+shape = SubResource("RectangleShape2D_hxkhb")
+
+[node name="GameStats" parent="." unique_id=1669112296 instance=ExtResource("3_fqpiu")]
