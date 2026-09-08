@@ -17,7 +17,6 @@
 [ext_resource type="Texture2D" uid="uid://cteqxd2gieftp" path="res://Scenes/LevelSelect/Art/BigDipperArt/BigDipper0003.png" id="13_wn3si"]
 [ext_resource type="BitMap" uid="uid://chg2v2vsuqxdg" path="res://Scenes/LevelSelect/Art/DracoArt/draco0004.png" id="14_d7t5y"]
 [ext_resource type="FontFile" uid="uid://bcorxdm3rgr4f" path="res://Art/Jersey_10/Jersey10-Regular.ttf" id="17_7irii"]
-[ext_resource type="JSON" path="res://Scenes/LevelSelect/stories.json" id="17_d7t5y"]
 [ext_resource type="Theme" uid="uid://be15x84s4leoy" path="res://button_theme.tres" id="18_d7t5y"]
 
 [sub_resource type="CompressedTexture2D" id="CompressedTexture2D_bpfon"]
@@ -103,7 +102,6 @@ anchors_preset = 0
 offset_right = 40.0
 offset_bottom = 40.0
 script = ExtResource("2_t45ri")
-stories_json = ExtResource("17_d7t5y")
 
 [node name="VBoxContainer" type="VBoxContainer" parent="LevelInfo" unique_id=746868221]
 layout_mode = 0

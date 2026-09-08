@@ -26,4 +26,4 @@ func _process(delta: float) -> void:
 			ring.next_ring(false)
 			lives -= 1
 			if lives == 0:
-				timer_end = true
+				end_game = true

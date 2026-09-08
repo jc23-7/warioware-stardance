@@ -6,8 +6,6 @@ extends Node
 @export var end_scene: PackedScene
 @export var level_select: PackedScene
 
-
-var completed_constellations: Array[bool]
 var tutorial = false
 var minigames_done = 0
 var total_minigames = 3
@@ -17,8 +15,7 @@ var current_constellation: Constellation
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
-	completed_constellations.resize(constellations.size())
-	completed_constellations.fill(false)
+	pass
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
@@ -53,7 +50,7 @@ func minigame_done(success: bool) -> void:
 		lives -= 1
 	
 	if minigames_done == current_constellation.minigames.size():
-		completed_constellations[constellations.find(current_constellation)] = true
+		constellations[constellations.find(current_constellation)].completed = true
 		get_tree().change_scene_to_packed(level_select)
 	else:
 		get_tree().change_scene_to_packed(timer_scene)
