@@ -1,6 +1,6 @@
 extends TextureButton
 
-@onready var level_select: Control = $"../../../../"
+@export var level_info: Control
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
@@ -11,4 +11,4 @@ func _process(delta: float) -> void:
 	pass
 
 func _on_pressed() -> void:
-	level_select.level_selected.emit(name)
+	level_info.level_selected.emit(name)

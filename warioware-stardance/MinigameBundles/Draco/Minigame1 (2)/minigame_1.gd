@@ -15,7 +15,8 @@ var hands_defeated = 0
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	super()
-	Input.mouse_mode = Input.MOUSE_MODE_HIDDEN
+	if not Global.tutorial:
+		Input.mouse_mode = Input.MOUSE_MODE_HIDDEN
 	
 	game_stats.progress_label.add_theme_font_size_override("normal_font_size", 24)
 	game_stats.timer.add_theme_font_size_override("normal_font_size", 36)

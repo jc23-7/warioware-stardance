@@ -1,7 +1,6 @@
 [gd_scene format=3 uid="uid://b5istff0hd8vq"]
 
 [ext_resource type="Texture2D" uid="uid://eqmlt61uaief" path="res://Scenes/LevelSelect/Art/CircleMask.png" id="1_1fiak"]
-[ext_resource type="Script" uid="uid://dxi1wtrk6adto" path="res://Scenes/LevelSelect/level_select.gd" id="1_72w8f"]
 [ext_resource type="Texture2D" uid="uid://bssdhf5jjmkqa" path="res://Scenes/LevelSelect/Art/LevelMap.png" id="2_nkys2"]
 [ext_resource type="Script" uid="uid://bcpver1lbrk4i" path="res://Scenes/level_information.gd" id="2_t45ri"]
 [ext_resource type="Script" uid="uid://4l8i5bw4fek3" path="res://Scenes/LevelSelect/lvl_select_camera.gd" id="3_lx4vd"]
@@ -19,14 +18,137 @@
 [ext_resource type="FontFile" uid="uid://bcorxdm3rgr4f" path="res://Art/Jersey_10/Jersey10-Regular.ttf" id="17_7irii"]
 [ext_resource type="JSON" path="res://Scenes/LevelSelect/stories.json" id="17_d7t5y"]
 [ext_resource type="Theme" uid="uid://be15x84s4leoy" path="res://button_theme.tres" id="18_d7t5y"]
+[ext_resource type="Script" uid="uid://c6l83rxdsd7ph" path="res://Scenes/LevelSelect/tutorial.gd" id="19_5wh6f"]
 
 [sub_resource type="CompressedTexture2D" id="CompressedTexture2D_bpfon"]
 load_path = "res://.godot/imported/BigDipper0003.png-b90af9b1cd4678e07c054b90a3e3ec3f.ctex"
 
+[sub_resource type="Animation" id="Animation_elo14"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:mg1_move")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".:mg2_mouse")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(0, 0)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath(".:mg3_mouse")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(0, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_b7hhi"]
+resource_name = "minigame_1_animation"
+length = 5.0
+loop_mode = 1
+tracks/0/type = "method"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1, 2.5),
+"transitions": PackedFloat32Array(1, 1, 1),
+"values": [{
+"args": [],
+"method": &"reset_minigame"
+}, {
+"args": [],
+"method": &"click_bucket"
+}, {
+"args": [159.0, 33.0],
+"method": &"click_star_spot"
+}]
+}
+tracks/1/type = "method"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(1, 2.5),
+"transitions": PackedFloat32Array(1, 1),
+"values": [{
+"args": [1],
+"method": &"click_star"
+}, {
+"args": [2],
+"method": &"click_star"
+}]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath(".:mg1_move")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(1, 2.5, 3, 4.5),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 1,
+"values": [1.0, 0.0, -1.0, 0.0]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath(".:mg2_mouse")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(1, 1.5, 2, 2.5),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [Vector2(72, 200), Vector2(72, 200), Vector2(159, 33), Vector2(159, 33)]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath(".:mg3_mouse")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(1, 2.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(164, 40), Vector2(223, 51.5)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_aql8v"]
+_data = {
+&"RESET": SubResource("Animation_elo14"),
+&"minigame_1_animation": SubResource("Animation_b7hhi")
+}
+
 [node name="LevelSelect" type="Control" unique_id=520717288]
 layout_mode = 3
 anchors_preset = 0
-script = ExtResource("1_72w8f")
 
 [node name="Background" type="ColorRect" parent="." unique_id=1256307960]
 layout_mode = 0
@@ -66,7 +188,7 @@ offset_right = 614.0
 offset_bottom = 698.0
 texture = ExtResource("2_nkys2")
 
-[node name="Ursa Major" type="TextureButton" parent="TextureRect2/SubViewportContainer/SubViewport" unique_id=1426055299]
+[node name="Ursa Major" type="TextureButton" parent="TextureRect2/SubViewportContainer/SubViewport" unique_id=1426055299 node_paths=PackedStringArray("level_info")]
 texture_filter = 1
 offset_left = -11.0
 offset_top = 73.0
@@ -79,8 +201,9 @@ texture_disabled = ExtResource("10_07bvh")
 texture_focused = SubResource("CompressedTexture2D_bpfon")
 texture_click_mask = ExtResource("9_npf18")
 script = ExtResource("5_s6o25")
+level_info = NodePath("../../../../LevelInfo")
 
-[node name="Draco" type="TextureButton" parent="TextureRect2/SubViewportContainer/SubViewport" unique_id=1493316759]
+[node name="Draco" type="TextureButton" parent="TextureRect2/SubViewportContainer/SubViewport" unique_id=1493316759 node_paths=PackedStringArray("level_info")]
 texture_filter = 1
 offset_left = -83.0
 offset_top = 92.0
@@ -93,6 +216,7 @@ texture_disabled = ExtResource("13_7irii")
 texture_focused = ExtResource("11_t45ri")
 texture_click_mask = ExtResource("14_d7t5y")
 script = ExtResource("5_s6o25")
+level_info = NodePath("../../../../LevelInfo")
 
 [node name="LvlSelectCamera" type="Camera2D" parent="TextureRect2/SubViewportContainer/SubViewport" unique_id=910052112]
 position = Vector2(-145, -44)
@@ -105,40 +229,37 @@ offset_bottom = 40.0
 script = ExtResource("2_t45ri")
 stories_json = ExtResource("17_d7t5y")
 
-[node name="VBoxContainer" type="VBoxContainer" parent="LevelInfo" unique_id=746868221]
+[node name="StoryButton" type="Button" parent="LevelInfo" unique_id=638750883]
+layout_mode = 0
+offset_left = 444.0
+offset_top = 58.0
+offset_right = 500.0
+offset_bottom = 84.0
+size_flags_vertical = 3
+theme_override_fonts/font = ExtResource("17_7irii")
+text = "Story"
+
+[node name="TutorialButton" type="Button" parent="LevelInfo" unique_id=312750302]
+layout_mode = 0
+offset_left = 445.0
+offset_top = 88.0
+offset_right = 501.0
+offset_bottom = 114.0
+size_flags_vertical = 3
+theme_override_fonts/font = ExtResource("17_7irii")
+text = "Tutorial"
+
+[node name="Title" type="RichTextLabel" parent="LevelInfo" unique_id=1046237857]
 layout_mode = 0
 offset_left = 286.0
 offset_top = 24.0
 offset_right = 436.0
-offset_bottom = 124.0
-
-[node name="Title" type="RichTextLabel" parent="LevelInfo/VBoxContainer" unique_id=1046237857]
-layout_mode = 2
+offset_bottom = 54.0
 size_flags_vertical = 3
 theme_override_fonts/normal_font = ExtResource("17_7irii")
 theme_override_font_sizes/normal_font_size = 24
 text = "Ursa Major
 "
-
-[node name="StoryCompleted" type="RichTextLabel" parent="LevelInfo/VBoxContainer" unique_id=1684768194]
-layout_mode = 2
-size_flags_vertical = 3
-theme_override_fonts/normal_font = ExtResource("17_7irii")
-theme_override_font_sizes/normal_font_size = 18
-text = "Story"
-
-[node name="MarginContainer" type="MarginContainer" parent="LevelInfo/VBoxContainer" unique_id=680349607]
-layout_mode = 2
-size_flags_vertical = 3
-theme_override_constants/margin_left = 10
-theme_override_constants/margin_top = -13
-
-[node name="Story" type="RichTextLabel" parent="LevelInfo/VBoxContainer/MarginContainer" unique_id=362390892]
-layout_mode = 2
-theme_override_fonts/normal_font = ExtResource("17_7irii")
-theme_override_font_sizes/normal_font_size = 14
-text = "Story not found. Complete the game to collect the story."
-scroll_active = false
 
 [node name="StartGame" type="Button" parent="LevelInfo" unique_id=1776484225]
 layout_mode = 0
@@ -150,6 +271,50 @@ theme = ExtResource("18_d7t5y")
 theme_override_font_sizes/font_size = 20
 text = "Start Game"
 
+[node name="StoryTab" type="Control" parent="LevelInfo" unique_id=1544989440]
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="StoryText" type="RichTextLabel" parent="LevelInfo/StoryTab" unique_id=362390892]
+layout_mode = 0
+offset_left = 296.0
+offset_top = 80.0
+offset_right = 436.0
+offset_bottom = 124.0
+theme_override_fonts/normal_font = ExtResource("17_7irii")
+theme_override_font_sizes/normal_font_size = 14
+text = "Story not found. Complete the game to collect the story."
+scroll_active = false
+
+[node name="TutorialTab" type="Control" parent="LevelInfo" unique_id=883442300]
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Tutorial" type="SubViewportContainer" parent="LevelInfo/TutorialTab" unique_id=1486600721 node_paths=PackedStringArray("level_info")]
+layout_mode = 0
+offset_left = 316.0
+offset_top = 136.0
+offset_right = 796.0
+offset_bottom = 406.0
+scale = Vector2(0.25, 0.25)
+mouse_filter = 2
+script = ExtResource("19_5wh6f")
+level_info = NodePath("../..")
+
+[node name="MinigameViewport" type="SubViewport" parent="LevelInfo/TutorialTab/Tutorial" unique_id=1105030698]
+handle_input_locally = false
+size = Vector2i(480, 270)
+render_target_update_mode = 4
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="LevelInfo/TutorialTab/Tutorial" unique_id=2011721988]
+root_node = NodePath("../../..")
+libraries/ = SubResource("AnimationLibrary_aql8v")
+autoplay = &"minigame_1_animation"
+
 [connection signal="pressed" from="TextureRect2/SubViewportContainer/SubViewport/Ursa Major" to="TextureRect2/SubViewportContainer/SubViewport/Ursa Major" method="_on_pressed"]
 [connection signal="pressed" from="TextureRect2/SubViewportContainer/SubViewport/Draco" to="TextureRect2/SubViewportContainer/SubViewport/Draco" method="_on_pressed"]
-[connection signal="pressed" from="LevelInfo/StartGame" to="." method="_on_start_game_pressed"]
+[connection signal="pressed" from="LevelInfo/StoryButton" to="LevelInfo" method="_change_tab" binds= [NodePath("StoryTab")]]
+[connection signal="pressed" from="LevelInfo/TutorialButton" to="LevelInfo" method="_change_tab" binds= [NodePath("TutorialTab")]]
+[connection signal="pressed" from="LevelInfo/StartGame" to="LevelInfo" method="_on_start_game_pressed"]
