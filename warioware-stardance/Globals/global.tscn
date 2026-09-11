@@ -2,8 +2,8 @@
 
 [ext_resource type="Script" uid="uid://s8pk7c33cdyt" path="res://Globals/Global.gd" id="1_6q3x5"]
 [ext_resource type="Script" uid="uid://djyjxwhqcifvv" path="res://Scenes/LevelSelect/constellation.gd" id="2_2wtbm"]
-[ext_resource type="Resource" uid="uid://bbpqe264v7lvk" path="res://MinigameBundles/BigDipper/big_dipper.tres" id="3_8tbuy"]
-[ext_resource type="Resource" uid="uid://b5mwjqfljjti7" path="res://MinigameBundles/Draco/draco.tres" id="4_24ueu"]
+[ext_resource type="Resource" uid="uid://bbpqe264v7lvk" path="res://MinigameBundles/Constellations/ursa_major.tres" id="3_8tbuy"]
+[ext_resource type="Resource" uid="uid://b5mwjqfljjti7" path="res://MinigameBundles/Constellations/draco.tres" id="4_24ueu"]
 [ext_resource type="PackedScene" uid="uid://cv30uf6iqhy32" path="res://Scenes/title_scene.tscn" id="4_brfyg"]
 [ext_resource type="PackedScene" uid="uid://cmojelq6qd65d" path="res://Scenes/TimerScene/timer_scene.tscn" id="5_c0pxt"]
 [ext_resource type="PackedScene" uid="uid://suv3r7ny0dvp" path="res://Scenes/end_scene.tscn" id="6_24ueu"]

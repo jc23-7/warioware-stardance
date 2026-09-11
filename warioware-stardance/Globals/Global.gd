@@ -6,6 +6,7 @@ extends Node
 @export var end_scene: PackedScene
 @export var level_select: PackedScene
 
+var mode
 var tutorial = false
 var minigames_done = 0
 var total_minigames = 3
@@ -22,6 +23,11 @@ func _ready() -> void:
 func _process(delta: float) -> void:
 	pass
 
+func reset_game() -> void:
+	minigames_done = 0
+	total_minigames = 3
+	lives = 5
+
 func change_scene(next_scene_name: String) -> void:
 	if next_scene_name == "title_scene":
 		get_tree().change_scene_to_packed(title_scene)
@@ -30,28 +36,31 @@ func change_scene(next_scene_name: String) -> void:
 		get_tree().change_scene_to_packed(level_select)
 
 
-func reset_game() -> void:
-	minigames_done = 0
-	total_minigames = 3
-	lives = 5
 func start_constellation(constellation: Constellation) -> void:
 	current_constellation = constellation
 	minigames_done = 0
 	get_tree().change_scene_to_packed(timer_scene)
 
+func start_survival() -> void:
+	reset_game()
+	get_tree().change_scene_to_packed(timer_scene)
+
 func next_minigame() -> void:
-	get_tree().change_scene_to_packed(current_constellation.minigames[minigames_done])
+	randomize()
+	get_tree().change_scene_to_packed(constellations[randi_range(0, constellations.size() - 1)].minigame)
 	
 	
 func minigame_done(success: bool) -> void:
-	if success:
-		minigames_done += 1
-	else:
-		lives -= 1
-	
-	if minigames_done == current_constellation.minigames.size():
-		constellations[constellations.find(current_constellation)].completed = true
+	if mode == "Play":
+		constellations[constellations.find(current_constellation)].completed = success
 		get_tree().change_scene_to_packed(level_select)
-	else:
-		get_tree().change_scene_to_packed(timer_scene)
-	
+	elif mode == "Survival":
+		if success:
+			minigames_done += 1
+		else:
+			lives -= 1
+
+		if lives == 0:
+			get_tree().change_scene_to_packed(end_scene)
+		else:
+			get_tree().change_scene_to_packed(timer_scene)

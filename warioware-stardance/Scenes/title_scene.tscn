@@ -3,7 +3,7 @@
 [ext_resource type="Theme" uid="uid://be15x84s4leoy" path="res://button_theme.tres" id="1_4nugt"]
 [ext_resource type="Script" uid="uid://c1vya0n2y4wc4" path="res://Scenes/title_scene.gd" id="1_b6ftn"]
 [ext_resource type="Texture2D" uid="uid://debccx5bpy647" path="res://Art/Backgrounds/title_bg.png" id="3_3cm6q"]
-[ext_resource type="Resource" uid="uid://bbpqe264v7lvk" path="res://MinigameBundles/BigDipper/big_dipper.tres" id="3_4nugt"]
+[ext_resource type="Resource" uid="uid://bbpqe264v7lvk" path="res://MinigameBundles/Constellations/ursa_major.tres" id="3_4nugt"]
 [ext_resource type="PackedScene" uid="uid://14s2vsvcjhvm" path="res://Scenes/tutorial_scene.tscn" id="3_wpeey"]
 
 [node name="TitleScene" type="Control" unique_id=346954644]
@@ -23,24 +23,26 @@ texture = ExtResource("3_3cm6q")
 
 [node name="VBoxContainer" type="VBoxContainer" parent="." unique_id=2029640105]
 layout_mode = 0
-offset_left = 55.0
-offset_top = 85.0
-offset_right = 163.455
-offset_bottom = 222.0
+offset_left = 50.0
+offset_top = 89.0
+offset_right = 160.0
+offset_bottom = 228.0
 mouse_filter = 2
+theme_override_constants/separation = 5
 
-[node name="Start" type="Button" parent="VBoxContainer" unique_id=616841783]
+[node name="Play" type="Button" parent="VBoxContainer" unique_id=616841783]
 layout_mode = 2
-text = "Start"
+text = "Play
+"
 
-[node name="Tutorial" type="Button" parent="VBoxContainer" unique_id=1582090839]
+[node name="Survival" type="Button" parent="VBoxContainer" unique_id=1590881269]
 layout_mode = 2
-text = "Tutorial"
+text = "Survival"
 
 [node name="Quit" type="Button" parent="VBoxContainer" unique_id=83450563]
 layout_mode = 2
 text = "Quit"
 
-[connection signal="pressed" from="VBoxContainer/Start" to="." method="_on_start_pressed"]
-[connection signal="pressed" from="VBoxContainer/Tutorial" to="." method="_on_tutorial_pressed"]
+[connection signal="pressed" from="VBoxContainer/Play" to="." method="_on_start_pressed"]
+[connection signal="pressed" from="VBoxContainer/Survival" to="." method="_on_survival_pressed"]
 [connection signal="pressed" from="VBoxContainer/Quit" to="." method="_on_quit_pressed"]

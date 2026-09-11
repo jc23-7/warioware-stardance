@@ -38,15 +38,13 @@ func _on_level_selected(constellation_name: String):
 	Global.tutorial = true
 	for constellation in Global.constellations:
 		if constellation.constellation_name == constellation_name:
-			minigame_template = constellation.minigames[0]
+			minigame_template = constellation.minigame
 			break
 	
 	reset_minigame()
 	show()
 
 func reset_minigame() -> void:
-	Input.action_release("ui_left")
-	Input.action_release("ui_right")
 	for action in InputMap.get_actions():
 		Input.action_release(action)
 	
@@ -64,8 +62,6 @@ func release_key(key_name: String) -> void:
 	
 
 func _exit_tree() -> void:
-	Input.action_release("ui_left")
-	Input.action_release("ui_right")
 	for action in InputMap.get_actions():
 		Input.action_release(action)
 	queue_free()

@@ -7,11 +7,8 @@ var time
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
-	if Global.lives == 0:
-		Global.next_minigame()
-	else:
-		await Timer(1.0)
-		Global.next_minigame()
+	await Timer(1.0)
+	Global.next_minigame()
 	
 		
 	

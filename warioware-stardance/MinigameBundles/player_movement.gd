@@ -18,7 +18,7 @@ func _physics_process(delta: float) -> void:
 	if Global.tutorial:
 		direction = fake_input.x
 	else:
-		direction = Input.get_axis("ui_left", "ui_right")
+		direction = Input.get_axis("move_left", "move_right")
 
 	if direction:
 		if direction < 0:

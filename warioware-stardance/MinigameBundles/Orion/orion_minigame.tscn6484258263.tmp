@@ -1,0 +1,150 @@
+[gd_scene format=3 uid="uid://cvl4hwr5lhs4p"]
+
+[ext_resource type="Texture2D" uid="uid://da3enufnadd0l" path="res://Art/Backgrounds/minigame_1_bg.png" id="1_u31tf"]
+[ext_resource type="Script" uid="uid://djc0coppvqoms" path="res://MinigameBundles/Orion/orion_minigame.gd" id="1_xj0d8"]
+[ext_resource type="PackedScene" uid="uid://ijvv7plr8526" path="res://Scenes/game_timer.tscn" id="3_xj0d8"]
+[ext_resource type="Script" uid="uid://dqy6hpwet03qf" path="res://MinigameBundles/UrsaMajor/hearts.gd" id="4_55mpo"]
+[ext_resource type="Texture2D" uid="uid://vfe0gkt4cix" path="res://icon.svg" id="5_fg6us"]
+[ext_resource type="Texture2D" uid="uid://bw5yrghjf3vdl" path="res://Scenes/TimerScene/StarLife.png" id="5_u31tf"]
+[ext_resource type="Script" uid="uid://bkwrxjdb4i3lb" path="res://MinigameBundles/Orion/player.gd" id="6_lq40j"]
+[ext_resource type="Texture2D" uid="uid://cp77p6m37hdts" path="res://Art/Character.png" id="7_fg6us"]
+[ext_resource type="Script" uid="uid://jteux1djf7c4" path="res://MinigameBundles/Orion/enemy.gd" id="8_55mpo"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_55mpo"]
+size = Vector2(38.400032, 81.066666)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_xj0d8"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("7_fg6us")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_lq40j"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("5_u31tf")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_xj0d8"]
+size = Vector2(53, 54)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_fg6us"]
+size = Vector2(434.4003, 733.39)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_4vpmv"]
+size = Vector2(830.9891, 389.88953)
+
+[node name="OrionMinigame" type="Node2D" unique_id=213333018 node_paths=PackedStringArray("game_stats")]
+script = ExtResource("1_xj0d8")
+game_stats = NodePath("GameStats")
+total_points = 5
+time_limit = 10.0
+activate_timer = true
+
+[node name="Background" type="TextureRect" parent="." unique_id=1022662267]
+offset_right = 480.0
+offset_bottom = 270.0
+texture = ExtResource("1_u31tf")
+
+[node name="Hearts" type="Node2D" parent="." unique_id=871621734]
+script = ExtResource("4_55mpo")
+
+[node name="Heart1" type="Sprite2D" parent="Hearts" unique_id=1365405082]
+position = Vector2(23, 27)
+scale = Vector2(0.2265625, 0.2265625)
+texture = ExtResource("5_fg6us")
+
+[node name="Heart2" type="Sprite2D" parent="Hearts" unique_id=1411986006]
+position = Vector2(23, 27)
+scale = Vector2(0.2265625, 0.2265625)
+texture = ExtResource("5_fg6us")
+
+[node name="Heart3" type="Sprite2D" parent="Hearts" unique_id=1469551147]
+position = Vector2(23, 27)
+scale = Vector2(0.2265625, 0.2265625)
+texture = ExtResource("5_fg6us")
+
+[node name="Heart4" type="Sprite2D" parent="Hearts" unique_id=607392825]
+position = Vector2(23, 27)
+scale = Vector2(0.2265625, 0.2265625)
+texture = ExtResource("5_fg6us")
+
+[node name="Heart5" type="Sprite2D" parent="Hearts" unique_id=680218943]
+position = Vector2(23, 27)
+scale = Vector2(0.2265625, 0.2265625)
+texture = ExtResource("5_fg6us")
+
+[node name="GameStats" parent="." unique_id=1669112296 instance=ExtResource("3_xj0d8")]
+
+[node name="Enemy" type="CharacterBody2D" parent="." unique_id=1309560956]
+position = Vector2(-5, 3)
+script = ExtResource("8_55mpo")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Enemy" unique_id=2045531318]
+position = Vector2(270, 86)
+scale = Vector2(0.46875, 0.46875)
+shape = SubResource("RectangleShape2D_55mpo")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Enemy" unique_id=342736848]
+position = Vector2(270, 85)
+scale = Vector2(0.46875, 0.46875)
+sprite_frames = SubResource("SpriteFrames_xj0d8")
+
+[node name="Player" type="CharacterBody2D" parent="." unique_id=47101783]
+script = ExtResource("6_lq40j")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Player" unique_id=370740971]
+position = Vector2(144, 87)
+sprite_frames = SubResource("SpriteFrames_lq40j")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Player" unique_id=426694359]
+position = Vector2(144, 87)
+shape = SubResource("RectangleShape2D_xj0d8")
+
+[node name="Walls" type="Node2D" parent="." unique_id=620022870]
+
+[node name="LeftWall" type="StaticBody2D" parent="Walls" unique_id=1925953680]
+position = Vector2(-39.000004, -97.000015)
+scale = Vector2(0.042028412, 0.4595099)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Walls/LeftWall" unique_id=1444811588]
+position = Vector2(690.0095, 544.05786)
+scale = Vector2(1.0000005, 1.0000005)
+shape = SubResource("RectangleShape2D_fg6us")
+
+[node name="RightWall" type="StaticBody2D" parent="Walls" unique_id=160397069]
+position = Vector2(461, -97.000015)
+scale = Vector2(0.042028412, 0.4595099)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Walls/RightWall" unique_id=893263018]
+position = Vector2(690.0095, 544.05786)
+scale = Vector2(1.0000005, 1.0000005)
+shape = SubResource("RectangleShape2D_fg6us")
+
+[node name="TopWall" type="StaticBody2D" parent="Walls" unique_id=369477540]
+position = Vector2(-29, -419)
+scale = Vector2(0.6582514, 0.45802766)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Walls/TopWall" unique_id=2071357838]
+position = Vector2(413.97565, 717.66376)
+scale = Vector2(1.0000005, 1.0000005)
+shape = SubResource("RectangleShape2D_4vpmv")
+
+[node name="BottomWall" type="StaticBody2D" parent="Walls" unique_id=1684363700]
+position = Vector2(-29, -419)
+scale = Vector2(0.6582514, 0.45802766)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Walls/BottomWall" unique_id=1563808375]
+position = Vector2(413.97565, 1702.9539)
+scale = Vector2(1.0000005, 1.0000005)
+shape = SubResource("RectangleShape2D_4vpmv")

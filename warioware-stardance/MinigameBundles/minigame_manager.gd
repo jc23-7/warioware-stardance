@@ -32,6 +32,7 @@ func _process(delta: float) -> void:
 	if increase_points:
 		
 		if completed_points >= total_points and not game_ended:
+			game_ended = true
 			game_stats.display_time = false
 			await game_stats.Timer(0.5)
 			game_stats.display_time = true
@@ -49,13 +50,14 @@ func _process(delta: float) -> void:
 			Global.minigame_done(false)
 	else:
 		if end_game and not game_ended:
+			game_ended = true
+			end_game = false
 			game_stats.display_time = false
 			await game_stats.Timer(0.5)
 			game_stats.display_time = true
 			Global.minigame_done(true)
 
 		elif completed_points <= 0 and not game_ended:
-			end_game = false
 			game_ended = true
 
 			game_stats.timer.add_theme_color_override("default_color", Color.RED)
