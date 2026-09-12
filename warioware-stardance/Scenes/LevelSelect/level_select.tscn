@@ -1,27 +1,20 @@
 [gd_scene format=3 uid="uid://b5istff0hd8vq"]
 
 [ext_resource type="Texture2D" uid="uid://eqmlt61uaief" path="res://Scenes/LevelSelect/Art/CircleMask.png" id="1_1fiak"]
-[ext_resource type="Texture2D" uid="uid://bssdhf5jjmkqa" path="res://Scenes/LevelSelect/Art/LevelMap.png" id="2_nkys2"]
+[ext_resource type="Texture2D" uid="uid://bdqrxdaukkbe6" path="res://Scenes/LevelSelect/Art/LevelMap2.png" id="2_d7t5y"]
 [ext_resource type="Script" uid="uid://bcpver1lbrk4i" path="res://Scenes/level_information.gd" id="2_t45ri"]
 [ext_resource type="Script" uid="uid://4l8i5bw4fek3" path="res://Scenes/LevelSelect/lvl_select_camera.gd" id="3_lx4vd"]
 [ext_resource type="Script" uid="uid://sc20de3tbw0f" path="res://Scenes/LevelSelect/constellation_button.gd" id="5_s6o25"]
-[ext_resource type="Texture2D" uid="uid://fwq4bffepi2f" path="res://Scenes/LevelSelect/Art/BigDipperArt/BigDipper0000.png" id="9_bpfon"]
-[ext_resource type="BitMap" uid="uid://baqclx73thacs" path="res://Scenes/LevelSelect/Art/BigDipperArt/BigDipper0005.png" id="9_npf18"]
 [ext_resource type="Texture2D" uid="uid://byh2uutmqatft" path="res://Scenes/LevelSelect/Art/BigDipperArt/BigDipper0004.png" id="10_07bvh"]
 [ext_resource type="Texture2D" uid="uid://bqeerqlr6ttti" path="res://Scenes/LevelSelect/Art/DracoArt/draco0000.png" id="10_yof5r"]
 [ext_resource type="Texture2D" uid="uid://bdypknjohanh" path="res://Scenes/LevelSelect/Art/DracoArt/draco0002.png" id="11_t45ri"]
 [ext_resource type="Texture2D" uid="uid://ddqsbstcrhucp" path="res://Scenes/LevelSelect/Art/DracoArt/draco0001.png" id="12_eol4j"]
-[ext_resource type="Texture2D" uid="uid://bkslimd8odxaj" path="res://Scenes/LevelSelect/Art/BigDipperArt/BigDipper0001.png" id="12_yx562"]
 [ext_resource type="Texture2D" uid="uid://b0o0uff8gn7j2" path="res://Scenes/LevelSelect/Art/DracoArt/draco0003.png" id="13_7irii"]
-[ext_resource type="Texture2D" uid="uid://cteqxd2gieftp" path="res://Scenes/LevelSelect/Art/BigDipperArt/BigDipper0003.png" id="13_wn3si"]
 [ext_resource type="BitMap" uid="uid://chg2v2vsuqxdg" path="res://Scenes/LevelSelect/Art/DracoArt/draco0004.png" id="14_d7t5y"]
 [ext_resource type="FontFile" uid="uid://bcorxdm3rgr4f" path="res://Art/Jersey_10/Jersey10-Regular.ttf" id="17_7irii"]
 [ext_resource type="JSON" path="res://Scenes/LevelSelect/stories.json" id="17_d7t5y"]
 [ext_resource type="Theme" uid="uid://be15x84s4leoy" path="res://button_theme.tres" id="18_d7t5y"]
 [ext_resource type="Script" uid="uid://c6l83rxdsd7ph" path="res://Scenes/LevelSelect/tutorial.gd" id="19_5wh6f"]
-
-[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_bpfon"]
-load_path = "res://.godot/imported/BigDipper0003.png-b90af9b1cd4678e07c054b90a3e3ec3f.ctex"
 
 [sub_resource type="Animation" id="Animation_elo14"]
 length = 0.001
@@ -155,7 +148,7 @@ layout_mode = 0
 offset_right = 480.0
 offset_bottom = 270.0
 mouse_filter = 2
-color = Color(0, 0, 0, 1)
+color = Color(0, 0, 0, 0.6156863)
 
 [node name="TextureRect2" type="TextureRect" parent="." unique_id=1118172012]
 clip_children = 1
@@ -181,12 +174,12 @@ physics_object_picking = true
 size = Vector2i(250, 250)
 render_target_update_mode = 4
 
-[node name="TextureRect" type="TextureRect" parent="TextureRect2/SubViewportContainer/SubViewport" unique_id=1593803911]
+[node name="TextureRect" type="TextureRect" parent="TextureRect2/SubViewportContainer/SubViewport" unique_id=1019324343]
 offset_left = -386.0
 offset_top = -302.0
 offset_right = 614.0
 offset_bottom = 698.0
-texture = ExtResource("2_nkys2")
+texture = ExtResource("2_d7t5y")
 
 [node name="Ursa Major" type="TextureButton" parent="TextureRect2/SubViewportContainer/SubViewport" unique_id=1426055299 node_paths=PackedStringArray("level_info")]
 texture_filter = 1
@@ -194,12 +187,7 @@ offset_left = -11.0
 offset_top = 73.0
 offset_right = 239.0
 offset_bottom = 323.0
-texture_normal = ExtResource("9_bpfon")
-texture_pressed = ExtResource("13_wn3si")
-texture_hover = ExtResource("12_yx562")
 texture_disabled = ExtResource("10_07bvh")
-texture_focused = SubResource("CompressedTexture2D_bpfon")
-texture_click_mask = ExtResource("9_npf18")
 script = ExtResource("5_s6o25")
 level_info = NodePath("../../../../LevelInfo")
 
