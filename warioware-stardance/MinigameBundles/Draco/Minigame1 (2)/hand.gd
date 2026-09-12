@@ -34,7 +34,7 @@ func grab_completed() -> void:
 func retreated() -> void:
 	super()
 	if has_object:
-		parent_minigame.completed_points -= 1
+		parent_minigame.lives -= 1
 	health = 6
 
 func _on_hand_clicked(viewport: Node, event: InputEvent, shape_idx: int) -> void:

@@ -18,7 +18,7 @@
 [ext_resource type="Texture2D" uid="uid://dw38ykswtq7dy" path="res://MinigameBundles/Draco/Minigame2/Art/dragon_grab.png" id="15_fy54w"]
 [ext_resource type="Texture2D" uid="uid://cgn41a50lqk6" path="res://MinigameBundles/Draco/Minigame2/Art/dragon_star.png" id="16_d27bs"]
 [ext_resource type="Script" uid="uid://dav8d150tw18e" path="res://MinigameBundles/Draco/Minigame3/dragon.gd" id="17_7agwb"]
-[ext_resource type="PackedScene" uid="uid://ijvv7plr8526" path="res://Scenes/game_timer.tscn" id="18_rk4xg"]
+[ext_resource type="PackedScene" uid="uid://ijvv7plr8526" path="res://Scenes/game_stats.tscn" id="18_rk4xg"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_l6vxb"]
 size = Vector2(34, 31.75)

@@ -12,7 +12,7 @@
 [ext_resource type="Script" uid="uid://1i37h6au7j1p" path="res://MinigameBundles/Draco/Minigame1 (2)/apple.gd" id="10_2n33d"]
 [ext_resource type="SpriteFrames" uid="uid://d14sehwfuhl0i" path="res://MinigameBundles/Draco/Minigame1 (2)/hand_animation.tres" id="11_u745u"]
 [ext_resource type="Script" uid="uid://dtwhm6tm1i284" path="res://MinigameBundles/Draco/Minigame1 (2)/hand.gd" id="12_5hv4b"]
-[ext_resource type="PackedScene" uid="uid://ijvv7plr8526" path="res://Scenes/game_timer.tscn" id="13_3kq2s"]
+[ext_resource type="PackedScene" uid="uid://ijvv7plr8526" path="res://Scenes/game_stats.tscn" id="13_3kq2s"]
 [ext_resource type="PackedScene" uid="uid://dwrf7huenjkb7" path="res://MinigameBundles/Draco/Minigame1 (2)/dragon_cursor.tscn" id="14_1ydlr"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_an021"]
@@ -49,9 +49,10 @@ script = ExtResource("1_u745u")
 min_time = 1.0
 max_time = 3.0
 game_stats = NodePath("GameStats")
-total_points = 1
+lives = 1
 time_limit = 10.0
-activate_timer = true
+display_time = true
+display_lives = true
 
 [node name="Background" type="TextureRect" parent="." unique_id=1120083052]
 offset_right = 40.0

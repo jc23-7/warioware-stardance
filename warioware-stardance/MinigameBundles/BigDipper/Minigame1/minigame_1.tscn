@@ -4,7 +4,7 @@
 [ext_resource type="PackedScene" uid="uid://c3j107p7jccwm" path="res://MinigameBundles/BigDipper/Minigame1/collectable_mg1.tscn" id="2_6wyto"]
 [ext_resource type="PackedScene" uid="uid://beavwkuna4s6h" path="res://MinigameBundles/BigDipper/Minigame1/player_mg1.tscn" id="2_11mgy"]
 [ext_resource type="Texture2D" uid="uid://da3enufnadd0l" path="res://Art/Backgrounds/minigame_1_bg.png" id="2_o6yob"]
-[ext_resource type="PackedScene" uid="uid://ijvv7plr8526" path="res://Scenes/game_timer.tscn" id="6_0uv5o"]
+[ext_resource type="PackedScene" uid="uid://ijvv7plr8526" path="res://Scenes/game_stats.tscn" id="6_0uv5o"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_f6tb2"]
 size = Vector2(966.5, 364.83255)

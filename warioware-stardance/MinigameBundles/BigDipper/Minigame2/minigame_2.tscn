@@ -5,7 +5,7 @@
 [ext_resource type="PackedScene" uid="uid://cc5m6hcfkjxqc" path="res://MinigameBundles/BigDipper/Minigame2/star_mg2.tscn" id="2_3c0qc"]
 [ext_resource type="Texture2D" uid="uid://ca88q0am8iemd" path="res://Art/Backgrounds/minigame_2_bg.png" id="2_mmgun"]
 [ext_resource type="Script" uid="uid://ih22ahw8eh1s" path="res://MinigameBundles/BigDipper/Minigame2/star_spot_mg2.gd" id="3_rfxq2"]
-[ext_resource type="PackedScene" uid="uid://ijvv7plr8526" path="res://Scenes/game_timer.tscn" id="4_mmgun"]
+[ext_resource type="PackedScene" uid="uid://ijvv7plr8526" path="res://Scenes/game_stats.tscn" id="4_mmgun"]
 [ext_resource type="Texture2D" uid="uid://bpxraq8n31v33" path="res://MinigameBundles/BigDipper/Minigame2/BucketMg2/frame0000.png" id="4_qhtu5"]
 [ext_resource type="Texture2D" uid="uid://c07g6dd8o7b6p" path="res://Art/star_spot.png" id="5_h684j"]
 [ext_resource type="Texture2D" uid="uid://cwj7tlyxgmlbe" path="res://MinigameBundles/BigDipper/Minigame2/BucketMg2/frame0001.png" id="5_m2y0d"]

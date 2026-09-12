@@ -16,16 +16,17 @@ func _ready() -> void:
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
-	if not hit_player:
-		position.x += horizontal_speed
-		position.y += vertical_speed
-		rotation = Vector2(horizontal_speed, vertical_speed).angle() - PI/2.0
-		if position.y > get_window().size.y + 100:
-			queue_free()
-		elif $AnimatedSprite2D/Area2D.overlaps_body(player):
-			parent_minigame.completed_points -= 1
-			hit_player = true
-			x_to_player = (position.x - player.position.x) * player.visuals.scale.x
-	else:
-		position.x = player.position.x + x_to_player * player.visuals.scale.x
+	if not parent_minigame.game_ended:
+		if not hit_player:
+			position.x += horizontal_speed
+			position.y += vertical_speed
+			rotation = Vector2(horizontal_speed, vertical_speed).angle() - PI/2.0
+			if position.y > get_window().size.y + 100:
+				queue_free()
+			elif $AnimatedSprite2D/Area2D.overlaps_body(player):
+				parent_minigame.lives -= 1
+				hit_player = true
+				x_to_player = (position.x - player.position.x) * player.visuals.scale.x
+		else:
+			position.x = player.position.x + x_to_player * player.visuals.scale.x
 		

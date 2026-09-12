@@ -1,0 +1,173 @@
+[gd_scene format=3 uid="uid://ijvv7plr8526"]
+
+[ext_resource type="Script" uid="uid://b24ijmkixnjwv" path="res://Scenes/game_stats.gd" id="1_j2gkn"]
+[ext_resource type="FontFile" uid="uid://bcorxdm3rgr4f" path="res://Art/Jersey_10/Jersey10-Regular.ttf" id="2_j2gkn"]
+[ext_resource type="Script" uid="uid://dqy6hpwet03qf" path="res://MinigameBundles/UrsaMajor/hearts.gd" id="3_wnms1"]
+[ext_resource type="Texture2D" uid="uid://vfe0gkt4cix" path="res://icon.svg" id="4_lc33e"]
+
+[node name="GameStats" type="Node2D" unique_id=1669112296]
+script = ExtResource("1_j2gkn")
+
+[node name="All" type="Node2D" parent="." unique_id=888009754]
+visible = false
+
+[node name="VBoxContainer" type="VBoxContainer" parent="All" unique_id=232973355]
+offset_left = 9.0
+offset_right = 60.0
+offset_bottom = 69.0
+theme_override_constants/separation = 25
+
+[node name="Progress" type="RichTextLabel" parent="All/VBoxContainer" unique_id=2119416280]
+layout_mode = 2
+theme_override_fonts/normal_font = ExtResource("2_j2gkn")
+theme_override_font_sizes/normal_font_size = 48
+bbcode_enabled = true
+text = "0/7"
+fit_content = true
+autowrap_mode = 0
+
+[node name="Timer" type="RichTextLabel" parent="All/VBoxContainer" unique_id=1186589225]
+layout_mode = 2
+theme_override_fonts/normal_font = ExtResource("2_j2gkn")
+theme_override_font_sizes/normal_font_size = 24
+text = "0.0"
+fit_content = true
+
+[node name="Hearts" type="Node2D" parent="All" unique_id=770809354]
+position = Vector2(0, 37)
+script = ExtResource("3_wnms1")
+
+[node name="Heart1" type="Sprite2D" parent="All/Hearts" unique_id=1859365478]
+position = Vector2(23, 27)
+scale = Vector2(0.2265625, 0.2265625)
+texture = ExtResource("4_lc33e")
+
+[node name="Heart2" type="Sprite2D" parent="All/Hearts" unique_id=1215562998]
+position = Vector2(23, 27)
+scale = Vector2(0.2265625, 0.2265625)
+texture = ExtResource("4_lc33e")
+
+[node name="Heart3" type="Sprite2D" parent="All/Hearts" unique_id=1555673]
+position = Vector2(23, 27)
+scale = Vector2(0.2265625, 0.2265625)
+texture = ExtResource("4_lc33e")
+
+[node name="Heart4" type="Sprite2D" parent="All/Hearts" unique_id=558815070]
+position = Vector2(23, 27)
+scale = Vector2(0.2265625, 0.2265625)
+texture = ExtResource("4_lc33e")
+
+[node name="Heart5" type="Sprite2D" parent="All/Hearts" unique_id=162621596]
+position = Vector2(23, 27)
+scale = Vector2(0.2265625, 0.2265625)
+texture = ExtResource("4_lc33e")
+
+[node name="HeartTimer" type="Node2D" parent="." unique_id=941954892]
+visible = false
+
+[node name="Timer" type="RichTextLabel" parent="HeartTimer" unique_id=1759441058]
+offset_left = 9.0
+offset_top = 45.0
+offset_right = 60.0
+offset_bottom = 72.0
+theme_override_fonts/normal_font = ExtResource("2_j2gkn")
+theme_override_font_sizes/normal_font_size = 24
+text = "0.0"
+fit_content = true
+
+[node name="Hearts" type="Node2D" parent="HeartTimer" unique_id=2064959867]
+script = ExtResource("3_wnms1")
+
+[node name="Heart1" type="Sprite2D" parent="HeartTimer/Hearts" unique_id=1757700074]
+position = Vector2(23, 27)
+scale = Vector2(0.2265625, 0.2265625)
+texture = ExtResource("4_lc33e")
+
+[node name="Heart2" type="Sprite2D" parent="HeartTimer/Hearts" unique_id=1034295725]
+position = Vector2(23, 27)
+scale = Vector2(0.2265625, 0.2265625)
+texture = ExtResource("4_lc33e")
+
+[node name="Heart3" type="Sprite2D" parent="HeartTimer/Hearts" unique_id=866903390]
+position = Vector2(23, 27)
+scale = Vector2(0.2265625, 0.2265625)
+texture = ExtResource("4_lc33e")
+
+[node name="Heart4" type="Sprite2D" parent="HeartTimer/Hearts" unique_id=94197456]
+position = Vector2(23, 27)
+scale = Vector2(0.2265625, 0.2265625)
+texture = ExtResource("4_lc33e")
+
+[node name="Heart5" type="Sprite2D" parent="HeartTimer/Hearts" unique_id=537128951]
+position = Vector2(23, 27)
+scale = Vector2(0.2265625, 0.2265625)
+texture = ExtResource("4_lc33e")
+
+[node name="HeartProgress" type="Node2D" parent="." unique_id=1529325220]
+visible = false
+
+[node name="Progress" type="RichTextLabel" parent="HeartProgress" unique_id=571869727]
+offset_left = 8.0
+offset_top = 3.0
+offset_right = 59.0
+offset_bottom = 55.0
+theme_override_fonts/normal_font = ExtResource("2_j2gkn")
+theme_override_font_sizes/normal_font_size = 48
+bbcode_enabled = true
+text = "0/7"
+fit_content = true
+autowrap_mode = 0
+
+[node name="Hearts" type="Node2D" parent="HeartProgress" unique_id=1778391027]
+position = Vector2(0, 41)
+script = ExtResource("3_wnms1")
+
+[node name="Heart1" type="Sprite2D" parent="HeartProgress/Hearts" unique_id=1210134257]
+position = Vector2(23, 27)
+scale = Vector2(0.2265625, 0.2265625)
+texture = ExtResource("4_lc33e")
+
+[node name="Heart2" type="Sprite2D" parent="HeartProgress/Hearts" unique_id=241599421]
+position = Vector2(23, 27)
+scale = Vector2(0.2265625, 0.2265625)
+texture = ExtResource("4_lc33e")
+
+[node name="Heart3" type="Sprite2D" parent="HeartProgress/Hearts" unique_id=1336352466]
+position = Vector2(23, 27)
+scale = Vector2(0.2265625, 0.2265625)
+texture = ExtResource("4_lc33e")
+
+[node name="Heart4" type="Sprite2D" parent="HeartProgress/Hearts" unique_id=307524244]
+position = Vector2(23, 27)
+scale = Vector2(0.2265625, 0.2265625)
+texture = ExtResource("4_lc33e")
+
+[node name="Heart5" type="Sprite2D" parent="HeartProgress/Hearts" unique_id=457091036]
+position = Vector2(23, 27)
+scale = Vector2(0.2265625, 0.2265625)
+texture = ExtResource("4_lc33e")
+
+[node name="ProgressTimer" type="Node2D" parent="." unique_id=715434476]
+visible = false
+
+[node name="VBoxContainer" type="VBoxContainer" parent="ProgressTimer" unique_id=1909283156]
+offset_left = 9.0
+offset_right = 60.0
+offset_bottom = 69.0
+theme_override_constants/separation = -10
+
+[node name="Progress" type="RichTextLabel" parent="ProgressTimer/VBoxContainer" unique_id=1921896198]
+layout_mode = 2
+theme_override_fonts/normal_font = ExtResource("2_j2gkn")
+theme_override_font_sizes/normal_font_size = 48
+bbcode_enabled = true
+text = "0/7"
+fit_content = true
+autowrap_mode = 0
+
+[node name="Timer" type="RichTextLabel" parent="ProgressTimer/VBoxContainer" unique_id=1596572794]
+layout_mode = 2
+theme_override_fonts/normal_font = ExtResource("2_j2gkn")
+theme_override_font_sizes/normal_font_size = 24
+text = "0.0"
+fit_content = true

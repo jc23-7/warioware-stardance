@@ -10,34 +10,42 @@ enum State {CHASE, CHARGE, RECOVER}
 var current_state = State.CHASE
 var charge_dir = Vector2.ZERO
 var wait_time := 0.0
+var touching_player = false
 
 func _physics_process(delta: float) -> void:
-	print(current_state)
-	if current_state == State.CHASE:
-		chase()
-	elif current_state == State.CHARGE:
-		if wait_time <= 0:
-			if charge_dir == Vector2.ZERO:
-				charge_dir = position.direction_to(player.position).normalized()
-			charge()
-		else:
-			wait_time -= delta
-			velocity = Vector2.ZERO
-	elif current_state == State.RECOVER:
+	if parent_minigame.game_ended:
 		velocity = Vector2.ZERO
-		wait_time -= delta
-		if wait_time <= 0:
-			current_state = State.CHASE
+	else:
+		if current_state == State.CHASE:
+			chase()
+		elif current_state == State.CHARGE:
+			if wait_time <= 0:
+				if charge_dir == Vector2.ZERO:
+					charge_dir = position.direction_to(player.position).normalized()
+				charge()
+			else:
+				wait_time -= delta
+				velocity = Vector2.ZERO
+		elif current_state == State.RECOVER:
+			velocity = Vector2.ZERO
+			wait_time -= delta
+			if wait_time <= 0:
+				current_state = State.CHASE
 
-	move_and_slide()
-	
-	if current_state == State.CHARGE:
-		for i in range(get_slide_collision_count()):
-			var collision = get_slide_collision(i)
-			if collision.get_collider() is CharacterBody2D:
+		move_and_slide()
+		
+		if current_state == State.CHARGE:
+			var touched_player = false
+			for i in range(get_slide_collision_count()):
+				var collision = get_slide_collision(i)
+				if collision.get_collider() is CharacterBody2D:
+					touched_player = true
+				current_state = State.RECOVER
+				wait_time = 2.0
+			if touching_player and not touched_player:
+				touching_player = false
+			elif touched_player and not touching_player:
 				parent_minigame.lives -= 1
-			current_state = State.RECOVER
-			wait_time = 2.0
 
 func chase() -> void:
 	var direction = position.direction_to(player.position).normalized()

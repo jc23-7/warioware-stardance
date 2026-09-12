@@ -18,11 +18,6 @@ func _ready() -> void:
 	if not Global.tutorial:
 		Input.mouse_mode = Input.MOUSE_MODE_HIDDEN
 	
-	game_stats.progress_label.add_theme_font_size_override("normal_font_size", 24)
-	game_stats.timer.add_theme_font_size_override("normal_font_size", 36)
-	
-	completed_points = total_points
-	
 	hands_list = hands_container.get_children()
 	
 	randomize()
@@ -33,8 +28,6 @@ func _ready() -> void:
 	
 func _process(delta: float) -> void:
 	super(delta)
-	game_stats.progress_label.text = "Protect all 7 apples!"
-
 func _exit_tree() -> void:
 	Input.mouse_mode = Input.MOUSE_MODE_VISIBLE
 

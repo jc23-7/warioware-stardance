@@ -8,11 +8,9 @@
 [ext_resource type="Script" uid="uid://badl3vv7ovqa2" path="res://MinigameBundles/Cassiopeia/cassiopeia.gd" id="4_qh4kg"]
 [ext_resource type="Texture2D" uid="uid://dsxdo20y1rebn" path="res://MinigameBundles/Cassiopeia/Rings/ring0002.png" id="5_dju83"]
 [ext_resource type="Script" uid="uid://drstfvkplf0p1" path="res://MinigameBundles/Cassiopeia/ring.gd" id="5_qh4kg"]
-[ext_resource type="Script" uid="uid://dqy6hpwet03qf" path="res://MinigameBundles/UrsaMajor/hearts.gd" id="6_i6knm"]
 [ext_resource type="Texture2D" uid="uid://cah7bq6g035mi" path="res://MinigameBundles/Cassiopeia/Rings/ring0003.png" id="6_sj8c8"]
 [ext_resource type="Texture2D" uid="uid://25rfsb6keow7" path="res://MinigameBundles/Cassiopeia/Rings/ring0004.png" id="7_7yw7x"]
-[ext_resource type="Texture2D" uid="uid://vfe0gkt4cix" path="res://icon.svg" id="7_uet5h"]
-[ext_resource type="PackedScene" uid="uid://ijvv7plr8526" path="res://Scenes/game_timer.tscn" id="13_64l1w"]
+[ext_resource type="PackedScene" uid="uid://ijvv7plr8526" path="res://Scenes/game_stats.tscn" id="13_64l1w"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_itc26"]
 animations = [{
@@ -41,9 +39,11 @@ animations = [{
 script = ExtResource("1_x0w72")
 game_stats = NodePath("GameStats")
 total_points = 4
+lives = 4
 time_limit = 20.0
-increase_points = true
-show_points = true
+display_time = true
+display_progress = true
+display_lives = true
 
 [node name="Background" type="TextureRect" parent="." unique_id=367214996]
 offset_right = 480.0
@@ -66,34 +66,5 @@ script = ExtResource("4_qh4kg")
 max_swing = 180.0
 min_duration = 0.5
 max_duration = 1.0
-
-[node name="Hearts" type="Node2D" parent="." unique_id=1343823053]
-position = Vector2(0, 37)
-script = ExtResource("6_i6knm")
-
-[node name="Heart1" type="Sprite2D" parent="Hearts" unique_id=1910558537]
-position = Vector2(23, 27)
-scale = Vector2(0.2265625, 0.2265625)
-texture = ExtResource("7_uet5h")
-
-[node name="Heart2" type="Sprite2D" parent="Hearts" unique_id=1614446659]
-position = Vector2(23, 27)
-scale = Vector2(0.2265625, 0.2265625)
-texture = ExtResource("7_uet5h")
-
-[node name="Heart3" type="Sprite2D" parent="Hearts" unique_id=1907346779]
-position = Vector2(23, 27)
-scale = Vector2(0.2265625, 0.2265625)
-texture = ExtResource("7_uet5h")
-
-[node name="Heart4" type="Sprite2D" parent="Hearts" unique_id=571493563]
-position = Vector2(23, 27)
-scale = Vector2(0.2265625, 0.2265625)
-texture = ExtResource("7_uet5h")
-
-[node name="Heart5" type="Sprite2D" parent="Hearts" unique_id=335099334]
-position = Vector2(23, 27)
-scale = Vector2(0.2265625, 0.2265625)
-texture = ExtResource("7_uet5h")
 
 [node name="GameStats" parent="." unique_id=1669112296 instance=ExtResource("13_64l1w")]

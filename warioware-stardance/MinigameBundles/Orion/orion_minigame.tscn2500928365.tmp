@@ -2,7 +2,9 @@
 
 [ext_resource type="Texture2D" uid="uid://da3enufnadd0l" path="res://Art/Backgrounds/minigame_1_bg.png" id="1_u31tf"]
 [ext_resource type="Script" uid="uid://djc0coppvqoms" path="res://MinigameBundles/Orion/orion_minigame.gd" id="1_xj0d8"]
-[ext_resource type="PackedScene" uid="uid://ijvv7plr8526" path="res://Scenes/game_stats.tscn" id="3_xj0d8"]
+[ext_resource type="PackedScene" uid="uid://ijvv7plr8526" path="res://Scenes/game_timer.tscn" id="3_xj0d8"]
+[ext_resource type="Script" uid="uid://dqy6hpwet03qf" path="res://MinigameBundles/UrsaMajor/hearts.gd" id="4_55mpo"]
+[ext_resource type="Texture2D" uid="uid://vfe0gkt4cix" path="res://icon.svg" id="5_fg6us"]
 [ext_resource type="Texture2D" uid="uid://bw5yrghjf3vdl" path="res://Scenes/TimerScene/StarLife.png" id="5_u31tf"]
 [ext_resource type="Script" uid="uid://bkwrxjdb4i3lb" path="res://MinigameBundles/Orion/player.gd" id="6_lq40j"]
 [ext_resource type="Texture2D" uid="uid://cp77p6m37hdts" path="res://Art/Character.png" id="7_fg6us"]
@@ -54,6 +56,34 @@ display_lives = true
 offset_right = 480.0
 offset_bottom = 270.0
 texture = ExtResource("1_u31tf")
+
+[node name="Hearts" type="Node2D" parent="." unique_id=871621734]
+script = ExtResource("4_55mpo")
+
+[node name="Heart1" type="Sprite2D" parent="Hearts" unique_id=1365405082]
+position = Vector2(23, 27)
+scale = Vector2(0.2265625, 0.2265625)
+texture = ExtResource("5_fg6us")
+
+[node name="Heart2" type="Sprite2D" parent="Hearts" unique_id=1411986006]
+position = Vector2(23, 27)
+scale = Vector2(0.2265625, 0.2265625)
+texture = ExtResource("5_fg6us")
+
+[node name="Heart3" type="Sprite2D" parent="Hearts" unique_id=1469551147]
+position = Vector2(23, 27)
+scale = Vector2(0.2265625, 0.2265625)
+texture = ExtResource("5_fg6us")
+
+[node name="Heart4" type="Sprite2D" parent="Hearts" unique_id=607392825]
+position = Vector2(23, 27)
+scale = Vector2(0.2265625, 0.2265625)
+texture = ExtResource("5_fg6us")
+
+[node name="Heart5" type="Sprite2D" parent="Hearts" unique_id=680218943]
+position = Vector2(23, 27)
+scale = Vector2(0.2265625, 0.2265625)
+texture = ExtResource("5_fg6us")
 
 [node name="Enemy" type="CharacterBody2D" parent="." unique_id=1309560956]
 position = Vector2(267, 87)

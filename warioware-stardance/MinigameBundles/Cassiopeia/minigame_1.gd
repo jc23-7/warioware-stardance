@@ -3,7 +3,6 @@ extends MinigameManager
 @onready var cassiopeia: Sprite2D = $Cassiopeia
 @onready var ring: AnimatedSprite2D = $Ring
 
-var lives = 5
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
@@ -25,5 +24,3 @@ func _process(delta: float) -> void:
 			print(ring.degrees[completed_points])
 			ring.next_ring(false)
 			lives -= 1
-			if lives == 0:
-				end_game = true

@@ -30,7 +30,7 @@ func _physics_process(delta: float) -> void:
 		move_and_slide()
 		
 		if position.x < 0:
-			parent_minigame.end_game = true
+			parent_minigame.lives -= 1
 			death_animation()
 	
 
