@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="Constellation" format=3 uid="uid://dwt812026dgxh"]
+
+[ext_resource type="PackedScene" uid="uid://dl8vsejqnbu8v" path="res://MinigameBundles/Cygnus/minigame_1.tscn" id="1_5ku7e"]
+[ext_resource type="Script" uid="uid://djyjxwhqcifvv" path="res://Scenes/LevelSelect/constellation.gd" id="2_qa3l7"]
+
+[resource]
+script = ExtResource("2_qa3l7")
+unlocked = true
+constellation_name = "Cygnus"
+minigame = ExtResource("1_5ku7e")
+metadata/_custom_type_script = "uid://djyjxwhqcifvv"

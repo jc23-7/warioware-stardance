@@ -14,6 +14,7 @@ var direction = 0
 func _physics_process(delta: float) -> void:
 	if parent_minigame.game_ended:
 		velocity = Vector2.ZERO
+		animated_sprite.stop()
 	else:
 		if not is_on_floor():
 			velocity += get_gravity() * delta

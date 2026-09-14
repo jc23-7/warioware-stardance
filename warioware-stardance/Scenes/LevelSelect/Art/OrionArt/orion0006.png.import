@@ -1,0 +1,16 @@
+[remap]
+
+importer="bitmap"
+type="BitMap"
+uid="uid://5tb1hd54ja0y"
+path="res://.godot/imported/orion0006.png-8b48ebfb187fe05fd925962101e67058.res"
+
+[deps]
+
+source_file="res://Scenes/LevelSelect/Art/OrionArt/orion0006.png"
+dest_files=["res://.godot/imported/orion0006.png-8b48ebfb187fe05fd925962101e67058.res"]
+
+[params]
+
+create_from=0
+threshold=0.5

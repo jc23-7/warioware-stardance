@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://fwq4bffepi2f"
-path="res://.godot/imported/BigDipper0000.png-44db4e3e390d04e13a4ec8b7a15c570c.ctex"
+uid="uid://bjwt1h0aqusm"
+path="res://.godot/imported/cassiopeia0004.png-147769a9b0b48cb7066beaaf04e29018.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Scenes/LevelSelect/Art/BigDipperArt/BigDipper0000.png"
-dest_files=["res://.godot/imported/BigDipper0000.png-44db4e3e390d04e13a4ec8b7a15c570c.ctex"]
+source_file="res://Scenes/LevelSelect/Art/CassiopeiaArt/cassiopeia0004.png"
+dest_files=["res://.godot/imported/cassiopeia0004.png-147769a9b0b48cb7066beaaf04e29018.ctex"]
 
 [params]
 

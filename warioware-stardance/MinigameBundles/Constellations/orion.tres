@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="Constellation" format=3 uid="uid://cqnuk70vj8es6"]
+
+[ext_resource type="PackedScene" uid="uid://cvl4hwr5lhs4p" path="res://MinigameBundles/Orion/orion_minigame.tscn" id="1_c71nq"]
+[ext_resource type="Script" uid="uid://djyjxwhqcifvv" path="res://Scenes/LevelSelect/constellation.gd" id="2_fuet3"]
+
+[resource]
+script = ExtResource("2_fuet3")
+unlocked = true
+constellation_name = "Orion"
+minigame = ExtResource("1_c71nq")
+metadata/_custom_type_script = "uid://djyjxwhqcifvv"

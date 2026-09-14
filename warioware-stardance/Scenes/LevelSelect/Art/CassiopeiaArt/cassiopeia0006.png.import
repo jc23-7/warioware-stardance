@@ -1,0 +1,16 @@
+[remap]
+
+importer="bitmap"
+type="BitMap"
+uid="uid://c0hclnmocxc1b"
+path="res://.godot/imported/cassiopeia0006.png-d6677cd7ae09f2e97e882a352cf8f343.res"
+
+[deps]
+
+source_file="res://Scenes/LevelSelect/Art/CassiopeiaArt/cassiopeia0006.png"
+dest_files=["res://.godot/imported/cassiopeia0006.png-d6677cd7ae09f2e97e882a352cf8f343.res"]
+
+[params]
+
+create_from=0
+threshold=0.5

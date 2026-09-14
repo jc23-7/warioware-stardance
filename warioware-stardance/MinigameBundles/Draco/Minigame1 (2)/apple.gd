@@ -2,18 +2,12 @@ extends AnimatedSprite2D
 
 @onready var minigame: Node2D = $"../../"
 var animation_playing = 0
-var minigame_num
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
-	minigame_num = int(str(minigame.name)[-1])
-	if minigame_num == 1:
-		frame = 1
-		minigame.apple_state_changed.connect(_on_apple_state_changed)
-		minigame.game_success.connect(play_animation)
-	else:
-		frame = 6
-		minigame.star_state_changed.connect(_on_star_state_changed)
+	frame = 1
+	minigame.apple_state_changed.connect(_on_apple_state_changed)
+	minigame.game_success.connect(play_animation)
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.

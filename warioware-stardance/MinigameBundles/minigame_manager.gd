@@ -35,7 +35,7 @@ func _process(delta: float) -> void:
 
 func _on_game_success() -> void:
 	success = true
-	await game_stats.Timer(0.5)
+	await game_stats.Timer(1.5)
 	Global.minigame_done(true)
 	
 func _on_game_fail() -> void:

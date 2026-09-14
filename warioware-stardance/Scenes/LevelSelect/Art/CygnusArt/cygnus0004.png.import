@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://byh2uutmqatft"
-path="res://.godot/imported/BigDipper0004.png-31a2dc11d48b52c1c7a2c31e8c0d02ef.ctex"
+uid="uid://bcdr6l7pjkm04"
+path="res://.godot/imported/cygnus0004.png-88553a46ab4e51913013f291bfc449a9.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Scenes/LevelSelect/Art/BigDipperArt/BigDipper0004.png"
-dest_files=["res://.godot/imported/BigDipper0004.png-31a2dc11d48b52c1c7a2c31e8c0d02ef.ctex"]
+source_file="res://Scenes/LevelSelect/Art/CygnusArt/cygnus0004.png"
+dest_files=["res://.godot/imported/cygnus0004.png-88553a46ab4e51913013f291bfc449a9.ctex"]
 
 [params]
 

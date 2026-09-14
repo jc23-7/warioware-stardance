@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://by7fj3lkfeqhk"
-path="res://.godot/imported/BigDipper0002.png-4667a04707101d24ce9c5ea2dfffa8ff.ctex"
+uid="uid://cbxslwxevucdm"
+path="res://.godot/imported/ursa_major0004.png-83b10dc942ea16d12de7fcf889c48705.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Scenes/LevelSelect/Art/BigDipperArt/BigDipper0002.png"
-dest_files=["res://.godot/imported/BigDipper0002.png-4667a04707101d24ce9c5ea2dfffa8ff.ctex"]
+source_file="res://Scenes/LevelSelect/Art/UrsaMajorArt/ursa_major0004.png"
+dest_files=["res://.godot/imported/ursa_major0004.png-83b10dc942ea16d12de7fcf889c48705.ctex"]
 
 [params]
 

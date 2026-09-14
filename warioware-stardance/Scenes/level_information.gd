@@ -5,6 +5,7 @@ extends Control
 @onready var parent: Control = $"../"
 @onready var title: RichTextLabel = $"Title"
 @onready var story: RichTextLabel = $"StoryTab/StoryText"
+@onready var tutorial: RichTextLabel = $"TutorialTab/TutorialText"
 @onready var tab = $"StoryTab"
 
 
@@ -36,9 +37,14 @@ func _on_level_selected(constellation_name: String):
 			selected_constellation = constellation
 			break
 	
-	title.text = selected_constellation.constellation_name
-	if selected_constellation.completed:
-		story.text = stories[selected_constellation.constellation_name]
+	if not selected_constellation.unlocked:
+		title.text = "???"
+		story.text = "Constellation locked"
+		tutorial.text = "Constellation locked"
+	else:
+		title.text = selected_constellation.constellation_name
+		if selected_constellation.completed:
+			story.text = stories[selected_constellation.constellation_name]
 	show()
 
 func _on_start_game_pressed() -> void:

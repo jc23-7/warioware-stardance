@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cteqxd2gieftp"
-path="res://.godot/imported/BigDipper0003.png-37c20f8482df3ec6597cd3703cbc36a9.ctex"
+uid="uid://6okkgf0kldba"
+path="res://.godot/imported/orion0003.png-e9269f5f37f9c653ce0e3c6c827cfd9d.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Scenes/LevelSelect/Art/BigDipperArt/BigDipper0003.png"
-dest_files=["res://.godot/imported/BigDipper0003.png-37c20f8482df3ec6597cd3703cbc36a9.ctex"]
+source_file="res://Scenes/LevelSelect/Art/OrionArt/orion0003.png"
+dest_files=["res://.godot/imported/orion0003.png-e9269f5f37f9c653ce0e3c6c827cfd9d.ctex"]
 
 [params]
 

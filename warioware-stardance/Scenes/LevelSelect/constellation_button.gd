@@ -14,6 +14,11 @@ extends TextureButton
 @export var completed_hover: Texture2D
 @export var completed_selected: Texture2D
 
+@export_group("Locked Textures")
+@export var locked_normal: Texture2D
+@export var locked_hover: Texture2D
+@export var locked_selected: Texture2D
+
 
 var completed = false
 
@@ -21,7 +26,11 @@ var completed = false
 func _ready() -> void:
 	for constellation in Global.constellations:
 		if constellation.constellation_name == str(name):
-			if constellation.completed:
+			if not constellation.unlocked:
+				texture_normal = completed_normal
+				texture_hover = completed_hover
+				texture_pressed = completed_selected
+			elif constellation.completed:
 				texture_normal = completed_normal
 				texture_hover = completed_hover
 				texture_pressed = completed_selected

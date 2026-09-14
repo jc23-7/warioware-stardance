@@ -37,17 +37,22 @@ func change_scene(next_scene_name: String) -> void:
 
 
 func start_constellation(constellation: Constellation) -> void:
+	tutorial = false
 	current_constellation = constellation
 	minigames_done = 0
 	get_tree().change_scene_to_packed(timer_scene)
 
 func start_survival() -> void:
+	tutorial = false
 	reset_game()
 	get_tree().change_scene_to_packed(timer_scene)
 
 func next_minigame() -> void:
-	randomize()
-	get_tree().change_scene_to_packed(constellations[randi_range(0, constellations.size() - 1)].minigame)
+	if mode == "Play":
+		get_tree().change_scene_to_packed(current_constellation.minigame)
+	else:
+		randomize()
+		get_tree().change_scene_to_packed(constellations[randi_range(0, constellations.size() - 1)].minigame)
 	
 	
 func minigame_done(success: bool) -> void:
