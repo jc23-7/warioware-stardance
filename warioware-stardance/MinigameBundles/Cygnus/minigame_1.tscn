@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" uid="uid://bibj3tb2ve2eh" path="res://MinigameBundles/Cygnus/minigame_1.gd" id="1_7elpu"]
 [ext_resource type="Texture2D" uid="uid://da3enufnadd0l" path="res://Art/Backgrounds/minigame_1_bg.png" id="2_sykq6"]
-[ext_resource type="PackedScene" uid="uid://ijvv7plr8526" path="res://Scenes/game_stats.tscn" id="3_fqpiu"]
+[ext_resource type="PackedScene" uid="uid://ijvv7plr8526" path="res://Scenes/GameStats/game_stats.tscn" id="3_fqpiu"]
 [ext_resource type="Texture2D" uid="uid://bw5yrghjf3vdl" path="res://Scenes/TimerScene/StarLife.png" id="3_hxkhb"]
 [ext_resource type="Script" uid="uid://b1wj25ptf105b" path="res://MinigameBundles/Cygnus/spawner.gd" id="3_xmtds"]
 [ext_resource type="PackedScene" uid="uid://b8bjdqitct8pt" path="res://MinigameBundles/Cygnus/Obstacles/obstacle1.tscn" id="4_d6xtu"]

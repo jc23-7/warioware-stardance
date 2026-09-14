@@ -17,7 +17,7 @@
 [ext_resource type="Texture2D" uid="uid://7befwye02v2i" path="res://MinigameBundles/Draco/Minigame1/Art/Apple Animation/apple0008.png" id="12_k5cb3"]
 [ext_resource type="Script" uid="uid://bny6wvy7r4fkw" path="res://MinigameBundles/Draco/Minigame2/dragon.gd" id="14_iuxwi"]
 [ext_resource type="Texture2D" uid="uid://dl1gkojtxgcp2" path="res://MinigameBundles/Draco/Minigame2/Art/dragon_default.png" id="14_svm5u"]
-[ext_resource type="PackedScene" uid="uid://ijvv7plr8526" path="res://Scenes/game_stats.tscn" id="15_67olh"]
+[ext_resource type="PackedScene" uid="uid://ijvv7plr8526" path="res://Scenes/GameStats/game_stats.tscn" id="15_67olh"]
 [ext_resource type="Texture2D" uid="uid://h0tn1xoif07u" path="res://MinigameBundles/Draco/Minigame2/Art/dragon_active.png" id="15_uovtv"]
 [ext_resource type="Texture2D" uid="uid://dw38ykswtq7dy" path="res://MinigameBundles/Draco/Minigame2/Art/dragon_grab.png" id="16_d3bx2"]
 [ext_resource type="Texture2D" uid="uid://cgn41a50lqk6" path="res://MinigameBundles/Draco/Minigame2/Art/dragon_star.png" id="17_jjgpd"]

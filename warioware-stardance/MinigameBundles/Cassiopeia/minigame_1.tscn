@@ -10,7 +10,7 @@
 [ext_resource type="Script" uid="uid://drstfvkplf0p1" path="res://MinigameBundles/Cassiopeia/ring.gd" id="5_qh4kg"]
 [ext_resource type="Texture2D" uid="uid://cah7bq6g035mi" path="res://MinigameBundles/Cassiopeia/Rings/ring0003.png" id="6_sj8c8"]
 [ext_resource type="Texture2D" uid="uid://25rfsb6keow7" path="res://MinigameBundles/Cassiopeia/Rings/ring0004.png" id="7_7yw7x"]
-[ext_resource type="PackedScene" uid="uid://ijvv7plr8526" path="res://Scenes/game_stats.tscn" id="13_64l1w"]
+[ext_resource type="PackedScene" uid="uid://ijvv7plr8526" path="res://Scenes/GameStats/game_stats.tscn" id="13_64l1w"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_itc26"]
 animations = [{

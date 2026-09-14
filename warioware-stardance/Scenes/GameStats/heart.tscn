@@ -1,0 +1,22 @@
+[gd_scene format=3 uid="uid://325c1ltj6rh5"]
+
+[ext_resource type="Texture2D" uid="uid://bw5yrghjf3vdl" path="res://Scenes/TimerScene/StarLife.png" id="1_t1vhj"]
+[ext_resource type="Texture2D" uid="uid://lxjdtv5bqo6v" path="res://Scenes/TimerScene/StarShattered.png" id="2_b30hi"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_t7pfd"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_t1vhj")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_b30hi")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[node name="Heart" type="AnimatedSprite2D" unique_id=1455830535]
+scale = Vector2(0.5, 0.5)
+sprite_frames = SubResource("SpriteFrames_t7pfd")

@@ -5,7 +5,7 @@
 [ext_resource type="Script" uid="uid://c8ewy3i1gpryg" path="res://MinigameBundles/BigDipper/Minigame3/star_mg3.gd" id="3_6sdpr"]
 [ext_resource type="Texture2D" uid="uid://d368wu03ubuac" path="res://Art/Star.png" id="4_y6mal"]
 [ext_resource type="Texture2D" uid="uid://klnp2wywub1a" path="res://MinigameBundles/BigDipper/Minigame3/Lines/Line0002.png" id="5_1kvof"]
-[ext_resource type="PackedScene" uid="uid://ijvv7plr8526" path="res://Scenes/game_stats.tscn" id="5_4cfv6"]
+[ext_resource type="PackedScene" uid="uid://ijvv7plr8526" path="res://Scenes/GameStats/game_stats.tscn" id="5_4cfv6"]
 [ext_resource type="Script" uid="uid://b2ydjro5asmej" path="res://MinigameBundles/BigDipper/Minigame3/line_container.gd" id="5_lr4ld"]
 [ext_resource type="Texture2D" uid="uid://cw3fgsnbc8b4g" path="res://MinigameBundles/BigDipper/Minigame3/Lines/Line0003.png" id="6_7u6rh"]
 [ext_resource type="Texture2D" uid="uid://ym2vmtl211n5" path="res://MinigameBundles/BigDipper/Minigame3/Lines/Line0001.png" id="6_y6mal"]

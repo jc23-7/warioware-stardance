@@ -2,7 +2,9 @@
 
 [ext_resource type="Texture2D" uid="uid://da3enufnadd0l" path="res://Art/Backgrounds/minigame_1_bg.png" id="1_u31tf"]
 [ext_resource type="Script" uid="uid://djc0coppvqoms" path="res://MinigameBundles/Orion/orion_minigame.gd" id="1_xj0d8"]
-[ext_resource type="PackedScene" uid="uid://ijvv7plr8526" path="res://Scenes/game_stats.tscn" id="3_xj0d8"]
+[ext_resource type="PackedScene" uid="uid://ijvv7plr8526" path="res://Scenes/GameStats/game_stats.tscn" id="3_xj0d8"]
+[ext_resource type="Texture2D" uid="uid://d368wu03ubuac" path="res://Art/Star.png" id="4_fg6us"]
+[ext_resource type="Texture2D" uid="uid://c07g6dd8o7b6p" path="res://Art/star_spot.png" id="5_4vpmv"]
 [ext_resource type="Texture2D" uid="uid://bw5yrghjf3vdl" path="res://Scenes/TimerScene/StarLife.png" id="5_u31tf"]
 [ext_resource type="Script" uid="uid://bkwrxjdb4i3lb" path="res://MinigameBundles/Orion/player.gd" id="6_lq40j"]
 [ext_resource type="Texture2D" uid="uid://cp77p6m37hdts" path="res://Art/Character.png" id="7_fg6us"]
@@ -13,6 +15,17 @@ size = Vector2(38.400032, 81.066666)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_xj0d8"]
 animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("4_fg6us")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_4vpmv")
+}],
+"loop": false,
+"name": &"attack",
+"speed": 5.0
+}, {
 "frames": [{
 "duration": 1.0,
 "texture": ExtResource("7_fg6us")
@@ -68,6 +81,7 @@ shape = SubResource("RectangleShape2D_55mpo")
 position = Vector2(3.8146973e-06, 0)
 scale = Vector2(0.46875, 0.46875)
 sprite_frames = SubResource("SpriteFrames_xj0d8")
+animation = &"attack"
 
 [node name="Player" type="CharacterBody2D" parent="." unique_id=47101783]
 position = Vector2(146, 98)
