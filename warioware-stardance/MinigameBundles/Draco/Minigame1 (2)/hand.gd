@@ -9,8 +9,6 @@ func _ready() -> void:
 	parent_minigame.game_success.connect(_on_game_success)
 
 func _process(delta: float) -> void:
-	
-	
 	if has_object:
 		animation = "hand_closed"
 	else:
@@ -40,15 +38,18 @@ func retreated() -> void:
 func _on_hand_clicked(viewport: Node, event: InputEvent, shape_idx: int) -> void:
 	if event is InputEventMouseButton and event.button_index == MOUSE_BUTTON_LEFT and event.pressed:
 		if active:
-			if parent_minigame.hands_defeated >= 3:
-				parent_minigame.hands_defeated = 0
-				health -= 6
-			else:
-				health -= 1
-			if health <= 0:
-				parent_minigame.hands_defeated += 1
-				if has_object:
-					parent_minigame.apple_state_changed.emit(int(str(name)[-1]))
-				frame = 1
-				has_object = false
-				retreat()
+			take_damage()
+			
+func take_damage() -> void:
+	if parent_minigame.hands_defeated >= 3:
+		parent_minigame.hands_defeated = 0
+		health -= 6
+	else:
+		health -= 1
+	if health <= 0:
+		parent_minigame.hands_defeated += 1
+		if has_object:
+			parent_minigame.apple_state_changed.emit(int(str(name)[-1]))
+		frame = 1
+		has_object = false
+		retreat()
