@@ -68,10 +68,14 @@ func reset_minigame() -> void:
 	viewport.add_child(minigame)
 
 func press_key(key_name: String) -> void:
-	Input.action_press(key_name)
+	if key_name == "move_left":
+		minigame.player.fake_input.x = -1
+	elif key_name == "move_right":
+		minigame.player.fake_input.x = 1
 	
 func release_key(key_name: String) -> void:
-	Input.action_release(key_name)
+	if key_name == "move_left" or key_name == "move_right":
+		minigame.player.fake_input.x = 0
 	
 func activate_draco_hand(hand_id: int) -> void:
 	minigame.grab_apple(hand_id)

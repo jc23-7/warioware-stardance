@@ -2,9 +2,9 @@
 
 [ext_resource type="Texture2D" uid="uid://da3enufnadd0l" path="res://Art/Backgrounds/minigame_1_bg.png" id="1_d1dnw"]
 [ext_resource type="Script" uid="uid://c3wix8tjvneca" path="res://MinigameBundles/UrsaMajor/minigame_1.gd" id="1_pjpp5"]
-[ext_resource type="PackedScene" uid="uid://beavwkuna4s6h" path="res://MinigameBundles/BigDipper/Minigame1/player_mg1.tscn" id="2_2y7vr"]
 [ext_resource type="PackedScene" uid="uid://bh1tbocrvepu1" path="res://MinigameBundles/UrsaMajor/falling_object.tscn" id="2_5mcws"]
 [ext_resource type="PackedScene" uid="uid://ijvv7plr8526" path="res://Scenes/GameStats/game_stats.tscn" id="3_pjpp5"]
+[ext_resource type="PackedScene" uid="uid://c3a1r2tgrfj0g" path="res://MinigameBundles/UrsaMajor/bear.tscn" id="4_pjpp5"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_5mcws"]
 size = Vector2(966.5, 364.83255)
@@ -57,8 +57,7 @@ position = Vector2(12562.931, 406.95532)
 scale = Vector2(1.0000005, 1.0000005)
 shape = SubResource("RectangleShape2D_bb4b5")
 
-[node name="Player" parent="." unique_id=515594243 instance=ExtResource("2_2y7vr")]
-position = Vector2(68, 195)
-scale = Vector2(1, 1)
+[node name="Bear" parent="." unique_id=515594243 instance=ExtResource("4_pjpp5")]
+position = Vector2(97, 202)
 
 [node name="GameStats" parent="." unique_id=1669112296 instance=ExtResource("3_pjpp5")]

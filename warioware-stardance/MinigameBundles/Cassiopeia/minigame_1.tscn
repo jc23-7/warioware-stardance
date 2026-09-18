@@ -2,7 +2,6 @@
 
 [ext_resource type="Texture2D" uid="uid://da3enufnadd0l" path="res://Art/Backgrounds/minigame_1_bg.png" id="1_7jgur"]
 [ext_resource type="Script" uid="uid://fnq1y54h72v2" path="res://MinigameBundles/Cassiopeia/minigame_1.gd" id="1_x0w72"]
-[ext_resource type="Texture2D" uid="uid://dwp0dkgemstxx" path="res://MinigameBundles/UrsaMajor/Art/arrow.png" id="3_a03mm"]
 [ext_resource type="Texture2D" uid="uid://j4jfyj7j5stv" path="res://MinigameBundles/Cassiopeia/Rings/ring0000.png" id="3_t11n7"]
 [ext_resource type="Texture2D" uid="uid://ctx6bewugniky" path="res://MinigameBundles/Cassiopeia/Rings/ring0001.png" id="4_64l1w"]
 [ext_resource type="Script" uid="uid://badl3vv7ovqa2" path="res://MinigameBundles/Cassiopeia/cassiopeia.gd" id="4_qh4kg"]
@@ -10,6 +9,7 @@
 [ext_resource type="Script" uid="uid://drstfvkplf0p1" path="res://MinigameBundles/Cassiopeia/ring.gd" id="5_qh4kg"]
 [ext_resource type="Texture2D" uid="uid://cah7bq6g035mi" path="res://MinigameBundles/Cassiopeia/Rings/ring0003.png" id="6_sj8c8"]
 [ext_resource type="Texture2D" uid="uid://25rfsb6keow7" path="res://MinigameBundles/Cassiopeia/Rings/ring0004.png" id="7_7yw7x"]
+[ext_resource type="Texture2D" uid="uid://clq508f1bubtx" path="res://MinigameBundles/Cassiopeia/cassiopeia.png" id="9_62pev"]
 [ext_resource type="PackedScene" uid="uid://ijvv7plr8526" path="res://Scenes/GameStats/game_stats.tscn" id="13_64l1w"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_itc26"]
@@ -51,17 +51,15 @@ offset_bottom = 270.0
 texture = ExtResource("1_7jgur")
 
 [node name="Ring" type="AnimatedSprite2D" parent="." unique_id=2072280834]
-position = Vector2(242, 117)
+position = Vector2(242, 140.5)
 sprite_frames = SubResource("SpriteFrames_itc26")
 script = ExtResource("5_qh4kg")
 degrees = Array[float]([45.0, 30.0, 20.0, 15.0, 7.0])
 
 [node name="Cassiopeia" type="Sprite2D" parent="." unique_id=845534072]
-position = Vector2(242, 117)
-rotation = 0.12356216
-scale = Vector2(2.5716515, 2.5716515)
-texture = ExtResource("3_a03mm")
-offset = Vector2(0, 13.555)
+position = Vector2(242, 140.5)
+texture = ExtResource("9_62pev")
+flip_v = true
 script = ExtResource("4_qh4kg")
 max_swing = 180.0
 min_duration = 0.5

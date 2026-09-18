@@ -8,7 +8,7 @@ extends MinigameManager
 @export var min_time: float
 @export var max_time: float
 
-@onready var player: CharacterBody2D = $Player
+@onready var player: CharacterBody2D = $Bear
 
 var arrow_timer
 
@@ -33,5 +33,6 @@ func spawn_arrow() -> void:
 	arrow.horizontal_speed = randf_range(arrow_hor_min_speed, arrow_hor_max_speed)
 	arrow.parent_minigame = $"./"
 	arrow.player = player
+	arrow.min_hit_y = 225
 	add_child(arrow)
 	arrow_timer.start(randf_range(min_time, max_time))
