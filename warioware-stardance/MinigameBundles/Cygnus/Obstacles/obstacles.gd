@@ -17,7 +17,7 @@ func _ready() -> void:
 	randomize()
 	for child in get_children():
 		if child is Marker2D:
-			if randf() <= SPAWN_PROBABILITY:
+			if randf() <= SPAWN_PROBABILITY or Global.tutorial:
 				var collectible = collectible_scene.instantiate()
 				collectible.position = child.position
 				add_child(collectible)

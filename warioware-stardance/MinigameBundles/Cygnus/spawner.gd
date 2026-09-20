@@ -10,17 +10,24 @@ var timer
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	randomize()
-	spawn_obstacle()
+	if not Global.tutorial:
+		spawn_obstacle()
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
-	pass
-	if not timer and cur_obstacle and cur_obstacle.can_spawn_next:
-		timer = Timer.new()
-		add_child(timer)
-		timer.start(randf_range(min_time, max_time))
-		timer.timeout.connect(spawn_obstacle)
+	if not Global.tutorial:
+		if not timer and cur_obstacle and cur_obstacle.can_spawn_next:
+			timer = Timer.new()
+			add_child(timer)
+			timer.start(randf_range(min_time, max_time))
+			timer.timeout.connect(spawn_obstacle)
+	else:
+		if not cur_obstacle:
+			cur_obstacle = obstacles[0].instantiate()
+			cur_obstacle.global_position.y = 0
+			add_child(cur_obstacle)
+			
 
 func spawn_obstacle():
 	if timer:

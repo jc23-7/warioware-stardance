@@ -10,7 +10,7 @@ extends Control
 
 
 signal level_selected(constellation_name: String)
-
+signal tutorial_tab(constellation_name: String)
 
 var selected_constellation
 var stories
@@ -58,5 +58,8 @@ func _change_tab(tab_name: NodePath) -> void:
 		tab.hide()
 	tab = get_node(tab_name)
 	tab.show()
+	
+	if tab.name == "TutorialTab":
+		tutorial_tab.emit(selected_constellation.constellation_name)
 	
 	

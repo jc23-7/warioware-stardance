@@ -9,6 +9,8 @@ const SPEED_X = 150
 const SINK_SPEED = 25
 const ROTATION_SPEED = 2
 
+var fake_input: Vector2 = Vector2.ZERO
+
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	pass # Replace with function body.
@@ -17,8 +19,12 @@ func _ready() -> void:
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _physics_process(delta: float) -> void:
 	if not parent_minigame.game_ended:
-		var turning = Input.get_axis("ui_up", "ui_down")
-		var direction = Input.get_axis("ui_left", "ui_right")
+		var turning = Input.get_axis("move_up", "move_down")
+		var direction = Input.get_axis("move_left", "move_right")
+		if Global.tutorial:
+			turning = fake_input.y
+			direction = fake_input.x
+		
 		
 		rotation += turning * animated_sprite.scale.x * ROTATION_SPEED * delta
 		rotation = clamp(rotation, deg_to_rad(-90), deg_to_rad(90))

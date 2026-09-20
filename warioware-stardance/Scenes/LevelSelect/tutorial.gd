@@ -12,7 +12,7 @@ var mouse_move_tween: Tween
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
-	level_info.level_selected.connect(_on_level_selected)
+	level_info.tutorial_tab.connect(_on_tutorial_tab)
 	hide()
 
 
@@ -28,7 +28,7 @@ func _input(event: InputEvent) -> void:
 	if event is InputEventKey:
 		get_viewport().set_input_as_handled()
 
-func _on_level_selected(constellation_name: String):
+func _on_tutorial_tab(constellation_name: String):
 	Global.tutorial = true
 	for constellation in Global.constellations:
 		if constellation.constellation_name == constellation_name:
@@ -72,10 +72,16 @@ func press_key(key_name: String) -> void:
 		minigame.player.fake_input.x = -1
 	elif key_name == "move_right":
 		minigame.player.fake_input.x = 1
+	elif key_name == "move_up":
+		minigame.player.fake_input.y = -1
+	elif key_name == "move_down":
+		minigame.player.fake_input.y = 1
 	
 func release_key(key_name: String) -> void:
 	if key_name == "move_left" or key_name == "move_right":
 		minigame.player.fake_input.x = 0
+	elif key_name == "move_up" or key_name == "move_down":
+		minigame.player.fake_input.y = 0
 	
 func activate_draco_hand(hand_id: int) -> void:
 	minigame.grab_apple(hand_id)
