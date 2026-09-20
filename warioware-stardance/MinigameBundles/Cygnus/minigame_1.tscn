@@ -1,22 +1,49 @@
 [gd_scene format=3 uid="uid://dl8vsejqnbu8v"]
 
 [ext_resource type="Script" uid="uid://bibj3tb2ve2eh" path="res://MinigameBundles/Cygnus/minigame_1.gd" id="1_7elpu"]
-[ext_resource type="Texture2D" uid="uid://da3enufnadd0l" path="res://Art/Backgrounds/minigame_1_bg.png" id="2_sykq6"]
+[ext_resource type="Texture2D" uid="uid://bjbfrxceq3iw4" path="res://MinigameBundles/Cygnus/Art/background.png" id="2_d6xtu"]
 [ext_resource type="PackedScene" uid="uid://ijvv7plr8526" path="res://Scenes/GameStats/game_stats.tscn" id="3_fqpiu"]
-[ext_resource type="Texture2D" uid="uid://bw5yrghjf3vdl" path="res://Scenes/TimerScene/StarLife.png" id="3_hxkhb"]
 [ext_resource type="Script" uid="uid://b1wj25ptf105b" path="res://MinigameBundles/Cygnus/spawner.gd" id="3_xmtds"]
 [ext_resource type="PackedScene" uid="uid://b8bjdqitct8pt" path="res://MinigameBundles/Cygnus/Obstacles/obstacle1.tscn" id="4_d6xtu"]
 [ext_resource type="Script" uid="uid://blqlb7wssxrrn" path="res://MinigameBundles/Cygnus/player.gd" id="4_xmtds"]
 [ext_resource type="PackedScene" uid="uid://bmgua711u3dfm" path="res://MinigameBundles/Cygnus/Obstacles/obstacle2.tscn" id="5_k7n0a"]
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_fqpiu"]
-size = Vector2(53, 54)
+[ext_resource type="PackedScene" uid="uid://drb2iqikpp6xo" path="res://MinigameBundles/Cygnus/Obstacles/obstacle3.tscn" id="6_3eff3"]
+[ext_resource type="PackedScene" uid="uid://dmixdbh1q3fc4" path="res://MinigameBundles/Cygnus/Obstacles/obstacle4.tscn" id="7_fpol2"]
+[ext_resource type="Texture2D" uid="uid://d30q5qj4b2f3c" path="res://MinigameBundles/Cygnus/Art/SwimAnimation/swim0000.png" id="7_mr1qu"]
+[ext_resource type="Texture2D" uid="uid://bjs77sxi6lawy" path="res://MinigameBundles/Cygnus/Art/SwimAnimation/swim0001.png" id="8_7msr3"]
+[ext_resource type="Texture2D" uid="uid://opasohx40wnq" path="res://MinigameBundles/Cygnus/Art/SwimAnimation/swim0002.png" id="9_3eff3"]
+[ext_resource type="Texture2D" uid="uid://cpkwo6mpj53qq" path="res://MinigameBundles/Cygnus/Art/SwimAnimation/swim0003.png" id="10_fpol2"]
+[ext_resource type="Texture2D" uid="uid://7gp63h2t1qvc" path="res://MinigameBundles/Cygnus/Art/SwimAnimation/swim0004.png" id="11_n8mkw"]
+[ext_resource type="Texture2D" uid="uid://b47elpt61lgk1" path="res://MinigameBundles/Cygnus/Art/SwimAnimation/swim0005.png" id="12_x1p3o"]
+[ext_resource type="Texture2D" uid="uid://b48vjn5o3nsjn" path="res://MinigameBundles/Cygnus/Art/SwimAnimation/swim0006.png" id="13_ybu18"]
+[ext_resource type="Texture2D" uid="uid://dyam8yfvq37vr" path="res://MinigameBundles/Cygnus/Art/SwimAnimation/swim0007.png" id="14_4ylma"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_fqpiu"]
 animations = [{
 "frames": [{
 "duration": 1.0,
-"texture": ExtResource("3_hxkhb")
+"texture": ExtResource("7_mr1qu")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_7msr3")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_3eff3")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_fpol2")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_n8mkw")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12_x1p3o")
+}, {
+"duration": 1.0,
+"texture": ExtResource("13_ybu18")
+}, {
+"duration": 1.0,
+"texture": ExtResource("14_4ylma")
 }],
 "loop": true,
 "name": &"default",
@@ -34,27 +61,32 @@ lives = 1
 display_progress = true
 display_lives = true
 
-[node name="Background" type="TextureRect" parent="." unique_id=1864616182]
-offset_right = 480.0
-offset_bottom = 270.0
-texture = ExtResource("2_sykq6")
+[node name="Background" type="Parallax2D" parent="." unique_id=1399242502]
+repeat_size = Vector2(960, 0)
+autoscroll = Vector2(-50, 0)
+
+[node name="Sprite2D" type="Sprite2D" parent="Background" unique_id=1549102360]
+position = Vector2(480, 135)
+texture = ExtResource("2_d6xtu")
 
 [node name="Spawner" type="Marker2D" parent="." unique_id=2043700871]
-position = Vector2(536, 63)
+position = Vector2(537, 0)
 script = ExtResource("3_xmtds")
-obstacles = Array[PackedScene]([ExtResource("4_d6xtu"), ExtResource("5_k7n0a")])
-min_time = 0.5
+obstacles = Array[PackedScene]([ExtResource("4_d6xtu"), ExtResource("5_k7n0a"), ExtResource("6_3eff3"), ExtResource("7_fpol2")])
+min_time = 0.2
 max_time = 1.0
 
 [node name="Player" type="CharacterBody2D" parent="." unique_id=484690266]
 position = Vector2(77, 106)
+scale = Vector2(0.5, 0.5)
 script = ExtResource("4_xmtds")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Player" unique_id=549971755]
-shape = SubResource("RectangleShape2D_fqpiu")
+[node name="CollisionShape2D" type="CollisionPolygon2D" parent="Player" unique_id=74564828]
+polygon = PackedVector2Array(19, 4, 43, 5, 42, 10, 13, 16, -53, 18, -50, 4)
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Player" unique_id=1587479486]
 sprite_frames = SubResource("SpriteFrames_fqpiu")
+autoplay = "default"
 
 [node name="Platform1" type="StaticBody2D" parent="." unique_id=182033628]
 position = Vector2(-65, -226)
@@ -65,10 +97,6 @@ shape = SubResource("RectangleShape2D_hxkhb")
 
 [node name="CollisionShape2D4" type="CollisionShape2D" parent="Platform1" unique_id=1273948562]
 position = Vector2(1030, 392)
-shape = SubResource("RectangleShape2D_hxkhb")
-
-[node name="CollisionShape2D3" type="CollisionShape2D" parent="Platform1" unique_id=1170107838]
-position = Vector2(-418, 384)
 shape = SubResource("RectangleShape2D_hxkhb")
 
 [node name="CollisionShape2D2" type="CollisionShape2D" parent="Platform1" unique_id=1575603665]

@@ -1,12 +1,13 @@
 extends CharacterBody2D
 
-@onready var collision_shape: CollisionShape2D = $CollisionShape2D
+@onready var collision_shape: CollisionPolygon2D = $CollisionShape2D
 @onready var animated_sprite: AnimatedSprite2D = $AnimatedSprite2D
 @onready var parent_minigame: Node2D = $"../"
 
 const SPEED_Y = 150
-const SPEED_X = 100
+const SPEED_X = 150
 const SINK_SPEED = 25
+const ROTATION_SPEED = 2
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
@@ -16,22 +17,34 @@ func _ready() -> void:
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _physics_process(delta: float) -> void:
 	if not parent_minigame.game_ended:
-		var direction = Input.get_vector("ui_left", "ui_right", "ui_up", "ui_down")
+		var turning = Input.get_axis("ui_up", "ui_down")
+		var direction = Input.get_axis("ui_left", "ui_right")
+		
+		rotation += turning * animated_sprite.scale.x * ROTATION_SPEED * delta
+		rotation = clamp(rotation, deg_to_rad(-90), deg_to_rad(90))
 
-		if direction.x:
-			velocity.x = direction.x * SPEED_X
+		var forward_dir = Vector2.RIGHT.rotated(rotation)
+		if direction:
+			if direction < 0:
+				animated_sprite.scale.x = -1
+			elif direction > 0:
+				animated_sprite.scale.x = 1
+				
+			velocity = forward_dir * direction * SPEED_X
+			animated_sprite.speed_scale = 1.5
 		else:
+			animated_sprite.speed_scale = 1.0
 			velocity.x = move_toward(velocity.x, 0, SPEED_X)
-
-		if direction.y:
-			velocity.y = direction.y * SPEED_Y
-		else:
 			velocity.y = move_toward(velocity.y, SINK_SPEED, SPEED_Y)
+
+			
 		move_and_slide()
 		
-		if position.x < 0:
+		if position.x < -10:
 			parent_minigame.lives -= 1
 			death_animation()
+	else:
+		animated_sprite.stop()
 	
 
 func death_animation():

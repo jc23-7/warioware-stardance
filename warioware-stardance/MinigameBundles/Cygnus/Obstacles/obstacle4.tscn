@@ -1,0 +1,45 @@
+[gd_scene format=3 uid="uid://dmixdbh1q3fc4"]
+
+[ext_resource type="Script" uid="uid://ish72yvp1ehu" path="res://MinigameBundles/Cygnus/Obstacles/obstacles.gd" id="1_e0psl"]
+[ext_resource type="PackedScene" uid="uid://b8sswx3o6rq8w" path="res://MinigameBundles/Cygnus/Obstacles/collectible.tscn" id="2_ahvtp"]
+[ext_resource type="Texture2D" uid="uid://2sarhj02khvs" path="res://MinigameBundles/Cygnus/Art/Obstacles/rock4.png" id="3_e0psl"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_1ft1p"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("3_e0psl")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[node name="Obstacle3" type="AnimatableBody2D" unique_id=1970614335]
+script = ExtResource("1_e0psl")
+width = 500
+collectible_scene = ExtResource("2_ahvtp")
+
+[node name="Marker2D" type="Marker2D" parent="." unique_id=2135946789]
+position = Vector2(-84, 211)
+
+[node name="Marker2D2" type="Marker2D" parent="." unique_id=649620172]
+position = Vector2(134, 146)
+
+[node name="CollisionShape2D" type="CollisionPolygon2D" parent="." unique_id=377844816]
+position = Vector2(44, 244)
+polygon = PackedVector2Array(-68, -89, -56, -73, -53, 13, -42, 18, -22, -9, 7, -9, 43, 10, 84, 4, 127, 14, 158, 14, 171, 5, 179, 24, 184, 60, -38, 82, -126, 79, -86, -26, -89, -68, -82, -134, -72, -147, -58, -141, -58, -125, -61, -121)
+
+[node name="CollisionShape2D2" type="CollisionPolygon2D" parent="." unique_id=767205658]
+position = Vector2(44, 244)
+polygon = PackedVector2Array(-167, -16, -164, -11, -162, 9, -142, 32, -127, 78, -266, 80, -258, 36, -247, 6, -230, -3, -220, -15, -190, -7)
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=384589831]
+position = Vector2(0, 135)
+sprite_frames = SubResource("SpriteFrames_1ft1p")
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="." unique_id=618824940]
+polygon = PackedVector2Array(-165, -11, -176, 11, -172, 72, -183, 76, -192, 87, -184, 116, -151, 127, -133, 138, -124, 104, -124, 82, -139, 60, -137, 48, -111, 20, -96, -16, -96, -64, -163, -63)
+
+[node name="CollisionPolygon2D2" type="CollisionPolygon2D" parent="." unique_id=492403259]
+polygon = PackedVector2Array(19, -39, 19, -3, 98, 36, 98, 91, 95, 129, 102, 147, 113, 95, 126, 94, 164, 115, 167, 171, 179, 185, 189, 184, 188, 114, 186, 53, 196, 4, 210, -25, 211, -93, 21, -89)

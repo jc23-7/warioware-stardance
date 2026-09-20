@@ -1,0 +1,33 @@
+[gd_scene format=3 uid="uid://drb2iqikpp6xo"]
+
+[ext_resource type="Script" uid="uid://ish72yvp1ehu" path="res://MinigameBundles/Cygnus/Obstacles/obstacles.gd" id="1_kvjrt"]
+[ext_resource type="PackedScene" uid="uid://b8sswx3o6rq8w" path="res://MinigameBundles/Cygnus/Obstacles/collectible.tscn" id="2_sauxf"]
+[ext_resource type="Texture2D" uid="uid://bvehan2va2mll" path="res://MinigameBundles/Cygnus/Art/Obstacles/rock3.png" id="3_kvjrt"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_1ft1p"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("3_kvjrt")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[node name="Obstacle3" type="AnimatableBody2D" unique_id=1970614335]
+script = ExtResource("1_kvjrt")
+max_y = 68
+width = 150
+collectible_scene = ExtResource("2_sauxf")
+
+[node name="Marker2D" type="Marker2D" parent="." unique_id=2135946789]
+position = Vector2(-21, 150)
+
+[node name="CollisionShape2D" type="CollisionPolygon2D" parent="." unique_id=377844816]
+position = Vector2(44, 244)
+polygon = PackedVector2Array(-40, -133, -19, -87, -44.50627, -52.27973, -86, -43, -96, -16, -109, 32, -1, 49, -6, 6, -1, -28, 17, -99, 7, -109, -5, -113, -9, -146, -20, -152)
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=384589831]
+position = Vector2(0, 178)
+sprite_frames = SubResource("SpriteFrames_1ft1p")
