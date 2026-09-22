@@ -1,7 +1,7 @@
 extends AnimatableBody2D
 
-@export var min_y: int
-@export var max_y: int
+@export var min_y: float
+@export var max_y: float
 @export var width: int
 @export var collectible_scene: PackedScene
 

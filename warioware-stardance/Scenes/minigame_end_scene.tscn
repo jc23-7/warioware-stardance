@@ -1,0 +1,140 @@
+[gd_scene format=3 uid="uid://dak514hs8teod"]
+
+[ext_resource type="Theme" uid="uid://be15x84s4leoy" path="res://button_theme.tres" id="1_1yqnh"]
+[ext_resource type="Script" uid="uid://cwjpgv1tl50o4" path="res://Scenes/minigame_end_scene.gd" id="2_opf8q"]
+[ext_resource type="FontFile" uid="uid://bcorxdm3rgr4f" path="res://Art/Jersey_10/Jersey10-Regular.ttf" id="3_3xbp3"]
+[ext_resource type="Texture2D" uid="uid://b1le7naea4han" path="res://Scenes/LevelSelect/Art/UrsaMajorArt/ursa_major0005.png" id="4_7ttho"]
+[ext_resource type="Texture2D" uid="uid://bt0wtc6n4hjjq" path="res://Scenes/LevelSelect/Art/OrionArt/orion0005.png" id="5_opf8q"]
+[ext_resource type="Texture2D" uid="uid://wymj0ajyudcq" path="res://Scenes/LevelSelect/Art/CygnusArt/cygnus0005.png" id="6_3xbp3"]
+[ext_resource type="Texture2D" uid="uid://dnr1qikfie378" path="res://Scenes/LevelSelect/Art/DracoArt/draco0005.png" id="7_ba8sx"]
+[ext_resource type="Texture2D" uid="uid://dfyquipnt4vs3" path="res://Scenes/LevelSelect/Art/CassiopeiaArt/cassiopeia0005.png" id="8_867sh"]
+[ext_resource type="Texture2D" uid="uid://lxjdtv5bqo6v" path="res://Scenes/TimerScene/StarShattered.png" id="9_867sh"]
+
+[node name="EndScreen" type="Control" unique_id=518739561 node_paths=PackedStringArray("title", "description", "constellation_container", "fail_image")]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+theme = ExtResource("1_1yqnh")
+script = ExtResource("2_opf8q")
+title = NodePath("CenterContainer/VBoxContainer/Title")
+description = NodePath("CenterContainer/VBoxContainer/Description")
+constellation_container = NodePath("Constellations")
+fail_image = NodePath("Constellations/Fail")
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=423177110]
+layout_mode = 0
+offset_right = 480.0
+offset_bottom = 270.0
+color = Color(0.050980393, 0.08627451, 0.15686275, 1)
+
+[node name="LevelSelectButton" type="Button" parent="." unique_id=686420271]
+layout_mode = 0
+offset_left = 371.0
+offset_top = 229.0
+offset_right = 471.0
+offset_bottom = 263.0
+size_flags_horizontal = 4
+theme_override_font_sizes/font_size = 16
+text = "Back to Levels"
+
+[node name="CenterContainer" type="CenterContainer" parent="." unique_id=859585904]
+layout_mode = 0
+offset_top = 8.0
+offset_right = 480.0
+offset_bottom = 120.0
+
+[node name="VBoxContainer" type="VBoxContainer" parent="CenterContainer" unique_id=1761167458]
+layout_mode = 2
+theme_override_constants/separation = -24
+
+[node name="Title" type="RichTextLabel" parent="CenterContainer/VBoxContainer" unique_id=1913176002]
+layout_mode = 2
+mouse_filter = 2
+theme_override_fonts/normal_font = ExtResource("3_3xbp3")
+theme_override_font_sizes/normal_font_size = 100
+text = "SUCCESS!"
+fit_content = true
+autowrap_mode = 0
+horizontal_alignment = 1
+
+[node name="Description" type="RichTextLabel" parent="CenterContainer/VBoxContainer" unique_id=494005118]
+layout_mode = 2
+mouse_filter = 2
+theme_override_fonts/normal_font = ExtResource("3_3xbp3")
+theme_override_font_sizes/normal_font_size = 25
+text = "Story Collected"
+fit_content = true
+autowrap_mode = 0
+horizontal_alignment = 1
+
+[node name="Constellations" type="Control" parent="." unique_id=748391226]
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Ursa Major" type="TextureRect" parent="Constellations" unique_id=1957965930]
+visible = false
+layout_mode = 0
+offset_left = 111.0
+offset_top = 77.0
+offset_right = 361.0
+offset_bottom = 327.0
+texture = ExtResource("4_7ttho")
+
+[node name="Orion" type="TextureRect" parent="Constellations" unique_id=1091828502]
+visible = false
+layout_mode = 0
+offset_left = 268.0
+offset_top = 65.0
+offset_right = 518.0
+offset_bottom = 315.0
+rotation = 0.9948377
+scale = Vector2(0.675, 0.675)
+texture = ExtResource("5_opf8q")
+
+[node name="Cygnus" type="TextureRect" parent="Constellations" unique_id=618791813]
+visible = false
+layout_mode = 0
+offset_left = 92.000015
+offset_top = 159.0
+offset_right = 342.0
+offset_bottom = 409.0
+rotation = -0.51487213
+scale = Vector2(0.75, 0.75)
+texture = ExtResource("6_3xbp3")
+
+[node name="Draco" type="TextureRect" parent="Constellations" unique_id=528525647]
+visible = false
+layout_mode = 0
+offset_left = 125.0
+offset_top = 61.0
+offset_right = 375.0
+offset_bottom = 311.0
+texture = ExtResource("7_ba8sx")
+
+[node name="Cassiopeia" type="TextureRect" parent="Constellations" unique_id=1109410753]
+visible = false
+layout_mode = 0
+offset_left = -8.0
+offset_top = -68.0
+offset_right = 242.0
+offset_bottom = 182.0
+scale = Vector2(1.955, 1.955)
+texture = ExtResource("8_867sh")
+
+[node name="Fail" type="TextureRect" parent="Constellations" unique_id=2042220595]
+visible = false
+layout_mode = 0
+offset_left = 185.0
+offset_top = 131.0
+offset_right = 238.0
+offset_bottom = 185.0
+scale = Vector2(2, 2)
+size_flags_vertical = 3
+texture = ExtResource("9_867sh")
+
+[connection signal="pressed" from="LevelSelectButton" to="." method="_return_to_levels"]

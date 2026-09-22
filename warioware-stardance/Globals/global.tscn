@@ -11,11 +11,13 @@
 [ext_resource type="Resource" uid="uid://dwt812026dgxh" path="res://MinigameBundles/Constellations/cygnus.tres" id="6_gigk1"]
 [ext_resource type="PackedScene" uid="uid://b5istff0hd8vq" path="res://Scenes/LevelSelect/level_select.tscn" id="7_c0pxt"]
 [ext_resource type="Resource" uid="uid://cqnuk70vj8es6" path="res://MinigameBundles/Constellations/orion.tres" id="7_kduni"]
+[ext_resource type="PackedScene" uid="uid://dak514hs8teod" path="res://Scenes/minigame_end_scene.tscn" id="10_n8viv"]
 
 [node name="Global" type="Node" unique_id=1437151391]
 script = ExtResource("1_6q3x5")
 constellations = Array[ExtResource("2_2wtbm")]([ExtResource("3_8tbuy"), ExtResource("4_24ueu"), ExtResource("5_n8viv"), ExtResource("6_gigk1"), ExtResource("7_kduni")])
 title_scene = ExtResource("4_brfyg")
 timer_scene = ExtResource("5_c0pxt")
-end_scene = ExtResource("6_24ueu")
+survival_end_scene = ExtResource("6_24ueu")
+minigame_end_scene = ExtResource("10_n8viv")
 level_select = ExtResource("7_c0pxt")

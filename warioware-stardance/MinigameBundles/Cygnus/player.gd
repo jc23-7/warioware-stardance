@@ -37,7 +37,7 @@ func _physics_process(delta: float) -> void:
 				animated_sprite.scale.x = 1
 				
 			velocity = forward_dir * direction * SPEED_X
-			animated_sprite.speed_scale = 1.5
+			animated_sprite.speed_scale = 2.0
 		else:
 			animated_sprite.speed_scale = 1.0
 			velocity.x = move_toward(velocity.x, 0, SPEED_X)

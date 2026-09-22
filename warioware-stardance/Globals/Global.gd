@@ -3,10 +3,13 @@ extends Node
 @export var constellations: Array[Constellation]
 @export var title_scene: PackedScene
 @export var timer_scene: PackedScene
-@export var end_scene: PackedScene
+@export var survival_end_scene: PackedScene
+@export var minigame_end_scene: PackedScene
 @export var level_select: PackedScene
 
-var mode
+enum Mode {PLAY, SURVIVAL}
+
+var current_mode
 var tutorial = false
 var minigames_done = 0
 var total_minigames = 3
@@ -48,7 +51,7 @@ func start_survival() -> void:
 	get_tree().change_scene_to_packed(timer_scene)
 
 func next_minigame() -> void:
-	if mode == "Play":
+	if current_mode == Mode.PLAY:
 		get_tree().change_scene_to_packed(current_constellation.minigame)
 	else:
 		randomize()
@@ -56,16 +59,16 @@ func next_minigame() -> void:
 	
 	
 func minigame_done(success: bool) -> void:
-	if mode == "Play":
+	if current_mode == Mode.PLAY:
 		constellations[constellations.find(current_constellation)].completed = success
-		get_tree().change_scene_to_packed(level_select)
-	elif mode == "Survival":
+		get_tree().change_scene_to_packed(minigame_end_scene)
+	elif current_mode == Mode.SURVIVAL:
 		if success:
 			minigames_done += 1
 		else:
 			lives -= 1
 
 		if lives == 0:
-			get_tree().change_scene_to_packed(end_scene)
+			get_tree().change_scene_to_packed(survival_end_scene)
 		else:
 			get_tree().change_scene_to_packed(timer_scene)

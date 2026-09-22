@@ -48,6 +48,7 @@ func _on_level_selected(constellation_name: String):
 	show()
 
 func _on_start_game_pressed() -> void:
+	Global.tutorial = false
 	for constellation in Global.constellations:
 		if constellation.constellation_name == selected_constellation.constellation_name:
 			Global.start_constellation(constellation)

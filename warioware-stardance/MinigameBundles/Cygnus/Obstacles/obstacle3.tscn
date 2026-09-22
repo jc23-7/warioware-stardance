@@ -16,8 +16,8 @@ animations = [{
 }]
 
 [node name="Obstacle3" type="AnimatableBody2D" unique_id=1970614335]
+sync_to_physics = false
 script = ExtResource("1_kvjrt")
-max_y = 68
 width = 150
 collectible_scene = ExtResource("2_sauxf")
 

@@ -6,6 +6,7 @@
 [ext_resource type="Texture2D" uid="uid://bnnnbejys40uf" path="res://MinigameBundles/Cygnus/Art/Obstacles/rock1_bottom.png" id="4_1ft1p"]
 
 [node name="Rock1" type="AnimatableBody2D" unique_id=1415655783]
+sync_to_physics = false
 script = ExtResource("1_1t1rm")
 width = 125
 collectible_scene = ExtResource("2_cihg3")

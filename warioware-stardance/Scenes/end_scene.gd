@@ -1,18 +1,11 @@
 extends Control
 
-@onready var fail: Control = $Fail
-@onready var success: Control = $Success
+@export var score: RichTextLabel
 
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
-	if Global.lives == 0:
-		fail.show()
-		success.hide()
-	else:
-		fail.hide()
-		success.show()
-		
+	score.text = str(Global.minigames_done)
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
@@ -28,3 +21,8 @@ func _on_home_pressed() -> void:
 func _on_quit_pressed() -> void:
 	GlobalAudio.button_pressed()
 	get_tree().quit()
+
+
+func _on_survival_pressed() -> void:
+	GlobalAudio.button_pressed()
+	Global.start_survival()

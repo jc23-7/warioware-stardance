@@ -25,18 +25,20 @@ func _process(delta: float) -> void:
 	else:
 		if not cur_obstacle:
 			cur_obstacle = obstacles[0].instantiate()
-			cur_obstacle.global_position.y = 0
 			add_child(cur_obstacle)
+			#cur_obstacle.global_position.y = 0
+			#
 			
 
 func spawn_obstacle():
 	if timer:
 		timer.queue_free()
 		timer = null
-	
-	randomize()
+
 	cur_obstacle = obstacles[randi_range(0, obstacles.size() - 1)].instantiate()
-	cur_obstacle.global_position.y = randi_range(cur_obstacle.min_y, cur_obstacle.max_y)
 	add_child(cur_obstacle)
+	cur_obstacle.global_position = Vector2(get_viewport_rect().size.x + cur_obstacle.width, randf_range(cur_obstacle.min_y, cur_obstacle.max_y))
+	
+	
 	
 	

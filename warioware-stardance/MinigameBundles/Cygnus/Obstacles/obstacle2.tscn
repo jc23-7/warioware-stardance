@@ -15,9 +15,10 @@ animations = [{
 "speed": 5.0
 }]
 
-[node name="Obstacle1" type="AnimatableBody2D" unique_id=1970614335]
+[node name="Obstacle2" type="AnimatableBody2D" unique_id=1970614335]
+sync_to_physics = false
 script = ExtResource("1_6y23x")
-min_y = -83
+min_y = -83.0
 width = 150
 collectible_scene = ExtResource("2_dfs2b")
 

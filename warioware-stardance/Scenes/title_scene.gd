@@ -15,11 +15,11 @@ func _process(delta: float) -> void:
 func _on_start_pressed() -> void:
 	GlobalAudio.button_pressed()
 	#get_tree().change_scene_to_file("res://Scenes/timer_screen.tscn")
-	Global.mode = "Play"
+	Global.current_mode = Global.Mode.PLAY
 	Global.change_scene("level_select")
 
 func _on_survival_pressed() -> void:
-	Global.mode = "Survival"
+	Global.current_mode = Global.Mode.SURVIVAL
 	Global.start_survival()
 
 func _on_quit_pressed() -> void:
