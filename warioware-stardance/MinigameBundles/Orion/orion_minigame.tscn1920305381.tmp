@@ -1,39 +1,33 @@
 [gd_scene format=3 uid="uid://cvl4hwr5lhs4p"]
 
+[ext_resource type="Texture2D" uid="uid://da3enufnadd0l" path="res://Art/Backgrounds/minigame_1_bg.png" id="1_u31tf"]
 [ext_resource type="Script" uid="uid://djc0coppvqoms" path="res://MinigameBundles/Orion/orion_minigame.gd" id="1_xj0d8"]
-[ext_resource type="Texture2D" uid="uid://by102g6nlddrb" path="res://MinigameBundles/Orion/Art/background.png" id="2_isyiu"]
 [ext_resource type="PackedScene" uid="uid://ijvv7plr8526" path="res://Scenes/GameStats/game_stats.tscn" id="3_xj0d8"]
-[ext_resource type="Texture2D" uid="uid://x8lwe6wdq7l" path="res://MinigameBundles/Orion/Art/ScorpionAnimation/scorpion0005.png" id="5_isyiu"]
-[ext_resource type="Texture2D" uid="uid://dkg0lt73hnega" path="res://MinigameBundles/Orion/Art/ScorpionAnimation/scorpion0001.png" id="6_3aato"]
+[ext_resource type="Texture2D" uid="uid://d368wu03ubuac" path="res://Art/Star.png" id="4_fg6us"]
+[ext_resource type="Texture2D" uid="uid://c07g6dd8o7b6p" path="res://Art/star_spot.png" id="5_4vpmv"]
+[ext_resource type="Texture2D" uid="uid://bw5yrghjf3vdl" path="res://Scenes/TimerScene/StarLife.png" id="5_u31tf"]
+[ext_resource type="Texture2D" uid="uid://cl2rsmsqyqeo5" path="res://MinigameBundles/Orion/Art/ScorpionAnimation/scorpion0001.png" id="6_3aato"]
 [ext_resource type="Script" uid="uid://bkwrxjdb4i3lb" path="res://MinigameBundles/Orion/player.gd" id="6_lq40j"]
-[ext_resource type="Texture2D" uid="uid://dl2vnut1lkd8b" path="res://MinigameBundles/Orion/Art/ScorpionAnimation/scorpion0002.png" id="7_5cugl"]
+[ext_resource type="Texture2D" uid="uid://doabwnkhj46dy" path="res://MinigameBundles/Orion/Art/ScorpionAnimation/scorpion0002.png" id="7_5cugl"]
 [ext_resource type="Script" uid="uid://jteux1djf7c4" path="res://MinigameBundles/Orion/enemy.gd" id="8_55mpo"]
-[ext_resource type="Texture2D" uid="uid://bujutkr7l4njg" path="res://MinigameBundles/Orion/Art/ScorpionAnimation/scorpion0003.png" id="8_v3seb"]
-[ext_resource type="Texture2D" uid="uid://bemvrdm6gwngi" path="res://MinigameBundles/Orion/Art/ScorpionAnimation/scorpion0004.png" id="9_vc3gg"]
-[ext_resource type="Texture2D" uid="uid://dbmvhn20dogxn" path="res://MinigameBundles/Orion/Art/PlayerAnimation/player0000.png" id="10_clcyu"]
-[ext_resource type="Texture2D" uid="uid://dosbtfh3jdfov" path="res://MinigameBundles/Orion/Art/PlayerAnimation/player0001.png" id="11_nj15w"]
-[ext_resource type="Texture2D" uid="uid://c2pxilkfw2y43" path="res://MinigameBundles/Orion/Art/PlayerAnimation/player0002.png" id="12_3t1it"]
-[ext_resource type="Texture2D" uid="uid://c18jpmghfruvi" path="res://MinigameBundles/Orion/Art/PlayerAnimation/player0003.png" id="13_005yf"]
-[ext_resource type="Texture2D" uid="uid://r104gcqwo1ak" path="res://MinigameBundles/Orion/Art/PlayerAnimation/player0004.png" id="14_4iv4f"]
-[ext_resource type="Texture2D" uid="uid://xxfm5k0vaak4" path="res://MinigameBundles/Orion/Art/PlayerAnimation/player0005.png" id="15_2nog2"]
-[ext_resource type="Texture2D" uid="uid://dxwejq16ya0g1" path="res://MinigameBundles/Orion/Art/PlayerAnimation/player0006.png" id="16_eue8o"]
-[ext_resource type="Texture2D" uid="uid://bptj5mk52inp1" path="res://MinigameBundles/Orion/Art/PlayerAnimation/player0007.png" id="17_fkdbv"]
+[ext_resource type="Texture2D" uid="uid://di82cwrghmhca" path="res://MinigameBundles/Orion/Art/ScorpionAnimation/scorpion0003.png" id="8_v3seb"]
+[ext_resource type="Texture2D" uid="uid://ybyhv6qx0vld" path="res://MinigameBundles/Orion/Art/ScorpionAnimation/scorpion0004.png" id="9_vc3gg"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_55mpo"]
-size = Vector2(138.66672, 130.13336)
+size = Vector2(38.400032, 81.066666)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_xj0d8"]
 animations = [{
 "frames": [{
 "duration": 1.0,
-"texture": ExtResource("9_vc3gg")
+"texture": ExtResource("4_fg6us")
 }, {
 "duration": 1.0,
-"texture": ExtResource("5_isyiu")
+"texture": ExtResource("5_4vpmv")
 }],
 "loop": false,
 "name": &"attack",
-"speed": 12.0
+"speed": 5.0
 }, {
 "frames": [{
 "duration": 1.0,
@@ -57,44 +51,15 @@ animations = [{
 animations = [{
 "frames": [{
 "duration": 1.0,
-"texture": ExtResource("10_clcyu")
+"texture": ExtResource("5_u31tf")
 }],
 "loop": true,
 "name": &"default",
-"speed": 12.0
-}, {
-"frames": [{
-"duration": 1.0,
-"texture": ExtResource("10_clcyu")
-}, {
-"duration": 1.0,
-"texture": ExtResource("11_nj15w")
-}, {
-"duration": 1.0,
-"texture": ExtResource("12_3t1it")
-}, {
-"duration": 1.0,
-"texture": ExtResource("13_005yf")
-}, {
-"duration": 1.0,
-"texture": ExtResource("14_4iv4f")
-}, {
-"duration": 1.0,
-"texture": ExtResource("15_2nog2")
-}, {
-"duration": 1.0,
-"texture": ExtResource("16_eue8o")
-}, {
-"duration": 1.0,
-"texture": ExtResource("17_fkdbv")
-}],
-"loop": true,
-"name": &"walk",
-"speed": 12.0
+"speed": 5.0
 }]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_xj0d8"]
-size = Vector2(9, 21)
+size = Vector2(53, 54)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_fg6us"]
 size = Vector2(434.4003, 733.39)
@@ -113,34 +78,30 @@ display_lives = true
 [node name="Background" type="TextureRect" parent="." unique_id=1022662267]
 offset_right = 480.0
 offset_bottom = 270.0
-texture = ExtResource("2_isyiu")
+texture = ExtResource("1_u31tf")
 
 [node name="Enemy" type="CharacterBody2D" parent="." unique_id=1309560956]
-position = Vector2(368, 139)
+position = Vector2(267, 87)
 motion_mode = 1
 script = ExtResource("8_55mpo")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Enemy" unique_id=2045531318]
-position = Vector2(1.5, 1.5)
 scale = Vector2(0.46875, 0.46875)
 shape = SubResource("RectangleShape2D_55mpo")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Enemy" unique_id=342736848]
 rotation = 1.5707964
 sprite_frames = SubResource("SpriteFrames_xj0d8")
-animation = &"attack"
 
 [node name="Player" type="CharacterBody2D" parent="." unique_id=47101783]
-position = Vector2(109, 138)
+position = Vector2(146, 98)
 motion_mode = 1
 script = ExtResource("6_lq40j")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Player" unique_id=370740971]
 sprite_frames = SubResource("SpriteFrames_lq40j")
-animation = &"walk"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Player" unique_id=426694359]
-position = Vector2(-0.5, -0.5)
 shape = SubResource("RectangleShape2D_xj0d8")
 
 [node name="Walls" type="Node2D" parent="." unique_id=620022870]
