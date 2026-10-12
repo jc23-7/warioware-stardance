@@ -1,6 +1,6 @@
 extends Node2D
 
-@onready var mute_animated_sprite: AnimatedSprite2D = $"MuteButton/AnimatedSprite2D"
+@onready var mute_button: TextureButton = $"CanvasLayer/MuteButton"
 
 var fade_tween: Tween
 var bgm_fade: Tween
@@ -8,7 +8,7 @@ var mute = false
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
-	mute_animated_sprite.frame = 0
+	mute_button.button_pressed = false
 	reset_bgm()
 
 
@@ -18,9 +18,9 @@ func _process(delta: float) -> void:
 		reset_bgm()
 	if Input.is_action_just_released("mute"):
 		if mute:
-			mute_animated_sprite.frame = 0
+			mute_button.button_pressed = false
 		else:
-			mute_animated_sprite.frame = 1
+			mute_button.button_pressed = true
 		mute = not mute
 		var master_index = AudioServer.get_bus_index("Master")
 		AudioServer.set_bus_mute(master_index, mute)
@@ -69,12 +69,16 @@ func time_up() -> void:
 		$TimeUp.play()
 		await $TimeUp.finished
 
-func _button_clicked(viewport: Node, event: InputEvent, shape_idx: int) -> void:
-	if event is InputEventMouseButton and event.button_index == MOUSE_BUTTON_LEFT and event.pressed:
-		if mute:
-			mute_animated_sprite.frame = 0
-		else:
-			mute_animated_sprite.frame = 1
-		mute = not mute
-		var master_index = AudioServer.get_bus_index("Master")
-		AudioServer.set_bus_mute(master_index, mute)
+func success() -> void:
+	if not Global.tutorial:
+		$CollectStar.play()
+		await $CollectStar.finished
+
+func _on_mute_button_pressed() -> void:
+	if mute:
+		mute_button.button_pressed = false
+	else:
+		mute_button.button_pressed = true
+	mute = not mute
+	var master_index = AudioServer.get_bus_index("Master")
+	AudioServer.set_bus_mute(master_index, mute)

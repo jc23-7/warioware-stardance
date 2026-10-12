@@ -16,8 +16,11 @@ func _process(delta: float) -> void:
 func _unhandled_input(event: InputEvent) -> void:
 	if event is InputEventMouseButton and event.button_index == MOUSE_BUTTON_LEFT:
 		if event.pressed:
-			panning = true
-			prev_pos = event.position
+			var center = get_viewport_rect().size / 2.0
+			var radius = get_viewport_rect().size.x / 2.0
+			if event.position.distance_to(center) <= radius:
+				panning = true
+				prev_pos = event.position
 		else:
 			panning = false
 	if panning:

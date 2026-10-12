@@ -35,15 +35,22 @@ func _process(delta: float) -> void:
 
 func _on_game_success() -> void:
 	success = true
-	await game_stats.Timer(1.5)
+	#await game_stats.Timer(1.5)
+	get_tree().paused = true
+	await GlobalAudio.success()
+	get_tree().paused = false
 	Global.minigame_done(true)
+	
 	
 func _on_game_fail() -> void:
 	success = false
+	
 	GlobalAudio.stop_timer()
+	get_tree().paused = true
 	await GlobalAudio.time_up()
+	get_tree().paused = false
 	Global.minigame_done(false)
-
+	
 func increase_point(num_increase: int, sound_played: Callable) -> void:
 	if completed_points < total_points and not game_ended:
 		completed_points = min(total_points, completed_points + num_increase)

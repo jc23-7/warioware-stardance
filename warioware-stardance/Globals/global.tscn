@@ -14,6 +14,7 @@
 [ext_resource type="PackedScene" uid="uid://dak514hs8teod" path="res://Scenes/minigame_end_scene.tscn" id="10_n8viv"]
 
 [node name="Global" type="Node" unique_id=1437151391]
+process_mode = 3
 script = ExtResource("1_6q3x5")
 constellations = Array[ExtResource("2_2wtbm")]([ExtResource("3_8tbuy"), ExtResource("4_24ueu"), ExtResource("5_n8viv"), ExtResource("6_gigk1"), ExtResource("7_kduni")])
 title_scene = ExtResource("4_brfyg")

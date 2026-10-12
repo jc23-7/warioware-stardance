@@ -8,6 +8,8 @@ extends Control
 @onready var tutorial: RichTextLabel = $"TutorialTab/TutorialText"
 @onready var tab = $"StoryTab"
 
+@onready var buttons: Control = $Buttons
+
 
 signal level_selected(constellation_name: String)
 signal tutorial_tab(constellation_name: String)
@@ -45,6 +47,8 @@ func _on_level_selected(constellation_name: String):
 		title.text = selected_constellation.constellation_name
 		if selected_constellation.completed:
 			story.text = stories[selected_constellation.constellation_name]
+	
+	_change_tab($StoryTab.get_path())
 	show()
 
 func _on_start_game_pressed() -> void:
@@ -64,3 +68,7 @@ func _change_tab(tab_name: NodePath) -> void:
 		tutorial_tab.emit(selected_constellation.constellation_name)
 	
 	
+
+
+func _on_return_to_home() -> void:
+	Global.change_scene("title_scene")

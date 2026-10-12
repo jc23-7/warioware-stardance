@@ -2,6 +2,7 @@
 
 [ext_resource type="Texture2D" uid="uid://eqmlt61uaief" path="res://Scenes/LevelSelect/Art/CircleMask.png" id="1_1fiak"]
 [ext_resource type="Texture2D" uid="uid://bssdhf5jjmkqa" path="res://Scenes/LevelSelect/Art/LevelMap.png" id="1_lc3gp"]
+[ext_resource type="Texture2D" uid="uid://ce138lfxdmu6m" path="res://Scenes/LevelSelect/Art/CircleOutline.png" id="2_3w545"]
 [ext_resource type="Texture2D" uid="uid://bdqrxdaukkbe6" path="res://Scenes/LevelSelect/Art/LevelMap2.png" id="2_d7t5y"]
 [ext_resource type="Script" uid="uid://bcpver1lbrk4i" path="res://Scenes/level_information.gd" id="2_t45ri"]
 [ext_resource type="Script" uid="uid://4l8i5bw4fek3" path="res://Scenes/LevelSelect/lvl_select_camera.gd" id="3_lx4vd"]
@@ -29,7 +30,6 @@
 [ext_resource type="Texture2D" uid="uid://cnsm6dyxeibp4" path="res://Scenes/LevelSelect/Art/UrsaMajorArt/ursa_major0003.png" id="17_35sug"]
 [ext_resource type="JSON" path="res://Scenes/LevelSelect/stories.json" id="17_d7t5y"]
 [ext_resource type="Texture2D" uid="uid://cbxslwxevucdm" path="res://Scenes/LevelSelect/Art/UrsaMajorArt/ursa_major0004.png" id="18_5wumq"]
-[ext_resource type="Theme" uid="uid://be15x84s4leoy" path="res://button_theme.tres" id="18_d7t5y"]
 [ext_resource type="Script" uid="uid://c6l83rxdsd7ph" path="res://Scenes/LevelSelect/tutorial.gd" id="19_5wh6f"]
 [ext_resource type="Texture2D" uid="uid://b1le7naea4han" path="res://Scenes/LevelSelect/Art/UrsaMajorArt/ursa_major0005.png" id="19_6ui0v"]
 [ext_resource type="BitMap" uid="uid://5tb1hd54ja0y" path="res://Scenes/LevelSelect/Art/OrionArt/orion0006.png" id="27_ivryp"]
@@ -53,6 +53,25 @@
 [ext_resource type="Texture2D" uid="uid://dtg5lw1h2xqdx" path="res://Scenes/LevelSelect/Art/CygnusArt/cygnus0003.png" id="45_ck5ev"]
 [ext_resource type="Texture2D" uid="uid://bcdr6l7pjkm04" path="res://Scenes/LevelSelect/Art/CygnusArt/cygnus0004.png" id="46_2clr8"]
 [ext_resource type="Texture2D" uid="uid://wymj0ajyudcq" path="res://Scenes/LevelSelect/Art/CygnusArt/cygnus0005.png" id="47_fhv3h"]
+[ext_resource type="Texture2D" uid="uid://b2wf55ec8ad65" path="res://Scenes/LevelSelect/Art/ArrowButton/normal.png" id="53_8m48a"]
+[ext_resource type="Texture2D" uid="uid://g28tj43vh768" path="res://Scenes/LevelSelect/Art/ArrowButton/pressed.png" id="54_3w545"]
+[ext_resource type="Texture2D" uid="uid://b3ixdhe7wlpa3" path="res://Scenes/LevelSelect/Art/StartGameButton/normal.png" id="54_ynt26"]
+[ext_resource type="Texture2D" uid="uid://djq57vcmik57v" path="res://Scenes/LevelSelect/Art/StartGameButton/pressed.png" id="55_3x64y"]
+[ext_resource type="Texture2D" uid="uid://cvn3a71yur6jl" path="res://Scenes/LevelSelect/Art/ArrowButton/hover.png" id="55_jvay1"]
+[ext_resource type="Texture2D" uid="uid://bsotqosyn1n56" path="res://Scenes/LevelSelect/Art/InfoPanel.png" id="55_ynt26"]
+[ext_resource type="Texture2D" uid="uid://csjgeum31e87v" path="res://Scenes/LevelSelect/Art/StartGameButton/hover.png" id="56_fkv1q"]
+[ext_resource type="Texture2D" uid="uid://bjfe5ydlmr5hn" path="res://Scenes/LevelSelect/Art/HomeButton/normal.png" id="61_hiqs5"]
+[ext_resource type="Texture2D" uid="uid://2rfcixmhxkka" path="res://Scenes/LevelSelect/Art/HomeButton/pressed.png" id="62_ck5ev"]
+[ext_resource type="Texture2D" uid="uid://b43ijeano0u7b" path="res://Scenes/LevelSelect/Art/HomeButton/hover.png" id="63_2clr8"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_lxv4g"]
+texture = ExtResource("53_8m48a")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_hiqs5"]
+texture = ExtResource("54_3w545")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_ck5ev"]
+texture = ExtResource("55_jvay1")
 
 [sub_resource type="Animation" id="Animation_vtbif"]
 resource_name = "Cassiopeia"
@@ -310,6 +329,24 @@ _data = {
 &"minigame_1_animation": SubResource("Animation_b7hhi")
 }
 
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_2clr8"]
+texture = ExtResource("53_8m48a")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_fhv3h"]
+texture = ExtResource("54_3w545")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_57m4l"]
+texture = ExtResource("55_jvay1")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_ynt26"]
+texture = ExtResource("54_ynt26")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_3x64y"]
+texture = ExtResource("55_3x64y")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_fkv1q"]
+texture = ExtResource("56_fkv1q")
+
 [node name="LevelSelect" type="Control" unique_id=520717288]
 layout_mode = 3
 anchors_preset = 0
@@ -319,7 +356,7 @@ layout_mode = 0
 offset_right = 480.0
 offset_bottom = 270.0
 mouse_filter = 2
-color = Color(0, 0, 0, 0.6156863)
+color = Color(0.021536611, 0.042906314, 0.0919211, 1)
 
 [node name="TextureRect (for placement)" type="TextureRect" parent="." unique_id=1953835859]
 visible = false
@@ -328,7 +365,16 @@ offset_left = -386.0
 offset_top = -302.0
 offset_right = 614.0
 offset_bottom = 698.0
+mouse_filter = 2
 texture = ExtResource("1_lc3gp")
+
+[node name="MapOutline" type="TextureRect" parent="." unique_id=1672469662]
+layout_mode = 0
+offset_left = -13.0
+offset_top = -12.0
+offset_right = 287.0
+offset_bottom = 288.0
+texture = ExtResource("2_3w545")
 
 [node name="TextureRect2" type="TextureRect" parent="." unique_id=1118172012]
 clip_children = 1
@@ -478,52 +524,19 @@ script = ExtResource("3_lx4vd")
 anchors_preset = 0
 offset_right = 40.0
 offset_bottom = 40.0
+mouse_filter = 2
 script = ExtResource("2_t45ri")
 stories_json = ExtResource("17_d7t5y")
 
-[node name="StoryButton" type="Button" parent="LevelInfo" unique_id=638750883]
+[node name="Background" type="TextureRect" parent="LevelInfo" unique_id=183044015]
 layout_mode = 0
-offset_left = 444.0
-offset_top = 58.0
-offset_right = 500.0
-offset_bottom = 84.0
-size_flags_vertical = 3
-theme_override_fonts/font = ExtResource("17_7irii")
-text = "Story"
-
-[node name="TutorialButton" type="Button" parent="LevelInfo" unique_id=312750302]
-layout_mode = 0
-offset_left = 445.0
-offset_top = 88.0
-offset_right = 501.0
-offset_bottom = 114.0
-size_flags_vertical = 3
-theme_override_fonts/font = ExtResource("17_7irii")
-text = "Tutorial"
-
-[node name="Title" type="RichTextLabel" parent="LevelInfo" unique_id=1046237857]
-layout_mode = 0
-offset_left = 286.0
-offset_top = 24.0
-offset_right = 436.0
-offset_bottom = 54.0
-size_flags_vertical = 3
-theme_override_fonts/normal_font = ExtResource("17_7irii")
-theme_override_font_sizes/normal_font_size = 24
-text = "Ursa Major
-"
-
-[node name="StartGame" type="Button" parent="LevelInfo" unique_id=1776484225]
-layout_mode = 0
-offset_left = 352.0
-offset_top = 210.0
-offset_right = 459.0
-offset_bottom = 253.0
-theme = ExtResource("18_d7t5y")
-theme_override_font_sizes/font_size = 20
-text = "Start Game"
+offset_right = 480.0
+offset_bottom = 270.0
+mouse_filter = 2
+texture = ExtResource("55_ynt26")
 
 [node name="StoryTab" type="Control" parent="LevelInfo" unique_id=1544989440]
+visible = false
 anchors_preset = 0
 offset_right = 40.0
 offset_bottom = 40.0
@@ -531,36 +544,87 @@ offset_bottom = 40.0
 [node name="StoryText" type="RichTextLabel" parent="LevelInfo/StoryTab" unique_id=362390892]
 layout_mode = 0
 offset_left = 296.0
-offset_top = 80.0
+offset_top = 110.0
 offset_right = 436.0
-offset_bottom = 124.0
+offset_bottom = 154.0
+theme_override_colors/default_color = Color(1, 0.7607843, 0.24705882, 1)
 theme_override_fonts/normal_font = ExtResource("17_7irii")
 theme_override_font_sizes/normal_font_size = 14
 text = "Story not found. Complete the game to collect the story."
 scroll_active = false
 
+[node name="StoryTitle" type="RichTextLabel" parent="LevelInfo/StoryTab" unique_id=995924283]
+layout_mode = 0
+offset_left = 298.0
+offset_top = 71.0
+offset_right = 438.0
+offset_bottom = 115.0
+theme_override_colors/default_color = Color(1, 0.7607843, 0.24705882, 1)
+theme_override_fonts/normal_font = ExtResource("17_7irii")
+theme_override_font_sizes/normal_font_size = 24
+text = "Story
+"
+scroll_active = false
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="StoryButton" type="Button" parent="LevelInfo/StoryTab" unique_id=638750883]
+layout_mode = 0
+offset_left = 413.0
+offset_top = 84.0
+offset_right = 426.0
+offset_bottom = 103.0
+size_flags_vertical = 3
+theme_override_colors/font_color = Color(0.61128515, 0.44369856, 0, 1)
+theme_override_colors/font_focus_color = Color(0.6117647, 0.44313726, 0, 1)
+theme_override_colors/font_pressed_color = Color(0.6117647, 0.44313726, 0, 1)
+theme_override_colors/font_hover_color = Color(0.6117647, 0.44313726, 0, 1)
+theme_override_colors/font_hover_pressed_color = Color(0.6117647, 0.44313726, 0, 1)
+theme_override_fonts/font = ExtResource("17_7irii")
+theme_override_font_sizes/font_size = 10
+theme_override_styles/normal = SubResource("StyleBoxTexture_lxv4g")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_hiqs5")
+theme_override_styles/hover = SubResource("StyleBoxTexture_ck5ev")
+
 [node name="TutorialTab" type="Control" parent="LevelInfo" unique_id=883442300]
+visible = false
 anchors_preset = 0
 offset_right = 40.0
 offset_bottom = 40.0
 
-[node name="TutorialText" type="RichTextLabel" parent="LevelInfo/TutorialTab" unique_id=2103392381]
+[node name="TutorialText" type="RichTextLabel" parent="LevelInfo/TutorialTab" unique_id=2040565359]
 layout_mode = 0
-offset_left = 294.0
-offset_top = 80.0
-offset_right = 434.0
-offset_bottom = 124.0
+offset_left = 298.0
+offset_top = 113.0
+offset_right = 438.0
+offset_bottom = 157.0
+theme_override_colors/default_color = Color(1, 0.7607843, 0.24705882, 1)
 theme_override_fonts/normal_font = ExtResource("17_7irii")
 theme_override_font_sizes/normal_font_size = 14
-text = "Text"
+text = "Tutorial text."
 scroll_active = false
+
+[node name="TutorialTitle" type="RichTextLabel" parent="LevelInfo/TutorialTab" unique_id=2014931478]
+layout_mode = 0
+offset_left = 298.0
+offset_top = 71.0
+offset_right = 438.0
+offset_bottom = 115.0
+theme_override_colors/default_color = Color(1, 0.7607843, 0.24705882, 1)
+theme_override_fonts/normal_font = ExtResource("17_7irii")
+theme_override_font_sizes/normal_font_size = 24
+text = "Tutorial
+"
+scroll_active = false
+horizontal_alignment = 1
+vertical_alignment = 1
 
 [node name="Tutorial" type="SubViewportContainer" parent="LevelInfo/TutorialTab" unique_id=1486600721 node_paths=PackedStringArray("level_info")]
 layout_mode = 0
-offset_left = 316.0
-offset_top = 136.0
-offset_right = 796.0
-offset_bottom = 406.0
+offset_left = 309.0
+offset_top = 155.0
+offset_right = 789.0
+offset_bottom = 425.0
 scale = Vector2(0.25, 0.25)
 mouse_filter = 2
 script = ExtResource("19_5wh6f")
@@ -570,11 +634,63 @@ level_info = NodePath("../..")
 handle_input_locally = false
 physics_object_picking = true
 size = Vector2i(480, 270)
-render_target_update_mode = 4
+render_target_update_mode = 0
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="LevelInfo/TutorialTab/Tutorial" unique_id=2011721988]
 root_node = NodePath("../../..")
 libraries/ = SubResource("AnimationLibrary_aql8v")
+
+[node name="TutorialButton" type="Button" parent="LevelInfo/TutorialTab" unique_id=312750302]
+layout_mode = 0
+offset_left = 320.0
+offset_top = 85.0
+offset_right = 333.0
+offset_bottom = 104.0
+scale = Vector2(-1, 1)
+size_flags_vertical = 3
+theme_override_colors/font_color = Color(0.6117647, 0.44313726, 0, 1)
+theme_override_colors/font_focus_color = Color(0.6117647, 0.44313726, 0, 1)
+theme_override_colors/font_pressed_color = Color(0.6117647, 0.44313726, 0, 1)
+theme_override_colors/font_hover_color = Color(0.6117647, 0.44313726, 0, 1)
+theme_override_colors/font_hover_pressed_color = Color(0.6117647, 0.44313726, 0, 1)
+theme_override_fonts/font = ExtResource("17_7irii")
+theme_override_font_sizes/font_size = 10
+theme_override_styles/normal = SubResource("StyleBoxTexture_2clr8")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_fhv3h")
+theme_override_styles/hover = SubResource("StyleBoxTexture_57m4l")
+
+[node name="Title" type="RichTextLabel" parent="LevelInfo" unique_id=1046237857]
+layout_mode = 0
+offset_left = 293.0
+offset_top = 26.0
+offset_right = 443.0
+offset_bottom = 71.0
+size_flags_vertical = 3
+theme_override_colors/default_color = Color(1, 0.7607843, 0.24705882, 1)
+theme_override_fonts/normal_font = ExtResource("17_7irii")
+theme_override_font_sizes/normal_font_size = 28
+text = "Ursa Major
+"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="StartGame" type="Button" parent="LevelInfo" unique_id=1776484225]
+layout_mode = 0
+offset_left = 375.0
+offset_top = 227.0
+offset_right = 463.0
+offset_bottom = 253.0
+theme_override_colors/font_color = Color(1, 0.7137255, 0.09411765, 1)
+theme_override_colors/font_focus_color = Color(0.6117647, 0.44313726, 0, 1)
+theme_override_colors/font_pressed_color = Color(1, 0.9098039, 0.72156864, 1)
+theme_override_colors/font_hover_color = Color(1, 1, 1, 1)
+theme_override_colors/font_hover_pressed_color = Color(1, 1, 1, 1)
+theme_override_fonts/font = ExtResource("17_7irii")
+theme_override_font_sizes/font_size = 16
+theme_override_styles/normal = SubResource("StyleBoxTexture_ynt26")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_3x64y")
+theme_override_styles/hover = SubResource("StyleBoxTexture_fkv1q")
+text = "Start Game"
 
 [node name="Ursa Minor (for placement)" type="TextureButton" parent="." unique_id=567230162 node_paths=PackedStringArray("level_info")]
 visible = false
@@ -584,6 +700,7 @@ offset_left = -11.0
 offset_top = 73.0
 offset_right = 239.0
 offset_bottom = 323.0
+mouse_filter = 2
 toggle_mode = true
 button_group = ExtResource("3_t71yp")
 texture_normal = ExtResource("5_t71yp")
@@ -597,13 +714,34 @@ completed_normal = ExtResource("8_148m5")
 completed_hover = ExtResource("9_uw1b4")
 completed_selected = ExtResource("10_0ymf3")
 
+[node name="TextureRect" type="TextureRect" parent="." unique_id=875691784]
+visible = false
+layout_mode = 0
+offset_left = 269.0
+offset_top = 14.0
+offset_right = 469.0
+offset_bottom = 254.0
+mouse_filter = 2
+texture = ExtResource("55_ynt26")
+
+[node name="HomeButton" type="TextureButton" parent="." unique_id=220860156]
+layout_mode = 0
+offset_left = 6.0
+offset_top = 6.0
+offset_right = 24.0
+offset_bottom = 24.0
+texture_normal = ExtResource("61_hiqs5")
+texture_pressed = ExtResource("62_ck5ev")
+texture_hover = ExtResource("63_2clr8")
+
 [connection signal="pressed" from="TextureRect2/SubViewportContainer/SubViewport/Ursa Minor" to="TextureRect2/SubViewportContainer/SubViewport/Ursa Minor" method="_on_pressed"]
 [connection signal="pressed" from="TextureRect2/SubViewportContainer/SubViewport/Ursa Major" to="TextureRect2/SubViewportContainer/SubViewport/Ursa Major" method="_on_pressed"]
 [connection signal="pressed" from="TextureRect2/SubViewportContainer/SubViewport/Cassiopeia" to="TextureRect2/SubViewportContainer/SubViewport/Cassiopeia" method="_on_pressed"]
 [connection signal="pressed" from="TextureRect2/SubViewportContainer/SubViewport/Orion" to="TextureRect2/SubViewportContainer/SubViewport/Orion" method="_on_pressed"]
 [connection signal="pressed" from="TextureRect2/SubViewportContainer/SubViewport/Draco" to="TextureRect2/SubViewportContainer/SubViewport/Draco" method="_on_pressed"]
 [connection signal="pressed" from="TextureRect2/SubViewportContainer/SubViewport/Cygnus" to="TextureRect2/SubViewportContainer/SubViewport/Cygnus" method="_on_pressed"]
-[connection signal="pressed" from="LevelInfo/StoryButton" to="LevelInfo" method="_change_tab" binds= [NodePath("StoryTab")]]
-[connection signal="pressed" from="LevelInfo/TutorialButton" to="LevelInfo" method="_change_tab" binds= [NodePath("TutorialTab")]]
+[connection signal="pressed" from="LevelInfo/StoryTab/StoryButton" to="LevelInfo" method="_change_tab" binds= [NodePath("TutorialTab")]]
+[connection signal="pressed" from="LevelInfo/TutorialTab/TutorialButton" to="LevelInfo" method="_change_tab" binds= [NodePath("StoryTab")]]
 [connection signal="pressed" from="LevelInfo/StartGame" to="LevelInfo" method="_on_start_game_pressed"]
 [connection signal="pressed" from="Ursa Minor (for placement)" to="Ursa Minor (for placement)" method="_on_pressed"]
+[connection signal="pressed" from="HomeButton" to="LevelInfo" method="_on_return_to_home"]

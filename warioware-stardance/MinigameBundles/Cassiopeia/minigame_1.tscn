@@ -40,8 +40,6 @@ script = ExtResource("1_x0w72")
 game_stats = NodePath("GameStats")
 total_points = 4
 lives = 4
-time_limit = 20.0
-display_time = true
 display_progress = true
 display_lives = true
 
