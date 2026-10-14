@@ -207,6 +207,60 @@ tracks/1/keys = {
 }]
 }
 
+[sub_resource type="Animation" id="Animation_hiqs5"]
+resource_name = "Orion"
+length = 10.0
+tracks/0/type = "method"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("TutorialTab/Tutorial")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(1.4, 2.4333334, 2.7, 2.9, 4.133333, 4.5, 5.133333, 5.3333335, 5.9333334, 6.0666666, 8.1, 8.333333, 9.766666),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
+"values": [{
+"args": ["move_up"],
+"method": &"press_key"
+}, {
+"args": ["move_up"],
+"method": &"release_key"
+}, {
+"args": ["move_down"],
+"method": &"press_key"
+}, {
+"args": ["move_right"],
+"method": &"press_key"
+}, {
+"args": ["move_down"],
+"method": &"release_key"
+}, {
+"args": ["move_up"],
+"method": &"press_key"
+}, {
+"args": ["move_up"],
+"method": &"release_key"
+}, {
+"args": ["move_right"],
+"method": &"release_key"
+}, {
+"args": ["move_left"],
+"method": &"press_key"
+}, {
+"args": ["move_down"],
+"method": &"press_key"
+}, {
+"args": ["move_down"],
+"method": &"release_key"
+}, {
+"args": ["move_up"],
+"method": &"press_key"
+}, {
+"args": [],
+"method": &"reset_minigame"
+}]
+}
+
 [sub_resource type="Animation" id="Animation_elo14"]
 length = 5.0
 loop_mode = 1
@@ -324,6 +378,7 @@ _data = {
 &"Cassiopeia": SubResource("Animation_vtbif"),
 &"Cygnus": SubResource("Animation_ynt26"),
 &"Draco": SubResource("Animation_ivryp"),
+&"Orion": SubResource("Animation_hiqs5"),
 &"RESET": SubResource("Animation_elo14"),
 &"Ursa Major": SubResource("Animation_rgxwd"),
 &"minigame_1_animation": SubResource("Animation_b7hhi")
