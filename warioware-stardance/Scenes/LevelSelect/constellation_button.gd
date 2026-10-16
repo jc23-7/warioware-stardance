@@ -24,8 +24,10 @@ var completed = false
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
+	var found = false
 	for constellation in Global.constellations:
 		if constellation.constellation_name == str(name):
+			found = true
 			if not constellation.unlocked:
 				texture_normal = completed_normal
 				texture_hover = completed_hover
@@ -40,7 +42,11 @@ func _ready() -> void:
 				texture_pressed = uncompleted_selected
 			texture_click_mask = click_mask
 			break
-
+	if not found:
+		texture_normal = uncompleted_normal
+		texture_hover = uncompleted_hover
+		texture_pressed = uncompleted_selected
+		texture_click_mask = click_mask
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
 	pass

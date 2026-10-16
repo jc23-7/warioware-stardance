@@ -463,7 +463,6 @@ offset_bottom = 698.0
 texture = ExtResource("2_d7t5y")
 
 [node name="Ursa Minor" type="TextureButton" parent="TextureRect2/SubViewportContainer/SubViewport" unique_id=1426055299 node_paths=PackedStringArray("level_info")]
-visible = false
 texture_filter = 1
 offset_left = -11.0
 offset_top = 73.0
@@ -796,6 +795,7 @@ texture_hover = ExtResource("63_2clr8")
 [connection signal="pressed" from="TextureRect2/SubViewportContainer/SubViewport/Draco" to="TextureRect2/SubViewportContainer/SubViewport/Draco" method="_on_pressed"]
 [connection signal="pressed" from="TextureRect2/SubViewportContainer/SubViewport/Cygnus" to="TextureRect2/SubViewportContainer/SubViewport/Cygnus" method="_on_pressed"]
 [connection signal="pressed" from="LevelInfo/StoryTab/StoryButton" to="LevelInfo" method="_change_tab" binds= [NodePath("TutorialTab")]]
+[connection signal="pressed" from="LevelInfo/TutorialTab/TutorialButton" to="LevelInfo/TutorialTab/Tutorial" method="_change_tab"]
 [connection signal="pressed" from="LevelInfo/TutorialTab/TutorialButton" to="LevelInfo" method="_change_tab" binds= [NodePath("StoryTab")]]
 [connection signal="pressed" from="LevelInfo/StartGame" to="LevelInfo" method="_on_start_game_pressed"]
 [connection signal="pressed" from="Ursa Minor (for placement)" to="Ursa Minor (for placement)" method="_on_pressed"]

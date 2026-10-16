@@ -13,6 +13,7 @@ var mouse_move_tween: Tween
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	level_info.tutorial_tab.connect(_on_tutorial_tab)
+	level_info.level_selected.connect(_on_level_selected)
 	hide()
 
 
@@ -27,6 +28,18 @@ func _process(delta: float) -> void:
 func _input(event: InputEvent) -> void:
 	if event is InputEventKey:
 		get_viewport().set_input_as_handled()
+
+func _on_level_selected(constellation_name: String):
+	if animation_player:
+		animation_player.stop()
+	if minigame:
+		for action in InputMap.get_actions():
+			if action != "mute":
+				Input.action_release(action)
+
+		for child in viewport.get_children():
+			child.queue_free()
+		minigame = null
 
 func _on_tutorial_tab(constellation_name: String):
 	Global.tutorial = true

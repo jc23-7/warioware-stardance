@@ -6,6 +6,7 @@ extends Control
 @onready var title: RichTextLabel = $"Title"
 @onready var story: RichTextLabel = $"StoryTab/StoryText"
 @onready var tutorial: RichTextLabel = $"TutorialTab/TutorialText"
+@onready var tutorial_control: SubViewportContainer = $"TutorialTab/Tutorial"
 @onready var tab = $"StoryTab"
 
 @onready var buttons: Control = $Buttons
@@ -34,12 +35,13 @@ func _process(delta: float) -> void:
 	
 
 func _on_level_selected(constellation_name: String):
+	selected_constellation = null
 	for constellation in Global.constellations:
 		if constellation.constellation_name == constellation_name:
 			selected_constellation = constellation
 			break
 	
-	if not selected_constellation.unlocked:
+	if not selected_constellation:
 		title.text = "???"
 		story.text = "Constellation locked"
 		tutorial.text = "Constellation locked"
@@ -63,6 +65,12 @@ func _change_tab(tab_name: NodePath) -> void:
 		tab.hide()
 	tab = get_node(tab_name)
 	tab.show()
+	
+	for child in tab.get_children():
+		if child is Button and not selected_constellation:
+			child.hide()
+		else:
+			child.show()
 	
 	if tab.name == "TutorialTab":
 		tutorial_tab.emit(selected_constellation.constellation_name)
