@@ -1,0 +1,16 @@
+[remap]
+
+importer="bitmap"
+type="BitMap"
+uid="uid://cde5f4o0ggf1u"
+path="res://.godot/imported/cancer0006.png-0dc90137b51718214122c7fdc6b71a9d.res"
+
+[deps]
+
+source_file="res://Scenes/LevelSelect/Art/AllLevelsArt/cancer0006.png"
+dest_files=["res://.godot/imported/cancer0006.png-0dc90137b51718214122c7fdc6b71a9d.res"]
+
+[params]
+
+create_from=0
+threshold=0.5

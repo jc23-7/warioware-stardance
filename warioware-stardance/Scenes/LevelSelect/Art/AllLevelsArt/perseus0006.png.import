@@ -1,0 +1,16 @@
+[remap]
+
+importer="bitmap"
+type="BitMap"
+uid="uid://b1my5n0jty4e"
+path="res://.godot/imported/perseus0006.png-94907d6ea7f646a26ad28dd40903aac0.res"
+
+[deps]
+
+source_file="res://Scenes/LevelSelect/Art/AllLevelsArt/perseus0006.png"
+dest_files=["res://.godot/imported/perseus0006.png-94907d6ea7f646a26ad28dd40903aac0.res"]
+
+[params]
+
+create_from=0
+threshold=0.5

@@ -1,0 +1,16 @@
+[remap]
+
+importer="bitmap"
+type="BitMap"
+uid="uid://c1w7ltksqb65i"
+path="res://.godot/imported/leo_minor0006.png-681337f2ee99e10885025d76fac8ea40.res"
+
+[deps]
+
+source_file="res://Scenes/LevelSelect/Art/AllLevelsArt/leo_minor0006.png"
+dest_files=["res://.godot/imported/leo_minor0006.png-681337f2ee99e10885025d76fac8ea40.res"]
+
+[params]
+
+create_from=0
+threshold=0.5

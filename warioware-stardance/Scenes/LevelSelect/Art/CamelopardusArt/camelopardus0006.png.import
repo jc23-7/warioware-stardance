@@ -1,0 +1,16 @@
+[remap]
+
+importer="bitmap"
+type="BitMap"
+uid="uid://cu603g0ri4441"
+path="res://.godot/imported/camelopardus0006.png-8737f2ff04f244b7d5d77f5994b7e95e.res"
+
+[deps]
+
+source_file="res://Scenes/LevelSelect/Art/CamelopardusArt/camelopardus0006.png"
+dest_files=["res://.godot/imported/camelopardus0006.png-8737f2ff04f244b7d5d77f5994b7e95e.res"]
+
+[params]
+
+create_from=0
+threshold=0.5

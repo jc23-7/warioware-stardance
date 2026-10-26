@@ -1,0 +1,16 @@
+[remap]
+
+importer="bitmap"
+type="BitMap"
+uid="uid://0rb655w5qm37"
+path="res://.godot/imported/pegasus0006.png-a2751bc616611247088dbf1d49f592aa.res"
+
+[deps]
+
+source_file="res://Scenes/LevelSelect/Art/AllLevelsArt/pegasus0006.png"
+dest_files=["res://.godot/imported/pegasus0006.png-a2751bc616611247088dbf1d49f592aa.res"]
+
+[params]
+
+create_from=0
+threshold=0.5

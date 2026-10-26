@@ -1,0 +1,16 @@
+[remap]
+
+importer="bitmap"
+type="BitMap"
+uid="uid://b6ua6wg0o2dt1"
+path="res://.godot/imported/lyra0006.png-f85bcf6427bae7dbb9f2680c24ff43d5.res"
+
+[deps]
+
+source_file="res://Scenes/LevelSelect/Art/AllLevelsArt/lyra0006.png"
+dest_files=["res://.godot/imported/lyra0006.png-f85bcf6427bae7dbb9f2680c24ff43d5.res"]
+
+[params]
+
+create_from=0
+threshold=0.5

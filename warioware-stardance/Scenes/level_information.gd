@@ -1,29 +1,36 @@
 extends Control
 
 @export var stories_json: JSON
+@export var tutorials_json: JSON
 
 @onready var parent: Control = $"../"
 @onready var title: RichTextLabel = $"Title"
 @onready var story: RichTextLabel = $"StoryTab/StoryText"
 @onready var tutorial: RichTextLabel = $"TutorialTab/TutorialText"
 @onready var tutorial_control: SubViewportContainer = $"TutorialTab/Tutorial"
+@onready var start_game: Button = $StartGame
 @onready var tab = $"StoryTab"
 
 @onready var buttons: Control = $Buttons
 
+
+@onready var instructions: Control = $"../Instructions"
 
 signal level_selected(constellation_name: String)
 signal tutorial_tab(constellation_name: String)
 
 var selected_constellation
 var stories
+var tutorials
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	hide()
+	instructions.show()
 	level_selected.connect(_on_level_selected)
 	
 	stories = stories_json.data
+	tutorials = tutorials_json.data
 	
 	for child in get_children():
 		if child.get_class() == "Control" and child != tab:
@@ -43,12 +50,17 @@ func _on_level_selected(constellation_name: String):
 	
 	if not selected_constellation:
 		title.text = "???"
-		story.text = "Constellation locked"
-		tutorial.text = "Constellation locked"
+		story.text = "Constellation coming soon!"
+		tutorial.text = "Constellation coming soon!"
+		start_game.hide()
 	else:
+		start_game.show()
 		title.text = selected_constellation.constellation_name
-		if selected_constellation.completed:
+		story.text = "Complete the game to unlock the story!"
+		if true or selected_constellation.completed:
 			story.text = stories[selected_constellation.constellation_name]
+		
+		tutorial.text = tutorials[selected_constellation.constellation_name]
 	
 	_change_tab($StoryTab.get_path())
 	show()

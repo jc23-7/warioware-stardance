@@ -1,0 +1,16 @@
+[remap]
+
+importer="bitmap"
+type="BitMap"
+uid="uid://dkb8kko22hhd6"
+path="res://.godot/imported/canes_venatici0006.png-87d25c7c53578add48140f25d978f548.res"
+
+[deps]
+
+source_file="res://Scenes/LevelSelect/Art/AllLevelsArt/canes_venatici0006.png"
+dest_files=["res://.godot/imported/canes_venatici0006.png-87d25c7c53578add48140f25d978f548.res"]
+
+[params]
+
+create_from=0
+threshold=0.5
