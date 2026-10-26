@@ -56,7 +56,7 @@ size = Vector2(966.5, 364.83255)
 [node name="Minigame1" type="Node2D" unique_id=234868541 node_paths=PackedStringArray("game_stats")]
 script = ExtResource("1_7elpu")
 game_stats = NodePath("GameStats")
-total_points = 10
+total_points = 5
 lives = 1
 display_progress = true
 display_lives = true

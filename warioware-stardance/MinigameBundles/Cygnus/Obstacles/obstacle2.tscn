@@ -25,6 +25,9 @@ collectible_scene = ExtResource("2_dfs2b")
 [node name="Marker2D" type="Marker2D" parent="." unique_id=2135946789]
 position = Vector2(-52, 126)
 
+[node name="Marker2D2" type="Marker2D" parent="." unique_id=1812910118]
+position = Vector2(12, 245)
+
 [node name="CollisionShape2D" type="CollisionPolygon2D" parent="." unique_id=377844816]
 position = Vector2(7.5062695, 128.27972)
 polygon = PackedVector2Array(-71.50627, -170.27972, -83.50627, -54.27973, -44.50627, -52.27973, -30.50627, -29.27974, -20.50627, -27.27974, -22.50627, 35.72026, -39.50627, 57.72026, -37.50627, 95.72026, -35.50627, 96.72026, -12.506269, 56.72026, 1.4937305, 62.72026, 9.493731, 41.72026, 20.49373, 53.72026, 30.49373, 78.72026, 37.49373, 62.72026, 43.49373, 8.720261, 18.49373, -9.279739, 30.49373, -46.27973, 45.49373, -62.27973, 36.49373, -151.27972)

@@ -34,6 +34,8 @@ func _process(delta: float) -> void:
 		_on_game_success()
 
 func _on_game_success() -> void:
+	if display_progress:
+		game_stats.progress_label.text = str(completed_points) + "/" + str(total_points)
 	success = true
 	#await game_stats.Timer(1.5)
 	get_tree().paused = true

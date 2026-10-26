@@ -41,11 +41,7 @@ func _on_hand_clicked(viewport: Node, event: InputEvent, shape_idx: int) -> void
 			take_damage()
 			
 func take_damage() -> void:
-	if parent_minigame.hands_defeated >= 3:
-		parent_minigame.hands_defeated = 0
-		health -= 6
-	else:
-		health -= 1
+	health -= 1
 	if health <= 0:
 		parent_minigame.hands_defeated += 1
 		if has_object:

@@ -18,11 +18,15 @@ animations = [{
 [node name="Obstacle3" type="AnimatableBody2D" unique_id=1970614335]
 sync_to_physics = false
 script = ExtResource("1_kvjrt")
+max_y = 100.0
 width = 150
 collectible_scene = ExtResource("2_sauxf")
 
 [node name="Marker2D" type="Marker2D" parent="." unique_id=2135946789]
 position = Vector2(-21, 150)
+
+[node name="Marker2D2" type="Marker2D" parent="." unique_id=309795369]
+position = Vector2(22, 45)
 
 [node name="CollisionShape2D" type="CollisionPolygon2D" parent="." unique_id=377844816]
 position = Vector2(44, 244)
