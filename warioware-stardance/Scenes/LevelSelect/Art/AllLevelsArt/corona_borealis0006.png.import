@@ -1,0 +1,16 @@
+[remap]
+
+importer="bitmap"
+type="BitMap"
+uid="uid://bwxxkji2rlbeo"
+path="res://.godot/imported/corona_borealis0006.png-eeeea8abf6ab0a6fad600bcb1d400f69.res"
+
+[deps]
+
+source_file="res://Scenes/LevelSelect/Art/AllLevelsArt/corona_borealis0006.png"
+dest_files=["res://.godot/imported/corona_borealis0006.png-eeeea8abf6ab0a6fad600bcb1d400f69.res"]
+
+[params]
+
+create_from=0
+threshold=0.5

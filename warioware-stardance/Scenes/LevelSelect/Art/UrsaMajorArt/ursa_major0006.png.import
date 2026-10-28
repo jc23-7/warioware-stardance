@@ -1,0 +1,16 @@
+[remap]
+
+importer="bitmap"
+type="BitMap"
+uid="uid://dofd207e2mu85"
+path="res://.godot/imported/ursa_major0006.png-eebcc2cba9e134c6796dc55ca829f22f.res"
+
+[deps]
+
+source_file="res://Scenes/LevelSelect/Art/UrsaMajorArt/ursa_major0006.png"
+dest_files=["res://.godot/imported/ursa_major0006.png-eebcc2cba9e134c6796dc55ca829f22f.res"]
+
+[params]
+
+create_from=0
+threshold=0.5

@@ -1,0 +1,16 @@
+[remap]
+
+importer="bitmap"
+type="BitMap"
+uid="uid://devylbn0iax2y"
+path="res://.godot/imported/leo0006.png-de50abf60d2596510129ef80d308a0bd.res"
+
+[deps]
+
+source_file="res://Scenes/LevelSelect/Art/AllLevelsArt/leo0006.png"
+dest_files=["res://.godot/imported/leo0006.png-de50abf60d2596510129ef80d308a0bd.res"]
+
+[params]
+
+create_from=0
+threshold=0.5

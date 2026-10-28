@@ -1,0 +1,16 @@
+[remap]
+
+importer="bitmap"
+type="BitMap"
+uid="uid://c16kuxlt8bt4d"
+path="res://.godot/imported/gemini0006.png-6bbcc76a650e2342daaa06924be40c66.res"
+
+[deps]
+
+source_file="res://Scenes/LevelSelect/Art/AllLevelsArt/gemini0006.png"
+dest_files=["res://.godot/imported/gemini0006.png-6bbcc76a650e2342daaa06924be40c66.res"]
+
+[params]
+
+create_from=0
+threshold=0.5

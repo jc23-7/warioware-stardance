@@ -1,0 +1,16 @@
+[remap]
+
+importer="bitmap"
+type="BitMap"
+uid="uid://cw3mm1inyo2gn"
+path="res://.godot/imported/big_dipper0006.png-f4547df00d8f2dfb3c2843f7c5685e3b.res"
+
+[deps]
+
+source_file="res://Scenes/LevelSelect/Art/BigDipperArt/big_dipper0006.png"
+dest_files=["res://.godot/imported/big_dipper0006.png-f4547df00d8f2dfb3c2843f7c5685e3b.res"]
+
+[params]
+
+create_from=0
+threshold=0.5

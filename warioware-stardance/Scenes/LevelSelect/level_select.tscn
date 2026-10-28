@@ -1,0 +1,1223 @@
+[gd_scene format=3 uid="uid://b5istff0hd8vq"]
+
+[ext_resource type="Texture2D" uid="uid://eqmlt61uaief" path="res://Scenes/LevelSelect/Art/CircleMask.png" id="1_1fiak"]
+[ext_resource type="Texture2D" uid="uid://bssdhf5jjmkqa" path="res://Scenes/LevelSelect/Art/LevelMap.png" id="1_lc3gp"]
+[ext_resource type="Texture2D" uid="uid://ce138lfxdmu6m" path="res://Scenes/LevelSelect/Art/CircleOutline.png" id="2_3w545"]
+[ext_resource type="Script" uid="uid://bcpver1lbrk4i" path="res://Scenes/level_information.gd" id="2_t45ri"]
+[ext_resource type="Script" uid="uid://4l8i5bw4fek3" path="res://Scenes/LevelSelect/lvl_select_camera.gd" id="3_lx4vd"]
+[ext_resource type="ButtonGroup" uid="uid://cvf2psrityxuc" path="res://Scenes/LevelSelect/level_select_buttons.tres" id="3_t71yp"]
+[ext_resource type="Texture2D" uid="uid://bqmb5syuwf45n" path="res://Scenes/LevelSelect/Art/AllLevelsArt/andromeda0003.png" id="4_7q01n"]
+[ext_resource type="Texture2D" uid="uid://ue4xo2gq3sl5" path="res://Scenes/LevelSelect/Art/gradient_background.png" id="4_54bps"]
+[ext_resource type="BitMap" uid="uid://cw3mm1inyo2gn" path="res://Scenes/LevelSelect/Art/BigDipperArt/big_dipper0006.png" id="4_s85kw"]
+[ext_resource type="Script" uid="uid://sc20de3tbw0f" path="res://Scenes/LevelSelect/constellation_button.gd" id="5_s6o25"]
+[ext_resource type="Texture2D" uid="uid://d24fioyshku5m" path="res://Scenes/LevelSelect/Art/BigDipperArt/big_dipper0000.png" id="5_t71yp"]
+[ext_resource type="BitMap" uid="uid://jlp5cjm0onjf" path="res://Scenes/LevelSelect/Art/AllLevelsArt/andromeda0006.png" id="6_qf34i"]
+[ext_resource type="Texture2D" uid="uid://bcu3uvlhar7vw" path="res://Scenes/LevelSelect/Art/BigDipperArt/big_dipper0001.png" id="6_ytkgt"]
+[ext_resource type="Texture2D" uid="uid://n0oib17d2dmv" path="res://Scenes/LevelSelect/Art/AllLevelsArt/andromeda0000.png" id="7_npnbu"]
+[ext_resource type="Texture2D" uid="uid://dngc3r7xy0508" path="res://Scenes/LevelSelect/Art/BigDipperArt/big_dipper0002.png" id="7_oslm0"]
+[ext_resource type="Texture2D" uid="uid://d4jxw84bnpyhw" path="res://Scenes/LevelSelect/Art/BigDipperArt/big_dipper0003.png" id="8_148m5"]
+[ext_resource type="Texture2D" uid="uid://h04dcjvedn02" path="res://Scenes/LevelSelect/Art/AllLevelsArt/andromeda0001.png" id="8_m0e4r"]
+[ext_resource type="Texture2D" uid="uid://bbgsxo5blian7" path="res://Scenes/LevelSelect/Art/AllLevelsArt/andromeda0002.png" id="9_41ob7"]
+[ext_resource type="Texture2D" uid="uid://cp8pn56buck3l" path="res://Scenes/LevelSelect/Art/BigDipperArt/big_dipper0004.png" id="9_uw1b4"]
+[ext_resource type="Texture2D" uid="uid://b2iikwsbaj8wy" path="res://Scenes/LevelSelect/Art/BigDipperArt/big_dipper0005.png" id="10_0ymf3"]
+[ext_resource type="Texture2D" uid="uid://b3kl72t4u8ylw" path="res://Scenes/LevelSelect/Art/CamelopardusArt/camelopardus0002.png" id="10_4tq6q"]
+[ext_resource type="Texture2D" uid="uid://dek6wehxghm4b" path="res://Scenes/LevelSelect/Art/AllLevelsArt/bootes0003.png" id="10_nyden"]
+[ext_resource type="Texture2D" uid="uid://bqeerqlr6ttti" path="res://Scenes/LevelSelect/Art/DracoArt/draco0000.png" id="10_yof5r"]
+[ext_resource type="BitMap" uid="uid://cu603g0ri4441" path="res://Scenes/LevelSelect/Art/CamelopardusArt/camelopardus0006.png" id="11_1n0rb"]
+[ext_resource type="Texture2D" uid="uid://c6hw3gkn4vjtb" path="res://Scenes/LevelSelect/Art/AllLevelsArt/cancer0003.png" id="11_2s3qg"]
+[ext_resource type="BitMap" uid="uid://rj3doaqqp80r" path="res://Scenes/LevelSelect/Art/DracoArt/draco0006.png" id="11_6jmn7"]
+[ext_resource type="Texture2D" uid="uid://bo5doqkhk0xef" path="res://Scenes/LevelSelect/Art/AurigaArt/auriga0002.png" id="11_n66a7"]
+[ext_resource type="Texture2D" uid="uid://bdypknjohanh" path="res://Scenes/LevelSelect/Art/DracoArt/draco0002.png" id="11_t45ri"]
+[ext_resource type="BitMap" uid="uid://cp60eeumkt1t7" path="res://Scenes/LevelSelect/Art/AllLevelsArt/bootes0006.png" id="11_wbbcx"]
+[ext_resource type="Texture2D" uid="uid://bwfoxdjissmit" path="res://Scenes/LevelSelect/Art/CamelopardusArt/camelopardus0000.png" id="12_e0xit"]
+[ext_resource type="Texture2D" uid="uid://ddqsbstcrhucp" path="res://Scenes/LevelSelect/Art/DracoArt/draco0001.png" id="12_eol4j"]
+[ext_resource type="BitMap" uid="uid://cde5f4o0ggf1u" path="res://Scenes/LevelSelect/Art/AllLevelsArt/cancer0006.png" id="12_hcttg"]
+[ext_resource type="BitMap" uid="uid://dxulyklgy51ts" path="res://Scenes/LevelSelect/Art/AurigaArt/auriga0006.png" id="12_mkkub"]
+[ext_resource type="Texture2D" uid="uid://dq5eqik3vrekk" path="res://Scenes/LevelSelect/Art/AllLevelsArt/bootes0000.png" id="12_umo4l"]
+[ext_resource type="BitMap" uid="uid://dofd207e2mu85" path="res://Scenes/LevelSelect/Art/UrsaMajorArt/ursa_major0006.png" id="13_4bl5u"]
+[ext_resource type="Texture2D" uid="uid://b0o0uff8gn7j2" path="res://Scenes/LevelSelect/Art/DracoArt/draco0003.png" id="13_7irii"]
+[ext_resource type="Texture2D" uid="uid://c4npt4dedpobn" path="res://Scenes/LevelSelect/Art/CamelopardusArt/camelopardus0001.png" id="13_bme7b"]
+[ext_resource type="Texture2D" uid="uid://cv3ninx07cv1g" path="res://Scenes/LevelSelect/Art/AllLevelsArt/cancer0000.png" id="13_ercye"]
+[ext_resource type="Texture2D" uid="uid://h07vqsma6et8" path="res://Scenes/LevelSelect/Art/AllLevelsArt/bootes0001.png" id="13_plnif"]
+[ext_resource type="Texture2D" uid="uid://co0fuuc5on36g" path="res://Scenes/LevelSelect/Art/AurigaArt/auriga0000.png" id="13_qkdi5"]
+[ext_resource type="Texture2D" uid="uid://dskrv1kam8qhh" path="res://Scenes/LevelSelect/Art/AurigaArt/auriga0001.png" id="14_1u8r4"]
+[ext_resource type="Texture2D" uid="uid://fq5bxrcdhjgj" path="res://Scenes/LevelSelect/Art/AllLevelsArt/cancer0001.png" id="14_17l7i"]
+[ext_resource type="BitMap" uid="uid://bq3ewgrojuq2c" path="res://Scenes/LevelSelect/Art/CepheusArt/cepheus0006.png" id="14_57m4l"]
+[ext_resource type="Texture2D" uid="uid://chg2v2vsuqxdg" path="res://Scenes/LevelSelect/Art/DracoArt/draco0004.png" id="14_d7t5y"]
+[ext_resource type="Texture2D" uid="uid://uwlc1wy7t7si" path="res://Scenes/LevelSelect/Art/AllLevelsArt/bootes0002.png" id="14_r1lal"]
+[ext_resource type="Texture2D" uid="uid://b1ca5c24of6bs" path="res://Scenes/LevelSelect/Art/UrsaMajorArt/ursa_major0000.png" id="14_sxk8s"]
+[ext_resource type="Texture2D" uid="uid://gdikxd8t2dc6" path="res://Scenes/LevelSelect/Art/AllLevelsArt/cancer0002.png" id="15_1a4d6"]
+[ext_resource type="Texture2D" uid="uid://iyir74q14c4d" path="res://Scenes/LevelSelect/Art/LynxArt/lynx0002.png" id="15_e2qqm"]
+[ext_resource type="Texture2D" uid="uid://q73664f0c5md" path="res://Scenes/LevelSelect/Art/AllLevelsArt/canes_venatici0003.png" id="15_l0clw"]
+[ext_resource type="Texture2D" uid="uid://x4b8637ojubn" path="res://Scenes/LevelSelect/Art/UrsaMajorArt/ursa_major0001.png" id="15_ocyqv"]
+[ext_resource type="Texture2D" uid="uid://qjn0ffc3g7ka" path="res://Scenes/LevelSelect/Art/CepheusArt/cepheus0000.png" id="15_rmj7q"]
+[ext_resource type="Texture2D" uid="uid://cmugshiyq71bn" path="res://Scenes/LevelSelect/Art/CepheusArt/cepheus0001.png" id="16_3cg7k"]
+[ext_resource type="BitMap" uid="uid://dkb8kko22hhd6" path="res://Scenes/LevelSelect/Art/AllLevelsArt/canes_venatici0006.png" id="16_bhw5p"]
+[ext_resource type="Texture2D" uid="uid://clvmvjl5yld5q" path="res://Scenes/LevelSelect/Art/UrsaMajorArt/ursa_major0002.png" id="16_iieyh"]
+[ext_resource type="BitMap" uid="uid://dnt1ei1ol8bcs" path="res://Scenes/LevelSelect/Art/LynxArt/lynx0006.png" id="16_kilby"]
+[ext_resource type="Texture2D" uid="uid://dnr1qikfie378" path="res://Scenes/LevelSelect/Art/DracoArt/draco0005.png" id="17_5k34y"]
+[ext_resource type="FontFile" uid="uid://bcorxdm3rgr4f" path="res://Art/Jersey_10/Jersey10-Regular.ttf" id="17_7irii"]
+[ext_resource type="Texture2D" uid="uid://cnsm6dyxeibp4" path="res://Scenes/LevelSelect/Art/UrsaMajorArt/ursa_major0003.png" id="17_35sug"]
+[ext_resource type="JSON" path="res://Scenes/LevelSelect/stories.json" id="17_d7t5y"]
+[ext_resource type="Texture2D" uid="uid://cs0dx8hcuq5am" path="res://Scenes/LevelSelect/Art/CepheusArt/cepheus0002.png" id="17_ho67q"]
+[ext_resource type="BitMap" uid="uid://0rb655w5qm37" path="res://Scenes/LevelSelect/Art/AllLevelsArt/pegasus0006.png" id="17_ir5xr"]
+[ext_resource type="Texture2D" uid="uid://cxulq7my0x4wf" path="res://Scenes/LevelSelect/Art/LynxArt/lynx0000.png" id="17_mcx6e"]
+[ext_resource type="Texture2D" uid="uid://bxh4y3euvltg1" path="res://Scenes/LevelSelect/Art/AllLevelsArt/canes_venatici0000.png" id="17_vro3r"]
+[ext_resource type="Texture2D" uid="uid://cbxslwxevucdm" path="res://Scenes/LevelSelect/Art/UrsaMajorArt/ursa_major0004.png" id="18_5wumq"]
+[ext_resource type="Texture2D" uid="uid://bkhdkhdph20xi" path="res://Scenes/LevelSelect/Art/AllLevelsArt/pegasus0000.png" id="18_aiei1"]
+[ext_resource type="Texture2D" uid="uid://c662p6lyrfwo3" path="res://Scenes/LevelSelect/Art/LynxArt/lynx0001.png" id="18_qhhqn"]
+[ext_resource type="Texture2D" uid="uid://d1phbn6vvxpli" path="res://Scenes/LevelSelect/Art/AllLevelsArt/canes_venatici0001.png" id="18_t5b8u"]
+[ext_resource type="Script" uid="uid://c6l83rxdsd7ph" path="res://Scenes/LevelSelect/tutorial.gd" id="19_5wh6f"]
+[ext_resource type="Texture2D" uid="uid://b1le7naea4han" path="res://Scenes/LevelSelect/Art/UrsaMajorArt/ursa_major0005.png" id="19_6ui0v"]
+[ext_resource type="Texture2D" uid="uid://n6x7jeslrgdl" path="res://Scenes/LevelSelect/Art/AllLevelsArt/pegasus0001.png" id="19_28l73"]
+[ext_resource type="Texture2D" uid="uid://dxlyqkt4sjgag" path="res://Scenes/LevelSelect/Art/AllLevelsArt/canes_venatici0002.png" id="19_asga6"]
+[ext_resource type="Texture2D" uid="uid://n1kveksrj3bd" path="res://Scenes/LevelSelect/Art/TaurusArt/taurus0002.png" id="19_jrkl4"]
+[ext_resource type="BitMap" uid="uid://ccmxtrm3l7je6" path="res://Scenes/LevelSelect/Art/TaurusArt/taurus0006.png" id="20_1rcvk"]
+[ext_resource type="Texture2D" uid="uid://cooh6vhj1wyjo" path="res://Scenes/LevelSelect/Art/AllLevelsArt/corona_borealis0004.png" id="20_54bps"]
+[ext_resource type="Texture2D" uid="uid://cu8kydtnnkjaw" path="res://Scenes/LevelSelect/Art/AllLevelsArt/pegasus0002.png" id="20_oealk"]
+[ext_resource type="Texture2D" uid="uid://b40faw0dtuqid" path="res://Scenes/LevelSelect/Art/TaurusArt/taurus0000.png" id="21_5m3v0"]
+[ext_resource type="BitMap" uid="uid://bwxxkji2rlbeo" path="res://Scenes/LevelSelect/Art/AllLevelsArt/corona_borealis0006.png" id="21_7y5vg"]
+[ext_resource type="Texture2D" uid="uid://0l0smid67rjf" path="res://Scenes/LevelSelect/Art/AllLevelsArt/leo0004.png" id="21_q5shc"]
+[ext_resource type="BitMap" uid="uid://devylbn0iax2y" path="res://Scenes/LevelSelect/Art/AllLevelsArt/leo0006.png" id="22_adnp1"]
+[ext_resource type="Texture2D" uid="uid://dyk6pmqda3o3d" path="res://Scenes/LevelSelect/Art/TaurusArt/taurus0001.png" id="22_f4a6f"]
+[ext_resource type="Texture2D" uid="uid://b14w4uej2sgvc" path="res://Scenes/LevelSelect/Art/AllLevelsArt/corona_borealis0000.png" id="22_kap87"]
+[ext_resource type="Texture2D" uid="uid://u565xnp43w2k" path="res://Scenes/LevelSelect/Art/AllLevelsArt/corona_borealis0001.png" id="23_7tcu0"]
+[ext_resource type="Texture2D" uid="uid://1xwaed30s8wp" path="res://Scenes/LevelSelect/Art/AllLevelsArt/leo0000.png" id="23_im4fy"]
+[ext_resource type="Texture2D" uid="uid://diho4lxtqm75s" path="res://Scenes/LevelSelect/Art/AllLevelsArt/corona_borealis0002.png" id="24_dhdsc"]
+[ext_resource type="Texture2D" uid="uid://6ohntipcgqno" path="res://Scenes/LevelSelect/Art/AllLevelsArt/leo0001.png" id="24_spo6j"]
+[ext_resource type="Texture2D" uid="uid://cgfpqs2cyf1ww" path="res://Scenes/LevelSelect/Art/AllLevelsArt/gemini0004.png" id="25_0axdb"]
+[ext_resource type="Texture2D" uid="uid://dl13k1734beev" path="res://Scenes/LevelSelect/Art/AllLevelsArt/leo0002.png" id="25_8c714"]
+[ext_resource type="Texture2D" uid="uid://dmku4yt01gjxx" path="res://Scenes/LevelSelect/Art/AllLevelsArt/leo_minor0003.png" id="26_0ol1s"]
+[ext_resource type="BitMap" uid="uid://c16kuxlt8bt4d" path="res://Scenes/LevelSelect/Art/AllLevelsArt/gemini0006.png" id="26_nl2ru"]
+[ext_resource type="Texture2D" uid="uid://dnbpae5e46ray" path="res://Scenes/LevelSelect/Art/AllLevelsArt/gemini0000.png" id="27_6tl3j"]
+[ext_resource type="BitMap" uid="uid://c1w7ltksqb65i" path="res://Scenes/LevelSelect/Art/AllLevelsArt/leo_minor0006.png" id="27_bqdo6"]
+[ext_resource type="BitMap" uid="uid://5tb1hd54ja0y" path="res://Scenes/LevelSelect/Art/OrionArt/orion0006.png" id="27_ivryp"]
+[ext_resource type="Texture2D" uid="uid://1iqsdxtou3bf" path="res://Scenes/LevelSelect/Art/AllLevelsArt/leo_minor0000.png" id="28_lm0kd"]
+[ext_resource type="Texture2D" uid="uid://xpa5uhhcpi41" path="res://Scenes/LevelSelect/Art/OrionArt/orion0000.png" id="28_rgxwd"]
+[ext_resource type="Texture2D" uid="uid://lqjmkqsrv28a" path="res://Scenes/LevelSelect/Art/AllLevelsArt/gemini0001.png" id="28_x2mvg"]
+[ext_resource type="Texture2D" uid="uid://v3ayd7raho4t" path="res://Scenes/LevelSelect/Art/AllLevelsArt/gemini0002.png" id="29_k06pl"]
+[ext_resource type="Texture2D" uid="uid://dxu1fax7ejmb7" path="res://Scenes/LevelSelect/Art/AllLevelsArt/leo_minor0001.png" id="29_sro5a"]
+[ext_resource type="Texture2D" uid="uid://b1n0p8qmalrsp" path="res://Scenes/LevelSelect/Art/OrionArt/orion0001.png" id="29_vtbif"]
+[ext_resource type="Texture2D" uid="uid://c3d7rg3j1r02o" path="res://Scenes/LevelSelect/Art/AllLevelsArt/leo_minor0002.png" id="30_ih6nn"]
+[ext_resource type="Texture2D" uid="uid://c6c8jfq1nr8qo" path="res://Scenes/LevelSelect/Art/OrionArt/orion0002.png" id="30_ynt26"]
+[ext_resource type="Texture2D" uid="uid://6okkgf0kldba" path="res://Scenes/LevelSelect/Art/OrionArt/orion0003.png" id="31_3x64y"]
+[ext_resource type="Texture2D" uid="uid://b2rw0euw6k06b" path="res://Scenes/LevelSelect/Art/AllLevelsArt/perseus0003.png" id="31_s6gn6"]
+[ext_resource type="Texture2D" uid="uid://y05gix6jnwwa" path="res://Scenes/LevelSelect/Art/AllLevelsArt/pegasus0003.png" id="32_bhw5p"]
+[ext_resource type="Texture2D" uid="uid://1bgmdrwnxr24" path="res://Scenes/LevelSelect/Art/OrionArt/orion0004.png" id="32_fkv1q"]
+[ext_resource type="BitMap" uid="uid://b1my5n0jty4e" path="res://Scenes/LevelSelect/Art/AllLevelsArt/perseus0006.png" id="32_xxjwx"]
+[ext_resource type="BitMap" uid="uid://c0hclnmocxc1b" path="res://Scenes/LevelSelect/Art/CassiopeiaArt/cassiopeia0006.png" id="33_6ui0v"]
+[ext_resource type="Texture2D" uid="uid://bt0wtc6n4hjjq" path="res://Scenes/LevelSelect/Art/OrionArt/orion0005.png" id="33_8m48a"]
+[ext_resource type="Texture2D" uid="uid://bpnemisxt3dlw" path="res://Scenes/LevelSelect/Art/AllLevelsArt/perseus0000.png" id="33_827kn"]
+[ext_resource type="Texture2D" uid="uid://6mrdhmjaittr" path="res://Scenes/LevelSelect/Art/AllLevelsArt/perseus0001.png" id="34_a717r"]
+[ext_resource type="Texture2D" uid="uid://omsc0vqi3trn" path="res://Scenes/LevelSelect/Art/CassiopeiaArt/cassiopeia0000.png" id="34_p0pae"]
+[ext_resource type="Texture2D" uid="uid://5eolsga4qht6" path="res://Scenes/LevelSelect/Art/CassiopeiaArt/cassiopeia0001.png" id="35_o5wnm"]
+[ext_resource type="Texture2D" uid="uid://vdsdwrsicfng" path="res://Scenes/LevelSelect/Art/AllLevelsArt/perseus0002.png" id="35_udgsv"]
+[ext_resource type="Texture2D" uid="uid://dg5v7a8x7yrs" path="res://Scenes/LevelSelect/Art/CassiopeiaArt/cassiopeia0002.png" id="36_ecyp1"]
+[ext_resource type="Texture2D" uid="uid://dm1jcwq72l6m0" path="res://Scenes/LevelSelect/Art/CassiopeiaArt/cassiopeia0003.png" id="37_2tegd"]
+[ext_resource type="Texture2D" uid="uid://b860arde8fsxh" path="res://Scenes/LevelSelect/Art/AllLevelsArt/lacerta0003.png" id="37_vro3r"]
+[ext_resource type="Texture2D" uid="uid://bjwt1h0aqusm" path="res://Scenes/LevelSelect/Art/CassiopeiaArt/cassiopeia0004.png" id="38_ly0pf"]
+[ext_resource type="BitMap" uid="uid://dedibk7ar5ta0" path="res://Scenes/LevelSelect/Art/AllLevelsArt/lacerta0006.png" id="38_t5b8u"]
+[ext_resource type="Texture2D" uid="uid://dfyquipnt4vs3" path="res://Scenes/LevelSelect/Art/CassiopeiaArt/cassiopeia0005.png" id="39_3mcy5"]
+[ext_resource type="Texture2D" uid="uid://b324mhals74wx" path="res://Scenes/LevelSelect/Art/AllLevelsArt/lacerta0000.png" id="39_asga6"]
+[ext_resource type="Texture2D" uid="uid://du6v4mdegavo5" path="res://Scenes/LevelSelect/Art/AllLevelsArt/lacerta0001.png" id="40_54bps"]
+[ext_resource type="BitMap" uid="uid://buw0h486pti3y" path="res://Scenes/LevelSelect/Art/CygnusArt/cygnus0006.png" id="41_3w545"]
+[ext_resource type="Texture2D" uid="uid://c2tqcmc2ii74v" path="res://Scenes/LevelSelect/Art/AllLevelsArt/lacerta0002.png" id="41_7y5vg"]
+[ext_resource type="Texture2D" uid="uid://cgqci4yfx2bcn" path="res://Scenes/LevelSelect/Art/CygnusArt/cygnus0000.png" id="42_jvay1"]
+[ext_resource type="Texture2D" uid="uid://d2cagfsn0m4nn" path="res://Scenes/LevelSelect/Art/AllLevelsArt/lyra0003.png" id="42_kap87"]
+[ext_resource type="BitMap" uid="uid://b6ua6wg0o2dt1" path="res://Scenes/LevelSelect/Art/AllLevelsArt/lyra0006.png" id="43_7tcu0"]
+[ext_resource type="Texture2D" uid="uid://boj5vgmnci5b" path="res://Scenes/LevelSelect/Art/CygnusArt/cygnus0001.png" id="43_lxv4g"]
+[ext_resource type="Texture2D" uid="uid://cu3ddhcd05ucq" path="res://Scenes/LevelSelect/Art/AllLevelsArt/lyra0000.png" id="44_dhdsc"]
+[ext_resource type="Texture2D" uid="uid://b5rfc721wb886" path="res://Scenes/LevelSelect/Art/CygnusArt/cygnus0002.png" id="44_hiqs5"]
+[ext_resource type="Texture2D" uid="uid://cd6mrcqg48qqn" path="res://Scenes/LevelSelect/Art/AllLevelsArt/lyra0001.png" id="45_0axdb"]
+[ext_resource type="Texture2D" uid="uid://dtg5lw1h2xqdx" path="res://Scenes/LevelSelect/Art/CygnusArt/cygnus0003.png" id="45_ck5ev"]
+[ext_resource type="Texture2D" uid="uid://bcdr6l7pjkm04" path="res://Scenes/LevelSelect/Art/CygnusArt/cygnus0004.png" id="46_2clr8"]
+[ext_resource type="Texture2D" uid="uid://bsrn35tqdhrep" path="res://Scenes/LevelSelect/Art/AllLevelsArt/lyra0002.png" id="46_nl2ru"]
+[ext_resource type="Texture2D" uid="uid://wymj0ajyudcq" path="res://Scenes/LevelSelect/Art/CygnusArt/cygnus0005.png" id="47_fhv3h"]
+[ext_resource type="Texture2D" uid="uid://b2wf55ec8ad65" path="res://Scenes/LevelSelect/Art/ArrowButton/normal.png" id="53_8m48a"]
+[ext_resource type="Texture2D" uid="uid://g28tj43vh768" path="res://Scenes/LevelSelect/Art/ArrowButton/pressed.png" id="54_3w545"]
+[ext_resource type="Texture2D" uid="uid://b3ixdhe7wlpa3" path="res://Scenes/LevelSelect/Art/StartGameButton/normal.png" id="54_ynt26"]
+[ext_resource type="Texture2D" uid="uid://djq57vcmik57v" path="res://Scenes/LevelSelect/Art/StartGameButton/pressed.png" id="55_3x64y"]
+[ext_resource type="Texture2D" uid="uid://cvn3a71yur6jl" path="res://Scenes/LevelSelect/Art/ArrowButton/hover.png" id="55_jvay1"]
+[ext_resource type="Texture2D" uid="uid://bsotqosyn1n56" path="res://Scenes/LevelSelect/Art/InfoPanel.png" id="55_ynt26"]
+[ext_resource type="Texture2D" uid="uid://csjgeum31e87v" path="res://Scenes/LevelSelect/Art/StartGameButton/hover.png" id="56_fkv1q"]
+[ext_resource type="Texture2D" uid="uid://bfgyd2ltjl41w" path="res://Scenes/LevelSelect/Art/AllLevelsArt/hercules0003.png" id="60_asga6"]
+[ext_resource type="BitMap" uid="uid://bc8t82jk22gv2" path="res://Scenes/LevelSelect/Art/AllLevelsArt/hercules0006.png" id="61_54bps"]
+[ext_resource type="Texture2D" uid="uid://bjfe5ydlmr5hn" path="res://Scenes/LevelSelect/Art/HomeButton/normal.png" id="61_hiqs5"]
+[ext_resource type="Texture2D" uid="uid://un5xds2u82u2" path="res://Scenes/LevelSelect/Art/AllLevelsArt/hercules0000.png" id="62_7y5vg"]
+[ext_resource type="Texture2D" uid="uid://2rfcixmhxkka" path="res://Scenes/LevelSelect/Art/HomeButton/pressed.png" id="62_ck5ev"]
+[ext_resource type="Texture2D" uid="uid://b43ijeano0u7b" path="res://Scenes/LevelSelect/Art/HomeButton/hover.png" id="63_2clr8"]
+[ext_resource type="Texture2D" uid="uid://du2lhudk2ptv1" path="res://Scenes/LevelSelect/Art/AllLevelsArt/hercules0001.png" id="63_kap87"]
+[ext_resource type="Texture2D" uid="uid://b8v8f2qyxmpp3" path="res://Scenes/LevelSelect/Art/AllLevelsArt/hercules0002.png" id="64_7tcu0"]
+[ext_resource type="Texture2D" uid="uid://cwaq266n54fgq" path="res://Scenes/LevelSelect/Art/StartingInstructions.png" id="136_kap87"]
+[ext_resource type="JSON" path="res://Scenes/LevelSelect/tutorials.json" id="137_7y5vg"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_lxv4g"]
+texture = ExtResource("53_8m48a")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_hiqs5"]
+texture = ExtResource("54_3w545")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_ck5ev"]
+texture = ExtResource("55_jvay1")
+
+[sub_resource type="Animation" id="Animation_vtbif"]
+resource_name = "Cassiopeia"
+length = 5.0
+tracks/0/type = "method"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("TutorialTab/Tutorial")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(5),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [],
+"method": &"reset_minigame"
+}]
+}
+
+[sub_resource type="Animation" id="Animation_ynt26"]
+resource_name = "Cygnus"
+length = 5.0
+tracks/0/type = "method"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("TutorialTab/Tutorial")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0.4, 0.56666666, 1.1, 1.5666667, 1.7666667, 1.9333333, 2.3666668, 2.5333333, 3.2, 3.9666667, 5),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
+"values": [{
+"args": ["move_up"],
+"method": &"press_key"
+}, {
+"args": ["move_up"],
+"method": &"release_key"
+}, {
+"args": ["move_right"],
+"method": &"press_key"
+}, {
+"args": ["move_right"],
+"method": &"release_key"
+}, {
+"args": ["move_down"],
+"method": &"press_key"
+}, {
+"args": ["move_down"],
+"method": &"release_key"
+}, {
+"args": ["move_up"],
+"method": &"press_key"
+}, {
+"args": ["move_up"],
+"method": &"release_key"
+}, {
+"args": ["move_right"],
+"method": &"press_key"
+}, {
+"args": ["move_right"],
+"method": &"release_key"
+}, {
+"args": [],
+"method": &"reset_minigame"
+}]
+}
+
+[sub_resource type="Animation" id="Animation_ivryp"]
+resource_name = "Draco"
+length = 5.0
+tracks/0/type = "method"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("TutorialTab/Tutorial")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0.06666667, 0.5, 1.4, 1.4999999, 1.5999999, 1.6999999, 1.8, 5),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1),
+"values": [{
+"args": [4],
+"method": &"activate_draco_hand"
+}, {
+"args": [Vector2(142, 199)],
+"method": &"move_mouse"
+}, {
+"args": [Vector2(142, 199)],
+"method": &"click_mouse"
+}, {
+"args": [Vector2(142, 199)],
+"method": &"click_mouse"
+}, {
+"args": [Vector2(142, 199)],
+"method": &"click_mouse"
+}, {
+"args": [Vector2(142, 199)],
+"method": &"click_mouse"
+}, {
+"args": [Vector2(142, 199)],
+"method": &"click_mouse"
+}, {
+"args": [],
+"method": &"reset_minigame"
+}]
+}
+tracks/1/type = "method"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("TutorialTab/Tutorial")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(1.4666667, 1.5333333, 1.6, 1.6666666, 1.7333333, 1.8),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1),
+"values": [{
+"args": [4],
+"method": &"damage_draco_hand"
+}, {
+"args": [4],
+"method": &"damage_draco_hand"
+}, {
+"args": [4],
+"method": &"damage_draco_hand"
+}, {
+"args": [4],
+"method": &"damage_draco_hand"
+}, {
+"args": [4],
+"method": &"damage_draco_hand"
+}, {
+"args": [4],
+"method": &"damage_draco_hand"
+}]
+}
+
+[sub_resource type="Animation" id="Animation_hiqs5"]
+resource_name = "Orion"
+length = 10.0
+tracks/0/type = "method"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("TutorialTab/Tutorial")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(1.4, 2.4333334, 2.7, 2.9, 4.133333, 4.5, 5.133333, 5.3333335, 5.9333334, 6.0666666, 8.1, 8.333333, 9.766666),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
+"values": [{
+"args": ["move_up"],
+"method": &"press_key"
+}, {
+"args": ["move_up"],
+"method": &"release_key"
+}, {
+"args": ["move_down"],
+"method": &"press_key"
+}, {
+"args": ["move_right"],
+"method": &"press_key"
+}, {
+"args": ["move_down"],
+"method": &"release_key"
+}, {
+"args": ["move_up"],
+"method": &"press_key"
+}, {
+"args": ["move_up"],
+"method": &"release_key"
+}, {
+"args": ["move_right"],
+"method": &"release_key"
+}, {
+"args": ["move_left"],
+"method": &"press_key"
+}, {
+"args": ["move_down"],
+"method": &"press_key"
+}, {
+"args": ["move_down"],
+"method": &"release_key"
+}, {
+"args": ["move_up"],
+"method": &"press_key"
+}, {
+"args": [],
+"method": &"reset_minigame"
+}]
+}
+
+[sub_resource type="Animation" id="Animation_elo14"]
+length = 5.0
+loop_mode = 1
+
+[sub_resource type="Animation" id="Animation_rgxwd"]
+resource_name = "Ursa Major"
+length = 4.0
+tracks/0/type = "method"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("TutorialTab/Tutorial")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1, 1.5, 2.5, 4),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
+"values": [{
+"args": ["move_right"],
+"method": &"press_key"
+}, {
+"args": ["move_right"],
+"method": &"release_key"
+}, {
+"args": ["move_left"],
+"method": &"press_key"
+}, {
+"args": ["move_left"],
+"method": &"release_key"
+}, {
+"args": [],
+"method": &"reset_minigame"
+}]
+}
+
+[sub_resource type="Animation" id="Animation_b7hhi"]
+resource_name = "minigame_1_animation"
+length = 5.0
+loop_mode = 1
+tracks/0/type = "method"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1, 2.5),
+"transitions": PackedFloat32Array(1, 1, 1),
+"values": [{
+"args": [],
+"method": &"reset_minigame"
+}, {
+"args": [],
+"method": &"click_bucket"
+}, {
+"args": [159.0, 33.0],
+"method": &"click_star_spot"
+}]
+}
+tracks/1/type = "method"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(1, 2.5),
+"transitions": PackedFloat32Array(1, 1),
+"values": [{
+"args": [1],
+"method": &"click_star"
+}, {
+"args": [2],
+"method": &"click_star"
+}]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath(".:mg1_move")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(1, 2.5, 3, 4.5),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 1,
+"values": [1.0, 0.0, -1.0, 0.0]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath(".:mg2_mouse")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(1, 1.5, 2, 2.5),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [Vector2(72, 200), Vector2(72, 200), Vector2(159, 33), Vector2(159, 33)]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath(".:mg3_mouse")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(1, 2.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(164, 40), Vector2(223, 51.5)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_aql8v"]
+_data = {
+&"Cassiopeia": SubResource("Animation_vtbif"),
+&"Cygnus": SubResource("Animation_ynt26"),
+&"Draco": SubResource("Animation_ivryp"),
+&"Orion": SubResource("Animation_hiqs5"),
+&"RESET": SubResource("Animation_elo14"),
+&"Ursa Major": SubResource("Animation_rgxwd"),
+&"minigame_1_animation": SubResource("Animation_b7hhi")
+}
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_2clr8"]
+texture = ExtResource("53_8m48a")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_fhv3h"]
+texture = ExtResource("54_3w545")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_57m4l"]
+texture = ExtResource("55_jvay1")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_ynt26"]
+texture = ExtResource("54_ynt26")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_3x64y"]
+texture = ExtResource("55_3x64y")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_fkv1q"]
+texture = ExtResource("56_fkv1q")
+
+[node name="LevelSelect" type="Control" unique_id=520717288]
+layout_mode = 3
+anchors_preset = 0
+
+[node name="Background" type="ColorRect" parent="." unique_id=1256307960]
+layout_mode = 0
+offset_right = 480.0
+offset_bottom = 270.0
+mouse_filter = 2
+color = Color(0.021536611, 0.042906314, 0.0919211, 1)
+
+[node name="TextureRect (for placement)" type="TextureRect" parent="." unique_id=1953835859]
+visible = false
+layout_mode = 0
+offset_left = -386.0
+offset_top = -302.0
+offset_right = 614.0
+offset_bottom = 698.0
+mouse_filter = 2
+texture = ExtResource("1_lc3gp")
+
+[node name="MapOutline" type="TextureRect" parent="." unique_id=1672469662]
+layout_mode = 0
+offset_left = -13.0
+offset_top = -12.0
+offset_right = 287.0
+offset_bottom = 288.0
+texture = ExtResource("2_3w545")
+
+[node name="TextureRect2" type="TextureRect" parent="." unique_id=1118172012]
+clip_children = 1
+layout_mode = 0
+offset_left = 11.0
+offset_top = 10.0
+offset_right = 261.0
+offset_bottom = 260.0
+mouse_filter = 2
+texture = ExtResource("1_1fiak")
+stretch_mode = 5
+
+[node name="SubViewportContainer" type="SubViewportContainer" parent="TextureRect2" unique_id=105864383]
+layout_mode = 0
+offset_left = 1.0
+offset_top = 2.0
+offset_right = 513.0
+offset_bottom = 514.0
+
+[node name="SubViewport" type="SubViewport" parent="TextureRect2/SubViewportContainer" unique_id=1341370546]
+handle_input_locally = false
+physics_object_picking = true
+size = Vector2i(250, 250)
+render_target_update_mode = 4
+
+[node name="TextureRect" type="TextureRect" parent="TextureRect2/SubViewportContainer/SubViewport" unique_id=1497757297]
+offset_left = -176.0
+offset_top = -182.0
+offset_right = 574.0
+offset_bottom = 568.0
+mouse_filter = 2
+texture = ExtResource("4_54bps")
+
+[node name="Ursa Minor" type="TextureButton" parent="TextureRect2/SubViewportContainer/SubViewport" unique_id=1426055299 node_paths=PackedStringArray("level_info")]
+texture_filter = 1
+offset_left = -11.0
+offset_top = 73.0
+offset_right = 239.0
+offset_bottom = 323.0
+toggle_mode = true
+button_group = ExtResource("3_t71yp")
+texture_normal = ExtResource("8_148m5")
+script = ExtResource("5_s6o25")
+level_info = NodePath("../../../../LevelInfo")
+click_mask = ExtResource("4_s85kw")
+uncompleted_normal = ExtResource("5_t71yp")
+uncompleted_hover = ExtResource("6_ytkgt")
+uncompleted_selected = ExtResource("7_oslm0")
+completed_normal = ExtResource("8_148m5")
+completed_hover = ExtResource("9_uw1b4")
+completed_selected = ExtResource("10_0ymf3")
+
+[node name="Andromeda" type="TextureButton" parent="TextureRect2/SubViewportContainer/SubViewport" unique_id=564804295 node_paths=PackedStringArray("level_info")]
+texture_filter = 1
+offset_left = 40.0
+offset_top = -122.0
+offset_right = 290.0
+offset_bottom = 128.0
+toggle_mode = true
+button_group = ExtResource("3_t71yp")
+texture_normal = ExtResource("4_7q01n")
+script = ExtResource("5_s6o25")
+level_info = NodePath("../../../../LevelInfo")
+click_mask = ExtResource("6_qf34i")
+uncompleted_normal = ExtResource("7_npnbu")
+uncompleted_hover = ExtResource("8_m0e4r")
+uncompleted_selected = ExtResource("9_41ob7")
+
+[node name="Bootes" type="TextureButton" parent="TextureRect2/SubViewportContainer/SubViewport" unique_id=2144715399 node_paths=PackedStringArray("level_info")]
+texture_filter = 1
+offset_left = -167.0
+offset_top = 290.0
+offset_right = 83.0
+offset_bottom = 540.0
+toggle_mode = true
+button_group = ExtResource("3_t71yp")
+texture_normal = ExtResource("10_nyden")
+script = ExtResource("5_s6o25")
+level_info = NodePath("../../../../LevelInfo")
+click_mask = ExtResource("11_wbbcx")
+uncompleted_normal = ExtResource("12_umo4l")
+uncompleted_hover = ExtResource("13_plnif")
+uncompleted_selected = ExtResource("14_r1lal")
+
+[node name="CanesVenatici" type="TextureButton" parent="TextureRect2/SubViewportContainer/SubViewport" unique_id=1470974703 node_paths=PackedStringArray("level_info")]
+texture_filter = 1
+offset_left = 36.0
+offset_top = 358.0
+offset_right = 286.0
+offset_bottom = 608.0
+toggle_mode = true
+button_group = ExtResource("3_t71yp")
+texture_normal = ExtResource("15_l0clw")
+script = ExtResource("5_s6o25")
+level_info = NodePath("../../../../LevelInfo")
+click_mask = ExtResource("16_bhw5p")
+uncompleted_normal = ExtResource("17_vro3r")
+uncompleted_hover = ExtResource("18_t5b8u")
+uncompleted_selected = ExtResource("19_asga6")
+
+[node name="CoronaBorealis" type="TextureButton" parent="TextureRect2/SubViewportContainer/SubViewport" unique_id=969806392 node_paths=PackedStringArray("level_info")]
+texture_filter = 1
+offset_left = -151.0
+offset_top = 289.0
+offset_right = 99.0
+offset_bottom = 539.0
+toggle_mode = true
+button_group = ExtResource("3_t71yp")
+texture_normal = ExtResource("20_54bps")
+script = ExtResource("5_s6o25")
+level_info = NodePath("../../../../LevelInfo")
+click_mask = ExtResource("21_7y5vg")
+uncompleted_normal = ExtResource("22_kap87")
+uncompleted_hover = ExtResource("23_7tcu0")
+uncompleted_selected = ExtResource("24_dhdsc")
+
+[node name="Gemini" type="TextureButton" parent="TextureRect2/SubViewportContainer/SubViewport" unique_id=2054362713 node_paths=PackedStringArray("level_info")]
+texture_filter = 1
+offset_left = 297.0
+offset_top = 166.0
+offset_right = 547.0
+offset_bottom = 416.0
+toggle_mode = true
+button_group = ExtResource("3_t71yp")
+texture_normal = ExtResource("25_0axdb")
+script = ExtResource("5_s6o25")
+level_info = NodePath("../../../../LevelInfo")
+click_mask = ExtResource("26_nl2ru")
+uncompleted_normal = ExtResource("27_6tl3j")
+uncompleted_hover = ExtResource("28_x2mvg")
+uncompleted_selected = ExtResource("29_k06pl")
+
+[node name="Pegasus" type="TextureButton" parent="TextureRect2/SubViewportContainer/SubViewport" unique_id=1769395066 node_paths=PackedStringArray("level_info")]
+texture_filter = 1
+offset_left = -97.0
+offset_top = -186.0
+offset_right = 153.0
+offset_bottom = 64.0
+toggle_mode = true
+button_group = ExtResource("3_t71yp")
+texture_normal = ExtResource("32_bhw5p")
+script = ExtResource("5_s6o25")
+level_info = NodePath("../../../../LevelInfo")
+click_mask = ExtResource("17_ir5xr")
+uncompleted_normal = ExtResource("18_aiei1")
+uncompleted_hover = ExtResource("19_28l73")
+uncompleted_selected = ExtResource("20_oealk")
+
+[node name="Lacerta" type="TextureButton" parent="TextureRect2/SubViewportContainer/SubViewport" unique_id=1238201755 node_paths=PackedStringArray("level_info")]
+texture_filter = 1
+offset_left = -3.0
+offset_top = -11.0
+offset_right = 247.0
+offset_bottom = 239.0
+toggle_mode = true
+button_group = ExtResource("3_t71yp")
+texture_normal = ExtResource("37_vro3r")
+script = ExtResource("5_s6o25")
+level_info = NodePath("../../../../LevelInfo")
+click_mask = ExtResource("38_t5b8u")
+uncompleted_normal = ExtResource("39_asga6")
+uncompleted_hover = ExtResource("40_54bps")
+uncompleted_selected = ExtResource("41_7y5vg")
+
+[node name="Lyra" type="TextureButton" parent="TextureRect2/SubViewportContainer/SubViewport" unique_id=1172736153 node_paths=PackedStringArray("level_info")]
+texture_filter = 1
+offset_left = -147.0
+offset_top = 104.0
+offset_right = 103.0
+offset_bottom = 354.0
+toggle_mode = true
+button_group = ExtResource("3_t71yp")
+texture_normal = ExtResource("42_kap87")
+script = ExtResource("5_s6o25")
+level_info = NodePath("../../../../LevelInfo")
+click_mask = ExtResource("43_7tcu0")
+uncompleted_normal = ExtResource("44_dhdsc")
+uncompleted_hover = ExtResource("45_0axdb")
+uncompleted_selected = ExtResource("46_nl2ru")
+
+[node name="Perseus" type="TextureButton" parent="TextureRect2/SubViewportContainer/SubViewport" unique_id=468185097 node_paths=PackedStringArray("level_info")]
+texture_filter = 1
+offset_left = 144.0
+offset_top = -31.0
+offset_right = 394.0
+offset_bottom = 219.0
+toggle_mode = true
+button_group = ExtResource("3_t71yp")
+texture_normal = ExtResource("31_s6gn6")
+script = ExtResource("5_s6o25")
+level_info = NodePath("../../../../LevelInfo")
+click_mask = ExtResource("32_xxjwx")
+uncompleted_normal = ExtResource("33_827kn")
+uncompleted_hover = ExtResource("34_a717r")
+uncompleted_selected = ExtResource("35_udgsv")
+
+[node name="Camelopardus" type="TextureButton" parent="TextureRect2/SubViewportContainer/SubViewport" unique_id=747917165 node_paths=PackedStringArray("level_info")]
+texture_filter = 1
+offset_left = 131.0
+offset_top = 95.0
+offset_right = 381.0
+offset_bottom = 345.0
+toggle_mode = true
+button_group = ExtResource("3_t71yp")
+script = ExtResource("5_s6o25")
+level_info = NodePath("../../../../LevelInfo")
+click_mask = ExtResource("11_1n0rb")
+uncompleted_normal = ExtResource("12_e0xit")
+uncompleted_hover = ExtResource("13_bme7b")
+uncompleted_selected = ExtResource("10_4tq6q")
+
+[node name="Cancer" type="TextureButton" parent="TextureRect2/SubViewportContainer/SubViewport" unique_id=1223517742 node_paths=PackedStringArray("level_info")]
+texture_filter = 1
+offset_left = 233.0
+offset_top = 281.0
+offset_right = 483.0
+offset_bottom = 531.0
+toggle_mode = true
+button_group = ExtResource("3_t71yp")
+texture_normal = ExtResource("11_2s3qg")
+script = ExtResource("5_s6o25")
+level_info = NodePath("../../../../LevelInfo")
+click_mask = ExtResource("12_hcttg")
+uncompleted_normal = ExtResource("13_ercye")
+uncompleted_hover = ExtResource("14_17l7i")
+uncompleted_selected = ExtResource("15_1a4d6")
+
+[node name="Hercules" type="TextureButton" parent="TextureRect2/SubViewportContainer/SubViewport" unique_id=1397625809 node_paths=PackedStringArray("level_info")]
+texture_filter = 1
+offset_left = -223.0
+offset_top = 140.0
+offset_right = 27.0
+offset_bottom = 390.0
+toggle_mode = true
+button_group = ExtResource("3_t71yp")
+texture_normal = ExtResource("60_asga6")
+script = ExtResource("5_s6o25")
+level_info = NodePath("../../../../LevelInfo")
+click_mask = ExtResource("61_54bps")
+uncompleted_normal = ExtResource("62_7y5vg")
+uncompleted_hover = ExtResource("63_kap87")
+uncompleted_selected = ExtResource("64_7tcu0")
+
+[node name="Leo" type="TextureButton" parent="TextureRect2/SubViewportContainer/SubViewport" unique_id=1421206045 node_paths=PackedStringArray("level_info")]
+texture_filter = 1
+offset_left = 91.0
+offset_top = 371.0
+offset_right = 341.0
+offset_bottom = 621.0
+toggle_mode = true
+button_group = ExtResource("3_t71yp")
+texture_normal = ExtResource("21_q5shc")
+script = ExtResource("5_s6o25")
+level_info = NodePath("../../../../LevelInfo")
+click_mask = ExtResource("22_adnp1")
+uncompleted_normal = ExtResource("23_im4fy")
+uncompleted_hover = ExtResource("24_spo6j")
+uncompleted_selected = ExtResource("25_8c714")
+
+[node name="LeoMinor" type="TextureButton" parent="TextureRect2/SubViewportContainer/SubViewport" unique_id=1398196910 node_paths=PackedStringArray("level_info")]
+texture_filter = 1
+offset_left = 128.0
+offset_top = 314.0
+offset_right = 378.0
+offset_bottom = 564.0
+toggle_mode = true
+button_group = ExtResource("3_t71yp")
+texture_normal = ExtResource("26_0ol1s")
+script = ExtResource("5_s6o25")
+level_info = NodePath("../../../../LevelInfo")
+click_mask = ExtResource("27_bqdo6")
+uncompleted_normal = ExtResource("28_lm0kd")
+uncompleted_hover = ExtResource("29_sro5a")
+uncompleted_selected = ExtResource("30_ih6nn")
+
+[node name="Auriga" type="TextureButton" parent="TextureRect2/SubViewportContainer/SubViewport" unique_id=555503951 node_paths=PackedStringArray("level_info")]
+texture_filter = 1
+offset_left = 193.0
+offset_top = 39.0
+offset_right = 443.0
+offset_bottom = 289.0
+toggle_mode = true
+button_group = ExtResource("3_t71yp")
+texture_normal = ExtResource("11_n66a7")
+script = ExtResource("5_s6o25")
+level_info = NodePath("../../../../LevelInfo")
+click_mask = ExtResource("12_mkkub")
+uncompleted_normal = ExtResource("13_qkdi5")
+uncompleted_hover = ExtResource("14_1u8r4")
+uncompleted_selected = ExtResource("11_n66a7")
+
+[node name="Lynx" type="TextureButton" parent="TextureRect2/SubViewportContainer/SubViewport" unique_id=1417350921 node_paths=PackedStringArray("level_info")]
+texture_filter = 1
+offset_left = 128.0
+offset_top = 158.0
+offset_right = 378.0
+offset_bottom = 408.0
+toggle_mode = true
+button_group = ExtResource("3_t71yp")
+texture_normal = ExtResource("15_e2qqm")
+script = ExtResource("5_s6o25")
+level_info = NodePath("../../../../LevelInfo")
+click_mask = ExtResource("16_kilby")
+uncompleted_normal = ExtResource("17_mcx6e")
+uncompleted_hover = ExtResource("18_qhhqn")
+uncompleted_selected = ExtResource("15_e2qqm")
+
+[node name="Taurus" type="TextureButton" parent="TextureRect2/SubViewportContainer/SubViewport" unique_id=1020240564 node_paths=PackedStringArray("level_info")]
+texture_filter = 1
+offset_left = 266.0
+offset_top = -50.0
+offset_right = 516.0
+offset_bottom = 200.0
+toggle_mode = true
+button_group = ExtResource("3_t71yp")
+texture_normal = ExtResource("19_jrkl4")
+script = ExtResource("5_s6o25")
+level_info = NodePath("../../../../LevelInfo")
+click_mask = ExtResource("20_1rcvk")
+uncompleted_normal = ExtResource("21_5m3v0")
+uncompleted_hover = ExtResource("22_f4a6f")
+uncompleted_selected = ExtResource("19_jrkl4")
+
+[node name="Cepheus" type="TextureButton" parent="TextureRect2/SubViewportContainer/SubViewport" unique_id=608535570 node_paths=PackedStringArray("level_info")]
+texture_filter = 1
+offset_left = -51.0
+offset_top = 2.0
+offset_right = 199.0
+offset_bottom = 252.0
+toggle_mode = true
+button_group = ExtResource("3_t71yp")
+script = ExtResource("5_s6o25")
+level_info = NodePath("../../../../LevelInfo")
+click_mask = ExtResource("14_57m4l")
+uncompleted_normal = ExtResource("15_rmj7q")
+uncompleted_hover = ExtResource("16_3cg7k")
+uncompleted_selected = ExtResource("17_ho67q")
+
+[node name="Ursa Major" type="TextureButton" parent="TextureRect2/SubViewportContainer/SubViewport" unique_id=961102296 node_paths=PackedStringArray("level_info")]
+texture_filter = 1
+offset_left = -2.0
+offset_top = 210.0
+offset_right = 248.0
+offset_bottom = 460.0
+toggle_mode = true
+button_group = ExtResource("3_t71yp")
+script = ExtResource("5_s6o25")
+level_info = NodePath("../../../../LevelInfo")
+click_mask = ExtResource("13_4bl5u")
+uncompleted_normal = ExtResource("14_sxk8s")
+uncompleted_hover = ExtResource("15_ocyqv")
+uncompleted_selected = ExtResource("16_iieyh")
+completed_normal = ExtResource("17_35sug")
+completed_hover = ExtResource("18_5wumq")
+completed_selected = ExtResource("19_6ui0v")
+
+[node name="Cassiopeia" type="TextureButton" parent="TextureRect2/SubViewportContainer/SubViewport" unique_id=244751162 node_paths=PackedStringArray("level_info")]
+texture_filter = 1
+offset_left = 15.0
+offset_top = -46.0
+offset_right = 265.0
+offset_bottom = 204.0
+toggle_mode = true
+button_group = ExtResource("3_t71yp")
+script = ExtResource("5_s6o25")
+level_info = NodePath("../../../../LevelInfo")
+click_mask = ExtResource("33_6ui0v")
+uncompleted_normal = ExtResource("34_p0pae")
+uncompleted_hover = ExtResource("35_o5wnm")
+uncompleted_selected = ExtResource("36_ecyp1")
+completed_normal = ExtResource("37_2tegd")
+completed_hover = ExtResource("38_ly0pf")
+completed_selected = ExtResource("39_3mcy5")
+
+[node name="Orion" type="TextureButton" parent="TextureRect2/SubViewportContainer/SubViewport" unique_id=876371288 node_paths=PackedStringArray("level_info")]
+texture_filter = 1
+offset_left = 386.0
+offset_top = 20.0
+offset_right = 636.0
+offset_bottom = 270.0
+toggle_mode = true
+button_group = ExtResource("3_t71yp")
+script = ExtResource("5_s6o25")
+level_info = NodePath("../../../../LevelInfo")
+click_mask = ExtResource("27_ivryp")
+uncompleted_normal = ExtResource("28_rgxwd")
+uncompleted_hover = ExtResource("29_vtbif")
+uncompleted_selected = ExtResource("30_ynt26")
+completed_normal = ExtResource("31_3x64y")
+completed_hover = ExtResource("32_fkv1q")
+completed_selected = ExtResource("33_8m48a")
+
+[node name="Draco" type="TextureButton" parent="TextureRect2/SubViewportContainer/SubViewport" unique_id=1493316759 node_paths=PackedStringArray("level_info")]
+texture_filter = 1
+offset_left = -83.0
+offset_top = 92.0
+offset_right = 167.0
+offset_bottom = 342.0
+toggle_mode = true
+button_group = ExtResource("3_t71yp")
+script = ExtResource("5_s6o25")
+level_info = NodePath("../../../../LevelInfo")
+click_mask = ExtResource("11_6jmn7")
+uncompleted_normal = ExtResource("10_yof5r")
+uncompleted_hover = ExtResource("12_eol4j")
+uncompleted_selected = ExtResource("11_t45ri")
+completed_normal = ExtResource("13_7irii")
+completed_hover = ExtResource("14_d7t5y")
+completed_selected = ExtResource("17_5k34y")
+
+[node name="Cygnus" type="TextureButton" parent="TextureRect2/SubViewportContainer/SubViewport" unique_id=653588954 node_paths=PackedStringArray("level_info")]
+texture_filter = 1
+offset_left = -209.0
+offset_top = -70.0
+offset_right = 41.0
+offset_bottom = 180.0
+toggle_mode = true
+button_group = ExtResource("3_t71yp")
+script = ExtResource("5_s6o25")
+level_info = NodePath("../../../../LevelInfo")
+click_mask = ExtResource("41_3w545")
+uncompleted_normal = ExtResource("42_jvay1")
+uncompleted_hover = ExtResource("43_lxv4g")
+uncompleted_selected = ExtResource("44_hiqs5")
+completed_normal = ExtResource("45_ck5ev")
+completed_hover = ExtResource("46_2clr8")
+completed_selected = ExtResource("47_fhv3h")
+
+[node name="LvlSelectCamera" type="Camera2D" parent="TextureRect2/SubViewportContainer/SubViewport" unique_id=910052112]
+position = Vector2(98, 180)
+script = ExtResource("3_lx4vd")
+
+[node name="Instructions" type="Control" parent="." unique_id=1631290979]
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="TextureRect" type="TextureRect" parent="Instructions" unique_id=1585782632]
+layout_mode = 0
+offset_left = 295.0
+offset_top = 81.0
+offset_right = 444.0
+offset_bottom = 186.0
+texture = ExtResource("136_kap87")
+
+[node name="InstructionsText" type="RichTextLabel" parent="Instructions" unique_id=2132948556]
+layout_mode = 0
+offset_left = 300.0
+offset_top = 70.0
+offset_right = 440.0
+offset_bottom = 192.555
+theme_override_colors/default_color = Color(1, 0.7607843, 0.24705882, 1)
+theme_override_fonts/normal_font = ExtResource("17_7irii")
+theme_override_font_sizes/normal_font_size = 16
+text = "Drag your mouse to pan around the star map. Click on stars to discover constellations."
+scroll_active = false
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="LevelInfo" type="Control" parent="." unique_id=392494688]
+visible = false
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+mouse_filter = 2
+script = ExtResource("2_t45ri")
+stories_json = ExtResource("17_d7t5y")
+tutorials_json = ExtResource("137_7y5vg")
+
+[node name="Background" type="TextureRect" parent="LevelInfo" unique_id=183044015]
+layout_mode = 0
+offset_right = 480.0
+offset_bottom = 270.0
+mouse_filter = 2
+texture = ExtResource("55_ynt26")
+
+[node name="StoryTab" type="Control" parent="LevelInfo" unique_id=1544989440]
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="StoryText" type="RichTextLabel" parent="LevelInfo/StoryTab" unique_id=362390892]
+layout_mode = 0
+offset_left = 298.0
+offset_top = 110.0
+offset_right = 438.0
+offset_bottom = 232.555
+theme_override_colors/default_color = Color(1, 0.7607843, 0.24705882, 1)
+theme_override_fonts/normal_font = ExtResource("17_7irii")
+theme_override_font_sizes/normal_font_size = 10
+text = "Story not found. Complete the game to collect the story."
+scroll_active = false
+
+[node name="StoryTitle" type="RichTextLabel" parent="LevelInfo/StoryTab" unique_id=995924283]
+layout_mode = 0
+offset_left = 298.0
+offset_top = 71.0
+offset_right = 438.0
+offset_bottom = 115.0
+theme_override_colors/default_color = Color(1, 0.7607843, 0.24705882, 1)
+theme_override_fonts/normal_font = ExtResource("17_7irii")
+theme_override_font_sizes/normal_font_size = 24
+text = "Story
+"
+scroll_active = false
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="StoryButton" type="Button" parent="LevelInfo/StoryTab" unique_id=638750883]
+layout_mode = 0
+offset_left = 413.0
+offset_top = 84.0
+offset_right = 426.0
+offset_bottom = 103.0
+size_flags_vertical = 3
+theme_override_colors/font_color = Color(0.61128515, 0.44369856, 0, 1)
+theme_override_colors/font_focus_color = Color(0.6117647, 0.44313726, 0, 1)
+theme_override_colors/font_pressed_color = Color(0.6117647, 0.44313726, 0, 1)
+theme_override_colors/font_hover_color = Color(0.6117647, 0.44313726, 0, 1)
+theme_override_colors/font_hover_pressed_color = Color(0.6117647, 0.44313726, 0, 1)
+theme_override_fonts/font = ExtResource("17_7irii")
+theme_override_font_sizes/font_size = 10
+theme_override_styles/normal = SubResource("StyleBoxTexture_lxv4g")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_hiqs5")
+theme_override_styles/hover = SubResource("StyleBoxTexture_ck5ev")
+
+[node name="TutorialTab" type="Control" parent="LevelInfo" unique_id=883442300]
+visible = false
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="TutorialText" type="RichTextLabel" parent="LevelInfo/TutorialTab" unique_id=2040565359]
+layout_mode = 0
+offset_left = 298.0
+offset_top = 110.0
+offset_right = 438.0
+offset_bottom = 154.0
+theme_override_colors/default_color = Color(1, 0.7607843, 0.24705882, 1)
+theme_override_fonts/normal_font = ExtResource("17_7irii")
+theme_override_font_sizes/normal_font_size = 10
+text = "Tutorial text."
+scroll_active = false
+
+[node name="TutorialTitle" type="RichTextLabel" parent="LevelInfo/TutorialTab" unique_id=2014931478]
+layout_mode = 0
+offset_left = 298.0
+offset_top = 71.0
+offset_right = 438.0
+offset_bottom = 115.0
+theme_override_colors/default_color = Color(1, 0.7607843, 0.24705882, 1)
+theme_override_fonts/normal_font = ExtResource("17_7irii")
+theme_override_font_sizes/normal_font_size = 24
+text = "Tutorial
+"
+scroll_active = false
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Tutorial" type="SubViewportContainer" parent="LevelInfo/TutorialTab" unique_id=1486600721 node_paths=PackedStringArray("level_info")]
+layout_mode = 0
+offset_left = 309.0
+offset_top = 155.0
+offset_right = 789.0
+offset_bottom = 425.0
+scale = Vector2(0.25, 0.25)
+mouse_filter = 2
+script = ExtResource("19_5wh6f")
+level_info = NodePath("../..")
+
+[node name="MinigameViewport" type="SubViewport" parent="LevelInfo/TutorialTab/Tutorial" unique_id=1105030698]
+handle_input_locally = false
+physics_object_picking = true
+size = Vector2i(480, 270)
+render_target_update_mode = 0
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="LevelInfo/TutorialTab/Tutorial" unique_id=2011721988]
+root_node = NodePath("../../..")
+libraries/ = SubResource("AnimationLibrary_aql8v")
+
+[node name="TutorialButton" type="Button" parent="LevelInfo/TutorialTab" unique_id=312750302]
+layout_mode = 0
+offset_left = 320.0
+offset_top = 85.0
+offset_right = 333.0
+offset_bottom = 104.0
+scale = Vector2(-1, 1)
+size_flags_vertical = 3
+theme_override_colors/font_color = Color(0.6117647, 0.44313726, 0, 1)
+theme_override_colors/font_focus_color = Color(0.6117647, 0.44313726, 0, 1)
+theme_override_colors/font_pressed_color = Color(0.6117647, 0.44313726, 0, 1)
+theme_override_colors/font_hover_color = Color(0.6117647, 0.44313726, 0, 1)
+theme_override_colors/font_hover_pressed_color = Color(0.6117647, 0.44313726, 0, 1)
+theme_override_fonts/font = ExtResource("17_7irii")
+theme_override_font_sizes/font_size = 10
+theme_override_styles/normal = SubResource("StyleBoxTexture_2clr8")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_fhv3h")
+theme_override_styles/hover = SubResource("StyleBoxTexture_57m4l")
+
+[node name="Title" type="RichTextLabel" parent="LevelInfo" unique_id=1046237857]
+layout_mode = 0
+offset_left = 293.0
+offset_top = 26.0
+offset_right = 443.0
+offset_bottom = 71.0
+size_flags_vertical = 3
+theme_override_colors/default_color = Color(1, 0.7607843, 0.24705882, 1)
+theme_override_fonts/normal_font = ExtResource("17_7irii")
+theme_override_font_sizes/normal_font_size = 28
+text = "Ursa Major
+"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="StartGame" type="Button" parent="LevelInfo" unique_id=1776484225]
+layout_mode = 0
+offset_left = 375.0
+offset_top = 227.0
+offset_right = 463.0
+offset_bottom = 253.0
+theme_override_colors/font_color = Color(1, 0.7137255, 0.09411765, 1)
+theme_override_colors/font_focus_color = Color(0.6117647, 0.44313726, 0, 1)
+theme_override_colors/font_pressed_color = Color(1, 0.9098039, 0.72156864, 1)
+theme_override_colors/font_hover_color = Color(1, 1, 1, 1)
+theme_override_colors/font_hover_pressed_color = Color(1, 1, 1, 1)
+theme_override_fonts/font = ExtResource("17_7irii")
+theme_override_font_sizes/font_size = 16
+theme_override_styles/normal = SubResource("StyleBoxTexture_ynt26")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_3x64y")
+theme_override_styles/hover = SubResource("StyleBoxTexture_fkv1q")
+text = "Start Game"
+
+[node name="Ursa Minor (for placement)" type="TextureButton" parent="." unique_id=567230162 node_paths=PackedStringArray("level_info")]
+visible = false
+texture_filter = 1
+layout_mode = 0
+offset_left = -11.0
+offset_top = 73.0
+offset_right = 239.0
+offset_bottom = 323.0
+mouse_filter = 2
+toggle_mode = true
+button_group = ExtResource("3_t71yp")
+texture_normal = ExtResource("5_t71yp")
+script = ExtResource("5_s6o25")
+level_info = NodePath("../LevelInfo")
+click_mask = ExtResource("4_s85kw")
+uncompleted_normal = ExtResource("5_t71yp")
+uncompleted_hover = ExtResource("6_ytkgt")
+uncompleted_selected = ExtResource("7_oslm0")
+completed_normal = ExtResource("8_148m5")
+completed_hover = ExtResource("9_uw1b4")
+completed_selected = ExtResource("10_0ymf3")
+
+[node name="TextureRect" type="TextureRect" parent="." unique_id=875691784]
+visible = false
+layout_mode = 0
+offset_left = 269.0
+offset_top = 14.0
+offset_right = 469.0
+offset_bottom = 254.0
+mouse_filter = 2
+texture = ExtResource("55_ynt26")
+
+[node name="HomeButton" type="TextureButton" parent="." unique_id=220860156]
+layout_mode = 0
+offset_left = 6.0
+offset_top = 6.0
+offset_right = 24.0
+offset_bottom = 24.0
+texture_normal = ExtResource("61_hiqs5")
+texture_pressed = ExtResource("62_ck5ev")
+texture_hover = ExtResource("63_2clr8")
+
+[connection signal="pressed" from="TextureRect2/SubViewportContainer/SubViewport/Ursa Minor" to="TextureRect2/SubViewportContainer/SubViewport/Ursa Minor" method="_on_pressed"]
+[connection signal="pressed" from="TextureRect2/SubViewportContainer/SubViewport/Andromeda" to="TextureRect2/SubViewportContainer/SubViewport/Andromeda" method="_on_pressed"]
+[connection signal="pressed" from="TextureRect2/SubViewportContainer/SubViewport/Bootes" to="TextureRect2/SubViewportContainer/SubViewport/Bootes" method="_on_pressed"]
+[connection signal="pressed" from="TextureRect2/SubViewportContainer/SubViewport/CanesVenatici" to="TextureRect2/SubViewportContainer/SubViewport/CanesVenatici" method="_on_pressed"]
+[connection signal="pressed" from="TextureRect2/SubViewportContainer/SubViewport/CoronaBorealis" to="TextureRect2/SubViewportContainer/SubViewport/CoronaBorealis" method="_on_pressed"]
+[connection signal="pressed" from="TextureRect2/SubViewportContainer/SubViewport/Gemini" to="TextureRect2/SubViewportContainer/SubViewport/Gemini" method="_on_pressed"]
+[connection signal="pressed" from="TextureRect2/SubViewportContainer/SubViewport/Pegasus" to="TextureRect2/SubViewportContainer/SubViewport/Pegasus" method="_on_pressed"]
+[connection signal="pressed" from="TextureRect2/SubViewportContainer/SubViewport/Lacerta" to="TextureRect2/SubViewportContainer/SubViewport/Lacerta" method="_on_pressed"]
+[connection signal="pressed" from="TextureRect2/SubViewportContainer/SubViewport/Lyra" to="TextureRect2/SubViewportContainer/SubViewport/Lyra" method="_on_pressed"]
+[connection signal="pressed" from="TextureRect2/SubViewportContainer/SubViewport/Perseus" to="TextureRect2/SubViewportContainer/SubViewport/Perseus" method="_on_pressed"]
+[connection signal="pressed" from="TextureRect2/SubViewportContainer/SubViewport/Camelopardus" to="TextureRect2/SubViewportContainer/SubViewport/Camelopardus" method="_on_pressed"]
+[connection signal="pressed" from="TextureRect2/SubViewportContainer/SubViewport/Cancer" to="TextureRect2/SubViewportContainer/SubViewport/Cancer" method="_on_pressed"]
+[connection signal="pressed" from="TextureRect2/SubViewportContainer/SubViewport/Hercules" to="TextureRect2/SubViewportContainer/SubViewport/Hercules" method="_on_pressed"]
+[connection signal="pressed" from="TextureRect2/SubViewportContainer/SubViewport/Leo" to="TextureRect2/SubViewportContainer/SubViewport/Leo" method="_on_pressed"]
+[connection signal="pressed" from="TextureRect2/SubViewportContainer/SubViewport/LeoMinor" to="TextureRect2/SubViewportContainer/SubViewport/LeoMinor" method="_on_pressed"]
+[connection signal="pressed" from="TextureRect2/SubViewportContainer/SubViewport/Auriga" to="TextureRect2/SubViewportContainer/SubViewport/Auriga" method="_on_pressed"]
+[connection signal="pressed" from="TextureRect2/SubViewportContainer/SubViewport/Lynx" to="TextureRect2/SubViewportContainer/SubViewport/Lynx" method="_on_pressed"]
+[connection signal="pressed" from="TextureRect2/SubViewportContainer/SubViewport/Taurus" to="TextureRect2/SubViewportContainer/SubViewport/Taurus" method="_on_pressed"]
+[connection signal="pressed" from="TextureRect2/SubViewportContainer/SubViewport/Cepheus" to="TextureRect2/SubViewportContainer/SubViewport/Cepheus" method="_on_pressed"]
+[connection signal="pressed" from="TextureRect2/SubViewportContainer/SubViewport/Ursa Major" to="TextureRect2/SubViewportContainer/SubViewport/Ursa Major" method="_on_pressed"]
+[connection signal="pressed" from="TextureRect2/SubViewportContainer/SubViewport/Cassiopeia" to="TextureRect2/SubViewportContainer/SubViewport/Cassiopeia" method="_on_pressed"]
+[connection signal="pressed" from="TextureRect2/SubViewportContainer/SubViewport/Orion" to="TextureRect2/SubViewportContainer/SubViewport/Orion" method="_on_pressed"]
+[connection signal="pressed" from="TextureRect2/SubViewportContainer/SubViewport/Draco" to="TextureRect2/SubViewportContainer/SubViewport/Draco" method="_on_pressed"]
+[connection signal="pressed" from="TextureRect2/SubViewportContainer/SubViewport/Cygnus" to="TextureRect2/SubViewportContainer/SubViewport/Cygnus" method="_on_pressed"]
+[connection signal="pressed" from="LevelInfo/StoryTab/StoryButton" to="LevelInfo" method="_change_tab" binds= [NodePath("TutorialTab")]]
+[connection signal="pressed" from="LevelInfo/TutorialTab/TutorialButton" to="LevelInfo/TutorialTab/Tutorial" method="_change_tab"]
+[connection signal="pressed" from="LevelInfo/TutorialTab/TutorialButton" to="LevelInfo" method="_change_tab" binds= [NodePath("StoryTab")]]
+[connection signal="pressed" from="LevelInfo/StartGame" to="LevelInfo" method="_on_start_game_pressed"]
+[connection signal="pressed" from="Ursa Minor (for placement)" to="Ursa Minor (for placement)" method="_on_pressed"]
+[connection signal="pressed" from="HomeButton" to="LevelInfo" method="_on_return_to_home"]

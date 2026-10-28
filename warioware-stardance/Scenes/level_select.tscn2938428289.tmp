@@ -1,0 +1,42 @@
+[gd_scene format=3 uid="uid://b5istff0hd8vq"]
+
+[ext_resource type="Texture2D" uid="uid://eqmlt61uaief" path="res://Art/LevelSelectArt/CircleMask.png" id="1_1fiak"]
+[ext_resource type="Texture2D" uid="uid://bssdhf5jjmkqa" path="res://Art/LevelSelectArt/LevelMap.png" id="2_nkys2"]
+[ext_resource type="Script" uid="uid://4l8i5bw4fek3" path="res://Scenes/lvl_select_camera.gd" id="3_lx4vd"]
+
+[node name="LevelSelect" type="Node2D" unique_id=529215221]
+
+[node name="Background" type="ColorRect" parent="." unique_id=1256307960]
+offset_right = 480.0
+offset_bottom = 270.0
+mouse_filter = 2
+color = Color(0.050980393, 0.08627451, 0.15686275, 1)
+
+[node name="TextureRect2" type="TextureRect" parent="." unique_id=1118172012]
+clip_children = 1
+offset_right = 40.0
+offset_bottom = 40.0
+texture = ExtResource("1_1fiak")
+stretch_mode = 5
+
+[node name="SubViewportContainer" type="SubViewportContainer" parent="TextureRect2" unique_id=105864383]
+layout_mode = 0
+offset_left = -145.0
+offset_top = -44.0
+offset_right = 367.0
+offset_bottom = 468.0
+
+[node name="SubViewport" type="SubViewport" parent="TextureRect2/SubViewportContainer" unique_id=1341370546]
+handle_input_locally = false
+render_target_update_mode = 4
+
+[node name="TextureRect" type="TextureRect" parent="TextureRect2/SubViewportContainer/SubViewport" unique_id=1593803911]
+offset_left = -228.0
+offset_top = -320.0
+offset_right = 772.0
+offset_bottom = 680.0
+texture = ExtResource("2_nkys2")
+
+[node name="LvlSelectCamera" type="Camera2D" parent="TextureRect2/SubViewportContainer/SubViewport" unique_id=910052112]
+position = Vector2(-145, -44)
+script = ExtResource("3_lx4vd")

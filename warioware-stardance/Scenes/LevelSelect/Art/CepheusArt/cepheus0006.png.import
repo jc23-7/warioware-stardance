@@ -1,0 +1,16 @@
+[remap]
+
+importer="bitmap"
+type="BitMap"
+uid="uid://bq3ewgrojuq2c"
+path="res://.godot/imported/cepheus0006.png-bb8b136fc324ad441ef57d2ec55be39e.res"
+
+[deps]
+
+source_file="res://Scenes/LevelSelect/Art/CepheusArt/cepheus0006.png"
+dest_files=["res://.godot/imported/cepheus0006.png-bb8b136fc324ad441ef57d2ec55be39e.res"]
+
+[params]
+
+create_from=0
+threshold=0.5

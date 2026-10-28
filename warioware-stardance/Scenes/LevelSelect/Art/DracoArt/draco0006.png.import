@@ -1,0 +1,16 @@
+[remap]
+
+importer="bitmap"
+type="BitMap"
+uid="uid://rj3doaqqp80r"
+path="res://.godot/imported/draco0006.png-2630c0c00823c7f2a0169b91f03e7c32.res"
+
+[deps]
+
+source_file="res://Scenes/LevelSelect/Art/DracoArt/draco0006.png"
+dest_files=["res://.godot/imported/draco0006.png-2630c0c00823c7f2a0169b91f03e7c32.res"]
+
+[params]
+
+create_from=0
+threshold=0.5

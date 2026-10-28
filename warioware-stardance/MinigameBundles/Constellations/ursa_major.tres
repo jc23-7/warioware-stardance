@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="Constellation" format=3 uid="uid://bbpqe264v7lvk"]
+
+[ext_resource type="PackedScene" uid="uid://bcc1nsnh55ytt" path="res://MinigameBundles/UrsaMajor/minigame_1.tscn" id="1_y30ah"]
+[ext_resource type="Script" uid="uid://djyjxwhqcifvv" path="res://Scenes/LevelSelect/constellation.gd" id="2_71o7m"]
+
+[resource]
+script = ExtResource("2_71o7m")
+unlocked = true
+constellation_name = "Ursa Major"
+minigame = ExtResource("1_y30ah")
+metadata/_custom_type_script = "uid://djyjxwhqcifvv"

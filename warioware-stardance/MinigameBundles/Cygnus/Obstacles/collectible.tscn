@@ -1,0 +1,31 @@
+[gd_scene format=3 uid="uid://b8sswx3o6rq8w"]
+
+[ext_resource type="Script" uid="uid://cavfsxkaaqip0" path="res://MinigameBundles/Cygnus/Obstacles/collectible.gd" id="1_4fdpp"]
+[ext_resource type="Texture2D" uid="uid://d368wu03ubuac" path="res://Art/Star.png" id="1_6b0u0"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_eoxe0"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_6b0u0")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_2y5hg"]
+size = Vector2(14, 14)
+
+[node name="Collectible" type="Node2D" unique_id=1732643627]
+script = ExtResource("1_4fdpp")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1974045639]
+sprite_frames = SubResource("SpriteFrames_eoxe0")
+
+[node name="Area2D" type="Area2D" parent="." unique_id=2037573532]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=627534530]
+shape = SubResource("RectangleShape2D_2y5hg")
+
+[connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]

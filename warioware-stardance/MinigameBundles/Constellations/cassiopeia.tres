@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="Constellation" format=3 uid="uid://c1gvk13bf635o"]
+
+[ext_resource type="PackedScene" uid="uid://dwgre787yr20u" path="res://MinigameBundles/Cassiopeia/minigame_1.tscn" id="1_m1d8p"]
+[ext_resource type="Script" uid="uid://djyjxwhqcifvv" path="res://Scenes/LevelSelect/constellation.gd" id="2_nsy5v"]
+
+[resource]
+script = ExtResource("2_nsy5v")
+unlocked = true
+constellation_name = "Cassiopeia"
+minigame = ExtResource("1_m1d8p")
+metadata/_custom_type_script = "uid://djyjxwhqcifvv"

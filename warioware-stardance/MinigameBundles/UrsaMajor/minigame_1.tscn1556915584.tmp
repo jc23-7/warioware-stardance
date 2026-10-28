@@ -1,0 +1,53 @@
+[gd_scene format=3 uid="uid://bcc1nsnh55ytt"]
+
+[ext_resource type="Texture2D" uid="uid://da3enufnadd0l" path="res://Art/Backgrounds/minigame_1_bg.png" id="1_d1dnw"]
+[ext_resource type="Script" uid="uid://c3wix8tjvneca" path="res://MinigameBundles/UrsaMajor/minigame_1.gd" id="1_pjpp5"]
+[ext_resource type="PackedScene" uid="uid://beavwkuna4s6h" path="res://MinigameBundles/BigDipper/Minigame1/player_mg1.tscn" id="2_2y7vr"]
+[ext_resource type="Script" uid="uid://cyrf1vbl5npt2" path="res://MinigameBundles/BigDipper/Minigame1/player_movement.gd" id="3_2y7vr"]
+[ext_resource type="PackedScene" uid="uid://ijvv7plr8526" path="res://Scenes/game_timer.tscn" id="3_pjpp5"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_5mcws"]
+size = Vector2(966.5, 364.83255)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_bb4b5"]
+size = Vector2(434.4003, 733.39)
+
+[node name="Minigame1" type="Node2D" unique_id=1162576641]
+script = ExtResource("1_pjpp5")
+
+[node name="Background" type="TextureRect" parent="." unique_id=1174752548]
+offset_right = 480.0
+offset_bottom = 270.0
+texture = ExtResource("1_d1dnw")
+
+[node name="Platform1" type="StaticBody2D" parent="." unique_id=1155511621]
+position = Vector2(-58, -251)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Platform1" unique_id=1511671497]
+position = Vector2(479.75, 678.41626)
+shape = SubResource("RectangleShape2D_5mcws")
+
+[node name="LeftWall" type="StaticBody2D" parent="." unique_id=1060267070]
+position = Vector2(-39.000004, 3)
+scale = Vector2(0.042028412, 0.4595099)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="LeftWall" unique_id=104832455]
+position = Vector2(690.0095, 544.05786)
+scale = Vector2(1.0000005, 1.0000005)
+shape = SubResource("RectangleShape2D_bb4b5")
+
+[node name="RightWall" type="StaticBody2D" parent="." unique_id=175408664]
+position = Vector2(-39.000004, 3)
+scale = Vector2(0.042028412, 0.4595099)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="RightWall" unique_id=644253077]
+position = Vector2(12562.931, 406.95532)
+scale = Vector2(1.0000005, 1.0000005)
+shape = SubResource("RectangleShape2D_bb4b5")
+
+[node name="Player" parent="." unique_id=515594243 instance=ExtResource("2_2y7vr")]
+position = Vector2(68, 195)
+scale = Vector2(1, 1)
+script = ExtResource("3_2y7vr")
+
+[node name="GameStats" parent="." unique_id=1669112296 instance=ExtResource("3_pjpp5")]

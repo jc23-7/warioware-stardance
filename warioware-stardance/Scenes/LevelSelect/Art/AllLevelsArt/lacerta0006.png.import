@@ -1,0 +1,16 @@
+[remap]
+
+importer="bitmap"
+type="BitMap"
+uid="uid://dedibk7ar5ta0"
+path="res://.godot/imported/lacerta0006.png-12190c1d9a7f88ae34ebaf16cc98f116.res"
+
+[deps]
+
+source_file="res://Scenes/LevelSelect/Art/AllLevelsArt/lacerta0006.png"
+dest_files=["res://.godot/imported/lacerta0006.png-12190c1d9a7f88ae34ebaf16cc98f116.res"]
+
+[params]
+
+create_from=0
+threshold=0.5

@@ -1,0 +1,16 @@
+[remap]
+
+importer="bitmap"
+type="BitMap"
+uid="uid://cp60eeumkt1t7"
+path="res://.godot/imported/bootes0006.png-56345aef087878a1e58ccfaffcc2e20e.res"
+
+[deps]
+
+source_file="res://Scenes/LevelSelect/Art/AllLevelsArt/bootes0006.png"
+dest_files=["res://.godot/imported/bootes0006.png-56345aef087878a1e58ccfaffcc2e20e.res"]
+
+[params]
+
+create_from=0
+threshold=0.5

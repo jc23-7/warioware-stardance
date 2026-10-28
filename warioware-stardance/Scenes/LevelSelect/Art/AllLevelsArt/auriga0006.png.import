@@ -1,0 +1,16 @@
+[remap]
+
+importer="bitmap"
+type="BitMap"
+uid="uid://yjrew4i68yx1"
+path="res://.godot/imported/auriga0006.png-f78f32f16e5215844830755645ac1aa2.res"
+
+[deps]
+
+source_file="res://Scenes/LevelSelect/Art/AllLevelsArt/auriga0006.png"
+dest_files=["res://.godot/imported/auriga0006.png-f78f32f16e5215844830755645ac1aa2.res"]
+
+[params]
+
+create_from=0
+threshold=0.5

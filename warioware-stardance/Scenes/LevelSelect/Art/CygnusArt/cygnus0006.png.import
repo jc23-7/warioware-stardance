@@ -1,0 +1,16 @@
+[remap]
+
+importer="bitmap"
+type="BitMap"
+uid="uid://buw0h486pti3y"
+path="res://.godot/imported/cygnus0006.png-cf7195bb6ca79ce964362c4be8c76c98.res"
+
+[deps]
+
+source_file="res://Scenes/LevelSelect/Art/CygnusArt/cygnus0006.png"
+dest_files=["res://.godot/imported/cygnus0006.png-cf7195bb6ca79ce964362c4be8c76c98.res"]
+
+[params]
+
+create_from=0
+threshold=0.5

@@ -1,0 +1,22 @@
+[gd_resource type="SpriteFrames" format=3 uid="uid://bbnbfna4kpvp"]
+
+[ext_resource type="Texture2D" uid="uid://dl1gkojtxgcp2" path="res://MinigameBundles/Draco/Minigame2/Art/dragon_default.png" id="1_84avc"]
+[ext_resource type="Texture2D" uid="uid://dw38ykswtq7dy" path="res://MinigameBundles/Draco/Minigame2/Art/dragon_grab.png" id="2_25p7v"]
+[ext_resource type="Texture2D" uid="uid://cgn41a50lqk6" path="res://MinigameBundles/Draco/Minigame2/Art/dragon_star.png" id="3_k4mvw"]
+
+[resource]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_84avc")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_25p7v")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_k4mvw")
+}],
+"loop": true,
+"name": &"dragon",
+"speed": 5.0
+}]

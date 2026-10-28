@@ -1,0 +1,16 @@
+[remap]
+
+importer="bitmap"
+type="BitMap"
+uid="uid://dnt1ei1ol8bcs"
+path="res://.godot/imported/lynx0006.png-a0f450931f5aafa93b1e22510e3bf60e.res"
+
+[deps]
+
+source_file="res://Scenes/LevelSelect/Art/LynxArt/lynx0006.png"
+dest_files=["res://.godot/imported/lynx0006.png-a0f450931f5aafa93b1e22510e3bf60e.res"]
+
+[params]
+
+create_from=0
+threshold=0.5

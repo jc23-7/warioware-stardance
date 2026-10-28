@@ -1,0 +1,16 @@
+[remap]
+
+importer="bitmap"
+type="BitMap"
+uid="uid://bc8t82jk22gv2"
+path="res://.godot/imported/hercules0006.png-b62d6d4aa2918301998259576d16f84c.res"
+
+[deps]
+
+source_file="res://Scenes/LevelSelect/Art/AllLevelsArt/hercules0006.png"
+dest_files=["res://.godot/imported/hercules0006.png-b62d6d4aa2918301998259576d16f84c.res"]
+
+[params]
+
+create_from=0
+threshold=0.5
