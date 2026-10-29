@@ -14,6 +14,7 @@ var tutorial = false
 var minigames_done = 0
 var total_minigames = 3
 var lives = 5
+var minigame_success
 
 var current_constellation: Constellation
 
@@ -60,7 +61,9 @@ func next_minigame() -> void:
 	
 func minigame_done(success: bool) -> void:
 	if current_mode == Mode.PLAY:
-		constellations[constellations.find(current_constellation)].completed = success
+		minigame_success = success
+		if not constellations[constellations.find(current_constellation)].completed:
+			constellations[constellations.find(current_constellation)].completed = success
 		get_tree().change_scene_to_packed(minigame_end_scene)
 	elif current_mode == Mode.SURVIVAL:
 		if success:

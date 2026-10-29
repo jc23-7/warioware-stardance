@@ -34,24 +34,28 @@ func _process(delta: float) -> void:
 		_on_game_success()
 
 func _on_game_success() -> void:
-	if display_progress:
-		game_stats.progress_label.text = str(completed_points) + "/" + str(total_points)
-	success = true
-	#await game_stats.Timer(1.5)
-	get_tree().paused = true
-	await GlobalAudio.success()
-	get_tree().paused = false
-	Global.minigame_done(true)
+	if not Global.tutorial:
+		if display_progress:
+			game_stats.progress_label.text = str(completed_points) + "/" + str(total_points)
+		success = true
+		#await game_stats.Timer(1.5)
+		get_tree().paused = true
+		await GlobalAudio.success()
+		get_tree().paused = false
+		Global.minigame_done(true)
 	
 	
 func _on_game_fail() -> void:
-	success = false
-	
-	GlobalAudio.stop_timer()
-	get_tree().paused = true
-	await GlobalAudio.time_up()
-	get_tree().paused = false
-	Global.minigame_done(false)
+	if not Global.tutorial:
+		if display_lives:
+			game_stats.hearts.lose_all_hearts()
+		success = false
+		
+		GlobalAudio.stop_timer()
+		get_tree().paused = true
+		await GlobalAudio.time_up()
+		get_tree().paused = false
+		Global.minigame_done(false)
 	
 func increase_point(num_increase: int, sound_played: Callable) -> void:
 	if completed_points < total_points and not game_ended:

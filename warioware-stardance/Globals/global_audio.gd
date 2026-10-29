@@ -2,6 +2,8 @@ extends Node2D
 
 @onready var mute_button: TextureButton = $"CanvasLayer/MuteButton"
 
+enum Sounds {ButtonClick, CollectStar, Shine, Incorrect, Ding, Timer, TimeUp, DGM, Hit, Hurt}
+
 var fade_tween: Tween
 var bgm_fade: Tween
 var mute = false
@@ -35,7 +37,14 @@ func reset_bgm() -> void:
 
 func button_pressed() -> void:
 	$ButtonClick.play()
-	
+
+func play_sound(sound: Sounds) -> void:
+	if not Global.tutorial:
+		for child in get_children():
+			if child.name == Sounds.find_key(sound):
+				child.play()
+				return
+				
 func collect_star() -> void:
 	if not Global.tutorial:
 		$CollectStar.play()
@@ -47,7 +56,7 @@ func shine() -> void:
 func ding() -> void:
 	if not Global.tutorial:
 		$Ding.play()
-	
+
 func start_timer(vol: int, fade_in: bool) -> void:
 	if not Global.tutorial:
 		if fade_tween and fade_tween.is_valid():

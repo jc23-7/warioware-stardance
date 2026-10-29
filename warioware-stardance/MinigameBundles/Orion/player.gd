@@ -43,6 +43,7 @@ func _physics_process(delta: float) -> void:
 			animated_sprite.stop()
 
 func lose_life() -> void:
+	GlobalAudio.play_sound(GlobalAudio.Sounds.Incorrect)
 	parent_minigame.lives -= 1
 	var colour_tween = create_tween()
 	for i in range(3):

@@ -5,9 +5,11 @@ extends Control
 @export var constellation_container: Control
 @export var fail_image: TextureRect
 
+var success
+
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
-	if Global.constellations[Global.constellations.find(Global.current_constellation)].completed:
+	if Global.minigame_success:
 		title.text = "SUCCESS!"
 		description.text = "Story collected"
 		for child in constellation_container.get_children():
@@ -28,4 +30,5 @@ func _process(delta: float) -> void:
 
 
 func _return_to_levels() -> void:
+	GlobalAudio.button_pressed()
 	Global.change_scene("level_select")

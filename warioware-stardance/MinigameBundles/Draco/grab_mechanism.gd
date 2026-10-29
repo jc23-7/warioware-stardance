@@ -10,8 +10,6 @@ class_name GrabMechanism
 @export var grab_frame: int
 @export var has_object_frame: int
 
-@onready var animation_player: AnimationPlayer = $"AnimationPlayer"
-@onready var sprite: AnimatedSprite2D = $"AnimatedSprite2D"
 
 var grab_tween: Tween
 var retreat_tween: Tween

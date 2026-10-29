@@ -26,8 +26,10 @@ func _process(delta: float) -> void:
 		if Input.is_action_just_pressed("space_key"):
 			if abs(wrapf(ring.rotation_degrees - cassiopeia.rotation_degrees, -180.0, 180.0)) <= ring.degrees[completed_points]:
 				completed_points += 1
+				GlobalAudio.play_sound(GlobalAudio.Sounds.Ding)
 				if completed_points != total_points:
 					ring.next_ring(true)
 			else:
+				GlobalAudio.play_sound(GlobalAudio.Sounds.Incorrect)
 				ring.next_ring(false)
 				lives -= 1

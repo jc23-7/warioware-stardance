@@ -47,7 +47,7 @@ func _ready() -> void:
 	elif display_progress and display_time:
 		info_container = $ProgressTimer
 		for child in info_container.get_children():
-			for label in child:
+			for label in child.get_children():
 				if child.name == "Progress":
 					progress_label = label
 				else:

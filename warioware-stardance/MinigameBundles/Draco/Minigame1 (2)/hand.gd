@@ -41,8 +41,11 @@ func _on_hand_clicked(viewport: Node, event: InputEvent, shape_idx: int) -> void
 			take_damage()
 			
 func take_damage() -> void:
+	if health <= 0:
+		return
 	health -= 1
 	if health <= 0:
+		GlobalAudio.play_sound(GlobalAudio.Sounds.Ding)
 		parent_minigame.hands_defeated += 1
 		if has_object:
 			parent_minigame.apple_state_changed.emit(int(str(name)[-1]))

@@ -24,3 +24,7 @@ func _process(delta: float) -> void:
 				child.frame = 1
 			else:
 				child.frame = 0
+
+func lose_all_hearts() -> void:
+	for child in get_children():
+		child.frame = 1

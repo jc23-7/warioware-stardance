@@ -11,7 +11,7 @@ var min_hit_y: float
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	randomize()
-	position.x = randf_range(0, 480-100)
+	position.x = randf_range(10, 470)
 	position.y = -100
 
 
@@ -25,6 +25,7 @@ func _process(delta: float) -> void:
 			if position.y > get_window().size.y + 100:
 				queue_free()
 			elif $AnimatedSprite2D/Area2D.overlaps_body(player) and global_position.y < min_hit_y:
+				GlobalAudio.play_sound(GlobalAudio.Sounds.Incorrect)
 				parent_minigame.lives -= 1
 				hit_player = true
 				x_to_player = (position.x - player.position.x) * player.visuals.scale.x

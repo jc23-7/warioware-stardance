@@ -19,7 +19,7 @@ extends TextureButton
 @export var locked_hover: Texture2D
 @export var locked_selected: Texture2D
 
-
+const LOCKED_TRANSPARENCY = 0.5
 var completed = false
 
 # Called when the node enters the scene tree for the first time.
@@ -29,6 +29,7 @@ func _ready() -> void:
 		if constellation.constellation_name == str(name):
 			found = true
 			if not constellation.unlocked:
+				self_modulate.a = LOCKED_TRANSPARENCY
 				texture_normal = completed_normal
 				texture_hover = completed_hover
 				texture_pressed = completed_selected
@@ -43,6 +44,7 @@ func _ready() -> void:
 			texture_click_mask = click_mask
 			break
 	if not found:
+		self_modulate.a = LOCKED_TRANSPARENCY
 		texture_normal = uncompleted_normal
 		texture_hover = uncompleted_hover
 		texture_pressed = uncompleted_selected
@@ -52,4 +54,5 @@ func _process(delta: float) -> void:
 	pass
 
 func _on_pressed() -> void:
+	GlobalAudio.play_sound(GlobalAudio.Sounds.Shine)
 	level_info.level_selected.emit(name)

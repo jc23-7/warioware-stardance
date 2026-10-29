@@ -14,5 +14,6 @@ func _process(delta: float) -> void:
 
 func _on_area_2d_body_entered(body: Node2D) -> void:
 	if body is CharacterBody2D:
+		GlobalAudio.play_sound(GlobalAudio.Sounds.Ding)
 		parent.parent_minigame.completed_points += 1
 		queue_free()

@@ -47,10 +47,10 @@ animations = [{
 [node name="Minigame1" type="Node2D" unique_id=221894460 node_paths=PackedStringArray("game_stats")]
 script = ExtResource("1_u745u")
 min_time = 1.0
-max_time = 3.0
+max_time = 2.0
 game_stats = NodePath("GameStats")
 lives = 1
-time_limit = 10.0
+time_limit = 15.0
 display_time = true
 display_lives = true
 
